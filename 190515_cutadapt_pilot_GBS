@@ -7,7 +7,8 @@ ls * -d | tr -d / > 190515_sample_list
 
 cat 190515_sample_list
 
-i=$1
+# Load cutadapt
+module load cutadapt
 
 # This worked, so I had to find out why  it wasn't working with variables
 cutadapt -a CTGTCTCT GarfieldLake_p_S243/GarfieldLake_p_S243_R1_001.fastq.gz -o GarfieldLake_p_S243/GarfieldLake_p_S243_R1_001_trimmed.fastq.gz
@@ -16,3 +17,23 @@ cutadapt -a CTGTCTCT GarfieldLake_p_S243/GarfieldLake_p_S243_R1_001.fastq.gz -o 
 for i in $(cat 190515_sample_list); do
 cutadapt -a CTGTCTCT $i/${i}_R1_001.fastq.gz -o $i/${i}_R1_001_trimmed.fastq.gz;
 done
+
+# Load fastQC
+module load fastqc
+
+# Run fastQC on trimmed reads
+for i in $(cat 190515_sample_list); do
+fastqc $i/${i}_R1_001_trimmed.fastq.gz;
+done
+
+# Use BWA to align fastq reads to the reference genome
+# Load BWA
+module load bwa
+
+# Assign a short name to the reference so the script calling BWA is easier to read
+FASTA='/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta.gz'
+
+# Index the genome
+bwa index $FASTA
+# Align one sample to the genome as a test before generalizing it so it will do all files.
+bwa aln -t 1 $FASTA 14S-PS_p_S239/14S-PS_p_S239_R1_001_trimmed.fastq.gz > 14S-PS_p_S239.sai 2> 14-PS_p_S239_bwa.err
