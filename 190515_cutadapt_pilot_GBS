@@ -1,0 +1,18 @@
+# 15 May 2019
+# This code is the beginning of the GBS pipeline for wild rice
+
+# Make a list of directories in the present working directory (/home/jkimball/haasx092/pilot_GBS)
+# Note: this makes a list of everything so for our purposes benefits from the fact that the only contents of pilot_GBS are directories.
+ls * -d | tr -d / > 190515_sample_list
+
+cat 190515_sample_list
+
+i=$1
+
+# This worked, so I had to find out why  it wasn't working with variables
+cutadapt -a CTGTCTCT GarfieldLake_p_S243/GarfieldLake_p_S243_R1_001.fastq.gz -o GarfieldLake_p_S243/GarfieldLake_p_S243_R1_001_trimmed.fastq.gz
+
+# This appears to work by iterating over each line within the text file 190515_sample_list
+for i in $(cat 190515_sample_list); do
+cutadapt -a CTGTCTCT $i/${i}_R1_001.fastq.gz -o $i/${i}_R1_001_trimmed.fastq.gz;
+done
