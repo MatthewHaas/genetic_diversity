@@ -36,4 +36,6 @@ FASTA='/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta.g
 # Index the genome
 bwa index $FASTA
 # Align one sample to the genome as a test before generalizing it so it will do all files.
-bwa aln -t 1 $FASTA 14S-PS_p_S239/14S-PS_p_S239_R1_001_trimmed.fastq.gz > 14S-PS_p_S239.sai 2> 14-PS_p_S239_bwa.err
+# Run bwa mem algorithm in the directory where the g-zipped fastq files are. It isn't working from the directory "~/pilot_GBS".
+# The generalized script should therefore feature a way to change directories into each sample's subdirectory.
+bwa mem $FASTA 14S-PS_p_S239_R1_001_trimmed.fastq.gz > 14S-PS_p_S239.sam 2> 14-PS_p_S239_bwa.err
