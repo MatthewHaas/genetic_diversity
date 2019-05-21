@@ -39,3 +39,57 @@ bwa index $FASTA
 # Run bwa mem algorithm in the directory where the g-zipped fastq files are. It isn't working from the directory "~/pilot_GBS".
 # The generalized script should therefore feature a way to change directories into each sample's subdirectory.
 bwa mem $FASTA 14S-PS_p_S239_R1_001_trimmed.fastq.gz > 14S-PS_p_S239.sam 2> 14-PS_p_S239_bwa.err
+
+# Create a sorted BAM file
+module load samtools
+samtools sort 14S-PS_p_S239.sam -o 14S-PS_p_S239_sorted.bam 2> 14-PS_p_S239_samtools_sort.err
+
+# Skip the intermediate file step and send the oupt of bwa mem directly to samtools for sorting
+module load bwa
+module load samtools 
+
+FASTA='/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta.gz'
+bwa index $FASTA 2> FY-C20_p_S238_bwa_index.err \
+bwa mem $FASTA FY-C20_p_S238_R1_001_trimmed.fastq.gz  2> FY-C20_p_S238_bwa.err | samtools sort -o FY-C20_p_S23_sorted.bam 2> FY-C20_p_S23_samtools_sort.err
+
+
+bwa mem $FASTA GarfieldLake_p_S243_R1_001_trimmed.fastq.gz  2> GarfieldLake_p_S243_bwa.err | samtools sort -o GarfieldLake_p_S243_sorted.bam 2> GarfieldLake_p_S243_samtools_sort.err
+
+# The following code can and should be done in a script and sent to the job queue. It is likely to take ~16 hours (for 8 samples..)
+# This code allows for simultaneous alignment of reads with bwa and piping to samtools for sorting so that the end result is a sorted BAM file.
+# Load software outside of loop--it only needs to be done once
+module load bwa
+module load samtools 
+
+# Likewise, this step only needs to be done once.
+FASTA='/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta.gz'
+
+
+for i in $(cat 190515_sample_list); do
+bwa mem $FASTA $i/${i}_R1_001_trimmed.fastq.gz 2> $i/${i}_bwa.err | samtools sort -o $i/${i}_sorted.bam 2> $i/${i}_samtools_sort.err;
+done
+
+# Trying to get the loop to not finish after a single sample--edited the original sample list and saved under a new name to not overwrite files that were already completed.
+# When there are ~1000, better to not need to re-enter code every time (and will probably need to do it in batches for sharing computational time)
+i=$1
+for i in $(cat 190521_sample_list); do
+bwa mem $FASTA $i/${i}_R1_001_trimmed.fastq.gz 2> $i/${i}_bwa.err | samtools sort -o $i/${i}_sorted.bam 2> $i/${i}_samtools_sort.err;
+done
+
+# Run this in the bam_list directory. Testing ground for processing of bams
+# Three bams are in a directory called 190520_bams (but for future analysis will want to keep the bams in their own directories)
+ls * -d | tr -d / > bam_list
+
+# Load bcftools
+module load bcftools
+
+# Index the reference genome (again-different software)
+# Doesn't work on gzipped files. Naming the path to the unzipped fasta file "FASTA2" so I don't overwrite the original.
+# Could a better approach be used to avoid taking up the extra space? Re-zip the file when complete.
+gunzip $FASTA 
+samtools faidx home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta
+FAI='/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta.fai'
+FASTA2='/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta'
+
+# BAM files should eventually be in a list (there will be ~1000)
+samtools mpileup -gDVu -f $FASTA2 14S-PS_p_S239_sorted.bam FY-C20_p_S23_sorted.bam GarfieldLake_p_S243_sorted.bam | bcftools call -mv -Ob -o calls.bcf
