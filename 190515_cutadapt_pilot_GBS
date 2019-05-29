@@ -53,8 +53,6 @@ bwa index $FASTA 2> FY-C20_p_S238_bwa_index.err \
 bwa mem $FASTA FY-C20_p_S238_R1_001_trimmed.fastq.gz  2> FY-C20_p_S238_bwa.err | samtools sort -o FY-C20_p_S23_sorted.bam 2> FY-C20_p_S23_samtools_sort.err
 
 
-bwa mem $FASTA GarfieldLake_p_S243_R1_001_trimmed.fastq.gz  2> GarfieldLake_p_S243_bwa.err | samtools sort -o GarfieldLake_p_S243_sorted.bam 2> GarfieldLake_p_S243_samtools_sort.err
-
 # The following code can and should be done in a script and sent to the job queue. It is likely to take ~16 hours (for 8 samples..)
 # This code allows for simultaneous alignment of reads with bwa and piping to samtools for sorting so that the end result is a sorted BAM file.
 # Load software outside of loop--it only needs to be done once
@@ -64,24 +62,20 @@ module load samtools
 # Likewise, this step only needs to be done once.
 FASTA='/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta.gz'
 
-
-for i in $(cat 190515_sample_list); do
+# BWA and SAMtools
+cat 190515_sample_list | while read i; do
 bwa mem $FASTA $i/${i}_R1_001_trimmed.fastq.gz 2> $i/${i}_bwa.err | samtools sort -o $i/${i}_sorted.bam 2> $i/${i}_samtools_sort.err;
 done
 
-# Trying to get the loop to not finish after a single sample--edited the original sample list and saved under a new name to not overwrite files that were already completed.
-# When there are ~1000, better to not need to re-enter code every time (and will probably need to do it in batches for sharing computational time)
-i=$1
-for i in $(cat 190521_sample_list); do
-bwa mem $FASTA $i/${i}_R1_001_trimmed.fastq.gz 2> $i/${i}_bwa.err | samtools sort -o $i/${i}_sorted.bam 2> $i/${i}_samtools_sort.err;
-done
+# Make a list of bam files for use in SNP calling
+ls */*bam > bam_list
 
-# Run this in the bam_list directory. Testing ground for processing of bams
-# Three bams are in a directory called 190520_bams (but for future analysis will want to keep the bams in their own directories)
-ls * -d | tr -d / > bam_list
 
 # Load bcftools
 module load bcftools
+
+# Load htslib (for bgzip and tabix)
+module load htslib
 
 # Index the reference genome (again-different software)
 # Doesn't work on gzipped files. Naming the path to the unzipped fasta file "FASTA2" so I don't overwrite the original.
@@ -91,5 +85,12 @@ samtools faidx home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.
 FAI='/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta.fai'
 FASTA2='/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta'
 
+bams='/home/jkimball/haasx092/pilot_GBS/bam_list'
+
 # BAM files should eventually be in a list (there will be ~1000)
-samtools mpileup -gDVu -f $FASTA2 14S-PS_p_S239_sorted.bam FY-C20_p_S23_sorted.bam GarfieldLake_p_S243_sorted.bam | bcftools call -mv -Ob -o calls.bcf
+#-Ou option for bcftools call is to prevent unnecessary compressions and decompressions
+samtools mpileup -gDVu -f $FASTA2 -b $bams | bcftools call -mv -Ou -o calls.vcf 2> calls.vcf.err
+
+# Single file version
+samtools mpileup -gDVu -f $FASTA2 14S-PS_p_S239/14S-PS_p_S239_sorted.bam | bcftools call -c | bgzip > calls.vcf.gz && tabix -p vcf calls.vcf.gz 2> calls.vcf.err
+
