@@ -94,3 +94,12 @@ samtools mpileup -gDVu -f $FASTA2 -b $bams | bcftools call -mv -Ou -o calls.vcf 
 # Single file version
 samtools mpileup -gDVu -f $FASTA2 14S-PS_p_S239/14S-PS_p_S239_sorted.bam | bcftools call -c | bgzip > calls.vcf.gz && tabix -p vcf calls.vcf.gz 2> calls.vcf.err
 
+# Variant calling
+# "awk -f" before ./gen_call.awk was necessary to get script to run
+# Original script had results writing to $tmp rather than tmp, but that results in error message: "-bash: $tmp: ambiguous redirect"
+# Initial run did not result in any output except for the headers.. maybe that was the result of configuration file parameters?
+
+config_file="config_file.conf"
+gencall_prefix="190530_gencall"
+mktemp | read tmp
+zcat */*.vcf.gz \ | awk -f ./gen_call.awk $config_file > tmp 2> $gencall_prefix.err
