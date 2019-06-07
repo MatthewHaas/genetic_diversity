@@ -70,36 +70,40 @@ done
 # Make a list of bam files for use in SNP calling
 ls */*bam > bam_list
 
+# Start here for  SNP calling portion
 
-# Load bcftools
+module load samtools
 module load bcftools
-
-# Load htslib (for bgzip and tabix)
 module load htslib
-
-# Index the reference genome (again-different software)
-# Doesn't work on gzipped files. Naming the path to the unzipped fasta file "FASTA2" so I don't overwrite the original.
-# Could a better approach be used to avoid taking up the extra space? Re-zip the file when complete.
-gunzip $FASTA 
-samtools faidx home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta
-FAI='/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta.fai'
-FASTA2='/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta'
+module load parallel
 
 bams='/home/jkimball/haasx092/pilot_GBS/bam_list'
+prefix="190607_samtools"
+parallel_samtools_processes=10
+ref="/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta"
 
-# BAM files should eventually be in a list (there will be ~1000)
-#-Ou option for bcftools call is to prevent unnecessary compressions and decompressions
-samtools mpileup -gDVu -f $FASTA2 -b $bams | bcftools call -mv -Ou -o calls.vcf 2> calls.vcf.err
-
-# Single file version
-samtools mpileup -gDVu -f $FASTA2 14S-PS_p_S239/14S-PS_p_S239_sorted.bam | bcftools call -c | bgzip > calls.vcf.gz && tabix -p vcf calls.vcf.gz 2> calls.vcf.err
+mkdir -p $prefix
+cut -f 1 ${ref}.fai \
+ | parallel --will-cite -I'{}' -j $parallel_samtools_processes \
+  \(samtools mpileup -gDVu \
+  -b $bams \
+  -r '{}' \
+  -f $ref} \
+  \| bcftools call -mv \
+  \| bgzip -c \
+  \> $prefix/${prefix}_'{}'.vcf.gz \) \
+  2\> $prefix/${prefix}_'{}'.err
 
 # Variant calling
-# "awk -f" before ./gen_call.awk was necessary to get script to run
+# "awk -f" before ./normalize.awk was necessary to get script to run
 # Original script had results writing to $tmp rather than tmp, but that results in error message: "-bash: $tmp: ambiguous redirect"
 # Initial run did not result in any output except for the headers.. maybe that was the result of configuration file parameters?
 
-config_file="config_file.conf"
-gencall_prefix="190530_gencall"
+
+normalize_prefix="190607_normalize"
 mktemp | read tmp
-zcat */*.vcf.gz \ | awk -f ./gen_call.awk $config_file > tmp 2> $gencall_prefix.err
+zcat */*.vcf.gz \ | awk -f ./normalize.awk > '$tmp' 2> $normalize_prefix.err
+
+# Copy the results of SNP calling in a temporary file to a TSV file for further processing
+# Retaining the temporary file for now in case I want to do something else with it in the immediate future
+cp '$tmp' 190607_normalize.tsv # Can further process/filter the TSV file in R.
