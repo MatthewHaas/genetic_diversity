@@ -88,7 +88,8 @@ cut -f 1 ${ref}.fai \
   \(samtools mpileup -gDVu \
   -b $bams \
   -r '{}' \
-  -f $ref} \
+  -f ${ref} \
+  -q 30 \
   \| bcftools call -mv \
   \| bgzip -c \
   \> $prefix/${prefix}_'{}'.vcf.gz \) \
