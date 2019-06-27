@@ -85,11 +85,10 @@ ref="/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta"
 mkdir -p $prefix
 cut -f 1 ${ref}.fai \
  | parallel --will-cite -I'{}' -j $parallel_samtools_processes \
-  \(samtools mpileup -gDVu \
+  \(samtools mpileup -q 20 -gDVu \
   -b $bams \
   -r '{}' \
   -f ${ref} \
-  -q 30 \
   \| bcftools call -mv \
   \| bgzip -c \
   \> $prefix/${prefix}_'{}'.vcf.gz \) \
@@ -103,7 +102,7 @@ cut -f 1 ${ref}.fai \
 
 normalize_prefix="190607_normalize"
 mktemp | read tmp
-zcat */*.vcf.gz \ | awk -f ./normalize.awk > '$tmp' 2> $normalize_prefix.err
+zcat *.vcf.gz | awk -f ./normalize.awk > '$tmp' 2> $normalize_prefix.err
 
 # Copy the results of SNP calling in a temporary file to a TSV file for further processing
 # Retaining the temporary file for now in case I want to do something else with it in the immediate future
