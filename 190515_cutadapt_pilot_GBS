@@ -99,10 +99,10 @@ cut -f 1 ${ref}.fai \
 # Original script had results writing to $tmp rather than tmp, but that results in error message: "-bash: $tmp: ambiguous redirect"
 # Initial run did not result in any output except for the headers.. maybe that was the result of configuration file parameters?
 
-
-normalize_prefix="190607_normalize"
+# This was done inside the samtools directory
+normalize_prefix="190627_normalize"
 mktemp | read tmp
-zcat *.vcf.gz | awk -f ./normalize.awk > '$tmp' 2> $normalize_prefix.err
+zcat ${prefix}_*.vcf.gz | awk -f ./normalize.awk > '$tmp' 2> $normalize_prefix.err
 
 # Copy the results of SNP calling in a temporary file to a TSV file for further processing
 # Retaining the temporary file for now in case I want to do something else with it in the immediate future
