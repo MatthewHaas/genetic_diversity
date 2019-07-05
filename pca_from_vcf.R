@@ -49,9 +49,12 @@ percentVar <- pca$eig/sum(pca$eig)
 pca_scores[, col := c(1:7)]
 
 # Make the PCA plot
-# signif() digits are different so that they will be the same in the plot (to the hundreths place)--likely due to % variance for PC2 being less than 1
+# format() necessary for the y label because the value for the present version is 19.0 and I wanted R to print the 0 after the decimal (so it wasn't just 19%)
 pdf("190705_pilot_GBS_PCA.pdf")
-pca_scores[, plot(PC1, PC2, xlab=paste0("PC1: ", signif(percentVar[1]*100, digits=3), "%"), ylab=paste0("PC2: ", signif(percentVar[2]*100, digits=3), "%"), main=paste0("PCA for pilot GBS", "\n", "17 largest scaffolds"), yaxt='n', pch=16, col=col)]
+pca_scores[, plot(PC1, PC2, xlab=paste0("PC1: ", round(percentVar[1]*100, digits=1), "%"), ylab=paste0("PC2: ", format(round(percentVar[2]*100, digits=1), nsmall=1), "%"), main=paste0("PCA for pilot GBS", "\n", "17 largest scaffolds"), yaxt='n', pch=16, col=col)]
 axis(2, las=2)
 legend("topright", legen=c("14S-PS", "Garfield Lake", "Itasca-C12", "Latifolia", "Necktie Lake", "PM3E", "Upper Rice Lake"), col=c(1:7), pch=16, bty='n')
 dev.off()
+
+# Save data from this session. Would take a long time to re-create
+save(x, gen_light_x, dist, rownames, pca, pca_scores, percentVar, file="190705_pca_from_vcfs.Rdata")
