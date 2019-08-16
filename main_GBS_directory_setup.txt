@@ -1,0 +1,70 @@
+# 15 August 2019
+# PATH TO GBS DATA: /home/jkimball/data_release/umgc/novaseq/190730_A00223_0174_BHCN5GDRXX/Kimball_Project_002
+
+# How many fastq.gz files are there in Kimball_Project_002?
+find *fastq.gz | wc -l # 1054 including samples from the pilot
+
+# Write the names of gzipped FASTQ files to a CSV file
+
+# Load R
+# module load R/3.6.0
+# R
+
+# Read in data using the data.table package
+library(data.table)
+fread("main_GBS_sample_names.csv", header=F) -> x
+
+setnames(x, "filename")
+
+x[, sample_number := filename]
+# Strip off first part of filename until sample number begins (S) but do not include it.
+x[, sample_number := sub("^.+[S]", "", sample_number)]
+# Strip off end of the filename (after the sample number) ... begins with "_R1"
+x[, sample_number := sub("_[R1].+$", "", sample_number)]
+
+# Convert sample numbers to numerical and add leading zeros to all samples (to help with sorting).
+x[, sample_number := sprintf("%04d", as.numeric(sample_number))]
+
+# Reorder rows in ascending order
+x[order(sample_number)] -> x
+
+# Set column order (my personal preference for sample_number to come first)
+setcolorder(x, c("sample_number", "filename")) -> x
+
+# Write output to CSV
+write.csv(x, file="190815_main_GBS_sample_names_and_numbers.csv", row.names=FALSE, col.names=FALSE, sep=",", quote=FALSE)
+
+# Save table as an R object
+save(x, file="190815_main_GBS_sample_names_and_numbers.Rdata")
+
+# Back on the command line: moved relevant files to the main_GBS directory
+mv main_GBS_sample_names.csv main_GBS
+mv 190815_main_GBS_sample_names_and_numbers.Rdata main_GBS
+mv 190815_main_GBS_sample_names_and_numbers.csv main_GBS
+
+# Set up directory structure
+cat 190815_main_GBS_sample_names_and_numbers.csv | cut -f 1 -d , \
+	| while read i; do
+	d=Sample_$i
+	echo $i
+	mkdir -p $d
+	done
+	
+# Delete directory that comes from sample_name (header) from the csv file
+rm -rf Sample_sample_number
+
+# Make a file with a list of the directories
+ls Sample*/ -d | tr -d / > 190815_sample_directory_list.txt
+
+
+# Make symlinks to GBS data
+
+n=$(printf "%04d\n" "$((1))")
+cat 190815_main_GBS_sample_names_and_numbers.csv | cut -f 2 -d , \
+	| while read i; do
+	ln -s /home/jkimball/data_release/umgc/novaseq/190730_A00223_0174_BHCN5GDRXX/Kimball_Project_002/$i Sample_$n/Sample_${n}.fq.gz
+	n=$(printf "%04d\n" "$((10#$n+1))")
+	done
+
+# Check that the paths are accurate.
+ls -l Sample*/Sample*gz > paths_to_gbs_data_check.txt
