@@ -1,0 +1,54 @@
+# 19 August 2019
+# wd: /home/jkimball/haasx092/main_GBS
+
+# Make a file containing the names of the directories
+ls -d Sample* | tr -d / > 190819_sample_list
+
+# Data released on August 15, 2019 are here:
+/home/jkimball/data_release/umgc/novaseq/190730_A00223_0174_BHCN5GDRXX/Kimball_Project_002
+
+# Data released on August 26, 2019 are here:
+/home/jkimball/data_release/umgc/novaseq/190819_A00223_0191_AHF3V3DRXX/Kimball_Project_001
+/home/jkimball/data_release/umgc/novaseq/190819_A00223_0191_AHF3V3DRXX/Kimball_Project_002
+
+# This was carried out in this directory: /home/jkimball/data_release/umgc/novaseq/190819_A00223_0191_AHF3V3DRXX/Kimball_Project_002
+# File written to my main_GBS directory.
+ls *fastq.gz -d  | tr -d / > ~/main_GBS/190827_main_gbs_release_2_unordered.txt
+
+n=$(printf "%04d\n" "$((1))")
+cat 190815_main_GBS_sample_names_and_numbers.csv | cut -f 2 -d , \
+	| while read i; do
+	ln -s /home/jkimball/data_release/umgc/novaseq/190730_A00223_0174_BHCN5GDRXX/Kimball_Project_002/$i Sample_$n/Sample_${n}_1.fq.gz
+	n=$(printf "%04d\n" "$((10#$n+1))")
+	done
+
+# Note: I originally made this csv file (190827_main_gbs_release_2_ordered.csv) in Excel (shameful, I know) based on the order of samples from the first release (using VLOOKUP).
+# The sample numbers were all off by 131 maybe because they were run as part of "GBS_Group_F" so another group's samples were also included (given the pattern).
+# In any case, making the csv file in Excel resulted in a hidden character (?) and the end of each file name that resulted in the symlink being broken b/c the path was wrong. 
+# I fixed it by loading the Excel-derived csv file into R and exporting it out again.
+# library(data.table)
+# fread("190827_main_gbs_release_2_ordered.csv") -> x
+# write.csv(x, file="190827_main_gbs_release_2_ordered.csv", col.names=FALSE, row.names=FALSE, quote=FALSE, sep=",")
+
+n=$(printf "%04d\n" "$((1))")
+cat 190827_main_gbs_release_2_ordered.csv \
+	| while read i; do
+	ln -s /home/jkimball/data_release/umgc/novaseq/190819_A00223_0191_AHF3V3DRXX/Kimball_Project_002/${i} Sample_$n/Sample_${n}_2.fq.gz
+	n=$(printf "%04d\n" "$((10#$n+1))")
+	done
+	
+	
+# Load fastQC
+module load fastqc
+
+# Run fastQC on trimmed reads
+for i in $(cat 190819_sample_list); do
+fastqc $i/${i}.fq.gz
+echo "1"
+done
+
+# Run fastQC on trimmed reads
+for i in $(cat 190819_sample_list); do
+echo $i/${i}
+echo "1"
+done
