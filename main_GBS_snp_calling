@@ -1,0 +1,33 @@
+# 10 September 2019
+# Processing of bam files to get vcf files for the main GBS project (1054 samples)
+# WD: /home/jkimball/haasx092/main_GBS
+
+# Make a list of bam files for use in SNP calling
+ls Sample_*/Sample_*.bam > 190910_sorted_bam_files.txt
+
+# Index bam files
+for i in $(cat 190910_sorted_bam_files.txt); do samtools index ${i}; done
+
+# Start here for  SNP calling portion
+
+module load samtools
+module load bcftools
+module load htslib
+module load parallel
+
+bams='/home/jkimball/haasx092/main_GBS/190910_sorted_bam_files.txt'
+prefix="190910_samtools"
+parallel_samtools_processes=10
+ref="/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta"
+
+mkdir -p $prefix
+cut -f 1 ${ref}.fai \
+ | parallel --will-cite -I'{}' -j $parallel_samtools_processes \
+  \(samtools mpileup -q 20 -gDVu \
+  -b $bams \
+  -r '{}' \
+  -f ${ref} \
+  \| bcftools call -mv \
+  \| bgzip -c \
+  \> $prefix/${prefix}_'{}'.vcf.gz \) \
+  2\> $prefix/${prefix}_'{}'.err
