@@ -31,3 +31,28 @@ cut -f 1 ${ref}.fai \
   \| bgzip -c \
   \> $prefix/${prefix}_'{}'.vcf.gz \) \
   2\> $prefix/${prefix}_'{}'.err
+  
+# 12 September 2019
+#  Putting VCF files into R to make PCA
+
+# Put all 17 VCF files into one to be read into vcfR.
+# module load bcftools
+bcftools concat -o 190912_seventeen_largest_vcfs_merged.vcf.gz '190910_samtools_Scaffold_48;HRSCAF=1451.vcf.gz' '190910_samtools_Scaffold_70;HRSCAF=1591.vcf.gz' '190910_samtools_Scaffold_1064;HRSCAF=3428.vcf.gz' '190910_samtools_Scaffold_415;HRSCAF=2522.vcf.gz' '190910_samtools_Scaffold_93;HRSCAF=1687.vcf.gz' '190910_samtools_Scaffold_18;HRSCAF=1069.vcf.gz' '190910_samtools_Scaffold_13;HRSCAF=912.vcf.gz' '190910_samtools_Scaffold_1;HRSCAF=83.vcf.gz' '190910_samtools_Scaffold_1062;HRSCAF=3426.vcf.gz' '190910_samtools_Scaffold_1065;HRSCAF=3429.vcf.gz' '190910_samtools_Scaffold_9;HRSCAF=810.vcf.gz' '190910_samtools_Scaffold_3;HRSCAF=502.vcf.gz' '190910_samtools_Scaffold_1063;HRSCAF=3427.vcf.gz' '190910_samtools_Scaffold_7;HRSCAF=722.vcf.gz' '190910_samtools_Scaffold_693;HRSCAF=2950.vcf.gz' '190910_samtools_Scaffold_51;HRSCAF=1459.vcf.gz'
+
+# Try fewer VCF files (R crashes when 17 are used...)
+bcftools concat -o 190912_two_largest_vcfs_merged.vcf.gz '190910_samtools_Scaffold_48;HRSCAF=1451.vcf.gz' '190910_samtools_Scaffold_70;HRSCAF=1591.vcf.gz'
+
+# Switch to R (v. 3.6.0)
+
+# Load necessary libraries...
+library(vcfR)
+library(poppr) # this package required many steps to install. Need gdal version 2.3.2 and other modules to be installed at the start of each session
+library(ape)
+library(RColorBrewer)
+library(data.table)
+
+# Read in partial data...
+x <- read.vcfR("190912_two_largest_vcfs_merged.vcf.gz", nrows=10000)
+
+# Save to work on later...
+save(x, file="190912_scaffold48_10k_variants.Rdata")
