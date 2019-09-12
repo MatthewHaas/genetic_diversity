@@ -21,7 +21,7 @@ library(data.table)
 # For now this is only the biggest scaffold (test run), but should use all (or at least the biggest) to get a better idea of structure
 x <- read.vcfR("seventeen_largest_vcfs_merged.vcf.gz")
 
-# Convert to a genlight object (for pooppr and adegenet)
+# Convert to a genlight object (for poppr and adegenet)
 gen_light_x <- vcfR2genlight(x)
 
 # Create a distance matrix
