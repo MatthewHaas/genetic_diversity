@@ -1,6 +1,13 @@
 # 1 July 2019
 # Making a PCA plot from vcf files
 
+# Load required  modules
+module load gcc/8.1.0
+module load udunits/2.2.26_gcc8.1.0
+module load proj/4.9.3
+module load gdal/2.3.2
+module load geos/3.7.1
+
 # Merge multiple vcf files into one
 # module load bcftools
 bcftools concat -o seventeen_largest_vcfs_merged.vcf.gz '190627_samtools_Scaffold_48;HRSCAF=1451.vcf.gz' '190627_samtools_Scaffold_70;HRSCAF=1591.vcf.gz' '190627_samtools_Scaffold_1064;HRSCAF=3428.vcf.gz'
