@@ -1,0 +1,33 @@
+# 27 September 2019
+# WD: /home/jkimball/haasx092/umgc_pilot_study
+
+# Convert vcf to plink format (using plink version 1.9)
+module load plink
+plink --vcf variants_filt_2M.vcf.gz --maf 0.05 --allow-extra-chr --recode --out myplink
+
+# Identity-by-state (IBS)
+# For the N individuals in a sample, to create an N x N matrix of genome-wide average IBS pairwise identities (http://zzz.bwh.harvard.edu/plink/strat.shtml)
+# output is in "plink.mibs"
+plink --file myplink --allow-extra-chr --cluster --matrix
+
+module load R/3.6.0
+
+library(data.table)
+
+# Read in data
+fread("plink.mibs") -> x
+
+# Set the column names (same as the VCF file and given in the file plink.mibs.ids
+setnames(x, c("14S-PS", "FY-C20", "GarfieldLake", "Itasca-C12", "NecktieRiver", "PM3E", "UpperRiceLake"))
+
+# Set row (sample) names (same order as above)
+x[, sample := c("14S-PS", "FY-C20", "GarfieldLake", "Itasca-C12", "NecktieRiver", "PM3E", "UpperRiceLake")]
+
+# Change the column order so that the samples are first
+setcolorder(x, c("sample","14S-PS", "FY-C20", "GarfieldLake", "Itasca-C12", "NecktieRiver", "PM3E", "UpperRiceLake"))
+
+# Write to a CSV file
+write.csv(x, file="190927_umgc_pilot_IBS_table_from_plink.csv", row.names=FALSE, col.names=TRUE)
+
+# Save data
+save(x, file="190927_umgc_pilot_IBS_table_from_plink.Rdata")
