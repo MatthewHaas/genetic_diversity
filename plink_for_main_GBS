@@ -4,3 +4,6 @@
 # WD: /home/jkimball/haasx092/main_GBS/190910_samtools
 
 plink --vcf SeventeenLargestMerged.vcf.gz --double-id --maf 0.05 --allow-extra-chr --recode --out myplink
+
+# PCA calculation
+plink --pca --file myplink --allow-extra-chr -out myplink_pca
