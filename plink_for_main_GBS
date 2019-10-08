@@ -1,0 +1,6 @@
+# 8 October 2019
+# The purpose of this code is to use plink for creation of a PCA plot for the main GBS project and to make the SNP able
+
+# WD: /home/jkimball/haasx092/main_GBS/190910_samtools
+
+plink --vcf SeventeenLargestMerged.vcf.gz --double-id --maf 0.05 --allow-extra-chr --recode --out myplink
