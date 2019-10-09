@@ -58,3 +58,35 @@ dev.off()
 
 # Save the data
 save(x, y, z, v, percentVar, file="191008_main_GBS_pca_from_plink.Rdata")
+
+# Started here on 9 October 2019
+# Not simply overwriting the above section because although it is largely the same, I want to preserve it since I use
+# the data saved in the above section, but import a slightly different version of the sample key (colored differently).
+
+# Load required package
+library(data.table)
+
+# Load data
+load("191008_main_GBS_pca_from_plink.Rdata")
+
+# Load in sample key (more identities of breedling lines are now known)
+y <- fread("~/main_GBS/191008_main_GBS_sample_key.csv")
+
+# Change column names to assist with merging data tables...
+setnames(y, c("ID", "sample", "class", "col"))
+
+# Remove a sample from data table y that is missing from x
+y[sample != "Sample_0199"] -> y
+
+# Merge data tables
+x[y, on="sample"] -> z
+
+# Make the plot
+pdf("191009_main_GBS_PCA_Itasca_and_JohnsonDoraF4.pdf", height=10, width=10)
+z[, plot(PC1, PC2, xlab=paste0("PC1: ", round(percentVar[1]*100), "%"), ylab=paste0("PC2: ", round(percentVar[2]*100), "%"), main="main GBS", pch=16, col=col, cex=1.5, yaxt='n')]
+axis(2, las=1)
+legend("bottomright", legend=c("Itasca-C12", "Itasca Haploid", "Johnson x Dora F4", "Z. latifolia", "Z. aquatica", "other"), pch=16, col=c(1,2,3,4,7,8), cex=1.5)
+dev.off()
+
+# Save data
+save(x, y, z, v, percentVar, file="191009_main_GBS_pca_from_plink.Rdata")
