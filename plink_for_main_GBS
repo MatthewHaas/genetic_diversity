@@ -7,3 +7,40 @@ plink --vcf SeventeenLargestMerged.vcf.gz --double-id --maf 0.05 --allow-extra-c
 
 # PCA calculation
 plink --pca --file myplink --allow-extra-chr -out myplink_pca
+
+
+module load R/3.6.0
+# Switch to R
+
+# Load required package.
+library(data.table)
+
+# Read in eigenvectors to plot PCA
+x <- fread("myplink_pca.eigenvec")
+
+
+# Remove column 2 (redundant)
+x[, V2 := NULL]
+
+# set column names
+setnames(x, c("sample", "PC1", "PC2", "PC3", "PC4", "PC5", "PC6", "PC7", "PC8", "PC9", "PC10", "PC11", "PC12", "PC13",
+			"PC14", "PC15", "PC16", "PC17", "PC18", "PC19", "PC20"))
+
+# Read in eigenvalues (to determine % variation explained by each PC)
+v <- fread("myplink_pca.eigenval")
+
+
+# Calculate percent variation (note: I didn't bother renaming the columns to something informative since there is only one)
+percentVar = c(PC1=v[1, V1] / sum(v$V1), PC2=v[2, V1] / sum(v$V1))
+
+
+# Make the plot
+pdf("out.pdf", height=12, width=16)
+x[, plot(PC1, PC2, xlab=paste0("PC1: ", round(percentVar[1]*100), "%"), ylab=paste0("PC2: ", round(percentVar[2]*100), "%"), main="0.5M reads", pch=16, col="grey", cex=1.5, yaxt='n')]
+axis(2, las=1)
+par(oma=c(0,0,0,0))
+#legend("topright", inset=c(0.4,0), legend=c("14S-PS", "PM3E", "Itasca-C12", "Garfield Lake", "Necktie River", "Upper Rice Lake"), pch=c(4, 17, 15, 8, 16, 18), col=c(1,1,1,2,2,2), cex=1.5, bty='n')
+dev.off()
+
+# Save data
+save(x, v, percentVar, file="191008_main_GBS_pca_from_plink.Rdata")
