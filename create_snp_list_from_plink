@@ -1,0 +1,10 @@
+# 9 October 2019
+# The purpose of this code is to generate a SNP table. 
+# Works, but SNP table is empty? Even though it uses the same data that generates PCA plots show genetic differentiation
+# WD: /home/jkimball/haasx092/main_GBS/190910_samtools
+
+# Make a bed file for use in writing the SNP list (next step)
+plink --file myplink --allow-extra-chr --make-bed
+
+# Make the SNP list
+plink --bfile plink --maf 0.05 --geno 0.05 --allow-extra-chr --write-snplist
