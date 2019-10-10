@@ -1,0 +1,29 @@
+# 10 October 2019
+# WD: /home/jkimball/haasx092/main_GBS
+# The purpose of this code is to try a different option for bcftools call 
+# (consensus--the older option-- vs multiallelic--the newer one). This is
+# part of the troubleshooting to figure out why there are so many NAs in
+# the SNP data.
+
+
+module load samtools
+module load bcftools
+module load parallel
+module load htslib
+
+bams="190919_sorted_bams_partial.txt"
+prefix="191010_samtools"
+parallel_samtools_processes=15
+ref="/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta"
+
+mkdir -p $prefix
+cut -f 1 ${ref}.fai \
+ | parallel --will-cite -I'{}' -j $parallel_samtools_processes \
+  \(samtools mpileup -q 60 -gDVu \
+  -b $bams \
+  -r '{}' \
+  -f ${ref} \
+  \| bcftools call -cv \
+  \| bgzip -c \
+  \> $prefix/${prefix}_'{}'.vcf.gz \) \
+  2\> $prefix/${prefix}_'{}'.err
