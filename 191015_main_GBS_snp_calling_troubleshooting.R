@@ -49,4 +49,4 @@ zz[sum < 70] -> a
 write.csv(a, file="191015_main_GBS_SNPs_200_samples_DP5_filtered.csv", row.names=FALSE, col.names=TRUE)
 
 # Save data
-save(a, x, y, z, zz,  file="191015_main_GBS_filtered_SNPs.Rdata")
+save(a, x, y, z, zz,  file="191015_main_GBS_filtered_SNPs.Rdata") 
