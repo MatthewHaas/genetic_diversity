@@ -31,4 +31,4 @@ a <- as.data.table(a)
 write.csv(a, file="190913_snp_calling_from_190607_samtools_pilot_GBS.csv")
 
 # Save data
-save(a,x,y,z, file="190913_snp_calling_from_190607_samtools_pilot_GBS.csv")
+save(a,x,y,z, file="190913_snp_calling_from_190607_samtools_pilot_GBS.Rdata")
