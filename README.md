@@ -118,3 +118,13 @@ Input file:
   
 Output file:
   - 190729_getting_SNP_stats_for_field_day.Rdata
+
+## snp_density_from_pilot_for_circos
+This file contains R code that finds SNP density for each scaffold to add to the circos plot that I generated to visualize links between the _Zizania palustris_ and _Oryza sativa_ genomes. It works, but could still use improvement. The biggest area for improvement would be to ensure that chromosome/scaffold lengths match up between circos input text files.
+
+Input file:
+  - 190627_snp_filtering_q60.Rdata
+  
+Output files:
+  - 190725_snp_density_for_circos.Rdata
+  - Many other small text files (e.g., scf1_snp_density, scf3_snp_density, etc ) that are used as input for circos. More details can be found in the circos repository (https://github.com/MatthewHaas/circos).
