@@ -103,3 +103,18 @@ Input file:
 
 Output file:
   - The plots (190609_pilot_GBS_samples_dv-dp_ratio.pdf)
+  
+## poppr_installation.R
+This shows the steps that I took to install the R package "poppr" (https://cran.r-project.org/web/packages/poppr/index.html). It was more complicate than a standard R package. For the same reason, every time the package is used in R, the same software packages need to be re-loaded. I haven't needed to run this specific code again since I installed it the first time.
+
+## run_bwa.sh
+This is simply partial generic command-line code that runs the burrows-wheeler aligner (bwa; http://bio-bwa.sourceforge.net/). It is in a format that can be submitted to the Minnesota Supercomputing Institute (MSI) batch submission system. The basic code can also be found in the pilot GBS (**190515_cutadapt_pilot_GBS**) or main GBS (**main_GBS_pipeline**) files.
+
+## snp_characteristics_from_pilot_study.R
+This is R code that I used to find basic SNP characteristics from the pilot study to be presented at the Cultivated Wild Rice Field Day in Grand Rapids, MN on 1 August 2019.
+
+Input file:
+  - 190627_snp_filtering_q60.Rdata
+  
+Output file:
+  - 190729_getting_SNP_stats_for_field_day.Rdata
