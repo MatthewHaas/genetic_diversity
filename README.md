@@ -66,4 +66,40 @@ The purpose of this code was to set up the directory structure for **main_GBS**.
 
 The code then makes symbolic links (symlinks) to the fastq files in the directory _/home/jkimball/haasx092/**main_GBS**_. The fastq file names generally begin with a pattern like "18NS###" or "18BL##" with NS standing for "natural stand" and BL standing for "breeding line". We have information on where these come from, but to make computations easier (especially pattern matching), I wanted to use a number that was in the middle of the filename (S##). Leading zeros were added to the sample numbers so that all sample numbers would have 4 digits. This was done to make sorting of samples easier (so that the order would be: 1, 2, 3, etc and not 1, 10, 100).
 
-A fle (paths_to_gbs_data_check.txt) was also created to verify that the code worked. The result is that it worked as expected.
+A file (paths_to_gbs_data_check.txt) was also created to verify that the code worked. The result is that it worked as expected.
+
+## main_GBS_pipeline
+This code is very similar to the file **190515_cutadapt_pilot_GBS** but is a better reflection of what was done for the **main_GBS** analysis.
+
+## main_GBS_snp_calling
+This code is part of the main_GBS SNP calling pipeline and is also very similar to code found in **190515_cutadapt_pilot_GBS**. The main difference is that it is just a subset of that code. It contains additional R code that is used to create a PCA plot directly from the VCF files. This approach did not work as well as it did for the pilot GBS project. I assume the reason is the huge volume of additional data. It caused R to crash.
+
+## pca_from_vcf.R
+This is R code that generates a PCA plot directly from VCF files. It was first used for the pilot GBS project and it worked very well for those samples. The seventeen largest VCF files were concatenated into a single VCF file called **seventeen_largest_vcfs_merged.vcf.gz** using bcftools concat. That file was used as input to generate:
+  - The PCA plot (190705_pilot_GBS_PCA.pdf); and
+  - The Rdata file (190705_pca_from_vcfs.Rdata)
+  
+Please note that multiple different modules are required to be loaded on the command line before beginning the R session.
+
+## plink_for_main_GBS
+This file contains command line code that used plink to generate a PCA plot for the main GBS project.
+
+It uses the seventeen largest VCFs (as was done with the pilot study) but these data came from the directory _190910_samtools_ which was the first attempt at the using the GBS pipeline for the main GBS dataset. The code was run in that directory.
+
+Input files include:
+  - Eigenvalue and eigenvector files made by plink (myplink_pca.eigenval & myplink_pca.eigenvec);
+  - The sample key (191008_main_GBS_sample_key.csv)
+  
+Output files include:
+  - One PCA plot (191008_main_GBS_pca_from_plink.pdf);
+  - Another PCA plot, colored according to file name (191009_main_GBS_PCA_Itasca_and_JohnsonDoraF4.pdf);
+  - The Rdata files (191008_main_GBS_pca_from_plink.Rdata & 191009_main_GBS_pca_from_plink.Rdata)
+  
+## plotting_dv-dp_ratios.r
+This is R code that plots the DV/DP ratio for each sample in the pilot study. DV/DP stands for "depth of the variant/total depth". The purpose of the code was to verify the diploid nature of _Zizania palustris_ given that the genome size came back much larger than expected.
+
+Input file:
+  - An R data file containing filtered SNP data (190607_snp_filtering.Rdata)
+
+Output file:
+  - The plots (190609_pilot_GBS_samples_dv-dp_ratio.pdf)
