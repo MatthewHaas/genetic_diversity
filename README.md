@@ -48,3 +48,22 @@ This is R code that is also part of the troubleshooting file section above. It r
   **Example output files:**
   (1) 191015_main_GBS_SNPs_200_samples_DP5_filtered.csv
   (2) 191015_main_GBS_filtered_SNPs.Rdata
+  
+## GDS_from_VCF
+The purpose of this code is to generate a GDS (Genomic Data Structure) file from VCF files. GDS files are used with seqArray and SNPRelate to manage large genomic datasets.
+
+## create_snp_list_from_plink
+The purpose of this code is to use plink (http://zzz.bwh.harvard.edu/plink/) to create a SNP list (table).
+
+## gen_call.awk
+This is code from Martin Mascher to extract SNP data from VCF files. It is outdated/was replaced with normalize.awk and shouldn't be used anymore.
+
+## main_GBS_directory_setup.txt
+The purpose of this code was to set up the directory structure for **main_GBS**. First, it creates a text file with the paths to the fastq files in the UMGC directory (_/home/jkimball/data_release/umgc/novaseq_). Please note that the UMGC released the GBS data in two waves. One set is in the directory **190730_A00223_0174_BHCN5GDRXX/Kimall_Project_002** while the other is in the directory **190819_A00223_0191_AHF3V3DRXX/Kimball_Project_002**.
+  - The pilot data (**Kimball_Project_001**) are in a different directory because they were sequenced using the **NextSeq** platform. That path is: **181030_NB551164_0099_AHVM22BGX7/Kimball_Project_001**
+  - The RNA-seq data are part of **Kimball_Project_003** and can be found in **190828_A00223_0198_BHCMFVDRXX/Kimball_Project_003**
+  - _Please note that these are **relative** paths and assume you are already in the directory /home/jkimball/data_release/umgc/novaseq or /home/jkimball/data_release/umgc/nextseq (in the case of the pilot study)_.
+
+The code then makes symbolic links (symlinks) to the fastq files in the directory _/home/jkimball/haasx092/**main_GBS**_. The fastq file names generally begin with a pattern like "18NS###" or "18BL##" with NS standing for "natural stand" and BL standing for "breeding line". We have information on where these come from, but to make computations easier (especially pattern matching), I wanted to use a number that was in the middle of the filename (S##). Leading zeros were added to the sample numbers so that all sample numbers would have 4 digits. This was done to make sorting of samples easier (so that the order would be: 1, 2, 3, etc and not 1, 10, 100).
+
+A fle (paths_to_gbs_data_check.txt) was also created to verify that the code worked. The result is that it worked as expected.
