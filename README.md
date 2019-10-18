@@ -128,3 +128,15 @@ Input file:
 Output files:
   - 190725_snp_density_for_circos.Rdata
   - Many other small text files (e.g., scf1_snp_density, scf3_snp_density, etc ) that are used as input for circos. More details can be found in the circos repository (https://github.com/MatthewHaas/circos).
+
+
+## snp_filtering.R
+This is R code that can be used for filtering SNPs. As input, it takes the tab-separated file (TSV) that is created at the end of the GBS pipeline (after using normalize.awk). In this case, it is used to filter SNPs with a minimum quality score of 40 and a minimum read depth of 50. It should be noted that the depth of 50 is far too strict for our GBS pipeline (as a depth of 10 was also too strict..a depth of 5 is sufficient). This is not surprising given that each sample was only sequenced to a depth of 2 million.
+
+Basic elements of this code (reading in data, giving columns meaningful names, and simplifying the sample names can be re-used for the pipeline).
+
+Input file:
+  - 190607_normalize.tsv
+  
+Output file:
+  - 190607_snp_filtering.Rdata
