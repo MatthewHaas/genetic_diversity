@@ -70,17 +70,17 @@ dcast(scf1065, scaffold + position ~ sample, value.var="GT") -> scf1065
 scf1065 <- as.data.table(scf1065)
 
 # Count the number of "NA" occurrences per row
-# These (well, scf1064) cause R to crash
-#scf1062[, sum := apply(scf1062, MARGIN=1, function(x) sum(is.na(x)))]
+# scf1064 causes R to crash
+scf1062[, sum := apply(scf1062, MARGIN=1, function(x) sum(is.na(x)))]
 #scf1063[, sum := apply(scf1063, MARGIN=1, function(x) sum(is.na(x)))]
-#scf1064[, sum := apply(scf1064, MARGIN=1, function(x) sum(is.na(x)))]
-#scf1065[, sum := apply(scf1065, MARGIN=1, function(x) sum(is.na(x)))]
+scf1064[, sum := apply(scf1064, MARGIN=1, function(x) sum(is.na(x)))]
+scf1065[, sum := apply(scf1065, MARGIN=1, function(x) sum(is.na(x)))]
 
 # Select rows (SNPs) with fewer than 158 (15%) missing data points (# of samples missing that SNP)
-#scf1062[sum < 158] -> scf1062
+scf1062[sum < 158] -> scf1062
 #scf1063[sum < 158] -> scf1063
-#scf1064[sum < 158] -> scf1064
-#scf1065[sum < 158] -> scf1065
+scf1064[sum < 158] -> scf1064
+scf1065[sum < 158] -> scf1065
 
 # Save data
 save(scf1062, scf1063, scf1064, scf1065, file="191024_main_GBS_filtered_slim_4.Rdata")
