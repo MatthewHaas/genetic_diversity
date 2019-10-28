@@ -1,5 +1,8 @@
 # 28 October 2019
 # WD: /home/jkimball/haasx092/main_GBS/191021_samtools
+# The purpose of this code is to improve the PCA plot created on 22 October.
+# The last version of this script was 191022_main_gbs_old_lake_and_dovetail_samples_removed.R.
+# Some incorrectly labeled samples are now correct and aquatica samples are now triangles rather than circles.
 
 # Load required package
 library(data.table)
