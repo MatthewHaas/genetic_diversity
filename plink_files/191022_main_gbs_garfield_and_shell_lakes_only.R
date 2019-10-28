@@ -42,8 +42,12 @@ percentVar = c(PC1=v[1, V1] / sum(v$V1), PC2=v[2, V1] / sum(v$V1), PC3=v[3, V1] 
 # Merge data tables
 x[y, on="sample"] -> z
 
-# Group by class 
-z[, col := .GRP, by="simplified"]
+# Assign colors (doing it this way rather than with z[, col := .GRP, by="simplified] so I can make the colors in a specific order)
+z[simplified == "Garfield Lake", col := 1]
+z[simplified == "Garfield Lake Old", col := 2]
+z[simplified == "Shell Lake", col := 3]
+z[simplified == "Shell Lake Old", col := 4]
+
 
 pdf("191022_main_gbs_garfield_and_shell_lakes_only.pdf", height=12, width=16)
 z[, plot(PC1, PC2, xlab=paste0("PC1: ", round(percentVar[1]*100), "%"), ylab=paste0("PC2: ", round(percentVar[2]*100), "%"), main="main GBS", pch=16, col=col, cex=1.5, yaxt='n')]
