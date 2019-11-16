@@ -6,7 +6,7 @@ source('/home/jkimball/haasx092/main_GBS/GBS_R_functions.R')
 library(SNPRelate)
 library(gdsfmt)
 
-gds.fn <- 'tmp.gds'
+gds.fn <- 'snp_relate_practice.gds'
 
 seqOpen(gds.fn)-> gds
 
@@ -14,4 +14,6 @@ seqOpen(gds.fn)-> gds
 
 g <- as.data.table(g)
 
-save(g, file="191115_snp_relate_practice")
+write.csv(g, file="191115_snp_relate_practice.csv", row.names=TRUE, col.names=TRUE)
+
+save(g, file="191115_snp_relate_practice.Rdata")
