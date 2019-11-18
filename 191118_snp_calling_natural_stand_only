@@ -1,0 +1,25 @@
+# 18 November 2019
+# WD: /home/jkimball/haasx092/main_GBS
+# Purpose of this code is to run SNP calling for current/modern natural stands only.. No breeding lines, no old samples, no pilot study samples.
+
+module load samtools
+module load bcftools
+module load htslib
+module load parallel
+
+bams='/home/jkimball/haasx092/main_GBS/present_natural_stands_only.txt'
+prefix="191118_samtools"
+parallel_samtools_processes=15
+ref="/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta"
+
+mkdir -p $prefix
+cut -f 1 ${ref}.fai \
+ | parallel --will-cite -I'{}' -j $parallel_samtools_processes \
+  \(samtools mpileup -q 50 -gDVu \
+  -b $bams \
+  -r '{}' \
+  -f ${ref} \
+  \| bcftools call -mv \
+  \| bgzip -c \
+  \> $prefix/${prefix}_'{}'.vcf.gz \) \
+  2\> $prefix/${prefix}_'{}'.err
