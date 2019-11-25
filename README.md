@@ -1,8 +1,17 @@
 # gbs_pipeline
 This repository contains all of the scripts that were used to develop the genotyping-by-sequencing (GBS) pipeline for the wild rice (_Zizania palustris_ L.) breeding and conservation program at the University of Minnesota.
 
+## R_CMD_BATCH (directory)
+These scripts were attempts to process R code requiring significant memory to run without crashing.
+
 ## awk_filtering_scripts (directory)
 These scripts are short and simple awk commands to pre-filter the tab-separated (TSV) files that contain the output of the normalize.awk script. The normalize.awk script can be found in this repository and is used to extract SNP information from the VCF files.
+
+## pairwise_distance (directory)
+These scripts are for creating pairwise distance tables in R
+
+## plink_files (directory)
+These scripts are for using plink to process/analyze large-scale GBS SNP data
 
 ## troubleshooting (directory)
 This directory contains scripts that were used to troubleshoot the development of the **main_GBS** pipeline
