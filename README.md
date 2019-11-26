@@ -134,6 +134,9 @@ Output file:
 ## scythe_mpileup.sh
 This is a script written with the help of Tom Kono to run the samtools mpileup part of the GBS pipeline in a a better, more efficient way. When the samtools mpileup part of the pipeline is entered directly on the command line and subsequently put into the background, each samtools process runs for ~15 minutes before being killed by the server. **I think this is the ultimate cause of the low number of SNPs identified** When I tried to turn the script (as it was) into a batch submission script for MSI, I received an error (argument too long) which was caused by parallel, but when I took parallel out, the region option (-r '{}') was not recognized. This script has the same basic skeleton as before, but was reworked so that parallel could work with it. Otherwise (with the old script--parallel and the -r '{}' option removed), all of the variants are written to a single VCF file and takes longer than 24 hours to finish.. So scythe_mpileup.sh represents a major improvement.
 
+## scythe_mpileup_q50.sh
+Same scythe mpileup script as above, but the input files (bams) contain the whole GBS set (minus Johnson/Dora and Dovetail samples). The mapping quality was also set to 50 rather than 40. Files are saved to /home/jkimball/haasx092/main_GBS/191126_samtools.
+
 ## snp_density_from_pilot_for_circos
 This file contains R code that finds SNP density for each scaffold to add to the circos plot that I generated to visualize links between the _Zizania palustris_ and _Oryza sativa_ genomes. It works, but could still use improvement. The biggest area for improvement would be to ensure that chromosome/scaffold lengths match up between circos input text files.
 
