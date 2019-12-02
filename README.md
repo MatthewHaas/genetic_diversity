@@ -4,6 +4,9 @@ This repository contains all of the scripts that were used to develop the genoty
 ## R_CMD_BATCH (directory)
 These scripts were attempts to process R code requiring significant memory to run without crashing.
 
+## complete_gbs_set (directory)
+These scripts were used to process the gbs data from the natural stands + breeding lines material (no Johnson/Dora population or Dovetail lines). Currently, the scripts pick up from VCF files (samtools mpileup & bcftools call script has already been run). The tsv file created with normalize.awk was 129G in size and one of the scripts here filters based on read depth (minimum of 5 reads).
+
 ## awk_filtering_scripts (directory)
 These scripts are short and simple awk commands to pre-filter the tab-separated (TSV) files that contain the output of the normalize.awk script. The normalize.awk script can be found in this repository and is used to extract SNP information from the VCF files.
 
