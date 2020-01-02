@@ -50,34 +50,35 @@ z[simplified == "Shell Lake Old", col := 4]
 
 
 #pdf("191022_main_gbs_garfield_and_shell_lakes_only.pdf", height=12, width=16)
-pdf("191028_main_gbs_garfield_and_shell_lakes_only.pdf", height=12, width=16)
+#pdf("191028_main_gbs_garfield_and_shell_lakes_only.pdf", height=12, width=16)
+pdf("200102_main_gbs_garfield_and_shell_lakes_only.pdf", height=12, width=16)
 z[, plot(PC1, PC2, xlab=paste0("PC1: ", round(percentVar[1]*100), "%"), ylab=paste0("PC2: ", round(percentVar[2]*100), "%"), pch=16, col=col, cex=1.5, yaxt='n')]
 axis(2, las=1)
 
 par(oma=c(0,0,0,0))
-legend("bottomright", legend=c("Garfield Lake", "Garfield Lake Old", "Shell Lake", "Shell Lake Old"), pch=16, col=c(1:4), cex=1.5)
+legend("bottomright", legend=c("Garfield Lake 2018", "Garfield Lake 2010", "Shell Lake 2018", "Shell Lake 2010"), pch=16, col=c(1:4), cex=1.5)
 
 z[, plot(PC2, PC3, xlab=paste0("PC2: ", round(percentVar[2]*100), "%"), ylab=paste0("PC3: ", round(percentVar[3]*100), "%"), pch=16, col=col, cex=1.5, yaxt='n')]
 axis(2, las=1)
 
 par(oma=c(0,0,0,0))
-legend("bottomright", legend=c("Garfield Lake", "Garfield Lake Old", "Shell Lake", "Shell Lake Old"), pch=16, col=c(1:4), cex=1.5)
+legend("bottomright", legend=c("Garfield Lake 2018", "Garfield Lake 2010", "Shell Lake 2018", "Shell Lake 2010"), pch=16, col=c(1:4), cex=1.5)
 
 z[, plot(PC3, PC4, xlab=paste0("PC3: ", round(percentVar[3]*100), "%"), ylab=paste0("PC4: ", round(percentVar[4]*100), "%"), pch=16, col=col, cex=1.5, yaxt='n')]
 axis(2, las=1)
 
 par(oma=c(0,0,0,0))
-legend("bottomright", legend=c("Garfield Lake", "Garfield Lake Old", "Shell Lake", "Shell Lake Old"), pch=16, col=c(1:4), cex=1.5)
+legend("bottomright", legend=c("Garfield Lake 2018", "Garfield Lake 2010", "Shell Lake 2018", "Shell Lake 2010"), pch=16, col=c(1:4), cex=1.5)
 
 z[, plot(PC4, PC5, xlab=paste0("PC4: ", round(percentVar[4]*100), "%"), ylab=paste0("PC5: ", round(percentVar[5]*100), "%"), pch=16, col=col, cex=1.5, yaxt='n')]
 axis(2, las=1)
 
 par(oma=c(0,0,0,0))
-legend("bottomright", legend=c("Garfield Lake", "Garfield Lake Old", "Shell Lake", "Shell Lake Old"), pch=16, col=c(1:4), cex=1.5)
+legend("bottomright", legend=c("Garfield Lake 2018", "Garfield Lake 2010", "Shell Lake 2018", "Shell Lake 2010"), pch=16, col=c(1:4), cex=1.5)
 
 z[, plot(PC5, PC6, xlab=paste0("PC5: ", round(percentVar[5]*100), "%"), ylab=paste0("PC6: ", round(percentVar[6]*100), "%"), pch=16, col=col, cex=1.5, yaxt='n')]
 axis(2, las=1)
 
 par(oma=c(0,0,0,0))
-legend("bottomright", legend=c("Garfield Lake", "Garfield Lake Old", "Shell Lake", "Shell Lake Old"), pch=16, col=c(1:4), cex=1.5)
+legend("bottomright", legend=c("Garfield Lake 2018", "Garfield Lake 2010", "Shell Lake 2018", "Shell Lake 2010"), pch=16, col=c(1:4), cex=1.5)
 dev.off()
