@@ -13,6 +13,9 @@ These scripts are short and simple awk commands to pre-filter the tab-separated 
 ## pairwise_distance (directory)
 These scripts are for creating pairwise distance tables in R
 
+## pca_from_poppr (directory)
+These scripts are for creating a PCA plot with the R package poppr. It was created when I began investigations into low Fst values (0.03-0.05) which were calculated using VCFtools. The plots look similar to the one created using PLINK, but explain less of the variation. That matches the low Fst values, but based on previous research we expect an Fst value closer to 0.3, so these files should ultimately be able to validate the PLINK results.
+
 ## plink_files (directory)
 These scripts are for using plink to process/analyze large-scale GBS SNP data
 
