@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#PBS -l nodes=1:ppn=8,mem=15g,walltime=24:00:00
+#PBS -l nodes=1:ppn=8,mem=15g,walltime=1:00:00
 #PBS -m abe
 #PBS -M haasx092@umn.edu
 #PBS -e filtering_vcf_with_vcftools.err
@@ -12,5 +12,5 @@
 
 cd /home/jkimball/haasx092/main_GBS/191021_samtools
 
-~/vcftools/bin/vcftools --gzvcf seventeen_largest_vcfs_merged.vcf.gz --maf 0.05 --max-missing 0.50 --recode
-mv out.recode.vcf largest_scaffolds_max_missing_half.vcf
+~/vcftools/bin/vcftools --gzvcf seventeen_largest_vcfs_merged.vcf.gz --maf 0.05 --max-missing 0.75 --recode
+mv out.recode.vcf largest_scaffolds_max_missing_three_fourths.vcf
