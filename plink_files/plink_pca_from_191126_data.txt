@@ -1,0 +1,116 @@
+# 22 January 2020
+# WD: /home/jkimball/haasx092/main_GBS/191126_samtools
+# This code is for making a PLINK PCA plot using data from 26 November 2019.
+# Still trying to find the reason for the discrepancy between PLINK and poppr PCA plots...
+# Major difference between this plot and the one created from 21 October 2019 is where Z. aquatica clusters.
+# According to these plots, Z. aquatica is much more closely related to the Z. palustris than the 21 October 2019 plots.
+
+# Load plink
+module load plink
+
+# Convert concatenated VCF file to a plink object
+plink --vcf largest_scaffolds_recoded.vcf.gz --double-id --maf 0.05 --allow-extra-chr --recode --out 200122_myplink
+
+# Use plink PCA function
+# Currently the VCF file has 5,275 variants and 919 individuals
+plink --pca --file 200122_myplink --allow-extra-chr -out 200122_myplink_pca
+
+# Now, switch to R
+module load R/3.6.0
+
+# Load required package.
+library(data.table)
+
+# Read in eigenvectors to plot PCA
+x <- fread("200122_myplink_pca.eigenvec")
+
+# Remove column 2 (redundant)
+x[, V2 := NULL]
+
+# Load in sample key
+y <- fread("~/main_GBS/191021_main_GBS_sample_key.csv")
+
+# set column names
+setnames(x, c("sample", "PC1", "PC2", "PC3", "PC4", "PC5", "PC6", "PC7", "PC8", "PC9", "PC10", "PC11", "PC12", "PC13",
+			"PC14", "PC15", "PC16", "PC17", "PC18", "PC19", "PC20"))
+
+setnames(y, c("sample", "ID", "simplified", "extended", "class"))
+
+# Shorten sample name (change from directory path format) so that it can be merged with data table y
+x[, sample := sub("/.+$", "", sample)]
+
+# Read in eigenvalues (to determine % variation explained by each PC)
+v <- fread("200122_myplink_pca.eigenval")
+
+
+# Calculate percent variation (note: I didn't bother renaming the columns to something informative since there is only one)
+percentVar = c(PC1=v[1, V1] / sum(v$V1), PC2=v[2, V1] / sum(v$V1), PC3=v[3, V1] / sum(v$V1), PC4=v[4, V1] / sum(v$V1), PC5=v[5, V1] / sum(v$V1), PC6=v[6, V1] / sum(v$V1), PC7=v[7, V1] / sum(v$V1), PC8=v[8, V1] / sum(v$V1))
+
+# Merge data tables
+x[y, on="sample"] -> z
+
+# Pick colors for individual natural stand accessions 
+z[simplified == "Aquatica_species", col := "red3"]
+z[simplified == "Bass Lake", col := "red"]
+z[simplified == "Big Fork River", col := "orange3"]
+z[simplified == "Clearwater River", col := "orange"]
+z[simplified == "Dahler Lake", col := "yellow3"]
+z[simplified == "Decker Lake", col := "yellow"]
+z[simplified == "Garfield Lake", col := "green3"]
+#z[simplified == "Latifolia", col := "black"]
+z[simplified == "Mud Hen Lake", col := "green"]
+z[simplified == "Necktie River", col := "blue4"]
+z[simplified == "Ottertail River", col := "blue"]
+z[simplified == "Phantom Lake", col := "violetred3"]
+z[simplified == "Plantagenet", col := "violet"]
+z[simplified == "Shell Lake", col := "purple4"]
+z[simplified == "Upper Rice Lake", col := "purple"]
+
+# And color breeding lines grey
+z[class == "Breeding line", col := "grey"]
+
+# Add symbols to make some lines stand out better (circles-16 for most, triangles-17 for others)
+z[, pch := 16]
+z[simplified == "Aquatica_species" | simplified == "AquaticaSpecies", pch := 17]
+
+# Make the plot
+pdf("200122_main_gbs_from_191126_data.pdf", height=12, width=16)
+z[, plot(PC1, PC2, xlab=paste0("PC1: ", round(percentVar[1]*100), "%"), ylab=paste0("PC2: ", round(percentVar[2]*100), "%"), main="main GBS", pch=pch, col=col, cex=1.5, yaxt='n')]
+axis(2, las=1)
+
+par(oma=c(0,0,0,0))
+legend("bottomright", legend=c("Aquatica species", "Bass Lake", "Big Fork River", "Clearwater River", "Dahler Lake", "Decker Lake", "Garfield Lake", "Mud Hen Lake", "Necktie River", "Ottertail River", "Phantom Lake", "Plantagenet", "Shell Lake", "Upper Rice Lake", "Breeding Line"), pch=c(17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16), col=c("red3", "red", "orange3", "orange", "yellow3", "yellow", "green3", "green", "blue4", "blue", "violetred3", "violet", "purple4", "purple", "grey"), ncol=3, cex=1.2)
+
+z[, plot(PC2, PC3, xlab=paste0("PC2: ", round(percentVar[2]*100), "%"), ylab=paste0("PC3: ", round(percentVar[3]*100), "%"), main="main GBS", pch=pch, col=col, cex=1.5, yaxt='n')]
+axis(2, las=1)
+
+par(oma=c(0,0,0,0))
+legend("bottomleft", legend=c("Aquatica species", "Bass Lake", "Big Fork River", "Clearwater River", "Dahler Lake", "Decker Lake", "Garfield Lake", "Mud Hen Lake", "Necktie River", "Ottertail River", "Phantom Lake", "Plantagenet", "Shell Lake", "Upper Rice Lake", "Breeding Line"), pch=c(17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16), col=c("red3", "red", "orange3", "orange", "yellow3", "yellow", "green3", "green", "blue4", "blue", "violetred3", "violet", "purple4", "purple", "grey"), ncol=3, cex=1.2)
+
+z[, plot(PC3, PC4, xlab=paste0("PC3: ", round(percentVar[3]*100), "%"), ylab=paste0("PC4: ", round(percentVar[4]*100), "%"), main="main GBS", pch=pch, col=col, cex=1.5, yaxt='n')]
+axis(2, las=1)
+
+par(oma=c(0,0,0,0))
+legend("topleft", legend=c("Aquatica species", "Bass Lake", "Big Fork River", "Clearwater River", "Dahler Lake", "Decker Lake", "Garfield Lake", "Mud Hen Lake", "Necktie River", "Ottertail River", "Phantom Lake", "Plantagenet", "Shell Lake", "Upper Rice Lake", "Breeding Line"), pch=c(17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16), col=c("red3", "red", "orange3", "orange", "yellow3", "yellow", "green3", "green", "blue4", "blue", "violetred3", "violet", "purple4", "purple", "grey"), ncol=3, cex=1.2)
+
+z[, plot(PC4, PC5, xlab=paste0("PC4: ", round(percentVar[4]*100), "%"), ylab=paste0("PC5: ", round(percentVar[5]*100), "%"), main="main GBS", pch=pch, col=col, cex=1.5, yaxt='n')]
+axis(2, las=1)
+
+par(oma=c(0,0,0,0))
+legend("topleft", legend=c("Aquatica species", "Bass Lake", "Big Fork River", "Clearwater River", "Dahler Lake", "Decker Lake", "Garfield Lake", "Mud Hen Lake", "Necktie River", "Ottertail River", "Phantom Lake", "Plantagenet", "Shell Lake", "Upper Rice Lake", "Breeding Line"), pch=c(17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16), col=c("red3", "red", "orange3", "orange", "yellow3", "yellow", "green3", "green", "blue4", "blue", "violetred3", "violet", "purple4", "purple", "grey"), ncol=3, cex=1.2)
+
+z[, plot(PC5, PC6, xlab=paste0("PC5: ", round(percentVar[5]*100), "%"), ylab=paste0("PC6: ", round(percentVar[6]*100), "%"), main="main GBS", pch=pch, col=col, cex=1.5, yaxt='n')]
+axis(2, las=1)
+
+par(oma=c(0,0,0,0))
+legend("topright", legend=c("Aquatica species", "Bass Lake", "Big Fork River", "Clearwater River", "Dahler Lake", "Decker Lake", "Garfield Lake", "Mud Hen Lake", "Necktie River", "Ottertail River", "Phantom Lake", "Plantagenet", "Shell Lake", "Upper Rice Lake", "Breeding Line"), pch=c(17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16), col=c("red3", "red", "orange3", "orange", "yellow3", "yellow", "green3", "green", "blue4", "blue", "violetred3", "violet", "purple4", "purple", "grey"), ncol=3, cex=1.2)
+
+z[, plot(PC6, PC7, xlab=paste0("PC6: ", round(percentVar[6]*100), "%"), ylab=paste0("PC7: ", round(percentVar[7]*100), "%"), main="main GBS", pch=pch, col=col, cex=1.5, yaxt='n')]
+axis(2, las=1)
+
+par(oma=c(0,0,0,0))
+legend("topright", legend=c("Aquatica species", "Bass Lake", "Big Fork River", "Clearwater River", "Dahler Lake", "Decker Lake", "Garfield Lake", "Mud Hen Lake", "Necktie River", "Ottertail River", "Phantom Lake", "Plantagenet", "Shell Lake", "Upper Rice Lake", "Breeding Line"), pch=c(17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16), col=c("red3", "red", "orange3", "orange", "yellow3", "yellow", "green3", "green", "blue4", "blue", "violetred3", "violet", "purple4", "purple", "grey"), ncol=3, cex=1.2)
+dev.off()
+
+# Save data
+save(v, x, y, z, percentVar, file="200122_main_gbs_from_191126_data.Rdata")
