@@ -66,7 +66,7 @@ z[class == "Breeding line", col := "grey"]
 z[, pch := 16]
 z[simplified == "Aquatica_species" | simplified == "AquaticaSpecies", pch := 17]
 
-pdf("200121_main_gbs_natural_stands_no_old_samples_dovetial_or_latifolia.pdf", height=12, width=16)
+pdf("200121_main_gbs_natural_stands_no_old_samples_dovetail_or_latifolia.pdf", height=12, width=16)
 z[, plot(PC1, PC2, xlab=paste0("PC1: ", round(percentVar[1]*100), "%"), ylab=paste0("PC2: ", round(percentVar[2]*100), "%"), main="main GBS", pch=pch, col=col, cex=1.5, yaxt='n')]
 axis(2, las=1)
 
