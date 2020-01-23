@@ -70,6 +70,9 @@ This is R code that is also part of the troubleshooting file section above. It r
 ## GDS_from_VCF
 The purpose of this code is to generate a GDS (Genomic Data Structure) file from VCF files. GDS files are used with seqArray and SNPRelate to manage large genomic datasets.
 
+## filter_vcf_by_maf.sh
+This is a PBS batch script to filter (& recode) VCF files so that they are filtered for a minor allele frequency of at least 0.05. There is also a flag (--remove) along with a text file that contains the sample numbers (one per line) that belong to the Old Lake samples to remove them from consideration. The script does this individually for specific VCF files and then concatenates them into a larger VCF file to feed into either PLINK or the R package _poppr_.
+
 ## create_snp_list_from_plink
 The purpose of this code is to use plink (http://zzz.bwh.harvard.edu/plink/) to create a SNP list (table).
 
