@@ -17,7 +17,7 @@ mv out.recode.vcf Scaffold_1.recode_maf.vcf
 mv out.recode.vcf Scaffold_3.recode_maf.vcf
 
 # Scaffold_7
-~/vcftools/bin/vcftools --gzvcf 191126_samtools_Scaffold_7.vcf.gz  --maf 0.05   --remove old_lake_samples_to_remove.txt --remove old_lake_samples_to_remove.txt --recode
+~/vcftools/bin/vcftools --gzvcf 191126_samtools_Scaffold_7.vcf.gz  --maf 0.05   --remove old_lake_samples_to_remove.txt --recode
 mv out.recode.vcf Scaffold_7.recode_maf.vcf
 
 # Scaffold_9
