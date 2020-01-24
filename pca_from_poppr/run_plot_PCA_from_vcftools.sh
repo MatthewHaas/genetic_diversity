@@ -6,7 +6,7 @@
 #PBS -o run_PCA_from_VCFtools.out
 #PBS -N run_PCA_from_VCFtools
 
-cd /home/jkimball/haasx092/main_GBS/191021_samtools
+cd /home/jkimball/haasx092/main_GBS/191126_samtools
 
 # Load required  modules
 module load gcc/8.1.0
