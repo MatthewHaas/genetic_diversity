@@ -10,20 +10,17 @@ library(RColorBrewer)
 library(data.table)
 
 # Read in data (919 individuals, 16 scaffolds, 2,943 variants)
-x <- read.vcfR("largest_scaffolds_max_missing_half.vcf")
+x <- read.vcfR("largest_scaffolds_recoded.vcf.gz")
 
 # Convert to a genlight object (for poppr and adegenet)
 gen_light_x <- vcfR2genlight(x)
 
-# Create a distance matrix
-dist <- dist(gen_light_x)
-
 # Principal component analysis
 # This step took a long time--adding cores may help
-pca <- glPca(gen_light_x, nf=4, n.cores=20)
+pca <- glPca(gen_light_x, nf=4, n.cores=24)
 
 # Save data in case of a crash
-save(x, gen_light_x, pca, file="200117_popgen_with_poppr.Rdata")
+#save(x, gen_light_x, pca, file="200123_popgen_with_poppr.Rdata")
 
 # Make into data.table
 pca_scores <- as.data.table(pca$scores)
@@ -75,9 +72,13 @@ pca_scores[simplified == "Aquatica_species", pch := 17]
 
 # Make the PCA plot
 # format() necessary for the y label because the value for the present version is 19.0 and I wanted R to print the 0 after the decimal (so it wasn't just 19%)
-pdf("200120_main_GBS_PCA.pdf")
-pca_scores[, plot(PC1, PC2, xlab=paste0("PC1: ", round(percentVar[1]*100, digits=1), "%"), ylab=paste0("PC2: ", format(round(percentVar[2]*100, digits=1), nsmall=1), "%"), main=paste0("PCA for main GBS", "\n", "1,160 SNPs"), yaxt='n', pch=pch, col=col)]
-pca_scores[, plot(PC3, PC4, xlab=paste0("PC3 ", round(percentVar[3]*100, digits=1), "%"), ylab=paste0("PC4: ", format(round(percentVar[4]*100, digits=1), nsmall=1), "%"), main=paste0("PCA for main GBS", "\n", "1,160 SNPs"), yaxt='n', pch=pch, col=col)]
+pdf("200124_main_GBS_PCA.pdf")
+pca_scores[, plot(PC1, PC2, xlab=paste0("PC1: ", round(percentVar[1]*100, digits=1), "%"), ylab=paste0("PC2: ", format(round(percentVar[2]*100, digits=1), nsmall=1), "%"), main=paste0("PCA for main GBS", "\n", "# SNPs"), yaxt='n', pch=pch, col=col)]
+pca_scores[, plot(PC3, PC4, xlab=paste0("PC3 ", round(percentVar[3]*100, digits=1), "%"), ylab=paste0("PC4: ", format(round(percentVar[4]*100, digits=1), nsmall=1), "%"), main=paste0("PCA for main GBS", "\n", "# SNPs"), yaxt='n', pch=pch, col=col)]
 axis(2, las=2)
 #legend("topright", legen=c("14S-PS", "Garfield Lake", "Itasca-C12", "Latifolia", "Necktie Lake", "PM3E", "Upper Rice Lake"), col=c(1:7), pch=16, bty='n')
 dev.off()
+
+# Save data
+save(x, gen_light_x, pca, file="200124_popgen_with_poppr.Rdata")
+

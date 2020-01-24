@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#PBS -l nodes=1:ppn=24,mem=150g,walltime=24:00:00
+#PBS -l nodes=1:ppn=24,mem=150g,walltime=48:00:00
 #PBS -m abe
 #PBS -M haasx092@umn.edu
 #PBS -e run_PCA_from_VCFtools.err
