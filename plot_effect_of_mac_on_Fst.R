@@ -12,16 +12,44 @@ x <- fread("Fst_variables_long_format.csv")
 x[Fst_class == "mean", col := "red"]
 x[Fst_class == "weighted", col := "blue"]
 
+depth=c(4,6,8)
+
 # Make the plot
-pdf("Effect_of_mac_on_Fst.pdf")
+pdf("Effect_of_mac_on_Fst.pdf",height=6, width=12)
+for(i in depth) {
+layout(matrix(c(1,2,3), nrow=1, byrow=TRUE))
 par(mar=c(5,5,2,5))
-x[dp == 6 & missing_percent == 15 & Fst_class == "mean", plot(mac, Fst, type='l', col=col, ylim=c(0.085, 0.100), yaxt='n', main="Effect of minor allele count on Fst with VCFtools", ylab="Fst value", xlab="Minor Allele Count (mac)")]
-x[dp == 6 & missing_percent == 15 & Fst_class == "weighted", lines(mac, Fst, type='l', col=col)]
+par(oma=c(0,0,10,0))
+x[dp == i & missing_percent == 15 & Fst_class == "mean", plot(mac, Fst, type='l', col=col, ylim=c(0.035, 0.100), yaxt='n', main="Missing rate = 0.85 (15%)", ylab="Fst value", xlab="Minor Allele Count (mac)")]
+x[dp == i & missing_percent == 15 & Fst_class == "weighted", lines(mac, Fst, type='l', col=col)]
 legend("bottomleft", col=c("red", "blue", "black"), legend=c("mean Fst", "weighted Fst", "# SNPs"), lty=c(1,1,0), pch=c(NA, NA, 16))
 axis(2, las=2)
 
 par(new=TRUE)
-x[dp == 6 & missing_percent == 15, plot(mac, num_snps, pch=16, axes=FALSE, xlab=NA, ylab=NA)]
+x[dp == i & missing_percent == 15, plot(mac, num_snps, pch=16, axes=FALSE, xlab=NA, ylab=NA)]
 axis(4, las=2)
-mtext(side=4, line=3, "Number of SNPs")
+mtext(side=4, line=3, "Number of SNPs", cex=0.75)
+
+x[dp == i & missing_percent == 25 & Fst_class == "mean", plot(mac, Fst, type='l', col=col, ylim=c(0.035, 0.100), yaxt='n', main="Missing rate = 0.75 (25%)", ylab="Fst value", xlab="Minor Allele Count (mac)")]
+x[dp == i & missing_percent == 25 & Fst_class == "weighted", lines(mac, Fst, type='l', col=col)]
+legend("bottomleft", col=c("red", "blue", "black"), legend=c("mean Fst", "weighted Fst", "# SNPs"), lty=c(1,1,0), pch=c(NA, NA, 16))
+axis(2, las=2)
+
+par(new=TRUE)
+x[dp == i & missing_percent == 25, plot(mac, num_snps, pch=16, axes=FALSE, xlab=NA, ylab=NA)]
+axis(4, las=2)
+mtext(side=4, line=3, "Number of SNPs", cex=0.75)
+
+x[dp == i & missing_percent == "not_specified" & Fst_class == "mean", plot(mac, Fst, type='l', col=col, ylim=c(0.035, 0.100), yaxt='n', main="Missing rate not specified", ylab="Fst value", xlab="Minor Allele Count (mac)")]
+x[dp == i & missing_percent == "not_specified" & Fst_class == "weighted", lines(mac, Fst, type='l', col=col)]
+legend("bottomleft", col=c("red", "blue", "black"), legend=c("mean Fst", "weighted Fst", "# SNPs"), lty=c(1,1,0), pch=c(NA, NA, 16))
+axis(2, las=2)
+
+par(new=TRUE)
+x[dp == i & missing_percent == "not_specified", plot(mac, num_snps, pch=16, axes=FALSE, xlab=NA, ylab=NA)]
+axis(4, las=2)
+mtext(side=4, line=3, "Number of SNPs", cex=0.75)
+
+mtext(paste0("Effect of Minor Allele Count on Fst Values", "\n", "Depth = ", i), side=3, outer=TRUE, line=2, cex=2)
+}
 dev.off()
