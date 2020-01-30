@@ -1,0 +1,16 @@
+Scaffold_1.recode.vcf
+Scaffold_3.recode.vcf
+Scaffold_7.recode.vcf
+Scaffold_9.recode.vcf
+Scaffold_13.recode.vcf
+Scaffold_18.recode.vcf
+Scaffold_48.recode.vcf
+Scaffold_51.recode.vcf
+Scaffold_70.recode.vcf
+Scaffold_93.recode.vcf
+Scaffold_415.recode.vcf
+Scaffold_693.recode.vcf
+Scaffold_1062.recode.vcf
+Scaffold_1063.recode.vcf
+Scaffold_1064.recode.vcf
+Scaffold_1065.recode.vcf

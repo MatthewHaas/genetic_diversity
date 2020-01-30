@@ -12,7 +12,7 @@ cd 200129_imputation
 
 # Make symlinks pointint to the original VCF files in the imputation directory 
 ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_1.recode.vcf Scaffold_1.recode.vcf
-ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_3.recode.vcf Scaffold_3.reocde.vcf
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_3.recode.vcf Scaffold_3.recode.vcf
 ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_7.recode.vcf Scaffold_7.recode.vcf
 ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_9.recode.vcf Scaffold_9.recode.vcf
 ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_13.recode.vcf Scaffold_13.recode.vcf
@@ -27,3 +27,7 @@ ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_1062.recode.vcf 
 ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_1063.recode.vcf Scaffold_1063.recode.vcf
 ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_1064.recode.vcf Scaffold_1064.recode.vcf
 ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_1065.recode.vcf Scaffold_1065.recode.vcf
+
+# Set minor allele frequency to 0.05 (same as PLINK) and make a new VCF with reduced SNP number (4,772 SNPs vs 5,259 SNPs as filtered by PLINK)
+~/vcftools/bin/vcftools --gzvcf largest_scaffolds_imputed.vcf.gz --maf 0.05 --recode
+mv out.recode.vcf largest_scaffolds_imputed.recode.vcf

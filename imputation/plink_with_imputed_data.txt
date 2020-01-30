@@ -1,0 +1,13 @@
+# 30 January 2020
+
+# After imputation, VCF files need to be index with 'bcftools index'
+
+module load bcftools
+
+bcftools concat 'Scaffold_1_imputed.vcf.gz' 'Scaffold_3_imputed.vcf.gz' 'Scaffold_7_imputed.vcf.gz' 'Scaffold_9_imputed.vcf.gz' 'Scaffold_13_imputed.vcf.gz' 'Scaffold_18_imputed.vcf.gz' 'Scaffold_48_imputed.vcf.gz' 'Scaffold_51_imputed.vcf.gz' 'Scaffold_70_imputed.vcf.gz' 'Scaffold_93_imputed.vcf.gz' 'Scaffold_415_imputed.vcf.gz' 'Scaffold_693_imputed.vcf.gz' 'Scaffold_1062_imputed.vcf.gz' 'Scaffold_1063_imputed.vcf.gz' 'Scaffold_1064_imputed.vcf.gz' 'Scaffold_1065_imputed.vcf.gz' -o largest_scaffolds_imputed.vcf.gz
+
+# Load imputed data into plink
+module load plink
+plink --vcf largest_scaffolds_imputed.vcf.gz --double-id --maf 0.05 --allow-extra-chr --recode --out 200130_plink_imputed
+
+plink --pca --file 200130_plink_imputed --allow-extra-chr -out 200130_plink_imputed_pca
