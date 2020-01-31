@@ -15,4 +15,15 @@ cd /home/jkimball/haasx092/main_GBS/imputation/200129_imputation
 # Beagle files are located here: /home/jkimball/haasx092/beagle
 
 # Run beagle (setting an upper limit of 100Gb of memory)
-java -Xmx100g -jar ~/beagle/beagle.25Nov19.28d.jar gt=Scaffold_1.recode.vcf out=RESULT impute=TRUE
+for i in $(cat vcf_file_list.txt)
+do
+STEM=$(echo ${i} | cut -f 1 -d ".")
+java -Xmx100g -jar ~/beagle/beagle.25Nov19.28d.jar gt=$i out=${STEM}_imputed gp=TRUE ne=1000
+done
+
+for i in $(cat vcf_file_list.txt)
+do
+STEM=$(echo ${i} | cut -f 1 -d ".")
+echo $STEM
+echo $i
+done

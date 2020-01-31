@@ -11,6 +11,24 @@ cd 200129_imputation
 # WD is now /home/jkimball/haasx092/main_GBS/imputation/200129_imputation
 
 # Make symlinks pointint to the original VCF files in the imputation directory 
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtools_Scaffold_1.vcf.gz Scaffold_1.vcf.gz
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtools_Scaffold_3.vcf.gz Scaffold_3.vcf.gz
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtools_Scaffold_7.vcf.gz Scaffold_7.vcf.gz
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtools_Scaffold_9.vcf.gz Scaffold_9.vcf.gz
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtools_Scaffold_13.vcf.gz Scaffold_13.vcf.gz
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtools_Scaffold_18.vcf.gz Scaffold_18.vcf.gz
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtoolsScaffold_48.vcf.gz Scaffold_48.vcf.gz
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtools_Scaffold_51.vcf.gz Scaffold_51.vcf.gz
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtools_Scaffold_70.vcf.gz Scaffold_70.vcf.gz
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtools_Scaffold_93.vcf.gz Scaffold_93.vcf.gz
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtools_Scaffold_415.vcf.gz Scaffold_415.vcf.gz
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtools_Scaffold_693.vcf.gz Scaffold_693.vcf.gz
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtools_Scaffold_1062.vcf.gz Scaffold_1062.vcf.gz
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtools_Scaffold_1063.vcf.gz Scaffold_1063.vcf.gz
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtools_Scaffold_1064.vcf.gz Scaffold_1064.vcf.gz
+ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/191126_samtools_Scaffold_1065.vcf.gz Scaffold_1065.vcf.gz
+
+# Make symlinks pointint to the recoded VCF files in the imputation directory 
 ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_1.recode.vcf Scaffold_1.recode.vcf
 ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_3.recode.vcf Scaffold_3.recode.vcf
 ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_7.recode.vcf Scaffold_7.recode.vcf
@@ -27,6 +45,13 @@ ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_1062.recode.vcf 
 ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_1063.recode.vcf Scaffold_1063.recode.vcf
 ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_1064.recode.vcf Scaffold_1064.recode.vcf
 ln -s /home/jkimball/haasx092/main_GBS/191126_samtools/Scaffold_1065.recode.vcf Scaffold_1065.recode.vcf
+
+for i in $(cat original_vcf_file_list.txt)
+do
+STEM=$(echo ${i} | cut -f 1 -d ".")
+~/vcftools/bin/vcftools --gzvcf $i --max-missing 0.50 --maf 0.05 --min-alleles 2 --max-alleles 2 --remove-indels --recode
+mv out.recode.vcf ${STEM}_filtered.vcf
+done
 
 # Set minor allele frequency to 0.05 (same as PLINK) and make a new VCF with reduced SNP number (4,772 SNPs vs 5,259 SNPs as filtered by PLINK)
 ~/vcftools/bin/vcftools --gzvcf largest_scaffolds_imputed.vcf.gz --maf 0.05 --recode
