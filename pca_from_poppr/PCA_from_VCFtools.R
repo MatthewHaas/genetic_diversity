@@ -1,5 +1,6 @@
-# 20 January 2020
-# This script is for generating a PCA plot from the VCF file filtered with VCFtools
+# 30 January 2020
+# Updated 4 February
+# This script is for generating a PCA plot from the VCF file created using imputed SNPs (using Beagle)
 # I am trying to replicate the PCA produced using PLINK
 
 # Load required packages
@@ -9,8 +10,8 @@ library(ape)
 library(RColorBrewer)
 library(data.table)
 
-# Read in data (919 individuals, 16 scaffolds, 2,943 variants)
-x <- read.vcfR("largest_scaffolds_recoded.vcf.gz")
+# Read in data
+x <- read.vcfR("largest_scaffolds_imputed.recode.vcf")
 
 # Convert to a genlight object (for poppr and adegenet)
 gen_light_x <- vcfR2genlight(x)
@@ -23,7 +24,7 @@ pca <- glPca(gen_light_x, nf=4, n.cores=24)
 #save(x, gen_light_x, pca, file="200123_popgen_with_poppr.Rdata")
 
 # Make into data.table
-pca_scores <- as.data.table(pca$scores)
+pca_scores <- as.data.table(pca$scores) # Dividing the data by 100 ((pca$scores)/100) would put it on the same scale/magnitude as plink
 
 # Keep rownames
 rownames(pca$scores) -> rownames
@@ -31,13 +32,13 @@ pca_scores[, sample := rownames]
 # Clean up sample names
 pca_scores[, sample := sub("/.+$", "", sample)]
 # Reorder so sample names are the first column
-setcolorder(pca_scores, c("sample", "PC1", "PC2", "PC3", "PC4", "PC5", "PC6", "PC7"))
+setcolorder(pca_scores, c("sample", "PC1", "PC2", "PC3", "PC4"))
 
 # This way seems easier and results seem more reliable than other methods
-percentVar <- pca$eig/sum(pca$eig)
+percentVar <- pca$eig
 
 # Read in sample names to help with coloring plot...
-y <- fread("../191126_samtools/200117_sample_key_for_poppr.csv")
+y <- fread("/home/jkimball/haasx092/main_GBS/191126_samtools/200117_sample_key_for_poppr.csv")
 # Set column names to help with merging... 
 setnames(y, c("sample", "ID", "simplified", "extended", "class"))
 
@@ -72,13 +73,14 @@ pca_scores[simplified == "Aquatica_species", pch := 17]
 
 # Make the PCA plot
 # format() necessary for the y label because the value for the present version is 19.0 and I wanted R to print the 0 after the decimal (so it wasn't just 19%)
-pdf("200124_main_GBS_PCA.pdf")
-pca_scores[, plot(PC1, PC2, xlab=paste0("PC1: ", round(percentVar[1]*100, digits=1), "%"), ylab=paste0("PC2: ", format(round(percentVar[2]*100, digits=1), nsmall=1), "%"), main=paste0("PCA for main GBS", "\n", "# SNPs"), yaxt='n', pch=pch, col=col)]
-pca_scores[, plot(PC3, PC4, xlab=paste0("PC3 ", round(percentVar[3]*100, digits=1), "%"), ylab=paste0("PC4: ", format(round(percentVar[4]*100, digits=1), nsmall=1), "%"), main=paste0("PCA for main GBS", "\n", "# SNPs"), yaxt='n', pch=pch, col=col)]
+pdf("200204_main_GBS_PCA_from_poppr.pdf", height=12, width=16)
+pca_scores[, plot(PC1, PC2, xlab=paste0("PC1: ", round(percentVar[1], digits=1), "%"), ylab=paste0("PC2: ", format(round(percentVar[2], digits=1), nsmall=1), "%"), main=paste0("PCA for main GBS", "\n", "5771 SNPs"), yaxt='n', pch=pch, col=col, cex=1.5)]
 axis(2, las=2)
-#legend("topright", legen=c("14S-PS", "Garfield Lake", "Itasca-C12", "Latifolia", "Necktie Lake", "PM3E", "Upper Rice Lake"), col=c(1:7), pch=16, bty='n')
+pca_scores[, plot(PC3, PC4, xlab=paste0("PC3 ", round(percentVar[3], digits=1), "%"), ylab=paste0("PC4: ", format(round(percentVar[4], digits=1), nsmall=1), "%"), main=paste0("PCA for main GBS", "\n", "5771 SNPs"), yaxt='n', pch=pch, col=col, cex=1.5)]
+axis(2, las=2)
+#legend("topright", legen=c("14S-PS", "Garfield Lake", "Itasca-C12", "Latifolia", "Necktie Lake", "PM3E", "Upper Rice Lake"), col=c(1:7), pch=16, bty='n', cex=1.2)
 dev.off()
 
 # Save data
-save(x, gen_light_x, pca, file="200124_popgen_with_poppr.Rdata")
+save(x, gen_light_x, pca, file="200204_popgen_with_poppr_imputed.Rdata")
 
