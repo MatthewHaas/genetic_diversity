@@ -79,9 +79,9 @@ pca_scores[simplified == "Aquatica_species", pch := 17]
 # Make the PCA plot
 # format() necessary for the y label because the value for the present version is 19.0 and I wanted R to print the 0 after the decimal (so it wasn't just 19%)
 pdf("200204_main_GBS_PCA_from_poppr.pdf", height=12, width=16)
-pca_scores[, plot(PC1, PC2, xlab=paste0("PC1: ", round(percentVar[1], digits=1), "%"), ylab=paste0("PC2: ", format(round(percentVar[2], digits=1), nsmall=1), "%"), main=paste0("PCA for main GBS", "\n", "5771 SNPs"), yaxt='n', pch=pch, col=col, cex=1.5)]
+pca_scores[, plot(PC1, PC2, xlab=paste0("PC1: ", round(percentVar[1]*100, digits=1), "%"), ylab=paste0("PC2: ", format(round(percentVar[2]*100, digits=1), nsmall=1), "%"), main=paste0("PCA for main GBS", "\n", "5771 SNPs"), yaxt='n', pch=pch, col=col, cex=1.5)]
 axis(2, las=2)
-pca_scores[, plot(PC3, PC4, xlab=paste0("PC3 ", round(percentVar[3], digits=1), "%"), ylab=paste0("PC4: ", format(round(percentVar[4], digits=1), nsmall=1), "%"), main=paste0("PCA for main GBS", "\n", "5771 SNPs"), yaxt='n', pch=pch, col=col, cex=1.5)]
+pca_scores[, plot(PC3, PC4, xlab=paste0("PC3 ", round(percentVar[3]*100, digits=1), "%"), ylab=paste0("PC4: ", format(round(percentVar[4]*100, digits=1), nsmall=1), "%"), main=paste0("PCA for main GBS", "\n", "5771 SNPs"), yaxt='n', pch=pch, col=col, cex=1.5)]
 axis(2, las=2)
 #legend("topright", legen=c("14S-PS", "Garfield Lake", "Itasca-C12", "Latifolia", "Necktie Lake", "PM3E", "Upper Rice Lake"), col=c(1:7), pch=16, bty='n', cex=1.2)
 dev.off()
