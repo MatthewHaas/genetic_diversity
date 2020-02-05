@@ -1,5 +1,5 @@
 # 30 January 2020
-# Updated 4 February
+# Updated 4 February 2020
 # This script is for generating a PCA plot from the VCF file created using imputed SNPs (using Beagle)
 # I am trying to replicate the PCA produced using PLINK
 
@@ -10,8 +10,8 @@ library(ape)
 library(RColorBrewer)
 library(data.table)
 
-# Read in data
-x <- read.vcfR("largest_scaffolds_imputed.recode.vcf")
+# Read in data (919 individuals, 16 scaffolds, 2,943 variants)
+x <- read.vcfR("largest_scaffolds_imputed.vcf.gz")
 
 # Convert to a genlight object (for poppr and adegenet)
 gen_light_x <- vcfR2genlight(x)
@@ -35,7 +35,12 @@ pca_scores[, sample := sub("/.+$", "", sample)]
 setcolorder(pca_scores, c("sample", "PC1", "PC2", "PC3", "PC4"))
 
 # This way seems easier and results seem more reliable than other methods
-percentVar <- pca$eig
+# Eigenvalue calculation was correct before. What PLINK does differently is that it only considers the top 20 eigenvalues.
+# poppr considers all of them. I will write R code that only keeps the top 20 here...
+# percentVar <- pca$eig/sum(pca$eig)
+v <- pca$eig[1:20}
+v <- as.data.table(v)
+percentVar <- c(PC1=v[1,v]/sum(v$v), PC2=v[2,v]/sum(v$v), PC3=v[3,v]/sum(v$v), PC4=v[4,v]/sum(v$v))
 
 # Read in sample names to help with coloring plot...
 y <- fread("/home/jkimball/haasx092/main_GBS/191126_samtools/200117_sample_key_for_poppr.csv")
