@@ -38,7 +38,7 @@ setcolorder(pca_scores, c("sample", "PC1", "PC2", "PC3", "PC4"))
 # Eigenvalue calculation was correct before. What PLINK does differently is that it only considers the top 20 eigenvalues.
 # poppr considers all of them. I will write R code that only keeps the top 20 here...
 # percentVar <- pca$eig/sum(pca$eig)
-v <- pca$eig[1:20}
+v <- pca$eig[1:20]
 v <- as.data.table(v)
 percentVar <- c(PC1=v[1,v]/sum(v$v), PC2=v[2,v]/sum(v$v), PC3=v[3,v]/sum(v$v), PC4=v[4,v]/sum(v$v))
 
