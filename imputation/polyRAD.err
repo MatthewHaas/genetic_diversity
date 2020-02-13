@@ -1,0 +1,13 @@
+Compressing file with bgzip.
+Compressed VCF sent to /tmp/Rtmp3bgHI1/file78ac3bb5e1c2.bgz
+Indexing VCF.
+Reading file...
+Unpacking data from VCF...
+Error in matrix(thisDepthVal, nrow = length(samples), ncol = length(thisDepthVal)%/%length(samples),  :
+  'data' must be of a vector type, was 'NULL'
+In addition: Warning messages:
+1: In .vcf_usertag(map, tag, nm, verbose) :
+  ScanVcfParam ‘geno’ fields not found in  header: ‘AD’
+2: In .Seqinfo.mergexy(x, y) :
+  The 2 combined objects have no sequence levels in common. (Use
+  suppressWarnings() to suppress this warning.)
