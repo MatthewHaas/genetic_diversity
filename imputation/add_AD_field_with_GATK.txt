@@ -1,0 +1,4 @@
+# Right now, this code is just something that I've pulled from the internet to try to create an AD field in my VCF files so I can use polyRAD
+# I need to change the inputs so it will work with my data...
+
+$ java -Xmx2g -jar /path/to/GenomeAnalysisTK.jar -R /path/to/ref.fasta -V input.vcf -T VariantAnnotator -A DepthPerAlleleBySample -o annotated.vcf
