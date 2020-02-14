@@ -1,4 +1,14 @@
-# Right now, this code is just something that I've pulled from the internet to try to create an AD field in my VCF files so I can use polyRAD
-# I need to change the inputs so it will work with my data...
+# 14 February 2020
+# WD: /home/jkimball/haasx092/main_GBS/imputation/200210_imputaiton
+# Genome Analysis Toolkit: adding AD field to VCF files
 
-$ java -Xmx2g -jar /path/to/GenomeAnalysisTK.jar -R /path/to/ref.fasta -V input.vcf -T VariantAnnotator -A DepthPerAlleleBySample -o annotated.vcf
+# Load GATK
+module load gatk
+
+FASTA="/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta.gz"
+SCAFFOLD="Scaffold_3_filtered.recode.vcf"
+
+java -Xmx30g -jar /panfs/roc/msisoft/gatk/4.1.2/GenomeAnalysisTK.jar -R $FASTA -V $SCAFFOLD -T VariantAnnotator -A DepthPerAlleleBySample -o annotated.vcf
+
+
+java -Xmx30g -jar /panfs/roc/msisoft/gatk/4.1.2/gatk-package-4.1.2.0-local.jar -R $FASTA -V $SCAFFOLD -T VariantAnnotator -A DepthPerAlleleBySample -o annotated.vcf
