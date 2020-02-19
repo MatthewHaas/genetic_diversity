@@ -1,0 +1,9 @@
+# 19 February 2020
+# WD: /home/jkimball/haasx092/main_GBS/imputation/200216_imputation
+
+# This code is used for finding the transition/transversion summary statistics
+# Output goes to the file "out.TsTv-summary"
+# This is the generalized version. It should perhaps be re-written as a script to loop through all scaffolds
+# and to not overwrite the output for each loop.
+
+~/vcftools/bin/vcftools --gzvcf Scaffold_1_filtered_40percent_NA_imputed.vcf.gz --TsTv-summary
