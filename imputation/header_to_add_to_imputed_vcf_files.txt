@@ -1,0 +1,20 @@
+# 20 February 2020
+# WD: /home/jkimball/haasx092/main_GBS/imputation/200216_imputation
+# As far as I can tell, these lines must be added to the header of the respective VCF files after imputation with BEAGLE in order to get bcftools concat to work.
+
+##contig=<ID=Scaffold_1;HRSCAF=83,length=95187837>
+##contig=<ID=Scaffold_3;HRSCAF=502,length=58865324>
+##contig=<ID=Scaffold_7;HRSCAF=722,length=39125943>
+##contig=<ID=Scaffold_9;HRSCAF=810,length=63217741>
+##contig=<ID=Scaffold_13;HRSCAF=912,length=95470783>
+##contig=<ID=Scaffold_18;HRSCAF=1069,length=98769966>
+##contig=<ID=Scaffold_48;HRSCAF=1451,length=118006097>
+##contig=<ID=Scaffold_51;HRSCAF=1459,length=13817767>
+##contig=<ID=Scaffold_70;HRSCAF=1591,length=111429323>
+##contig=<ID=Scaffold_93;HRSCAF=1687,length=103377072>
+##contig=<ID=Scaffold_415;HRSCAF=2522,length=105879435>
+##contig=<ID=Scaffold_693;HRSCAF=2950,length=24058870>
+##contig=<ID=Scaffold_1062;HRSCAF=3426,length=75690682>
+##contig=<ID=Scaffold_1063;HRSCAF=3427,length=42614780>
+##contig=<ID=Scaffold_1064;HRSCAF=3428,length=111260184>
+##contig=<ID=Scaffold_1065;HRSCAF=3429,length=66616710>
