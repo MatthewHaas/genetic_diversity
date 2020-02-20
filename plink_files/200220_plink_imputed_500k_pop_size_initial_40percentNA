@@ -1,0 +1,10 @@
+# 20 February 2020
+# WD: /home/jkimball/haasx092/main_GBS/imputation/200216_imputation
+# This code is for running PLINK on imputed data (effective population size=500,000, 40% initial missing data)
+
+module load plink
+
+# 1948 variants
+plink --vcf  merged_imputed_scaffolds.vcf --double-id --maf 0.05 --allow-extra-chr -allow-no-sex --recode --out 200220_plink_imputed
+
+plink --pca --file 200220_plink_imputed --allow-extra-chr -out 200220_plink_imputed_pca
