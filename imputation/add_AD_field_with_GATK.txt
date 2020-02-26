@@ -1,14 +1,25 @@
-# 14 February 2020
+# 26 February 2020
 # WD: /home/jkimball/haasx092/main_GBS/imputation/200210_imputaiton
 # Genome Analysis Toolkit: adding AD field to VCF files
 
-# Load GATK
+# Load required software packages
 module load gatk
+module load samtools
+module load picard-tools # To create a .dict file
 
-FASTA="/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta.gz"
+FASTA="/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta"
 SCAFFOLD="Scaffold_3_filtered.recode.vcf"
 
-java -Xmx30g -jar /panfs/roc/msisoft/gatk/4.1.2/GenomeAnalysisTK.jar -R $FASTA -V $SCAFFOLD -T VariantAnnotator -A DepthPerAlleleBySample -o annotated.vcf
+# Create FASTA index
+# samtools faidx $FASTA # Not necessary; already exists
 
+# Create a .dict file
+java -Xmx2g -jar /panfs/roc/msisoft/picard/2.18.16/picard.jar CreateSequenceDictionary REFERENCE=$FASTA OUTPUT=/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.dict
 
-java -Xmx30g -jar /panfs/roc/msisoft/gatk/4.1.2/gatk-package-4.1.2.0-local.jar -R $FASTA -V $SCAFFOLD -T VariantAnnotator -A DepthPerAlleleBySample -o annotated.vcf
+## Notes: VariantAnnotator is a BETA tool and is not yet ready for production (warning message delivered by program when I run it)
+##		1) The -R option stands for "reference" and is followed by the path to the FASTA file.
+##		2) The -V option stands for "VCF" and is followed by the path to a VCF file that you want to operate on.
+##		3) The -A option stands for "annotation" and is followed by a string of the annotation you wish to perform.
+##		4) The -O option stands for output and is followed by the name of a file you want to print the output to.
+
+java -Xmx30g -jar /soft/gatk/4.1.2/gatk-package-4.1.2.0-local.jar VariantAnnotator -R $FASTA -V $SCAFFOLD -A DepthPerAlleleBySample -O annotated.vcf
