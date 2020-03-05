@@ -12,8 +12,8 @@ module load bcftools
 module load htslib
 module load parallel
 
-export bams='present_natural_stands_only.txt'
-export prefix="191122_samtools"
+export bams="190910_sorted_bam_files_no_JohnsonDora.txt"
+export prefix="200305_samtools"
 export ref="/home/jkimball/mshao/genome_seq/zizania_palustris_13Nov2018_okGsv.fasta"
 
 parallel_samtools_processes=15
@@ -25,7 +25,7 @@ cut -f 1 ${ref}.fai
 scythe_mpileup() {
 	REGIONS=${1}
 	SCAFFOLD=$(echo ${REGIONS} | cut -f 1 -d ";")
-	samtools mpileup -q 40 -gDVu \
+	samtools mpileup -q 20 -gDVu \
 		-b $bams \
 		-r ${REGIONS} \
 		-f ${ref} \
