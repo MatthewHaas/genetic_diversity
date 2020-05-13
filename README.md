@@ -19,9 +19,6 @@ These scripts are for creating a PCA plot with the R package poppr. It was creat
 ## plink_files (directory)
 These scripts are for using plink to process/analyze large-scale GBS SNP data
 
-## troubleshooting (directory)
-This directory contains scripts that were used to troubleshoot the development of the **main_GBS** pipeline
-
 ## umgc_pilot_study (directory)
 These scripts are for the (partial) re-analysis of the pilot GBS study conducted by the University of Minnesota Genomics Center (UMGC). I say partial because I start the re-analysis from the VCF files produced by their pipeline. For their pipeline, they used a program called stacks (http://catchenlab.life.illinois.edu/stacks/). The reference genome of _Zizania palustris_ was not used in this pipeline. I was mostly interested in pulling some stats out of the files and re-creating the PCA plot to meet my style preferences. The paper was accepted for publication in Conservation Genetics Resources.
 
@@ -85,9 +82,6 @@ A file (paths_to_gbs_data_check.txt) was also created to verify that the code wo
 
 ## main_GBS_pipeline
 This code is very similar to the file **190515_cutadapt_pilot_GBS** but is a better reflection of what was done for the **main_GBS** analysis.
-
-## main_GBS_snp_calling
-This code is part of the main_GBS SNP calling pipeline and is also very similar to code found in **190515_cutadapt_pilot_GBS**. The main difference is that it is just a subset of that code. It contains additional R code that is used to create a PCA plot directly from the VCF files. This approach did not work as well as it did for the pilot GBS project. I assume the reason is the huge volume of additional data. It caused R to crash.
 
 ## pca_from_vcf.R
 This is R code that generates a PCA plot directly from VCF files. It was first used for the pilot GBS project and it worked very well for those samples. The seventeen largest VCF files were concatenated into a single VCF file called **seventeen_largest_vcfs_merged.vcf.gz** using bcftools concat. That file was used as input to generate:
