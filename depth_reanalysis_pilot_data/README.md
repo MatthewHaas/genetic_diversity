@@ -9,7 +9,7 @@ Shell script that runs the _normalize.awk_ script
 ## run_snp_filtering_circos_density.sh
 Shell script that runs R code for filtering SNP calls using the _scythe_mpileup.sh_ and _run_normalize.sh_ scripts
 
-# scythe_mpileup.sh
+## scythe_mpileup.sh
 This script has been used before for the main GBS project. Here, I apply it to re-analyze the pilot GBS data (call SNPs) for the pilot GBS project using the reference genome.
 
 ## snp_filtering_for_circos_density_plot.R
