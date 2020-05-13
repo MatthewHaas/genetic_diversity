@@ -66,18 +66,12 @@ This is R code that is also part of the troubleshooting file section above. It r
   **Example output files:**
   (1) 191015_main_GBS_SNPs_200_samples_DP5_filtered.csv
   (2) 191015_main_GBS_filtered_SNPs.Rdata
-  
-## GDS_from_VCF
-The purpose of this code is to generate a GDS (Genomic Data Structure) file from VCF files. GDS files are used with seqArray and SNPRelate to manage large genomic datasets.
 
 ## filter_vcf_by_maf.sh
 This is a PBS batch script to filter (& recode) VCF files so that they are filtered for a minor allele frequency of at least 0.05. There is also a flag (--remove) along with a text file that contains the sample numbers (one per line) that belong to the Old Lake samples to remove them from consideration. The script does this individually for specific VCF files and then concatenates them into a larger VCF file to feed into either PLINK or the R package _poppr_.
 
 ## create_snp_list_from_plink
 The purpose of this code is to use plink (http://zzz.bwh.harvard.edu/plink/) to create a SNP list (table).
-
-## gen_call.awk
-This is code from Martin Mascher to extract SNP data from VCF files. It is outdated/was replaced with normalize.awk and shouldn't be used anymore.
 
 ## main_GBS_directory_setup.txt
 The purpose of this code was to set up the directory structure for **main_GBS**. First, it creates a text file with the paths to the fastq files in the UMGC directory (_/home/jkimball/data_release/umgc/novaseq_). Please note that the UMGC released the GBS data in two waves. One set is in the directory **190730_A00223_0174_BHCN5GDRXX/Kimall_Project_002** while the other is in the directory **190819_A00223_0191_AHF3V3DRXX/Kimball_Project_002**.
