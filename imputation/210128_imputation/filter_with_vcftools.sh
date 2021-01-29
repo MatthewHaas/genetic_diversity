@@ -19,5 +19,5 @@ mkdir filtered_vcf_files
 for i in $(cat vcf_list_short.txt)
 do
 STEM=$(echo ${i} | cut -f 1 -d ".")
-~/vcftools/bin/vcftools --gzvcf  $i --keep samples_to_keep_for_ref_panel_fewer_than_200_missing.txt --max-missing 1 --min-alleles 2 --max-alleles 2 --maf 0.05 --remove-indels --minDP 6 --recode --recode-INFO-all --out filtered_vcf_files/${STEM}_filtered
+~/vcftools/bin/vcftools --gzvcf  $i --keep samples_to_keep_for_ref_panel_fewer_than_200_missing.txt --max-missing 1 filter_with_vcftools.sh --min-alleles 2 --max-alleles 2 --maf 0.05 --remove-indels --minDP 6 --recode --recode-INFO-all --out filtered_vcf_files/${STEM}_filtered
 done
