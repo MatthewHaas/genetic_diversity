@@ -1,4 +1,0 @@
-Scaffold_70_filtered_40percent_NA.recode.vcf
-Scaffold_93_filtered_40percent_NA.recode.vcf
-Scaffold_415_filtered_40percent_NA.recode.vcf
-Scaffold_693_filtered_40percent_NA.recode.vcf
