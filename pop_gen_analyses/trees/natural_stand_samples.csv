@@ -1,0 +1,581 @@
+sample_number,sample_id,class
+Sample_0001,Necktie River,Natural stand
+Sample_0002,Necktie River,Natural stand
+Sample_0003,Necktie River,Natural stand
+Sample_0004,Necktie River,Natural stand
+Sample_0005,Necktie River,Natural stand
+Sample_0006,Necktie River,Natural stand
+Sample_0007,Clearwater River,Natural stand
+Sample_0008,Clearwater River,Natural stand
+Sample_0009,Clearwater River,Natural stand
+Sample_0010,Clearwater River,Natural stand
+Sample_0011,Clearwater River,Natural stand
+Sample_0012,Necktie River,Natural stand
+Sample_0013,Necktie River,Natural stand
+Sample_0014,Necktie River,Natural stand
+Sample_0015,Necktie River,Natural stand
+Sample_0016,Necktie River,Natural stand
+Sample_0017,Necktie River,Natural stand
+Sample_0018,Clearwater River,Natural stand
+Sample_0019,Clearwater River,Natural stand
+Sample_0020,Clearwater River,Natural stand
+Sample_0021,Clearwater River,Natural stand
+Sample_0022,Clearwater River,Natural stand
+Sample_0023,Necktie River,Natural stand
+Sample_0024,Necktie River,Natural stand
+Sample_0025,Necktie River,Natural stand
+Sample_0026,Necktie River,Natural stand
+Sample_0027,Necktie River,Natural stand
+Sample_0028,Necktie River,Natural stand
+Sample_0029,Clearwater River,Natural stand
+Sample_0030,Clearwater River,Natural stand
+Sample_0031,Clearwater River,Natural stand
+Sample_0032,Clearwater River,Natural stand
+Sample_0033,Clearwater River,Natural stand
+Sample_0034,Necktie River,Natural stand
+Sample_0035,Necktie River,Natural stand
+Sample_0036,Necktie River,Natural stand
+Sample_0037,Necktie River,Natural stand
+Sample_0038,Necktie River,Natural stand
+Sample_0039,Necktie River,Natural stand
+Sample_0040,Clearwater River,Natural stand
+Sample_0041,Clearwater River,Natural stand
+Sample_0042,Clearwater River,Natural stand
+Sample_0043,Clearwater River,Natural stand
+Sample_0044,Clearwater River,Natural stand
+Sample_0045,Necktie River,Natural stand
+Sample_0046,Necktie River,Natural stand
+Sample_0047,Necktie River,Natural stand
+Sample_0048,Necktie River,Natural stand
+Sample_0049,Necktie River,Natural stand
+Sample_0050,Necktie River,Natural stand
+Sample_0051,Necktie River,Natural stand
+Sample_0052,Clearwater River,Natural stand
+Sample_0053,Clearwater River,Natural stand
+Sample_0054,Clearwater River,Natural stand
+Sample_0055,Clearwater River,Natural stand
+Sample_0056,Clearwater River,Natural stand
+Sample_0057,Necktie River,Natural stand
+Sample_0058,Necktie River,Natural stand
+Sample_0059,Necktie River,Natural stand
+Sample_0060,Necktie River,Natural stand
+Sample_0061,Necktie River,Natural stand
+Sample_0062,Necktie River,Natural stand
+Sample_0063,Necktie River,Natural stand
+Sample_0064,Clearwater River,Natural stand
+Sample_0065,Clearwater River,Natural stand
+Sample_0066,Clearwater River,Natural stand
+Sample_0067,Clearwater River,Natural stand
+Sample_0068,Clearwater River,Natural stand
+Sample_0069,Necktie River,Natural stand
+Sample_0070,Necktie River,Natural stand
+Sample_0071,Necktie River,Natural stand
+Sample_0072,Necktie River,Natural stand
+Sample_0073,Necktie River,Natural stand
+Sample_0074,Necktie River,Natural stand
+Sample_0075,Clearwater River,Natural stand
+Sample_0076,Clearwater River,Natural stand
+Sample_0077,Clearwater River,Natural stand
+Sample_0078,Clearwater River,Natural stand
+Sample_0079,Clearwater River,Natural stand
+Sample_0080,Clearwater River,Natural stand
+Sample_0081,Necktie River,Natural stand
+Sample_0082,Necktie River,Natural stand
+Sample_0083,Necktie River,Natural stand
+Sample_0084,Necktie River,Natural stand
+Sample_0085,Necktie River,Natural stand
+Sample_0086,Necktie River,Natural stand
+Sample_0087,Clearwater River,Natural stand
+Sample_0088,Clearwater River,Natural stand
+Sample_0089,Clearwater River,Natural stand
+Sample_0090,Clearwater River,Natural stand
+Sample_0091,Clearwater River,Natural stand
+Sample_0092,Clearwater River,Natural stand
+Sample_0093,Clearwater River,Natural stand
+Sample_0094,Clearwater River,Natural stand
+Sample_0095,Upper Rice Lake,Natural stand
+Sample_0096,Upper Rice Lake,Natural stand
+Sample_0097,Upper Rice Lake,Natural stand
+Sample_0098,Upper Rice Lake,Natural stand
+Sample_0099,Upper Rice Lake,Natural stand
+Sample_0100,Upper Rice Lake,Natural stand
+Sample_0101,Garfield Lake,Natural stand
+Sample_0102,Garfield Lake,Natural stand
+Sample_0103,Garfield Lake,Natural stand
+Sample_0104,Garfield Lake,Natural stand
+Sample_0105,Clearwater River,Natural stand
+Sample_0106,Clearwater River,Natural stand
+Sample_0107,Upper Rice Lake,Natural stand
+Sample_0108,Upper Rice Lake,Natural stand
+Sample_0109,Upper Rice Lake,Natural stand
+Sample_0110,Upper Rice Lake,Natural stand
+Sample_0111,Upper Rice Lake,Natural stand
+Sample_0112,Upper Rice Lake,Natural stand
+Sample_0113,Garfield Lake,Natural stand
+Sample_0114,Garfield Lake,Natural stand
+Sample_0115,Garfield Lake,Natural stand
+Sample_0116,Garfield Lake,Natural stand
+Sample_0117,Clearwater River,Natural stand
+Sample_0118,Clearwater River,Natural stand
+Sample_0119,Upper Rice Lake,Natural stand
+Sample_0120,Upper Rice Lake,Natural stand
+Sample_0121,Upper Rice Lake,Natural stand
+Sample_0122,Upper Rice Lake,Natural stand
+Sample_0123,Upper Rice Lake,Natural stand
+Sample_0124,Upper Rice Lake,Natural stand
+Sample_0125,Garfield Lake,Natural stand
+Sample_0126,Garfield Lake,Natural stand
+Sample_0127,Garfield Lake,Natural stand
+Sample_0128,Garfield Lake,Natural stand
+Sample_0129,Clearwater River,Natural stand
+Sample_0130,Clearwater River,Natural stand
+Sample_0131,Upper Rice Lake,Natural stand
+Sample_0132,Upper Rice Lake,Natural stand
+Sample_0133,Upper Rice Lake,Natural stand
+Sample_0134,Upper Rice Lake,Natural stand
+Sample_0135,Upper Rice Lake,Natural stand
+Sample_0136,Upper Rice Lake,Natural stand
+Sample_0137,Garfield Lake,Natural stand
+Sample_0138,Garfield Lake,Natural stand
+Sample_0139,Garfield Lake,Natural stand
+Sample_0140,Garfield Lake,Natural stand
+Sample_0141,Upper Rice Lake,Natural stand
+Sample_0142,Upper Rice Lake,Natural stand
+Sample_0143,Upper Rice Lake,Natural stand
+Sample_0144,Upper Rice Lake,Natural stand
+Sample_0145,Upper Rice Lake,Natural stand
+Sample_0146,Upper Rice Lake,Natural stand
+Sample_0147,Upper Rice Lake,Natural stand
+Sample_0148,Garfield Lake,Natural stand
+Sample_0149,Garfield Lake,Natural stand
+Sample_0150,Garfield Lake,Natural stand
+Sample_0151,Garfield Lake,Natural stand
+Sample_0152,Upper Rice Lake,Natural stand
+Sample_0153,Upper Rice Lake,Natural stand
+Sample_0154,Upper Rice Lake,Natural stand
+Sample_0155,Upper Rice Lake,Natural stand
+Sample_0156,Upper Rice Lake,Natural stand
+Sample_0157,Upper Rice Lake,Natural stand
+Sample_0158,Upper Rice Lake,Natural stand
+Sample_0159,Garfield Lake,Natural stand
+Sample_0160,Garfield Lake,Natural stand
+Sample_0161,Garfield Lake,Natural stand
+Sample_0162,Garfield Lake,Natural stand
+Sample_0163,Upper Rice Lake,Natural stand
+Sample_0164,Upper Rice Lake,Natural stand
+Sample_0165,Upper Rice Lake,Natural stand
+Sample_0166,Upper Rice Lake,Natural stand
+Sample_0167,Upper Rice Lake,Natural stand
+Sample_0168,Upper Rice Lake,Natural stand
+Sample_0169,Garfield Lake,Natural stand
+Sample_0170,Garfield Lake,Natural stand
+Sample_0171,Garfield Lake,Natural stand
+Sample_0172,Garfield Lake,Natural stand
+Sample_0173,Garfield Lake,Natural stand
+Sample_0174,Upper Rice Lake,Natural stand
+Sample_0175,Upper Rice Lake,Natural stand
+Sample_0176,Upper Rice Lake,Natural stand
+Sample_0177,Upper Rice Lake,Natural stand
+Sample_0178,Upper Rice Lake,Natural stand
+Sample_0179,Upper Rice Lake,Natural stand
+Sample_0180,Garfield Lake,Natural stand
+Sample_0181,Garfield Lake,Natural stand
+Sample_0182,Garfield Lake,Natural stand
+Sample_0183,Garfield Lake,Natural stand
+Sample_0184,Garfield Lake,Natural stand
+Sample_0185,Garfield Lake,Natural stand
+Sample_0186,Garfield Lake,Natural stand
+Sample_0187,Plantagenet,Natural stand
+Sample_0188,Plantagenet,Natural stand
+Sample_0189,Plantagenet,Natural stand
+Sample_0190,Plantagenet,Natural stand
+Sample_0191,Plantagenet,Natural stand
+Sample_0192,Plantagenet,Natural stand
+Sample_0193,Z aquatica,Natural stand
+Sample_0194,Z aquatica,Natural stand
+Sample_0195,Z aquatica,Natural stand
+Sample_0196,Garfield Lake,Natural stand
+Sample_0197,Garfield Lake,Natural stand
+Sample_0198,Plantagenet,Natural stand
+Sample_0199,Plantagenet,Natural stand
+Sample_0200,Plantagenet,Natural stand
+Sample_0201,Plantagenet,Natural stand
+Sample_0202,Plantagenet,Natural stand
+Sample_0203,Plantagenet,Natural stand
+Sample_0204,Z aquatica,Natural stand
+Sample_0205,Z aquatica,Natural stand
+Sample_0206,Z aquatica,Natural stand
+Sample_0207,Garfield Lake,Natural stand
+Sample_0208,Garfield Lake,Natural stand
+Sample_0209,Plantagenet,Natural stand
+Sample_0210,Plantagenet,Natural stand
+Sample_0211,Plantagenet,Natural stand
+Sample_0212,Plantagenet,Natural stand
+Sample_0213,Plantagenet,Natural stand
+Sample_0214,Plantagenet,Natural stand
+Sample_0215,Z aquatica,Natural stand
+Sample_0216,Z aquatica,Natural stand
+Sample_0217,Z aquatica,Natural stand
+Sample_0218,Garfield Lake,Natural stand
+Sample_0219,Garfield Lake,Natural stand
+Sample_0220,Plantagenet,Natural stand
+Sample_0221,Plantagenet,Natural stand
+Sample_0222,Plantagenet,Natural stand
+Sample_0223,Plantagenet,Natural stand
+Sample_0224,Plantagenet,Natural stand
+Sample_0225,Plantagenet,Natural stand
+Sample_0226,Z aquatica,Natural stand
+Sample_0227,Z aquatica,Natural stand
+Sample_0228,Z aquatica,Natural stand
+Sample_0229,Garfield Lake,Natural stand
+Sample_0230,Garfield Lake,Natural stand
+Sample_0231,Plantagenet,Natural stand
+Sample_0232,Plantagenet,Natural stand
+Sample_0233,Plantagenet,Natural stand
+Sample_0234,Plantagenet,Natural stand
+Sample_0235,Plantagenet,Natural stand
+Sample_0236,Plantagenet,Natural stand
+Sample_0237,Plantagenet,Natural stand
+Sample_0238,Z aquatica,Natural stand
+Sample_0239,Z aquatica,Natural stand
+Sample_0240,Z aquatica,Natural stand
+Sample_0241,Garfield Lake,Natural stand
+Sample_0242,Garfield Lake,Natural stand
+Sample_0243,Plantagenet,Natural stand
+Sample_0244,Plantagenet,Natural stand
+Sample_0245,Plantagenet,Natural stand
+Sample_0246,Plantagenet,Natural stand
+Sample_0247,Plantagenet,Natural stand
+Sample_0248,Plantagenet,Natural stand
+Sample_0249,Plantagenet,Natural stand
+Sample_0250,Z aquatica,Natural stand
+Sample_0251,Z aquatica,Natural stand
+Sample_0252,Z aquatica,Natural stand
+Sample_0253,Garfield Lake,Natural stand
+Sample_0254,Garfield Lake,Natural stand
+Sample_0255,Plantagenet,Natural stand
+Sample_0256,Plantagenet,Natural stand
+Sample_0257,Plantagenet,Natural stand
+Sample_0258,Plantagenet,Natural stand
+Sample_0259,Plantagenet,Natural stand
+Sample_0260,Plantagenet,Natural stand
+Sample_0261,Z aquatica,Natural stand
+Sample_0262,Z aquatica,Natural stand
+Sample_0263,Z aquatica,Natural stand
+Sample_0264,Z aquatica,Natural stand
+Sample_0265,Garfield Lake,Natural stand
+Sample_0266,Garfield Lake,Natural stand
+Sample_0267,Plantagenet,Natural stand
+Sample_0268,Plantagenet,Natural stand
+Sample_0269,Plantagenet,Natural stand
+Sample_0270,Plantagenet,Natural stand
+Sample_0271,Plantagenet,Natural stand
+Sample_0272,Plantagenet,Natural stand
+Sample_0273,Z aquatica,Natural stand
+Sample_0274,Z aquatica,Natural stand
+Sample_0275,Z aquatica,Natural stand
+Sample_0276,Z aquatica,Natural stand
+Sample_0277,Z aquatica,Natural stand
+Sample_0278,Z aquatica,Natural stand
+Sample_0279,Z aquatica,Natural stand
+Sample_0280,Z aquatica,Natural stand
+Sample_0281,Bass Lake,Natural stand
+Sample_0282,Bass Lake,Natural stand
+Sample_0283,Bass Lake,Natural stand
+Sample_0284,Bass Lake,Natural stand
+Sample_0285,Bass Lake,Natural stand
+Sample_0286,Bass Lake,Natural stand
+Sample_0287,Dahler Lake,Natural stand
+Sample_0288,Dahler Lake,Natural stand
+Sample_0289,Z aquatica,Natural stand
+Sample_0290,Z aquatica,Natural stand
+Sample_0291,Z aquatica,Natural stand
+Sample_0292,Z aquatica,Natural stand
+Sample_0293,Bass Lake,Natural stand
+Sample_0294,Bass Lake,Natural stand
+Sample_0295,Bass Lake,Natural stand
+Sample_0296,Bass Lake,Natural stand
+Sample_0297,Bass Lake,Natural stand
+Sample_0298,Bass Lake,Natural stand
+Sample_0299,Dahler Lake,Natural stand
+Sample_0300,Dahler Lake,Natural stand
+Sample_0301,Z aquatica,Natural stand
+Sample_0302,Z aquatica,Natural stand
+Sample_0303,Z aquatica,Natural stand
+Sample_0304,Z aquatica,Natural stand
+Sample_0305,Bass Lake,Natural stand
+Sample_0306,Bass Lake,Natural stand
+Sample_0307,Bass Lake,Natural stand
+Sample_0308,Bass Lake,Natural stand
+Sample_0309,Bass Lake,Natural stand
+Sample_0310,Bass Lake,Natural stand
+Sample_0311,Dahler Lake,Natural stand
+Sample_0312,Dahler Lake,Natural stand
+Sample_0313,Z aquatica,Natural stand
+Sample_0314,Z aquatica,Natural stand
+Sample_0315,Z aquatica,Natural stand
+Sample_0316,Z aquatica,Natural stand
+Sample_0317,Bass Lake,Natural stand
+Sample_0318,Bass Lake,Natural stand
+Sample_0319,Bass Lake,Natural stand
+Sample_0320,Bass Lake,Natural stand
+Sample_0321,Bass Lake,Natural stand
+Sample_0322,Bass Lake,Natural stand
+Sample_0323,Dahler Lake,Natural stand
+Sample_0324,Dahler Lake,Natural stand
+Sample_0325,Z aquatica,Natural stand
+Sample_0326,Z aquatica,Natural stand
+Sample_0327,Bass Lake,Natural stand
+Sample_0328,Bass Lake,Natural stand
+Sample_0329,Bass Lake,Natural stand
+Sample_0330,Bass Lake,Natural stand
+Sample_0331,Bass Lake,Natural stand
+Sample_0332,Bass Lake,Natural stand
+Sample_0333,Bass Lake,Natural stand
+Sample_0334,Dahler Lake,Natural stand
+Sample_0335,Dahler Lake,Natural stand
+Sample_0336,Z aquatica,Natural stand
+Sample_0337,Z aquatica,Natural stand
+Sample_0338,Bass Lake,Natural stand
+Sample_0339,Bass Lake,Natural stand
+Sample_0340,Bass Lake,Natural stand
+Sample_0341,Bass Lake,Natural stand
+Sample_0342,Bass Lake,Natural stand
+Sample_0343,Bass Lake,Natural stand
+Sample_0344,Bass Lake,Natural stand
+Sample_0345,Dahler Lake,Natural stand
+Sample_0346,Dahler Lake,Natural stand
+Sample_0347,Z aquatica,Natural stand
+Sample_0348,Z aquatica,Natural stand
+Sample_0349,Bass Lake,Natural stand
+Sample_0350,Bass Lake,Natural stand
+Sample_0351,Bass Lake,Natural stand
+Sample_0352,Bass Lake,Natural stand
+Sample_0353,Bass Lake,Natural stand
+Sample_0354,Bass Lake,Natural stand
+Sample_0355,Dahler Lake,Natural stand
+Sample_0356,Dahler Lake,Natural stand
+Sample_0357,Dahler Lake,Natural stand
+Sample_0358,Z aquatica,Natural stand
+Sample_0359,Z aquatica,Natural stand
+Sample_0360,Bass Lake,Natural stand
+Sample_0361,Bass Lake,Natural stand
+Sample_0362,Bass Lake,Natural stand
+Sample_0363,Bass Lake,Natural stand
+Sample_0364,Bass Lake,Natural stand
+Sample_0365,Bass Lake,Natural stand
+Sample_0366,Dahler Lake,Natural stand
+Sample_0367,Dahler Lake,Natural stand
+Sample_0368,Dahler Lake,Natural stand
+Sample_0369,Dahler Lake,Natural stand
+Sample_0370,Dahler Lake,Natural stand
+Sample_0371,Dahler Lake,Natural stand
+Sample_0372,Dahler Lake,Natural stand
+Sample_0373,Shell Lake,Natural stand
+Sample_0374,Shell Lake,Natural stand
+Sample_0375,Shell Lake,Natural stand
+Sample_0376,Shell Lake,Natural stand
+Sample_0377,Shell Lake,Natural stand
+Sample_0378,Shell Lake,Natural stand
+Sample_0380,Dahler Lake,Natural stand
+Sample_0381,Dahler Lake,Natural stand
+Sample_0382,Dahler Lake,Natural stand
+Sample_0383,Dahler Lake,Natural stand
+Sample_0384,Shell Lake,Natural stand
+Sample_0385,Shell Lake,Natural stand
+Sample_0386,Shell Lake,Natural stand
+Sample_0387,Shell Lake,Natural stand
+Sample_0388,Shell Lake,Natural stand
+Sample_0389,Shell Lake,Natural stand
+Sample_0391,Dahler Lake,Natural stand
+Sample_0392,Dahler Lake,Natural stand
+Sample_0393,Dahler Lake,Natural stand
+Sample_0394,Dahler Lake,Natural stand
+Sample_0395,Shell Lake,Natural stand
+Sample_0396,Shell Lake,Natural stand
+Sample_0397,Shell Lake,Natural stand
+Sample_0398,Shell Lake,Natural stand
+Sample_0399,Shell Lake,Natural stand
+Sample_0400,Shell Lake,Natural stand
+Sample_0402,Dahler Lake,Natural stand
+Sample_0403,Dahler Lake,Natural stand
+Sample_0404,Dahler Lake,Natural stand
+Sample_0405,Dahler Lake,Natural stand
+Sample_0406,Shell Lake,Natural stand
+Sample_0407,Shell Lake,Natural stand
+Sample_0408,Shell Lake,Natural stand
+Sample_0409,Shell Lake,Natural stand
+Sample_0410,Shell Lake,Natural stand
+Sample_0411,Shell Lake,Natural stand
+Sample_0413,Dahler Lake,Natural stand
+Sample_0414,Dahler Lake,Natural stand
+Sample_0415,Dahler Lake,Natural stand
+Sample_0416,Dahler Lake,Natural stand
+Sample_0417,Shell Lake,Natural stand
+Sample_0418,Shell Lake,Natural stand
+Sample_0419,Shell Lake,Natural stand
+Sample_0420,Shell Lake,Natural stand
+Sample_0421,Shell Lake,Natural stand
+Sample_0422,Shell Lake,Natural stand
+Sample_0423,Shell Lake,Natural stand
+Sample_0425,Dahler Lake,Natural stand
+Sample_0426,Dahler Lake,Natural stand
+Sample_0427,Dahler Lake,Natural stand
+Sample_0428,Dahler Lake,Natural stand
+Sample_0429,Shell Lake,Natural stand
+Sample_0430,Shell Lake,Natural stand
+Sample_0431,Shell Lake,Natural stand
+Sample_0432,Shell Lake,Natural stand
+Sample_0433,Shell Lake,Natural stand
+Sample_0434,Shell Lake,Natural stand
+Sample_0435,Shell Lake,Natural stand
+Sample_0437,Dahler Lake,Natural stand
+Sample_0438,Dahler Lake,Natural stand
+Sample_0439,Dahler Lake,Natural stand
+Sample_0440,Dahler Lake,Natural stand
+Sample_0441,Shell Lake,Natural stand
+Sample_0442,Shell Lake,Natural stand
+Sample_0443,Shell Lake,Natural stand
+Sample_0444,Shell Lake,Natural stand
+Sample_0445,Shell Lake,Natural stand
+Sample_0446,Shell Lake,Natural stand
+Sample_0449,Dahler Lake,Natural stand
+Sample_0450,Dahler Lake,Natural stand
+Sample_0451,Dahler Lake,Natural stand
+Sample_0452,Dahler Lake,Natural stand
+Sample_0453,Shell Lake,Natural stand
+Sample_0454,Shell Lake,Natural stand
+Sample_0455,Shell Lake,Natural stand
+Sample_0456,Shell Lake,Natural stand
+Sample_0457,Shell Lake,Natural stand
+Sample_0458,Shell Lake,Natural stand
+Sample_0551,Decker Lake,Natural stand
+Sample_0552,Decker Lake,Natural stand
+Sample_0553,Decker Lake,Natural stand
+Sample_0554,Decker Lake,Natural stand
+Sample_0555,Decker Lake,Natural stand
+Sample_0556,Decker Lake,Natural stand
+Sample_0557,Ottertail River,Natural stand
+Sample_0558,Ottertail River,Natural stand
+Sample_0559,Ottertail River,Natural stand
+Sample_0560,Ottertail River,Natural stand
+Sample_0561,Ottertail River,Natural stand
+Sample_0562,Decker Lake,Natural stand
+Sample_0563,Decker Lake,Natural stand
+Sample_0564,Decker Lake,Natural stand
+Sample_0565,Decker Lake,Natural stand
+Sample_0566,Decker Lake,Natural stand
+Sample_0567,Decker Lake,Natural stand
+Sample_0568,Ottertail River,Natural stand
+Sample_0569,Ottertail River,Natural stand
+Sample_0570,Ottertail River,Natural stand
+Sample_0571,Ottertail River,Natural stand
+Sample_0572,Ottertail River,Natural stand
+Sample_0573,Decker Lake,Natural stand
+Sample_0574,Decker Lake,Natural stand
+Sample_0575,Decker Lake,Natural stand
+Sample_0576,Decker Lake,Natural stand
+Sample_0577,Decker Lake,Natural stand
+Sample_0578,Decker Lake,Natural stand
+Sample_0579,Ottertail River,Natural stand
+Sample_0580,Ottertail River,Natural stand
+Sample_0581,Ottertail River,Natural stand
+Sample_0582,Ottertail River,Natural stand
+Sample_0583,Ottertail River,Natural stand
+Sample_0584,Decker Lake,Natural stand
+Sample_0585,Decker Lake,Natural stand
+Sample_0586,Decker Lake,Natural stand
+Sample_0587,Decker Lake,Natural stand
+Sample_0588,Decker Lake,Natural stand
+Sample_0589,Decker Lake,Natural stand
+Sample_0590,Ottertail River,Natural stand
+Sample_0591,Ottertail River,Natural stand
+Sample_0592,Ottertail River,Natural stand
+Sample_0593,Ottertail River,Natural stand
+Sample_0594,Ottertail River,Natural stand
+Sample_0595,Decker Lake,Natural stand
+Sample_0596,Decker Lake,Natural stand
+Sample_0597,Decker Lake,Natural stand
+Sample_0598,Decker Lake,Natural stand
+Sample_0599,Decker Lake,Natural stand
+Sample_0600,Decker Lake,Natural stand
+Sample_0601,Decker Lake,Natural stand
+Sample_0602,Ottertail River,Natural stand
+Sample_0603,Ottertail River,Natural stand
+Sample_0604,Ottertail River,Natural stand
+Sample_0605,Ottertail River,Natural stand
+Sample_0606,Ottertail River,Natural stand
+Sample_0607,Decker Lake,Natural stand
+Sample_0608,Decker Lake,Natural stand
+Sample_0609,Decker Lake,Natural stand
+Sample_0610,Decker Lake,Natural stand
+Sample_0611,Decker Lake,Natural stand
+Sample_0612,Decker Lake,Natural stand
+Sample_0613,Decker Lake,Natural stand
+Sample_0614,Ottertail River,Natural stand
+Sample_0615,Ottertail River,Natural stand
+Sample_0616,Ottertail River,Natural stand
+Sample_0617,Ottertail River,Natural stand
+Sample_0618,Ottertail River,Natural stand
+Sample_0619,Decker Lake,Natural stand
+Sample_0620,Decker Lake,Natural stand
+Sample_0621,Decker Lake,Natural stand
+Sample_0622,Decker Lake,Natural stand
+Sample_0623,Decker Lake,Natural stand
+Sample_0624,Decker Lake,Natural stand
+Sample_0625,Ottertail River,Natural stand
+Sample_0626,Ottertail River,Natural stand
+Sample_0627,Ottertail River,Natural stand
+Sample_0628,Ottertail River,Natural stand
+Sample_0629,Ottertail River,Natural stand
+Sample_0630,Ottertail River,Natural stand
+Sample_0631,Decker Lake,Natural stand
+Sample_0632,Decker Lake,Natural stand
+Sample_0633,Decker Lake,Natural stand
+Sample_0634,Decker Lake,Natural stand
+Sample_0635,Decker Lake,Natural stand
+Sample_0636,Decker Lake,Natural stand
+Sample_0637,Ottertail River,Natural stand
+Sample_0638,Ottertail River,Natural stand
+Sample_0639,Ottertail River,Natural stand
+Sample_0640,Ottertail River,Natural stand
+Sample_0641,Ottertail River,Natural stand
+Sample_0642,Ottertail River,Natural stand
+Sample_0643,Ottertail River,Natural stand
+Sample_0644,Phantom Lake,Natural stand
+Sample_0645,Phantom Lake,Natural stand
+Sample_0646,Phantom Lake,Natural stand
+Sample_0655,Ottertail River,Natural stand
+Sample_0656,Phantom Lake,Natural stand
+Sample_0657,Phantom Lake,Natural stand
+Sample_0658,Phantom Lake,Natural stand
+Sample_0667,Ottertail River,Natural stand
+Sample_0668,Phantom Lake,Natural stand
+Sample_0669,Phantom Lake,Natural stand
+Sample_0670,Phantom Lake,Natural stand
+Sample_0679,Ottertail River,Natural stand
+Sample_0680,Phantom Lake,Natural stand
+Sample_0681,Phantom Lake,Natural stand
+Sample_0682,Phantom Lake,Natural stand
+Sample_0691,Ottertail River,Natural stand
+Sample_0692,Phantom Lake,Natural stand
+Sample_0693,Phantom Lake,Natural stand
+Sample_0702,Ottertail River,Natural stand
+Sample_0703,Phantom Lake,Natural stand
+Sample_0704,Phantom Lake,Natural stand
+Sample_0713,Ottertail River,Natural stand
+Sample_0714,Phantom Lake,Natural stand
+Sample_0715,Phantom Lake,Natural stand
+Sample_0724,Ottertail River,Natural stand
+Sample_0725,Phantom Lake,Natural stand
+Sample_0726,Phantom Lake,Natural stand
+Sample_0991,Mud Hen Lake,Natural stand
+Sample_0992,Mud Hen Lake,Natural stand
+Sample_1000,Mud Hen Lake,Natural stand
+Sample_1001,Mud Hen Lake,Natural stand
+Sample_1009,Mud Hen Lake,Natural stand
+Sample_1010,Mud Hen Lake,Natural stand
+Sample_1017,Mud Hen Lake,Natural stand
+Sample_1018,Mud Hen Lake,Natural stand
+Sample_1025,Mud Hen Lake,Natural stand
+Sample_1032,Mud Hen Lake,Natural stand
