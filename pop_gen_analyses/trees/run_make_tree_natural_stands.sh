@@ -21,4 +21,4 @@ module load geos/3.7.1
 module load R/3.6.0
 
 # arg[1] is a VCF file; arg[2] os a CSV file containing population data; arg[3] is Rdata file you want to save to; arg[4] is the PDF file to save the plot
-Rscript make_tree.R natural_stands.recode.vcf natural_stand_samples.csv natural_stand_tree.Rdata natural_stand_tree.pdf
+Rscript make_tree_natural_stands.R natural_stands.recode.vcf natural_stand_samples.csv natural_stand_tree.Rdata natural_stand_tree.pdf
