@@ -31,14 +31,30 @@ pop(gen_light_x) <- pop.data$sample_id
 # Make a tree (note: this step took a few minutes. Not sure if it would crash if dataset were larger. Ultimately a good idea to run within a shell script submitted to SLURM)
 tree <- aboot(gen_light_x, tree = "upgma", distance = bitwise.dist, sample = 100, showtree = F, cutoff = 50, quiet = T)
 
+# Change tip labels to have sample ids rather than sample number
+tree$tip.label <- as.character(pop.data$sample_id)
+
 # Save progress
-save(x, gen_light_x, genLightX.dist, tree, file = args[3])
+save(x, gen_light_x, genLightX.dist, tree, pop.data, file = args[3])
+
+# Define col2hex() function (from: https://rdrr.io/cran/gplots/src/R/col2hex.R)
+col2hex <- function(cname) {
+    colMat <- col2rgb(cname)
+    rgb(red=colMat[1,]/255, green=colMat[2,]/255,blue=colMat[3,]/255)
+}
+
+# Define my colors because we want to make it match the colors used in the PCA plots
+myColors = c("red", "orange", "yellow3", "yellow", "green3", "green", "blue4", "blue", "violetred3", "violet", "purple4", "purple", "red3")
+
+hexColorList <- vector() # initiate empty vector
+for (color in myColors){
+	hexColor = col2hex(color)
+	hexColorList <- c(hexColorList, hexColor)
+}
 
 pdf(args[4], height = 100, width = 100)
-cols <- brewer.pal(n = nPop(gen_light_x), name = "Spectral")
-plot.phylo(tree, cex = 0.8, font = 2, adj = 0, tip.color =  cols[pop(gen_light_x)])
+plot.phylo(tree, cex = 0.8, font = 2, adj = 0, tip.color =  hexColorList[pop(gen_light_x)])
 nodelabels(tree$node.label, adj = c(1.3, -0.5), frame = "n", cex = 0.8, font = 3, xpd = TRUE)
-legend('topleft', legend = c("CA","OR","WA"), fill = cols, border = FALSE, bty = "n", cex = 2)
 axis(side = 1)
 title(xlab = "Genetic distance (proportion of loci that are different)")
 dev.off()
