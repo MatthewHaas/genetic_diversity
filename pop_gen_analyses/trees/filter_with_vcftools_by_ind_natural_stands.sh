@@ -7,7 +7,7 @@
 #SBATCH --mail-user=haasx092@umn.edu
 #SBATCH -p amdsmall
 #SBATCH --account=jkimball
-#SBATCH -o filter_vcfs_natural_stnads.out
+#SBATCH -o filter_vcfs_natural_stands.out
 #SBATCH -e filter_vcfs_natural_stands.err
 
 # Include path to the working directory
