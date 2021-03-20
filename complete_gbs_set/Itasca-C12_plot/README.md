@@ -1,3 +1,3 @@
 # README
 
-PCA plot for only Itasca-C12 accessions from various sources.
+The purpose of these scripts was create a PCA plot featuring only Itasca-C12 samples to see if they cluster according to their collection sites (e.g., farms). The text file [Itasca.txt](Itasca.txt) was used to filter the input VCF file using PLINK. The script [run_plink_20percent_NA_Itasca_dp4.sh](run_plink_20percent_NA_Itasca_dp4.sh) achieves this while creating the eigenvalue and eigenvector files used to make the PCA. The script [run_plot_Itasca_plink_pca_dp4.sh](run_plot_Itasca_plink_pca_dp4.sh) makes the PCA plots by calling the R script [plot_Itasca_plink_pca.R](plot_Itasca_plink_pca.R).
