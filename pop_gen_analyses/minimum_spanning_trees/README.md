@@ -1,1 +1,3 @@
 # README for minimum spanning trees
+
+These scripts plot minimum spanning trees from existing genlight objects. There are lots of improvements that could be made to these to make them informative. The natural stands and temporal samples are colored appropriately, but something is off with the breeding lines and I'm not sure why. I think there is a conflict with the number of samples. Right now, I think the biggest issue is that they all seem to have a star pattern. The natural stands also don't seem to have any rational pattern to their clustering. Perhaps this is not unexpected, but it still seems odd to me.
