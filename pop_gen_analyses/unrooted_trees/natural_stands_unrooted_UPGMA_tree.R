@@ -9,7 +9,7 @@ library(igraph)
 load("natural_stand_tree_dp4.Rdata")
 
 # Load the gl2gi (genlight to genind object; from dartR package but it had difficulties installing so I saved the required function separately under the name gl2gi.R)
-source(gl2gi.R)
+source("gl2gi.R")
 
 # Make genind object
 gen_ind_x <- gl2gi(gen_light_x)
