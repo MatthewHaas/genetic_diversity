@@ -7,7 +7,7 @@ library(data.table)
 library(igraph)
 
 # Load the gl2gi (genlight to genind object; from dartR package but it had difficulties installing so I saved the required function separately under the name gl2gi.R)
-source(gl2gi.R)
+source("gl2gi.R")
 
 # Load data (containing the genlight object needed for this analysis)
 load("temporal_samples_tree_dp4.Rdata")
