@@ -1,4 +1,10 @@
-
+library(adegenet)
+library(vcfR)
+library(poppr)
+library(ape)
+library(RColorBrewer)
+library(data.table)
+library(igraph)
 
 load("natural_stand_tree_dp4.Rdata")
 
