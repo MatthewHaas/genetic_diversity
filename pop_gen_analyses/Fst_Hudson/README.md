@@ -18,7 +18,7 @@ The R scripts follow a basic pattern:<br>
 
 The shell scripts run the aforementioned R script and use a for loop to iterate over a text file which was created using the general form ```ls [natural_stand_name]*csv > [natural_stand_name]_comparison_csv_sample_list.txt```.<br>
 
-Most of the pairwise comparisons were performed using the script [hudson_Fst.R](hudson_Fst.R). It follows an assumption that the first 50 rows (1-50) belong to population 1 (the first population mentioned in the file name) and the second 50 rows (51-100) belong to population 2 (the second population mentioned in the file name).<br>
+Most of the pairwise comparisons were performed using the script [```hudson_Fst.R```](hudson_Fst.R). It follows an assumption that the first 50 rows (1-50) belong to population 1 (the first population mentioned in the file name) and the second 50 rows (51-100) belong to population 2 (the second population mentioned in the file name).<br>
 
 The loop looks like:
 ```
@@ -28,7 +28,7 @@ Rscript hudon_Fst.R $file [natural_stand_name]_Fst_pairwise_comparisonstxt
 done
 ```
 
-Because of the way I set up the population comparisons, for some of the comparisons featuring Mud Hen Lake and Phantom Lake  (with 10 and 20 lakes, respectively where these lakes are "population 2"), the _F<sub>ST</sub>_ calculations don't seem to be affected since any spare rows from 61-100 or 71-100 are not available (NA). However, for the comparisons where Mud Hen Lake or Phantom Lake are the first partner in the comparison, special scripts were required. Otherwise, the populations would be mixed. For comparisons involving Mud Hen Lake, population 1 is represented by rows 1-10 and population 2 is represented by rows 11-60. For comparisons involving Phantom Lake, population 1 is represented by rows 1-20 and population 2 is represented by rows 21-70. For these reasons, the scripts [hudson_Fst_mudhen.R](hudson_Fst_mudhen.R) and [hudson_Fst_phantom.R](hudson_Fst_phantom.R) were used for these comparisons.
+Because of the way I set up the population comparisons, for some of the comparisons featuring Mud Hen Lake and Phantom Lake  (with 10 and 20 lakes, respectively where these lakes are "population 2"), the _F<sub>ST</sub>_ calculations don't seem to be affected since any spare rows from 61-100 or 71-100 are not available (NA). However, for the comparisons where Mud Hen Lake or Phantom Lake are the first partner in the comparison, special scripts were required. Otherwise, the populations would be mixed. For comparisons involving Mud Hen Lake, population 1 is represented by rows 1-10 and population 2 is represented by rows 11-60. For comparisons involving Phantom Lake, population 1 is represented by rows 1-20 and population 2 is represented by rows 21-70. For these reasons, the scripts [```hudson_Fst_mudhen.R```](hudson_Fst_mudhen.R) and [```hudson_Fst_phantom.R```](hudson_Fst_phantom.R) were used for these comparisons.
 
 ## References
 Bhatia, G., Patterson, N., Sankararaman, S., and Price, A.L. (2013). Estimating and interpreting FST: The impact of rare variants. _Genome Res_ **23**:1514-1521.<br>
