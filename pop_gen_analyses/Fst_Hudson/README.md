@@ -1,8 +1,8 @@
 # README for Fst_Hudson
 
-These scripts are for calculating _F<sub>ST</sub>_ values using the Hudson method. There are Excel equivalents that contain the sample names/identities for each row because they cannot be accepted by the R functions described here.
+These scripts are for calculating _F<sub>ST</sub>_ values using the Hudson method.
 
-The comma-separated value (CSV) files are contain the single nucleotide polymorphism (SNP) data.<br><br>
+The comma-separated value (CSV) files are contain the single nucleotide polymorphism (SNP) data. There are Excel equivalents that contain the sample names/identities for each row because the CSV files cannot be accepted by the R functions described here.<br><br>
 :dna: 0 is homozygous for the reference allele (0) or AA<br>
 :dna: 1 is heterozygous (1) or AB<br>
 :dna: 2 is homozygous for the alternate allele (2) or BB<br><br>
@@ -13,7 +13,7 @@ Rows represent individuals and columns represent SNPs. There are 1,162 SNPs and 
 The R scripts follow a basic pattern:<br>
 1. Data (CSV files) are loaded into the R statistical environment.
 2. The data are converted to a matrix (although this step isn't strictly necessary).
-3. The ```fst.hudson()``` function from the [KRIS](https://rdrr.io/cran/KRIS/man/KRIS-package.html) package is used to calculate _F<sub>ST</sub>_ values using the Hudson Method.
+3. The [```fst.hudson()```](fst_hudson_function.R) function from the [KRIS](https://rdrr.io/cran/KRIS/man/KRIS-package.html) package is used to calculate _F<sub>ST</sub>_ values using the Hudson Method.
 4. _F<sub>ST</sub>_ values and the name of the CSV file being examined are written (appended to) a text file using the ```write.table()``` function with the ```append = TRUE``` option (so that the script can be run in a loop and not have new results overwrite previous results).
 
 The shell scripts run the aforementioned R script and use a for loop to iterate over a text file which was created using the general form ```ls [natural_stand_name]*csv > [natural_stand_name]_comparison_csv_sample_list.txt```.<br>
