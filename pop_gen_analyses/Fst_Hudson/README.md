@@ -1,6 +1,6 @@
 # README for Fst_Hudson
 
-These scripts are for calculating _F<sub>ST</sub>_ values using the Hudson method.
+These scripts are for calculating _F<sub>ST</sub>_ values using the Hudson method. There are Excel equivalents that contain the sample names/identities for each row because they cannot be accepted by the R functions described here.
 
 The comma-separated value (CSV) files are contain the single nucleotide polymorphism (SNP) data.<br><br>
 :dna: 0 is homozygous for the reference allele (0) or AA<br>
@@ -14,11 +14,11 @@ The R scripts follow a basic pattern:<br>
 1. Data (CSV files) are loaded into the R statistical environment.
 2. The data are converted to a matrix (although this step isn't strictly necessary).
 3. The ```fst.hudson()``` function from the [KRIS](https://rdrr.io/cran/KRIS/man/KRIS-package.html) package is used to calculate _F<sub>ST</sub>_ values using the Hudson Method.
-4. _F<sub>ST</sub>_ values and the name of the CSV file being examined are written (appended to) a text file using the ```write.table()``` function and the ```append = TRUE``` option (so that the script can be run in a loop and not have new results overwrite previous results).
+4. _F<sub>ST</sub>_ values and the name of the CSV file being examined are written (appended to) a text file using the ```write.table()``` function with the ```append = TRUE``` option (so that the script can be run in a loop and not have new results overwrite previous results).
 
 The shell scripts run the aforementioned R script and use a for loop to iterate over a text file which was created using the general form ```ls [natural_stand_name]*csv > [natural_stand_name]_comparison_csv_sample_list.txt```.<br>
 
-Most of the pairwise comparisons were performed using the script [hudson_Fst.R](hudson_Fst.R). It follows an assumption that the first 50 rows (1-50) belong to population 1 (the first population mentioned in the file name) and the second 50 rows (51-100) belong to population 2 (the second population mentioned in the file name).
+Most of the pairwise comparisons were performed using the script [hudson_Fst.R](hudson_Fst.R). It follows an assumption that the first 50 rows (1-50) belong to population 1 (the first population mentioned in the file name) and the second 50 rows (51-100) belong to population 2 (the second population mentioned in the file name).<br>
 
 The loop looks like:
 ```
@@ -27,6 +27,8 @@ do
 Rscript hudon_Fst.R $file [natural_stand_name]_Fst_pairwise_comparisonstxt
 done
 ```
+
+Because of the way I set up the population comparisons, for some of the comparisons featuring Mud Hen Lake and Phantom Lake  (with 10 and 20 lakes, respectively where these lakes are "population 2"), the _F<sub>ST</sub>_ calculations don't seem to be affected since any spare rows from 61-100 or 71-100 are not available (NA). However, for the comparisons where Mud Hen Lake or Phantom Lake are the first partner in the comparison, special scripts were required. Otherwise, the populations would be mixed. For comparisons involving Mud Hen Lake, population 1 is represented by rows 1-10 and population 2 is represented by rows 11-60. For comparisons involving Phantom Lake, population 1 is represented by rows 1-20 and population 2 is represented by rows 21-70. For these reasons, the scripts [hudson_Fst_mudhen.R](hudson_Fst_mudhen.R) and [hudson_Fst_phantom.R](hudson_Fst_phantom.R) were used for these comparisons.
 
 ## References
 Bhatia, G., Patterson, N., Sankararaman, S., and Price, A.L. (2013). Estimating and interpreting FST: The impact of rare variants. _Genome Res_ **23**:1514-1521.<br>
