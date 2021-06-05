@@ -18,6 +18,8 @@ The R scripts follow a basic pattern:<br>
 
 The shell scripts run the aforementioned R script and use a for loop to iterate over a text file which was created using the general form ```ls [natural_stand_name]*csv > [natural_stand_name]_comparison_csv_sample_list.txt```.<br>
 
+Most of the pairwise comparisons were performed using the script [hudson_Fst.R](hudson_Fst.R). It follows an assumption that the first 50 rows (1-50) belong to population 1 (the first population mentioned in the file name) and the second 50 rows (51-100) belong to population 2 (the second population mentioned in the file name).
+
 The loop looks like:
 ```
 for file in $(cat [natural_stand_name]_comparison_csv_sample_list.txt);
