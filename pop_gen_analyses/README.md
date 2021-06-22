@@ -26,3 +26,17 @@ They were created by opening the original SNP matrix (with rows=SNPs and columsn
 Some post-processing is required (for example, removing quotation marks around each SNP call which are there because they are strings in Python, but will cause issues when input into Arlequin. Haplotype names and the number of individuals with each haplotype also need to be added.<br>
 
 I am also considering each individual to have its own haplotype. We would likely see many shared haplotypes if we were using imputed data, but for now I haven't tried to reduce the number of haplotypes.
+
+Arlequin can be difficult to work with sometimes. Here are the settings that I used to make it work:
+* Each lake in its own group
+* Population comparisons
+    * :heavy_check_mark: Compute pairwise FST
+* Genetic distance settings
+    * :heavy_check_mark: Slatkin's distance
+    * :heavy_check_mark: Reynold's distance
+    * :heavy_check_mark: Compute pairwise differences (pi)
+    * No. of permutations: 100
+    * Significance level: 0.05
+    * Use conventional F-statistics (haplotype frequencies only)
+    * Pairwise difference
+    * Gamma a value: 0 
