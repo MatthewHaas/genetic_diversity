@@ -1,6 +1,6 @@
 # README
 
-The script [convert_csv_to_arlequin_input_format.py](pop_gen_analyses/convert_csv_to_arlequin_input_format.py) was written to convert the SNP matrix from the comma-separated value (CSV) format to Arlequin input format. Arlequin requires somewhat unique formatting. For a diploid individual, each locus requires two lines. There needs to be a name for the haplotype, the number of individuals with that haplotype, followed by the SNP calls. The second line only need the SNP calls. For homozygous calls (0 or 1), the ref (0) or alt (2) calls are used for both lines.
+The script [convert_csv_to_arlequin_input_format.py](convert_csv_to_arlequin_input_format.py) was written to convert the SNP matrix from the comma-separated value (CSV) format to Arlequin input format. Arlequin requires somewhat unique formatting. For a diploid individual, each locus requires two lines. There needs to be a name for the haplotype, the number of individuals with that haplotype, followed by the SNP calls. The second line only need the SNP calls. For homozygous calls (0 or 1), the ref (0) or alt (2) calls are used for both lines.
 
 The basic code for running the script is:<br>
 ```python convert_csv_to_arlequin_input_format.py BassLake_snp_matrix.csv BassLake_arlequin_input.arp```<br>
