@@ -30,6 +30,15 @@ I am considering each individual to have its own haplotype. We would likely see 
 Arlequin can be difficult to work with sometimes. Here are the settings that I used to make it work:
 * Each lake in its own group
     * e.g., Group 1 = Bass Lake, Group 2 = Clearwater River
+* Project information (all of this is greyed out)
+    * Filename: C:/Users/haasx092/Documents/wild_rice/genetic_diversity/Arlequin_files/natural_stands_fst.arp
+    * Ploidy: Genotypic data
+    * Gametic Phase: Unknown
+    * Dominance: Codominant
+    * Data type: DNA
+    * Recessive allele: null
+    * Locus separator: WHITESPACE
+    * Missing data: ?
 * Population comparisons
     * :heavy_check_mark: Compute pairwise FST
 * Genetic distance settings
