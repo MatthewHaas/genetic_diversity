@@ -40,3 +40,10 @@ Arlequin can be difficult to work with sometimes. Here are the settings that I u
     * Use conventional F-statistics (haplotype frequencies only)
     * Pairwise difference
     * Gamma a value: 0 
+* Population differentiation
+    * :heavy_check_mark: Exact test of population differentiation
+    * Exact test settings
+        * No. of steps in Markov chain: 100,000
+        * No. of dememorization steps: 10,000
+        * :heavy_check_mark: Generate histogram and table
+        * Significance level: 0.05
