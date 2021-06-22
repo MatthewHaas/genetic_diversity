@@ -23,10 +23,6 @@ for line in data:
         continue
     if thirdline:
         thirdline = False
-        line = line.split(',')
-        snpID = list()
-        for char in line[1:]:
-            snpID.append(char)
         continue
     if fourthline:
         fourthline = False
@@ -44,29 +40,28 @@ for line in data:
         continue
     line = line.split(',')
     index = 0
+    sampleID = list()
+    for char in line:
+        sampleID.append(line[0])
     for char in line[5:]:
         if char == '0':
             allele1.append(refAllele[index])
             allele2.append(refAllele[index])
-            name = snpID[index]
             index += 1
         elif char == '1':
             allele1.append(refAllele[index])
             allele2.append(altAllele[index])
-            name = snpID[index]
             index += 1
         elif char == '2':
             allele1.append(altAllele[index])
             allele2.append(altAllele[index])
-            name = snpID[index]
             index += 1
         elif char == 'NA':
             allele1.append(str('?'))
             allele2.append(str('?'))
-            name = snpID[index]
             index += 1
-    outfile.write(name + ' 1 ' + ' '.join(allele1) + '\n')
-    outfile.write(' '.join(allele2) + '\n')
+    outfile.write(sampleID[index] + ' 1 ' + ' '.join(allele1) + '\n')
+    outfile.write('  ' + ' '.join(allele2) + '\n')
     del allele1[:] # too bad can't use clear() method
     del allele2[:] # too bad can't use clear() method
 outfile.close()
