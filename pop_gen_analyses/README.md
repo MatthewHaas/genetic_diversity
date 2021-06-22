@@ -29,6 +29,7 @@ I am considering each individual to have its own haplotype. We would likely see 
 
 Arlequin can be difficult to work with sometimes. Here are the settings that I used to make it work:
 * Each lake in its own group
+    * e.g., Group 1 = Bass Lake, Group 2 = Clearwater River
 * Population comparisons
     * :heavy_check_mark: Compute pairwise FST
 * Genetic distance settings
