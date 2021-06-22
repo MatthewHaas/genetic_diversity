@@ -47,3 +47,16 @@ Arlequin can be difficult to work with sometimes. Here are the settings that I u
         * No. of dememorization steps: 10,000
         * :heavy_check_mark: Generate histogram and table
         * Significance level: 0.05
+* Project Wizard
+    * Data type: FREQUENCY
+    * Genotypic data: NOT CHECKED
+    * Known gametic phase: GREY AND NOT CHECKED
+    * Recessive data: GREY AND NOT CHECKED
+    * Controls:
+        * No. of samples: 2
+        * Locus separator: WHITESPACE
+        * Missing data: ?
+    * Optional sections
+        * Include haplotype list: UNCHECKED
+        * Include distance matrix: UNCHECKED
+        * Include genetic structure: UNCHECKED
