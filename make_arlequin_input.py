@@ -1,4 +1,4 @@
-```
+'''
 This script takes a SNP matrix in CSV format as an argument and converts the SNP calls into to an Arlequin-style file (which requires 2 lines for each haplotype).
 It is a bit complicated because the first line should have a haplotype identifer/sample name, followed by a space, the frequency of the haplotype (1 in this case), another space, and finally a series of allele calls. The second line should only be allele calls, but it seems to need spaces where the first line has the haplotype ID and frequency.
 The first three lines are skipped because they contain information that are not relevant to the output.
@@ -12,7 +12,7 @@ If the SNP call is a 2, the respective altAllele is writteo to lists allele1 and
 Missing data are written as a question mark (?) which is in accordance with Arlequin format.
 At the end of each iteration of the for loop, the sampleID, frequency, and allele1 and allele2 lists are written to the output file (the Arlequin input style).
 The lists allele1 and allele1 are cleared at the end of each iteration of the for loop so that they do not become exponentially larger and combine sammples/haplotypes.
-```
+'''
 import sys
 import os
 
