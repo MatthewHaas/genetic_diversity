@@ -1,0 +1,5 @@
+# 25 June 2021
+# WD: /home/jkimball/haasx092/pilot_GBS
+# The purpose of this one-liner is to remove extraneous details from the scaffold names of the UMGC-called SNPs.
+
+sed -r 's/;HRSCAF=[0-9 ]+//' variants_filt_umgc.tsv > variants_filt_umgc_short_scaffold_name.tsv
