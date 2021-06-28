@@ -8,6 +8,6 @@ _Fst_ values were calculated using [VCFtools](https://vcftools.github.io/index.h
 * [4 million](calculate_Fst_vcftools_umgc_called_snps_with_ref_4_MILLION.sh)
 * [500,000](calculate_Fst_vcftools_umgc_called_snps_with_ref_500K.sh)
 
-Individuals were assigned to either [natural stands](natural_stands.txt) or [breeding lines](breeding_lines.txt) to compare the populations to each other.
+Individuals were assigned to either [natural stands](natural_stands.txt) or [breeding lines](breeding_lines.txt) to compare the two classes to each other.
 
-I then plotted the output from the 7 million analysis using a simple [R script]9plot_Fst_values_from_vcftools_SNPs_called_without_reference_using_stacks_7M.R) in Rstudio on my personal machine. It only shows _Fst_ values that are greater than zero because I filtered out nonsensical _Fst_ values (e.g., those less than 0).
+I then plotted the output from the 7 million analysis using a simple [R script](plot_Fst_values_from_vcftools_SNPs_called_without_reference_using_stacks_7M.R) in Rstudio on my personal machine. It only shows _Fst_ values that are greater than zero because I filtered out nonsensical _Fst_ values (e.g., those less than 0).
