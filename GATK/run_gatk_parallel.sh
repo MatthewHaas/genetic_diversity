@@ -1,7 +1,7 @@
 #!/bin/bash -l
 #SBATCH --nodes=1
 #SBATCH --ntasks=32
-#SBATCH --time=24:00:00
+#SBATCH --time=16:00:00
 #SBATCH --mem=30g
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=haasx092@umn.edu
@@ -25,17 +25,21 @@ FASTA='/home/jkimball/shared/WR_Annotation/NCBI_submission/zizania_palustris_13N
 # The code to create the FASTA dictionary is commented out because it worked and doesn't need to be re-run each time I debug the rest of the code
 #gatk --java-options "-Xmx4g"  CreateSequenceDictionary -R $FASTA
 
-cat samples.txt | parallel --will-cite -j 10 "java -jar /panfs/roc/msisoft/picard/2.18.16/picard.jar AddOrReplaceReadGroups \
-        I={}_sorted.bam \
-        O={}_with_rgs.bam \
-        RGID=4 \
-        RGLB=lib1 \
-        RGPL=ILLUMINA \
-        RGPU=unit1 \
-        RGSM={}"
+#cat sample_list.txt | parallel --will-cite -j 10 "java -jar /panfs/roc/msisoft/picard/2.18.16/picard.jar AddOrReplaceReadGroups \
+#       I={}/{}_sorted.bam \
+#       O={}/{}_with_rgs.bam \
+#       RGID=4 \
+#       RGLB=lib1 \
+#       RGPL=ILLUMINA \
+#       RGPU=unit1 \
+#       RGSM={}"
 
-#samtools index -c ${STEM}_with_rgs.bam
+#for i in $(cat sample_list.txt); do
+#       samtools index -c ${i}/${i}_with_rgs.bam
+#done
 
-#cat samples.txt | parallel --will-cite -j 10 "gatk --java-options "-Xmx4g" HaplotypeCaller -R $FASTA -I ${}_with_rgs.bam -O ${}.vcf.gz --sample-name ${}"
-
-# possible alternate solution using read groups? @RG\tID:XXX\tSM:XXX_sample
+cat sample_list.txt | parallel --will-cite -j 10 "gatk --java-options "-Xmx4g" HaplotypeCaller \
+        -R $FASTA \
+        -I {}/{}_with_rgs.bam \
+        -O {}/{}.vcf.gz \
+        --sample-name {}"
