@@ -8,3 +8,7 @@ Afterwards, you can check that the RGs have been added using the following code:
 ```samtools view -H Sample_0001_with_RGs.bam | grep "^@RG"```
 
 Note: In order to use this code you need to have typed ```module load samtools``` for the system to recognize the ```samtools``` command. You also need to be in the correct working directory. In this case, it was run in ```/scratch.global/haasx092```.
+
+You can then merge the BAM files containing RGs into a single large BAM file with the script [merge_bams_with_RGs.sh](merge_bams_with_RGs.sh). I did this to facilitate the actual variant-calling step. I thought the code would be easier to understand if there was one large BAM file rather than listing ~1000 separate BAM files to be fed into FreeBayes.
+
+The variant-calling step is done with the script [run_freebayes.sh](run_freebayes.sh).
