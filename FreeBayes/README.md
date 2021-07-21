@@ -11,6 +11,11 @@ Note: In order to use this code you need to have typed ```module load samtools``
 
 You can then merge the BAM files containing RGs into a single large BAM file with the script [merge_bams_with_RGs.sh](merge_bams_with_RGs.sh). I did this to facilitate the actual variant-calling step. I thought the code would be easier to understand if there was one large BAM file rather than listing ~1000 separate BAM files to be fed into FreeBayes.
 
+**Note":** To make the [bams_to_merge.txt](bams_to_merge.txt) file, I used the ```ls /scratch.global/haasx092``` command to get the list of BAM files containing RGs and wrote it to a text file, but since I was actually working in a different directory (```/home/jkimball/haasx092/main_GBS```) I needed to specify the full path to those files. I used the search and replace function in _vim_ to acheive this. Once in vim (e.g., ```vi bams_to_merge.txt```), I typed:
+1. Esc then Shift + ":" (simultaneously)
+2. ```%s/Sample/\/scratch.global\/haasx092\/Sample/g```
+3. Esc then Shift + ":" (simultaneously) followed by typing ```wq``` to save and hitting Enter to exit vim.
+
 The variant-calling step is done with the script [run_freebayes.sh](run_freebayes.sh).
 
 Filtering was done using VCFtools with the script [filter_with_vcftools.sh](filter_with_vcftools.sh).
