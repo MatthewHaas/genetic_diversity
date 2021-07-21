@@ -16,6 +16,6 @@ cd /home/jkimball/haasx092/TASSEL
 
 for i in $(cat sample_list.txt);
 do
-ln ~/main_GBS/${i}/${i}_1.fq.gz ~/TASSEL/fastq/${i}_HCN5GDRXX_1_fastq.txt.gz
-ln ~/main_GBS/${i}/${i}_2.fq.gz ~/TASSEL/fastq/${i}_HCN5GDRXX_2_fastq.txt.gz
+ln ~/main_GBS/${i}/${i}_1.fq.gz ~/TASSEL/fastq/${i}_HCN5GDRXX_s_1_fastq.txt.gz
+ln ~/main_GBS/${i}/${i}_2.fq.gz ~/TASSEL/fastq/${i}_HCN5GDRXX_s_2_fastq.txt.gz
 done
