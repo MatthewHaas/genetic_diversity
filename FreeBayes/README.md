@@ -13,7 +13,7 @@ You can then merge the BAM files containing RGs into a single large BAM file wit
 
 **Note":** To make the [bams_to_merge.txt](bams_to_merge.txt) file, I used the ```ls /scratch.global/haasx092``` command to get the list of BAM files containing RGs and wrote it to a text file, but since I was actually working in a different directory (```/home/jkimball/haasx092/main_GBS```) I needed to specify the full path to those files. I used the search and replace function in _vim_ to acheive this. Once in vim (e.g., ```vi bams_to_merge.txt```), I typed:
 1. Esc then Shift + ":" (simultaneously)
-2. ```%s/Sample/\/scratch.global\/haasx092\/Sample/g```
+2. ```%s/Sample/\/scratch.global\/haasx092\/Sample/g``` (the "\" character in front of each "/" is important because it tells vim to take the character literally rather than its special case in the search/replace function (general form: ```%s/originalString/replacementString/g```)
 3. Esc then Shift + ":" (simultaneously) followed by typing ```wq``` to save and hitting Enter to exit vim.
 
 The variant-calling step is done with the script [run_freebayes.sh](run_freebayes.sh).
