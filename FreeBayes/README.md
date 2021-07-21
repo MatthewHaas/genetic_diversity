@@ -12,3 +12,5 @@ Note: In order to use this code you need to have typed ```module load samtools``
 You can then merge the BAM files containing RGs into a single large BAM file with the script [merge_bams_with_RGs.sh](merge_bams_with_RGs.sh). I did this to facilitate the actual variant-calling step. I thought the code would be easier to understand if there was one large BAM file rather than listing ~1000 separate BAM files to be fed into FreeBayes.
 
 The variant-calling step is done with the script [run_freebayes.sh](run_freebayes.sh).
+
+Filtering was done using VCFtools with the script [filter_with_vcftools.sh](filter_with_vcftools.sh).
