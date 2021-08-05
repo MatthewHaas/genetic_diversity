@@ -13,6 +13,8 @@ Principal Component Analysis (PCA) plots were generated using [PLINK](http://zzz
 
 The directory [imputation](imputation) contains scripts to impute missing genotype calls, although these were not used in the final analysis.
 
+The directory [pop_gen_analyses](pop_gen_analyses) contains scripts used to conduct many of the population genetic analyses for this project.
+
 The directory [umgc_pilot_study](umgc_pilot_study) contains some scripts that were used in the pilot GBS study by [Shao _et al._ (2020)](https://link.springer.com/content/pdf/10.1007/s12686-019-01116-9.pdf).
 
 ## awk_filtering_scripts (directory)
