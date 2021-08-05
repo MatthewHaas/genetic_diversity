@@ -11,6 +11,8 @@ The goal of each of these pipelines was to generate a Variant Call Format (VCF) 
 
 Principal Component Analysis (PCA) plots were generated using [PLINK](http://zzz.bwh.harvard.edu/plink/) version 1.90b6.10. Those files can be found [here](plink_files).
 
+The directory [imputation](imputation) contains scripts to impute missing genotype calls, although these were not used in the final analysis.
+
 The directory [umgc_pilot_study](umgc_pilot_study) contains some scripts that were used in the pilot GBS study by [Shao _et al._ (2020)](https://link.springer.com/content/pdf/10.1007/s12686-019-01116-9.pdf).
 
 ## awk_filtering_scripts (directory)
