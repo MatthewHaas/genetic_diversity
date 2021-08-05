@@ -1,4 +1,4 @@
-# README for gbs_pipeline
+# README for genetic_diversity
 This repository contains all of the scripts that were used to develop the genotyping-by-sequencing (GBS) pipeline for the wild rice (_Zizania palustris_ L.) breeding and conservation program at the University of Minnesota.
 
 We used multiple SNP-calling pipelines in the development of this project.
