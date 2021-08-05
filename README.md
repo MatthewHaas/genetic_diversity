@@ -63,16 +63,6 @@ This file contains R code for generating a SNP table for the pilot study (exclud
 The purpose of this code is to create a PCA plot directly from the VCF files for the first 50 samples of the main_GBS project. It only considered Scaffold_48. I used this approach because I was having a hard time getting all of the data to load and run at once without the system crashing.
   - Input files: 1) '191001_samtools_Scaffold_48;HRSCAF=1451.vcf.gz', 2) 191002_first_fifty_lines.csv
   - Output files: 1) 191002_pca_from_vcf_subset_of_main_GBS_data.pdf, 2) 191002_pca_from_vcf_subset_of_main_GBS_data.Rdata
-  
-## 191010_main_GBS_snp_calling_troubleshooting
-The purpose of this code is to play around with different parameters from the SNP calling portion of the pipeline (samtools mpileup and bcftools call). All code within this file is simply another version of the SNP calling portion from **190515_cutadapt_pilot_GBS**. Every iteration may not have been version-controlled (saved) because, as the title implies, this was all troubleshooting. The resulting files are contained within directories that follow the pattern: "YYMMDD_samtools". They can probably be deleted at some point after we have decided on our "best practices". Note: if that is done, this text should be changed to "strikethrough" format.
-
-## 191015_main_GBS_snp_calling_troubleshooting.R
-This is R code that is also part of the troubleshooting file section above. It reads SNP data contained in a tab-separated value (TSV) file (for example, **191010_normalize_filtered.tsv**) and processes the table in R. The result is a wide format SNP table. Data are saved in CSV and Rdata formats.
-
-  **Example output files:**
-  (1) 191015_main_GBS_SNPs_200_samples_DP5_filtered.csv
-  (2) 191015_main_GBS_filtered_SNPs.Rdata
 
 ## filter_vcf_by_maf.sh
 This is a PBS batch script to filter (& recode) VCF files so that they are filtered for a minor allele frequency of at least 0.05. There is also a flag (--remove) along with a text file that contains the sample numbers (one per line) that belong to the Old Lake samples to remove them from consideration. The script does this individually for specific VCF files and then concatenates them into a larger VCF file to feed into either PLINK or the R package _poppr_.
@@ -140,9 +130,6 @@ Output file:
 
 ## scythe_mpileup.sh
 This is a script written with the help of Tom Kono to run the samtools mpileup part of the GBS pipeline in a a better, more efficient way. When the samtools mpileup part of the pipeline is entered directly on the command line and subsequently put into the background, each samtools process runs for ~15 minutes before being killed by the server. **I think this is the ultimate cause of the low number of SNPs identified** When I tried to turn the script (as it was) into a batch submission script for MSI, I received an error (argument too long) which was caused by parallel, but when I took parallel out, the region option (-r '{}') was not recognized. This script has the same basic skeleton as before, but was reworked so that parallel could work with it. Otherwise (with the old script--parallel and the -r '{}' option removed), all of the variants are written to a single VCF file and takes longer than 24 hours to finish.. So scythe_mpileup.sh represents a major improvement.
-
-## scythe_mpileup_q50.sh
-Same scythe mpileup script as above, but the input files (bams) contain the whole GBS set (minus Johnson/Dora and Dovetail samples). The mapping quality was also set to 50 rather than 40. Files are saved to /home/jkimball/haasx092/main_GBS/191126_samtools.
 
 ## snp_density_from_pilot_for_circos
 This file contains R code that finds SNP density for each scaffold to add to the circos plot that I generated to visualize links between the _Zizania palustris_ and _Oryza sativa_ genomes. It works, but could still use improvement. The biggest area for improvement would be to ensure that chromosome/scaffold lengths match up between circos input text files.
