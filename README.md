@@ -17,6 +17,9 @@ The directory [pop_gen_analyses](pop_gen_analyses) contains scripts used to cond
 
 The directory [umgc_pilot_study](umgc_pilot_study) contains some scripts that were used in the pilot GBS study by [Shao _et al._ (2020)](https://link.springer.com/content/pdf/10.1007/s12686-019-01116-9.pdf).
 
+This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin.
+<img src="images/200402_collection_map.png" width="500">
+
 ## awk_filtering_scripts (directory)
 These scripts are short and simple awk commands to pre-filter the tab-separated (TSV) files that contain the output of the normalize.awk script. The normalize.awk script can be found in this repository and is used to extract SNP information from the VCF files.
 
