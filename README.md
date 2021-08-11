@@ -17,11 +17,13 @@ The directory [pop_gen_analyses](pop_gen_analyses) contains scripts used to cond
 
 The directory [umgc_pilot_study](umgc_pilot_study) contains some scripts that were used in the pilot GBS study by [Shao _et al._ (2020)](https://link.springer.com/content/pdf/10.1007/s12686-019-01116-9.pdf).
 
-This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin.<br>
+This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin<br>
 <img src="images/200402_collection_map.png" width="500">
 
+Principal component analysis plot (PC1 vs PC2) for the complete set<br>
+<img src="images/210306_main_gbs_20percent_NA_Page_1.png" width="500">
 
-Principal component analysis plot for the temporal samples:<br>
+Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
 <img src="images/210311_main_gbs_20percent_NA_temporal_Page_1.png" width="500">
 
 ## awk_filtering_scripts (directory)
