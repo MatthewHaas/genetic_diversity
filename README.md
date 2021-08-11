@@ -22,7 +22,7 @@ This figure shows the location of collection sites on public, non-tribal land in
 
 
 Principal component analysis plot for the temporal samples:<br>
-<img src="images/210311_main_gbs_20percent_NA_temporal_Page_1.tiff" width="500">
+<img src="images/210311_main_gbs_20percent_NA_temporal_Page_1.png" width="500">
 
 ## awk_filtering_scripts (directory)
 These scripts are short and simple awk commands to pre-filter the tab-separated (TSV) files that contain the output of the normalize.awk script. The normalize.awk script can be found in this repository and is used to extract SNP information from the VCF files.
