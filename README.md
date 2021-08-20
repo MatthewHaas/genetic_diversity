@@ -29,8 +29,8 @@ The directory [umgc_pilot_study](umgc_pilot_study) contains some scripts that we
 **Figure 2C.** Principal component analysis plot (PC1 vs PC2) for the cultivated material only<br>
 <img src="images/210818_breeding_lines_pca_incl_nonbiallelic.png" width="500">
 
-Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
-<img src="images/210311_main_gbs_20percent_NA_temporal_Page_1.png" width="500">
+**Figure 4.** Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
+<img src="images/210820_pca_temporal_incl_nonbiallelic_Page_1.png" width="500">
 
 ## awk_filtering_scripts (directory)
 These scripts are short and simple awk commands to pre-filter the tab-separated (TSV) files that contain the output of the normalize.awk script. The normalize.awk script can be found in this repository and is used to extract SNP information from the VCF files.
