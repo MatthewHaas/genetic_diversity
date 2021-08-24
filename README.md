@@ -4,8 +4,6 @@ This repository contains all of the scripts that were used to develop the genoty
 We used multiple SNP-calling pipelines in the development of this project.
 1. [SAMtools/BCFtools](SAMtools-BCFtools)
 2. [FreeBayes](FreeBayes)
-3. [TASSEL](TASSEL)
-4. [stacks](stacks)
 
 The goal of each of these pipelines was to generate a Variant Call Format (VCF) file containing SNP data for our population to be used in further analysis.
 
