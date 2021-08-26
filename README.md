@@ -24,10 +24,10 @@ The directory [umgc_pilot_study](umgc_pilot_study) contains some scripts that we
 **Figure 2B.** Principal component analysis plot (PC1 vs PC2) for the natural stands only<br>
 <img src="images/210818_natural_stands_pca_incl_nonbiallelic.png" width="500">
 
-**Figure 3.** Principal component analysis plot (PC1 vs PC2) for the cultivated material only<br>
+**Figure 2C.** Principal component analysis plot (PC1 vs PC2) for the cultivated material only<br>
 <img src="images/210818_breeding_lines_pca_incl_nonbiallelic.png" width="500">
 
-**Figure 4.** Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
+**Figure 2D.** Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
 <img src="images/Figure_4_210820_temporal_pca_incl_nonbiallelic.png" width="500">
 
 ## awk_filtering_scripts (directory)
