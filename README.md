@@ -18,16 +18,16 @@ The directory [umgc_pilot_study](umgc_pilot_study) contains some scripts that we
 **Figure 1.** This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin<br>
 <img src="images/210819_NWR_collection_sites.png" width="500">
 
-**Figure 2A.** Principal component analysis plot (PC1 vs PC2) for the complete set<br>
+**Figure 2a.** Principal component analysis plot (PC1 vs PC2) for the complete set<br>
 <img src="images/210306_main_gbs_20percent_NA_Page_1.png" width="500">
 
-**Figure 2B.** Principal component analysis plot (PC1 vs PC2) for the natural stands only<br>
+**Figure 2b.** Principal component analysis plot (PC1 vs PC2) for the natural stands only<br>
 <img src="images/210818_natural_stands_pca_incl_nonbiallelic.png" width="500">
 
-**Figure 2C.** Principal component analysis plot (PC1 vs PC2) for the cultivated material only<br>
+**Figure 2c.** Principal component analysis plot (PC1 vs PC2) for the cultivated material only<br>
 <img src="images/210818_breeding_lines_pca_incl_nonbiallelic.png" width="500">
 
-**Figure 2D.** Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
+**Figure 2d.** Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
 <img src="images/Figure_4_210820_temporal_pca_incl_nonbiallelic.png" width="500">
 
 ## awk_filtering_scripts (directory)
