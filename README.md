@@ -30,7 +30,7 @@ The directory [umgc_pilot_study](umgc_pilot_study) contains some scripts that we
 **Figure 2d.** Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
 <img src="images/Figure_4_210820_temporal_pca_incl_nonbiallelic.png" width="500">
 
-** Tables**
+**Tables**
 
 The Transition/Transversion ratios were generated using the script [calculate_TsTv_vcftools.sh](vcftools_scripts_incl_nonbiallelic/calculate_TsTv_vcftools.sh). Additional details can be found within the directory containing the script.
 
