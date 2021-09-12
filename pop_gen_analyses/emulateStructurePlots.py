@@ -16,10 +16,16 @@ def makePlot(K = NULL):
     if K = 2:
         plt.xticks([]) # hide x-axis tick marks
         dfSorted = df.sort_values(by = ['Most_likely', 'Likelihood'], ascending = (True, False))
-        cluster1_ID = dfSorted['Most_likely'] == 'Cluster_1'].Class.mode()
-        cluster2_ID = dfSorted['Most_likely'] == 'Cluster_2'].Class.mode()
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0])
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAl[1])
+        cluster1_ID = dfSorted[(dfSorted['Most_likely'] == 'Cluster_1') & (dfSorted['Likelihood'] > 0.6)].Class.mode()
+        cluster2_ID = dfSorted[(dfSorted['Most_likely'] == 'Cluster_2') & (dfSorted['Likelihood'] > 0.6)].Class.mode()
+        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
+        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
+        x1 = len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_1') & (dfSorted['Likelihood'] > 0.6)])/2
+        y1 = -0.1
+        x2 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2') & (dfSorted['Likelihood'] > 0.6)])/2
+        y2 = -0.1
+        text(x1, y1, s = cluster1_ID[0], fontsize = 12, ha = 'center')
+        text(x2, y2, s = cluster2_ID[0], fontsize = 12, ha = 'center')
     elif K = 3:
     elif K = 4:
     elif K = 5:
