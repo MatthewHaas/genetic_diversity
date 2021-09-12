@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 
 def makePlot(K = NULL):
     if K = 2:
+        plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([]) # hide x-axis tick marks
         dfSorted = df.sort_values(by = ['Most_likely', 'Likelihood'], ascending = (True, False))
         cluster1_ID = dfSorted[(dfSorted['Most_likely'] == 'Cluster_1') & (dfSorted['Likelihood'] > 0.6)].Class.mode()
