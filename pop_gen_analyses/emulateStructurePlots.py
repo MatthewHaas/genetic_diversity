@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 #print(parser.format_help())
 
 def makePlot(K = NULL):
-    if K = 2:
+    if K == 2:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([]) # hide x-axis tick marks
         dfSorted = df.sort_values(by = ['Most_likely', 'Likelihood'], ascending = (True, False))
@@ -28,10 +28,10 @@ def makePlot(K = NULL):
         y2 = -0.1
         text(x1, y1, s = cluster1_ID[0], fontsize = 12, ha = 'center')
         text(x2, y2, s = cluster2_ID[0], fontsize = 12, ha = 'center')
-    elif K = 3:
-    elif K = 4:
-    elif K = 5:
-    elif K = 6:
+    elif K == 3:
+    elif K == 4:
+    elif K == 5:
+    elif K == 6:
     else:
         print('Not an acceptable value of K!')
 
