@@ -83,6 +83,13 @@ def makePlot(K = NULL):
             existing_IDs.append(cluster4_ID[0])
         else:
             existing_IDs.append(cluster4_ID[0])
+        # This for loop is to add a roman numeral to the first Natural stand cluster to be consistent with the second
+        # The other part is to change the name of the breeding lines cluster to be 'Cultivated material'
+        for cluster in [cluster1_ID, cluster2_ID, cluster3_ID, cluster4_ID]:
+            if cluster[0] == 'Natural stand':
+                cluster[0] = 'Natural stand I'
+            elif cluster [0] == 'Breeding line':
+                cluster[0] = 'Cultivated material'
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([])
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
