@@ -27,6 +27,7 @@ def makePlot(K = NULL):
         y = -0.1
         plt.text(x1, y, s = cluster1_ID[0], fontsize = 12, ha = 'center')
         plt.text(x2, y, s = cluster2_ID[0], fontsize = 12, ha = 'center')
+        plt.savefig(sys.argv[2])
     elif K == 3:
     elif K == 4:
     elif K == 5:
