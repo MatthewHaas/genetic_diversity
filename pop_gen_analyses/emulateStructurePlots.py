@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 #print(parser.format_help())
 
 def makePlot(K = NULL):
+    colorsAll = ['red', 'lime', 'blue', 'yellow', 'fuchsia', 'cyan']
     if K == 2:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([]) # hide x-axis tick marks
@@ -63,7 +64,6 @@ def makePlot(K = NULL):
         print('Not an acceptable value of K!')
 
 def emulateStructure(data):
-    colorsAll = ['red', 'lime', 'blue', 'yellow', 'fuchsia', 'cyan']
     if len(df.columns) == 9:
         makePlot(K = 2)
         print('Analysis completed assuming K=2 populations.')
