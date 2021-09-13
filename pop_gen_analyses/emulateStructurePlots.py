@@ -37,27 +37,27 @@ def makePlot(K = NULL):
 def emulateStructure(data):
     df = pd.read_csv(data)
     colorsAll = ['red', 'lime', 'blue', 'yellow', 'fuchsia', 'cyan']
-    if len(df.columns) == 8:
+    if len(df.columns) == 9:
         colors = colorsAll[:2]
         makePlot(K = 2)
         print('this assumes there are K = 2 populations')
-    elif len(df.columns) == 9:
+    elif len(df.columns) == 10:
         colors = colorsAll[:3]
         makePlot(K = 3)
         print('this assumes there are K = 3 populations')
-    elif len(df.columns == 10):
+    elif len(df.columns == 11):
         colors = colorsAll[:4]
         makePlot(K = 4)
         print('this assumes there are K = 4 populations')
-    elif len(df.columns == 11):
+    elif len(df.columns == 12):
         colors = colorsAll[:5]
         makePlot(K = 5)
         print('this assumes there are K = 5 populations')
-    elif len(df.columns == 12):
+    elif len(df.columns == 13):
         colors = colorsAll[:6]
         makePlot(K = 6)
         print('this assumes there are K = 6 populations')
-    elif len(df.columns > 12):
+    elif len(df.columns > 13):
         print('You might have more than K = 6 populations in your input file.')
     else:
         print('Something is wrong with your input file.')
