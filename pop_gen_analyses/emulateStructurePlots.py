@@ -63,7 +63,6 @@ def makePlot(K = NULL):
         print('Not an acceptable value of K!')
 
 def emulateStructure(data):
-    df = pd.read_csv(data)
     colorsAll = ['red', 'lime', 'blue', 'yellow', 'fuchsia', 'cyan']
     if len(df.columns) == 9:
         makePlot(K = 2)
