@@ -64,23 +64,18 @@ def emulateStructure(data):
     df = pd.read_csv(data)
     colorsAll = ['red', 'lime', 'blue', 'yellow', 'fuchsia', 'cyan']
     if len(df.columns) == 9:
-        colors = colorsAll[:2]
         makePlot(K = 2)
         print('Analysis completed assuming K=2 populations.')
     elif len(df.columns) == 10:
-        colors = colorsAll[:3]
         makePlot(K = 3)
         print('Analysis completed assuming K=3 populations.')
     elif len(df.columns == 11):
-        colors = colorsAll[:4]
         makePlot(K = 4)
         print('Analysis completed assuming K=4 populations.')
     elif len(df.columns == 12):
-        colors = colorsAll[:5]
         makePlot(K = 5)
         print('Analysis completed assuming K=5 populations.')
     elif len(df.columns == 13):
-        colors = colorsAll[:6]
         makePlot(K = 6)
         print('Analysis completed assuming K=6 populations.')
     elif len(df.columns > 13):
