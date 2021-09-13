@@ -26,8 +26,8 @@ def makePlot(K = NULL):
         y1 = -0.1
         x2 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2') & (dfSorted['Likelihood'] > 0.6)])/2
         y2 = -0.1
-        text(x1, y1, s = cluster1_ID[0], fontsize = 12, ha = 'center')
-        text(x2, y2, s = cluster2_ID[0], fontsize = 12, ha = 'center')
+        plt.text(x1, y1, s = cluster1_ID[0], fontsize = 12, ha = 'center')
+        plt.text(x2, y2, s = cluster2_ID[0], fontsize = 12, ha = 'center')
     elif K == 3:
     elif K == 4:
     elif K == 5:
