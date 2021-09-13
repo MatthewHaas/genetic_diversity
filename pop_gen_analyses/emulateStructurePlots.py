@@ -63,4 +63,6 @@ def emulateStructure(data):
     else:
         print('Something is wrong with your input file.')
 
-emulateStructure(data = sys.argv[1])
+df = pd.read_csv(sys.argv[1])
+dfSorted = df.sort_values(by = ['Most_likely', 'Likelihood'], ascending = (True, False))
+emulateStructure(df)
