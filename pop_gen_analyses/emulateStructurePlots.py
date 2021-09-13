@@ -66,23 +66,23 @@ def emulateStructure(data):
     if len(df.columns) == 9:
         colors = colorsAll[:2]
         makePlot(K = 2)
-        print('this assumes there are K = 2 populations')
+        print('Analysis completed assuming K=2 populations.')
     elif len(df.columns) == 10:
         colors = colorsAll[:3]
         makePlot(K = 3)
-        print('this assumes there are K = 3 populations')
+        print('Analysis completed assuming K=3 populations.')
     elif len(df.columns == 11):
         colors = colorsAll[:4]
         makePlot(K = 4)
-        print('this assumes there are K = 4 populations')
+        print('Analysis completed assuming K=4 populations.')
     elif len(df.columns == 12):
         colors = colorsAll[:5]
         makePlot(K = 5)
-        print('this assumes there are K = 5 populations')
+        print('Analysis completed assuming K=5 populations.')
     elif len(df.columns == 13):
         colors = colorsAll[:6]
         makePlot(K = 6)
-        print('this assumes there are K = 6 populations')
+        print('Analysis completed assuming K=6 populations.')
     elif len(df.columns > 13):
         print('You might have more than K = 6 populations in your input file.')
     else:
