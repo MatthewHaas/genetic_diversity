@@ -58,6 +58,48 @@ def makePlot(K = NULL):
         plt.text(x3, y, s = cluster3_ID[0], fontsize = 12, ha = 'center')
         plt.savefig(sys.argv[2])
     elif K == 4:
+        existing_IDs = [] # empty list to store existing IDs. Main purpose is to have a mechanism to recogize of 'Natural stand' has already been used and 'Natural stand II' should be used instead
+        cluster1_ID = dfSorted[(dfSorted['Most_likely'] == 'Cluster_1') & (dfSorted['Likelihood'] > 0.6)].Class.mode()
+        existing_IDs.append(cluster1_ID[0])
+        cluster2_ID = dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')].Sample_identity.mode()
+        print('The length of Z aquatica is:' + str(len(dfSorted[dfSorted['Sample_identity'] == 'Zizania aquatica'])))
+        print('The total length of Cluster 2 is:' + str(len(dfSorted[dfSorted['Most_likely'] == 'Cluster_2'])))
+        if cluster2_ID[0] in existing_IDs:
+            print('So far so good.')
+            fractionZaquatica = int(len(dfSorted[(dfSorted['Sample_identity'] == 'Zizania aquatica')])) / int(len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]))
+            print(fractionZaquatica)
+            if fractionZaquatica > 0.7:
+                print('You are in the right spot.')
+                cluster2_ID[0] = 'Zizania aquatica'
+                existing_IDs.append(cluster2_ID[0])
+        else:
+            print('How did I end up here??')
+            existing_IDs.append(cluster2_ID[0])
+        cluster3_ID = dfSorted[(dfSorted['Most_likely'] == 'Cluster_3') & (dfSorted['Likelihood'] > 0.6)].Class.mode()
+        existing_IDs.append(cluster3_ID[0])
+        cluster4_ID = dfSorted[(dfSorted['Most_likely'] == 'Cluster_4') & (dfSorted['Likelihood'] > 0.6)].Class.mode()
+        if cluster4_ID[0] in existing_IDs:
+            cluster4_ID[0] = 'Natural stand II'
+            existing_IDs.append(cluster4_ID[0])
+        else:
+            existing_IDs.append(cluster4_ID[0])
+        plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
+        plt.xticks([])
+        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
+        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
+        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_3'], bottom = dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[2], width = 1)
+        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_4'], bottom = dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[3], width = 1)
+        plt.ylabel('Population membership probability')
+        x1 = len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_1')])/2
+        x2 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')])/2
+        x3 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')])/2
+        x4 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_4')])/2
+        y = -0.1
+        plt.text(x1, y, s = cluster1_ID[0], fontsize = 12, ha = 'center')
+        plt.text(x2, y, s = cluster2_ID[0], fontsize = 12, ha = 'center')
+        plt.text(x3, y, s = cluster3_ID[0], fontsize = 12, ha = 'center')
+        plt.text(x4, y, s = cluster4_ID[0], fontsize = 12, ha = 'center')
+        plt.savefig(sys.argv[2])
     elif K == 5:
     elif K == 6:
     else:
