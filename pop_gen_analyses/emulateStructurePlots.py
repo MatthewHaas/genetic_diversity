@@ -50,6 +50,46 @@ def assignClusterMembership(K):
             if cluster[0] == 'Breeding line':
                 cluster[0] = 'Cultivated material'
         return clusterA, clusterB, clusterC
+    elif K == 4:
+        if dfSorted[(dfSorted['Most_likely'] == 'Cluster_1')].Sample_identity.mode()[0] == 'Zizania aquatica':
+            clusterA = dfSorted[(dfSorted['Most_likely'] == 'Cluster_1')].Sample_identity.mode()
+            existing_IDs.append(clusterA[0])
+        else:
+            clusterA = dfSorted[(dfSorted['Most_likely'] == 'Cluster_1')].Class.mode()
+            existing_IDs.append(clusterA[0])
+        if dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')].Sample_identity.mode()[0] == 'Zizania aquatica':
+            clusterB = dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')].Sample_identity.mode()
+            existing_IDs.append(clusterB[0])
+        else:
+            clusterB = dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')].Class.mode()
+            if clusterB[0] in existing_IDs:
+                clusterB[0] = 'Natural stand II'
+                existing_IDs.append(clusterB[0])
+            else:
+                existing_IDs.append(clusterB[0])
+        if dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')].Sample_identity.mode()[0] == 'Zizania aquatica':
+            clusterC = dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')].Sample_identity.mode()
+            existing_IDs.append(clusterC[0])
+        else:
+            clusterC = dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')].Class.mode()
+            if clusterC[0] in existing_IDs:
+                clusterC[0] = 'Natural stand II'
+                existing_IDs.append(clusterC[0])
+            else:
+                existing_IDs.append(clusterC[0])
+        if dfSorted[(dfSorted['Most_likely'] == 'Cluster_4')].Sample_identity.mode()[0] == 'Zizania aquatica':
+            clusterD = dfSorted[(dfSorted['Most_likely'] == 'Cluster_4')].Sample_identity.mode()
+            existing_IDs.append(clusterD[0])
+        else:
+            clusterD = dfSorted[(dfSorted['Most_likely'] == 'Cluster_4')].Class.mode()
+            if clusterD[0] in existing_IDs:
+                clusterD[0] = 'Natural stand II'
+                existing_IDs.append(clusterD[0])
+            else:
+                existing_IDs.append(clusterD[0])
+        for cluster in (clusterA, clusterB, clusterC, clusterD):
+            if cluster[0] == 'Breeding line':
+                cluster[0] = 'Cultivated material'
 
 def makePlot(K):
     colorsAll = ['red', 'lime', 'blue', 'yellow', 'fuchsia', 'cyan']
