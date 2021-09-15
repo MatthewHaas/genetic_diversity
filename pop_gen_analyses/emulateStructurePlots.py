@@ -135,10 +135,10 @@ def makePlot(K):
         x3 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')])/2
         x4 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_4')])/2
         y = -0.1
-        plt.text(x1, y, s = cluster1_ID[0], fontsize = 12, ha = 'center')
-        plt.text(x2, y, s = cluster2_ID[0], fontsize = 12, ha = 'center')
-        plt.text(x3, y, s = cluster3_ID[0], fontsize = 12, ha = 'center')
-        plt.text(x4, y, s = cluster4_ID[0], fontsize = 12, ha = 'center')
+        plt.text(x1, y, s = clusterA[0], fontsize = 12, ha = 'center')
+        plt.text(x2, y, s = clusterB[0], fontsize = 12, ha = 'center')
+        plt.text(x3, y, s = clusterC[0], fontsize = 12, ha = 'center')
+        plt.text(x4, y, s = clusterD[0], fontsize = 12, ha = 'center')
         plt.savefig(sys.argv[2])
     elif K == 5:
         print('K=5')
