@@ -154,16 +154,16 @@ def emulateStructure(df):
     elif len(df.columns) == 10:
         makePlot(K = 3)
         print('Analysis completed assuming K=3 populations.')
-    elif len(df.columns == 11):
+    elif len(df.columns) == 11:
         makePlot(K = 4)
         print('Analysis completed assuming K=4 populations.')
-    elif len(df.columns == 12):
+    elif len(df.columns) == 12:
         makePlot(K = 5)
         print('Analysis completed assuming K=5 populations.')
-    elif len(df.columns == 13):
+    elif len(df.columns) == 13:
         makePlot(K = 6)
         print('Analysis completed assuming K=6 populations.')
-    elif len(df.columns > 13):
+    elif len(df.columns) > 13:
         print('You might have more than K = 6 populations in your input file.')
     else:
         print('Something is wrong with your input file.')
