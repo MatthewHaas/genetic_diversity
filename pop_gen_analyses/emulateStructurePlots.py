@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 
 def assignClusterMembership(K):
     existing_IDs = [] # make empty list to store cluster IDs
-    global clusterA, clusterB, clusterC
+    global clusterA, clusterB, clusterC, clusterD, clusterE, clusterF # declare global variables here rather than in each if/elif statement
     if K == 2:
         clusterA = dfSorted[(dfSorted['Most_likely'] == 'Cluster_1') & (dfSorted['Likelihood'] > 0.6)].Class.mode()
         existing_IDs.append(clusterA[0])
