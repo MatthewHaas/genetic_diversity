@@ -5,17 +5,8 @@ descending order)), I figured that with a consistent file format, it was easier 
 
 import sys
 import os
-#import argparse
 import pandas as pd
 import matplotlib.pyplot as plt
-
-#parser = argparse.ArgumentParser()
-
-#parser.add_argument('--pops', '-k', help = 'How many K populations do you expect?', type = str)
-
-#args = parser.parse_args()
-
-#print(parser.format_help())
 
 def assignClusterMembership(K):
     existing_IDs = [] # make empty list to store cluster IDs
