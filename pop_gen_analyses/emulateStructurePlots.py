@@ -123,37 +123,6 @@ def makePlot(K):
         plt.text(x3, y, s = clusterC[0], fontsize = 12, ha = 'center')
         plt.savefig(sys.argv[2])
     elif K == 4:
-        cluster1_ID = dfSorted[(dfSorted['Most_likely'] == 'Cluster_1') & (dfSorted['Likelihood'] > 0.6)].Class.mode()
-        existing_IDs.append(cluster1_ID[0])
-        cluster2_ID = dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')].Sample_identity.mode()
-        print('The length of Z aquatica is:' + str(len(dfSorted[dfSorted['Sample_identity'] == 'Zizania aquatica'])))
-        print('The total length of Cluster 2 is:' + str(len(dfSorted[dfSorted['Most_likely'] == 'Cluster_2'])))
-        if cluster2_ID[0] in existing_IDs:
-            print('So far so good.')
-            fractionZaquatica = int(len(dfSorted[(dfSorted['Sample_identity'] == 'Zizania aquatica')])) / int(len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]))
-            print(fractionZaquatica)
-            if fractionZaquatica > 0.7:
-                print('You are in the right spot.')
-                cluster2_ID[0] = 'Zizania aquatica'
-                existing_IDs.append(cluster2_ID[0])
-        else:
-            print('How did I end up here??')
-            existing_IDs.append(cluster2_ID[0])
-        cluster3_ID = dfSorted[(dfSorted['Most_likely'] == 'Cluster_3') & (dfSorted['Likelihood'] > 0.6)].Class.mode()
-        existing_IDs.append(cluster3_ID[0])
-        cluster4_ID = dfSorted[(dfSorted['Most_likely'] == 'Cluster_4') & (dfSorted['Likelihood'] > 0.6)].Class.mode()
-        if cluster4_ID[0] in existing_IDs:
-            cluster4_ID[0] = 'Natural stand II'
-            existing_IDs.append(cluster4_ID[0])
-        else:
-            existing_IDs.append(cluster4_ID[0])
-        # This for loop is to add a roman numeral to the first Natural stand cluster to be consistent with the second
-        # The other part is to change the name of the breeding lines cluster to be 'Cultivated material'
-        for cluster in [cluster1_ID, cluster2_ID, cluster3_ID, cluster4_ID]:
-            if cluster[0] == 'Natural stand':
-                cluster[0] = 'Natural stand I'
-            elif cluster [0] == 'Breeding line':
-                cluster[0] = 'Cultivated material'
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([])
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
