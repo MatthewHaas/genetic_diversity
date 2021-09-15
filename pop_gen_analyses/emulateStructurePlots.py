@@ -137,7 +137,17 @@ def assignClusterMembership(K):
                 existing_IDs.append(clusterE[0])
             else:
                 existing_IDs.append(clusterE[0])
-        for cluster in (clusterA, clusterB, clusterC, clusterD, clusterE):
+        if dfSorted[(dfSorted['Most_likely'] == 'Cluster_6')].Sample_identity.mode()[0] == 'Zizania aquatica':
+            clusterF = dfSorted[(dfSorted['Most_likely'] == 'Cluster_6')].Sample_identity.mode()
+            existing_IDs.append(clusterF[0])
+        else:
+            clusterF = dfSorted[(dfSorted['Most_likely'] == 'Cluster_6')].Class.mode()
+            if clusterF[0] in existing_IDs:
+                clusterF[0] = 'Natural stand IV'
+                existing_IDs.append(clusterF[0])
+            else:
+                existing_IDs.append(clusterF[0])
+        for cluster in (clusterA, clusterB, clusterC, clusterD, clusterE, clusterF):
             if cluster[0] == 'Breeding line':
                 cluster[0] = 'Cultivated material'
 
@@ -213,7 +223,30 @@ def makePlot(K):
         plt.text(x5, y, s = clusterE[0], fontsize = 12, ha = 'center')
         plt.savefig(sys.argv[2])
     elif K == 6:
-        print('K=6')
+        plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
+        plt.xticks([])
+        assignClusterMembership(K)
+        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
+        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
+        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_3'], bottom = dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[2], width = 1)
+        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_4'], bottom = dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[3], width = 1)
+        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_5'], bottom = dfSorted['Cluster_4'] + dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[4], width = 1)
+        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_6'], bottom = dfSorted['Cluster_5'] + dfSorted['Cluster_4'] + dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[5], width = 1)
+        plt.ylabel('Population membership probability')
+        x1 = len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_1')])/2
+        x2 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')])/2
+        x3 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')])/2
+        x4 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_4')])/2
+        x5 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_4')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_5')])/2
+        x6 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_4')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_5')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_6')])/2
+        y = -0.1
+        plt.text(x1, y, s = clusterA[0], fontsize = 12, ha = 'center')
+        plt.text(x2, y, s = clusterB[0], fontsize = 12, ha = 'center')
+        plt.text(x3, y, s = clusterC[0], fontsize = 12, ha = 'center')
+        plt.text(x4, y, s = clusterD[0], fontsize = 12, ha = 'center')
+        plt.text(x5, y, s = clusterE[0], fontsize = 12, ha = 'center')
+        plt.text(x6, y, s = clusterF[0], fontsize = 12, ha = 'center')
+        plt.savefig(sys.argv[2])
     else:
         print('Not an acceptable value of K!')
 
