@@ -12,7 +12,7 @@ library(data.table)
 x <- read.vcfR("filt_20_NA_vcf_files_concat.vcf")
 
 # Load sample key
-y <- fread("~/main_GBS/191021_main_GBS_sample_key.csv")
+y <- fread("210920_sample_key_with_population_structure.csv")
 
 # Convert to a genlight object (for poppr and adegenet)
 gen_light_x <- vcfR2genlight(x)
