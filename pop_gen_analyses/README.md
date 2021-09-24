@@ -5,6 +5,9 @@ The [emulateStructurePlots.py](emulateStructurePlots.py) script was written to m
 
 To use this script on the command line, type: ```python emulateStructurePlots.py sys.argv[1] sys.argv[2]``` where ```sys.argv[1]``` is the CSV file and ```sys.argv[2]``` is the desired output (PNG format).
 
+**Analysis of Molecular Variance (AMOVA)**<br>
+The Rscript [AMOVA.R](AMOVA.R) conducts the Analysis of Molecular Variance analysis. The R script uses the [```poppr.amova()```](https://search.r-project.org/CRAN/refmans/poppr/html/poppr.amova.html) function from the [_poppr_](https://cran.r-project.org/web/packages/poppr/index.html) R package. We used the "farthest neighbor" algorithm because it is the most strict option. The ```poppr.amova()``` function gives users the choice between the [_ade4_](https://cran.r-project.org/web/packages/ade4/index.html) implementation or the [_pegas_](https://cran.r-project.org/web/packages/pegas/index.html) implementation. We chose to use the _ade4_ implementation. To correct for non-Euclidean distance, we used the ```quasieuclid``` correction. We chose this over the ```lingoes``` or ```cailliez``` correction methods because ```quasieuclid``` does not introduce a modification of the original distances like the other two methods. The [AMOVA.R](AMOVA.R) script is launched using the shell script [run_AMOVA.sh](run_AMOVA.sh).
+
 **Prep files for input into Arlequin**<br>
 The script [convert_csv_to_arlequin_input_format.py](convert_csv_to_arlequin_input_format.py) was written to convert the SNP matrix from the comma-separated value (CSV) format to Arlequin input format. Arlequin requires somewhat unique formatting. For a diploid individual, each locus requires two lines. There needs to be a name for the haplotype, the number of individuals with that haplotype, followed by the SNP calls. The second line only need the SNP calls. For homozygous calls (0 or 1), the ref (0) or alt (2) calls are used for both lines.
 
