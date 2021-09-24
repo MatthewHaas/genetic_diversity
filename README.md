@@ -142,36 +142,5 @@ This shows the steps that I took to install the R package "poppr" (https://cran.
 ## run_bwa.sh
 This is simply partial generic command-line code that runs the burrows-wheeler aligner (bwa; http://bio-bwa.sourceforge.net/). It is in a format that can be submitted to the Minnesota Supercomputing Institute (MSI) batch submission system. The basic code can also be found in the pilot GBS (**190515_cutadapt_pilot_GBS**) or main GBS (**main_GBS_pipeline**) files.
 
-## snp_characteristics_from_pilot_study.R
-This is R code that I used to find basic SNP characteristics from the pilot study to be presented at the Cultivated Wild Rice Field Day in Grand Rapids, MN on 1 August 2019.
-
-Input file:
-  - 190627_snp_filtering_q60.Rdata
-  
-Output file:
-  - 190729_getting_SNP_stats_for_field_day.Rdata
-
 ## scythe_mpileup.sh
 This is a script written with the help of Tom Kono to run the samtools mpileup part of the GBS pipeline in a a better, more efficient way. When the samtools mpileup part of the pipeline is entered directly on the command line and subsequently put into the background, each samtools process runs for ~15 minutes before being killed by the server. **I think this is the ultimate cause of the low number of SNPs identified** When I tried to turn the script (as it was) into a batch submission script for MSI, I received an error (argument too long) which was caused by parallel, but when I took parallel out, the region option (-r '{}') was not recognized. This script has the same basic skeleton as before, but was reworked so that parallel could work with it. Otherwise (with the old script--parallel and the -r '{}' option removed), all of the variants are written to a single VCF file and takes longer than 24 hours to finish.. So scythe_mpileup.sh represents a major improvement.
-
-## snp_density_from_pilot_for_circos
-This file contains R code that finds SNP density for each scaffold to add to the circos plot that I generated to visualize links between the _Zizania palustris_ and _Oryza sativa_ genomes. It works, but could still use improvement. The biggest area for improvement would be to ensure that chromosome/scaffold lengths match up between circos input text files.
-
-Input file:
-  - 190627_snp_filtering_q60.Rdata
-  
-Output files:
-  - 190725_snp_density_for_circos.Rdata
-  - Many other small text files (e.g., scf1_snp_density, scf3_snp_density, etc ) that are used as input for circos. More details can be found in the circos repository (https://github.com/MatthewHaas/circos).
-
-
-## snp_filtering.R
-This is R code that can be used for filtering SNPs. As input, it takes the tab-separated file (TSV) that is created at the end of the GBS pipeline (after using normalize.awk). In this case, it is used to filter SNPs with a minimum quality score of 40 and a minimum read depth of 50. It should be noted that the depth of 50 is far too strict for our GBS pipeline (as a depth of 10 was also too strict..a depth of 5 is sufficient). This is not surprising given that each sample was only sequenced to a depth of 2 million.
-
-Basic elements of this code (reading in data, giving columns meaningful names, and simplifying the sample names can be re-used for the pipeline).
-
-Input file:
-  - 190607_normalize.tsv
-  
-Output file:
-  - 190607_snp_filtering.Rdata
