@@ -95,9 +95,11 @@ Analysis of Molecular Variance (AMOVA). The AMOVA was performed using the [AMOVA
 
 # Supplementary Figures
 
-**Figure S1**
-Evanno method implemented by STRUCTURE harvester to show the ideal number of _K_ populations from STRUCTURE results<br>
+**Figure S1** Evanno method implemented by STRUCTURE harvester to show the ideal number of _K_ populations from STRUCTURE results<br>
 <img src="images/deltaK.png" width="500">
+
+**Figure S2** Temporal samples tree. This was produced with the same base scripts at the Cultivated and Natural Stands trees.
+<img src ="images/temporal_samples_tree.png" width="500">
 
 ## awk_filtering_scripts (directory)
 These scripts are short and simple awk commands to pre-filter the tab-separated (TSV) files that contain the output of the normalize.awk script. The normalize.awk script can be found in this repository and is used to extract SNP information from the VCF files.
