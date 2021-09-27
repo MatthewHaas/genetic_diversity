@@ -15,6 +15,8 @@ The directory [pop_gen_analyses](pop_gen_analyses) contains scripts used to cond
 
 The directory [umgc_pilot_study](umgc_pilot_study) contains some scripts that were used in the pilot GBS study by [Shao _et al._ (2020)](https://link.springer.com/content/pdf/10.1007/s12686-019-01116-9.pdf).
 
+**Genome stats:** The script [merge_fastq_read_counts.py](merge_fastq_read_counts.py) was used to merge the fastq read counts from each of the two sequening runs and summing them based on sample identity. The average read count from the FASTQC report (this one run by the University of Minnesota Genomics Center) was 2.1 million reads/sample. I used the CSV output file from this script to find the total read count (1.8 billion reads for 873 samples). We filtered out some samples which were included in the sequencing run, but which were not part of the diversity study. This was done in Excel using the ```VLOOKUP()``` function on the sample key.
+
 # Figures
 
 **Figure 1.** This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin. The map uses watershed boundaries provided by the Minnesota Department of Natural Resources.<br>
