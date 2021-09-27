@@ -61,7 +61,7 @@ STRUCTURE results for _K_ = 6<br>
 The Transition/Transversion ratios were generated using the script [calculate_TsTv_vcftools.sh](vcftools_scripts_incl_nonbiallelic/calculate_TsTv_vcftools.sh). Additional details can be found within the directory containing the script.
 
 **Table 2**<br>
-Analysis of Molecular Variance (AMOVA)
+Analysis of Molecular Variance (AMOVA). The AMOVA was performed using the[AMOVA.R](pop_gen_analyses/AMOVA/AMOVA.R) R script launched by [run_AMOVA.sh](pop_gen_analyses/AMOVA/run_AMOVA.sh].
 
 | Grouping | Source of variation | df | MS | Sigma | % | Probability |
 | :--- | :--- | ---: | ---: | ---: | ---: | ---: |
