@@ -29,10 +29,8 @@ The directory [umgc_pilot_study](umgc_pilot_study) contains some scripts that we
 **Figure 2c.** Principal component analysis plot (PC1 vs PC2) for the cultivated material only<br>
 <img src="images/210818_breeding_lines_pca_incl_nonbiallelic.png" width="500">
 
-**Figure 2d.** Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
+**Figure 3.** Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
 <img src="images/Figure_4_210820_temporal_pca_incl_nonbiallelic.png" width="500">
-
-**Figure 3**<br>
 
 **Figure 4**<br>
 
