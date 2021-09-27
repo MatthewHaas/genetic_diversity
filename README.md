@@ -60,6 +60,12 @@ STRUCTURE results for _K_ = 6<br>
 
 The Transition/Transversion ratios were generated using the script [calculate_TsTv_vcftools.sh](vcftools_scripts_incl_nonbiallelic/calculate_TsTv_vcftools.sh). Additional details can be found within the directory containing the script.
 
+# Supplementary Figures
+
+**Figure S1**
+Evanno method implemented by STRUCTURE harvester to show the ideal number of _K_ populations from STRUCTURE results<br>
+<img src="images/deltaK.png" width="500">
+
 ## awk_filtering_scripts (directory)
 These scripts are short and simple awk commands to pre-filter the tab-separated (TSV) files that contain the output of the normalize.awk script. The normalize.awk script can be found in this repository and is used to extract SNP information from the VCF files.
 
