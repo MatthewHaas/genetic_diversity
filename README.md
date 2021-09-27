@@ -15,8 +15,8 @@ The directory [pop_gen_analyses](pop_gen_analyses) contains scripts used to cond
 
 The directory [umgc_pilot_study](umgc_pilot_study) contains some scripts that were used in the pilot GBS study by [Shao _et al._ (2020)](https://link.springer.com/content/pdf/10.1007/s12686-019-01116-9.pdf).
 
-**Figure 1.** This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin<br>
-<img src="images/210819_NWR_collection_sites.png" width="500">
+**Figure 1.** This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin. The map uses watershed boundaries provided by the Minnesota Department of Natural Resources.<br>
+<img src="images/watershed_map_export.png" width="500">
 
 **Figure 2a.** Principal component analysis plot (PC1 vs PC2) for the complete set<br>
 <img src="images/210306_main_gbs_20percent_NA_Page_1.png" width="500">
