@@ -15,6 +15,8 @@ The directory [pop_gen_analyses](pop_gen_analyses) contains scripts used to cond
 
 The directory [umgc_pilot_study](umgc_pilot_study) contains some scripts that were used in the pilot GBS study by [Shao _et al._ (2020)](https://link.springer.com/content/pdf/10.1007/s12686-019-01116-9.pdf).
 
+# Figures
+
 **Figure 1.** This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin. The map uses watershed boundaries provided by the Minnesota Department of Natural Resources.<br>
 <img src="images/watershed_map_export.png" width="500">
 
@@ -30,7 +32,7 @@ The directory [umgc_pilot_study](umgc_pilot_study) contains some scripts that we
 **Figure 2d.** Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
 <img src="images/Figure_4_210820_temporal_pca_incl_nonbiallelic.png" width="500">
 
-**Tables**
+# Tables
 
 The Transition/Transversion ratios were generated using the script [calculate_TsTv_vcftools.sh](vcftools_scripts_incl_nonbiallelic/calculate_TsTv_vcftools.sh). Additional details can be found within the directory containing the script.
 
