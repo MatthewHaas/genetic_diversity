@@ -12,6 +12,8 @@
 
 cd /home/jkimball/haasx092/main_GBS/210306_samtools
 
+cd /home/jkimball/haasx092/trees_for_diversity_study
+
 module load gcc/8.1.0
 module load udunits/2.2.26_gcc8.1.0
 module load proj/4.9.3
