@@ -11,7 +11,7 @@
 #SBATCH -e filter_vcfs_temporal_samples.err
 
 # Include path to the working directory
-cd /home/jkimball/haasx092/main_GBS/210306_samtools
+cd /home/jkimball/haasx092/main_GBS/trees_for_diversity_study
 
 # Filter VCF files to keep natural stands only
-~/vcftools/bin/vcftools --gzvcf filt_20_NA_vcf_files_concat_short_sample_names.vcf --keep temporal_samples_for_vcftools_filt.txt --recode --recode-INFO-all --out temporal_samples
+~/vcftools/bin/vcftools --gzvcf filt_20_NA_vcf_files_concat_incl_nonbiallelic_short_sample_names.vcf --keep temporal_samples_for_vcftools_filt.txt --recode --recode-INFO-all --out temporal_sample
