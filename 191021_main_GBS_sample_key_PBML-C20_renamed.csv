@@ -1,0 +1,1055 @@
+sample_number,ID,sample_ID_simplified,sample_ID_extended,class
+Sample_0846,18BL323,14PD-C10,14PD-C10,Breeding line
+Sample_0856,18BL324,14PD-C10,14PD-C10,Breeding line
+Sample_1048,14S-PS,14S-PS,14S-PS,Breeding line
+Sample_0864,18BL325,14S*PM3/PBM-C3,14S*PM3/PBM-C3,Breeding line
+Sample_0872,18BL326,14S*PM3/PBM-C3,14S*PM3/PBM-C3,Breeding line
+Sample_0881,18BL327,14S*PM3/PBM-C3,14S*PM3/PBM-C3,Breeding line
+Sample_0743,18BL227,14S*PS,14S*PS-C3,Breeding line
+Sample_0754,18BL228,14S*PS,14S*PS-C3,Breeding line
+Sample_0764,18BL229,14S*PS,14S*PS-C3,Breeding line
+Sample_0772,18BL230,14S*PS,14S*PS-C3,Breeding line
+Sample_0783,18BL231,14S*PS,14S*PS-C3,Breeding line
+Sample_0226,18NS256,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0238,18NS257,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0250,18NS258,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0262,18NS259,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0274,18NS260,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0194,18NS261,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0205,18NS262,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0216,18NS263,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0227,18NS264,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0239,18NS265,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0251,18NS266,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0263,18NS267,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0275,18NS268,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0195,18NS269,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0206,18NS270,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0217,18NS271,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0228,18NS272,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0240,18NS273,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0252,18NS274,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0264,18NS275,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0276,18NS276,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0277,18NS277,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0289,18NS278,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0301,18NS279,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0313,18NS280,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0325,18NS281,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0336,18NS282,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0347,18NS283,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0358,18NS284,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0278,18NS285,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0290,18NS286,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0302,18NS287,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0314,18NS288,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0279,18NS289,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0291,18NS290,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0303,18NS291,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0315,18NS292,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0326,18NS293,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0337,18NS294,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0348,18NS295,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0359,18NS296,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0280,18NS297,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0292,18NS298,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0304,18NS299,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0316,18NS300,Zizania aquatica,Aquatica_species,Natural stand
+Sample_0261,18NS251,Zizania aquatica,AquaticaSpecies,Natural stand
+Sample_0273,18NS252,Zizania aquatica,AquaticaSpecies,Natural stand
+Sample_0193,18NS253,Zizania aquatica,AquaticaSpecies,Natural stand
+Sample_0204,18NS254,Zizania aquatica,AquaticaSpecies,Natural stand
+Sample_0215,18NS255,Zizania aquatica,AquaticaSpecies,Natural stand
+Sample_0735,18BL151,Barron,Barron-GWMR,Breeding line
+Sample_0745,18BL152,Barron,Barron-GWMR,Breeding line
+Sample_0756,18BL153,Barron,Barron-GWMR,Breeding line
+Sample_0774,18BL163,Barron,BarronIMLQ15,Breeding line
+Sample_0785,18BL164,Barron,BarronIMLQ15,Breeding line
+Sample_0776,18BL179,Barron,Barron,Breeding line
+Sample_0787,18BL180,Barron,Barron,Breeding line
+Sample_0797,18BL181,Barron,Barron-Gun91S,Breeding line
+Sample_0806,18BL182,Barron,Barron-Gun91S,Breeding line
+Sample_0777,18BL183,Barron,Barron-Gun91S,Breeding line
+Sample_0789,18BL200,Barron,Barron,Breeding line
+Sample_0799,18BL201,Barron,Barron,Breeding line
+Sample_0808,18BL202,Barron,Barron,Breeding line
+Sample_0740,18BL203,Barron,Barron,Breeding line
+Sample_0751,18BL204,Barron,Barron,Breeding line
+Sample_0761,18BL205,Barron,Barron,Breeding line
+Sample_0769,18BL206,Barron,Barron,Breeding line
+Sample_0780,18BL207,Barron,Barron,Breeding line
+Sample_0790,18BL208,Barron,Barron,Breeding line
+Sample_0800,18BL209,Barron,Barron,Breeding line
+Sample_0809,18BL210,Barron,Barron,Breeding line
+Sample_0741,18BL211,Barron,Barron,Breeding line
+Sample_0833,18BL298,Barron,Barron,Breeding line
+Sample_0843,18BL299,Barron,Barron,Breeding line
+Sample_0853,18BL300,Barron,Barron,Breeding line
+Sample_0327,18NS301,Bass Lake,Bass Lake,Natural stand
+Sample_0338,18NS302,Bass Lake,Bass Lake,Natural stand
+Sample_0349,18NS303,Bass Lake,Bass Lake,Natural stand
+Sample_0360,18NS304,Bass Lake,Bass Lake,Natural stand
+Sample_0281,18NS305,Bass Lake,Bass Lake,Natural stand
+Sample_0293,18NS306,Bass Lake,Bass Lake,Natural stand
+Sample_0305,18NS307,Bass Lake,Bass Lake,Natural stand
+Sample_0317,18NS308,Bass Lake,Bass Lake,Natural stand
+Sample_0328,18NS309,Bass Lake,Bass Lake,Natural stand
+Sample_0339,18NS310,Bass Lake,Bass Lake,Natural stand
+Sample_0350,18NS311,Bass Lake,Bass Lake,Natural stand
+Sample_0361,18NS312,Bass Lake,Bass Lake,Natural stand
+Sample_0282,18NS313,Bass Lake,Bass Lake,Natural stand
+Sample_0294,18NS314,Bass Lake,Bass Lake,Natural stand
+Sample_0306,18NS315,Bass Lake,Bass Lake,Natural stand
+Sample_0318,18NS316,Bass Lake,Bass Lake,Natural stand
+Sample_0329,18NS317,Bass Lake,Bass Lake,Natural stand
+Sample_0340,18NS318,Bass Lake,Bass Lake,Natural stand
+Sample_0351,18NS319,Bass Lake,Bass Lake,Natural stand
+Sample_0362,18NS320,Bass Lake,Bass Lake,Natural stand
+Sample_0283,18NS321,Bass Lake,Bass Lake,Natural stand
+Sample_0295,18NS322,Bass Lake,Bass Lake,Natural stand
+Sample_0307,18NS323,Bass Lake,Bass Lake,Natural stand
+Sample_0319,18NS324,Bass Lake,Bass Lake,Natural stand
+Sample_0330,18NS325,Bass Lake,Bass Lake,Natural stand
+Sample_0341,18NS326,Bass Lake,Bass Lake,Natural stand
+Sample_0352,18NS327,Bass Lake,Bass Lake,Natural stand
+Sample_0363,18NS328,Bass Lake,Bass Lake,Natural stand
+Sample_0284,18NS329,Bass Lake,Bass Lake,Natural stand
+Sample_0296,18NS330,Bass Lake,Bass Lake,Natural stand
+Sample_0308,18NS331,Bass Lake,Bass Lake,Natural stand
+Sample_0320,18NS332,Bass Lake,Bass Lake,Natural stand
+Sample_0331,18NS333,Bass Lake,Bass Lake,Natural stand
+Sample_0342,18NS334,Bass Lake,Bass Lake,Natural stand
+Sample_0353,18NS335,Bass Lake,Bass Lake,Natural stand
+Sample_0364,18NS336,Bass Lake,Bass Lake,Natural stand
+Sample_0285,18NS337,Bass Lake,Bass Lake,Natural stand
+Sample_0297,18NS338,Bass Lake,Bass Lake,Natural stand
+Sample_0309,18NS339,Bass Lake,Bass Lake,Natural stand
+Sample_0321,18NS340,Bass Lake,Bass Lake,Natural stand
+Sample_0332,18NS341,Bass Lake,Bass Lake,Natural stand
+Sample_0343,18NS342,Bass Lake,Bass Lake,Natural stand
+Sample_0354,18NS343,Bass Lake,Bass Lake,Natural stand
+Sample_0365,18NS344,Bass Lake,Bass Lake,Natural stand
+Sample_0286,18NS345,Bass Lake,Bass Lake,Natural stand
+Sample_0298,18NS346,Bass Lake,Bass Lake,Natural stand
+Sample_0310,18NS347,Bass Lake,Bass Lake,Natural stand
+Sample_0322,18NS348,Bass Lake,Bass Lake,Natural stand
+Sample_0333,18NS349,Bass Lake,Bass Lake,Natural stand
+Sample_0344,18NS350,Bass Lake,Bass Lake,Natural stand
+Sample_0883,18BL250,Big Fork River,BigForkRiver,Natural stand
+Sample_0815,18BL251,Big Fork River,BigForkRiver,Natural stand
+Sample_0827,18BL252,Big Fork River,BigForkRiver,Natural stand
+Sample_0839,18BL253,Big Fork River,BigForkRiver,Natural stand
+Sample_0849,18BL254,Big Fork River,BigForkRiver,Natural stand
+Sample_0859,18BL255,Big Fork River,BigForkRiver,Natural stand
+Sample_0867,18BL256,Big Fork River,BigForkRiver,Natural stand
+Sample_0874,18BL257,Big Fork River,BigForkRiver,Natural stand
+Sample_0884,18BL258,Big Fork River,BigForkRiver,Natural stand
+Sample_0816,18BL259,Big Fork River,BigForkRiver,Natural stand
+Sample_0828,18BL260,Big Fork River,BigForkRiver,Natural stand
+Sample_0647,18BL337,Big Fork River,BigForkRiver,Natural stand
+Sample_0659,18BL338,Big Fork River,BigForkRiver,Natural stand
+Sample_0671,18BL339,Big Fork River,BigForkRiver,Natural stand
+Sample_0683,18BL340,Big Fork River,BigForkRiver,Natural stand
+Sample_0694,18BL341,Big Fork River,BigForkRiver,Natural stand
+Sample_0705,18BL342,Big Fork River,BigForkRiver,Natural stand
+Sample_0716,18BL343,Big Fork River,BigForkRiver,Natural stand
+Sample_0727,18BL344,Big Fork River,BigForkRiver,Natural stand
+Sample_0648,18BL345,Big Fork River,BigForkRiver,Natural stand
+Sample_0660,18BL346,Big Fork River,BigForkRiver,Natural stand
+Sample_0672,18BL347,Big Fork River,BigForkRiver,Natural stand
+Sample_0684,18BL348,Big Fork River,BigForkRiver,Natural stand
+Sample_0695,18BL349,Big Fork River,BigForkRiver,Natural stand
+Sample_0706,18BL350,Big Fork River,BigForkRiver,Natural stand
+Sample_0717,18BL351,Big Fork River,BigForkRiver,Natural stand
+Sample_0728,18BL352,Big Fork River,BigForkRiver,Natural stand
+Sample_0649,18BL353,Big Fork River,BigForkRiver,Natural stand
+Sample_0661,18BL354,Big Fork River,BigForkRiver,Natural stand
+Sample_0673,18BL355,Big Fork River,BigForkRiver,Natural stand
+Sample_0685,18BL356,Big Fork River,BigForkRiver,Natural stand
+Sample_0696,18BL357,Big Fork River,BigForkRiver,Natural stand
+Sample_0707,18BL358,Big Fork River,BigForkRiver,Natural stand
+Sample_0718,18BL359,Big Fork River,BigForkRiver,Natural stand
+Sample_0729,18BL360,Big Fork River,BigForkRiver,Natural stand
+Sample_0650,18BL361,Big Fork River,BigForkRiver,Natural stand
+Sample_0662,18BL362,Big Fork River,BigForkRiver,Natural stand
+Sample_0674,18BL363,Big Fork River,BigForkRiver,Natural stand
+Sample_0686,18BL364,Big Fork River,BigForkRiver,Natural stand
+Sample_0697,18BL365,Big Fork River,BigForkRiver,Natural stand
+Sample_0708,18BL366,Big Fork River,BigForkRiver,Natural stand
+Sample_0719,18BL367,Big Fork River,BigForkRiver,Natural stand
+Sample_0730,18BL368,Big Fork River,BigForkRiver,Natural stand
+Sample_0651,18BL369,Big Fork River,BigForkRiver,Natural stand
+Sample_0663,18BL370,Big Fork River,BigForkRiver,Natural stand
+Sample_0675,18BL371,Big Fork River,BigForkRiver,Natural stand
+Sample_0075,18NS051,Clearwater River,Clearwater River,Natural stand
+Sample_0087,18NS052,Clearwater River,Clearwater River,Natural stand
+Sample_0007,18NS053,Clearwater River,Clearwater River,Natural stand
+Sample_0018,18NS054,Clearwater River,Clearwater River,Natural stand
+Sample_0029,18NS055,Clearwater River,Clearwater River,Natural stand
+Sample_0040,18NS056,Clearwater River,Clearwater River,Natural stand
+Sample_0052,18NS057,Clearwater River,Clearwater River,Natural stand
+Sample_0064,18NS058,Clearwater River,Clearwater River,Natural stand
+Sample_0076,18NS059,Clearwater River,Clearwater River,Natural stand
+Sample_0088,18NS060,Clearwater River,Clearwater River,Natural stand
+Sample_0008,18NS061,Clearwater River,Clearwater River,Natural stand
+Sample_0019,18NS062,Clearwater River,Clearwater River,Natural stand
+Sample_0030,18NS063,Clearwater River,Clearwater River,Natural stand
+Sample_0041,18NS064,Clearwater River,Clearwater River,Natural stand
+Sample_0053,18NS065,Clearwater River,Clearwater River,Natural stand
+Sample_0065,18NS066,Clearwater River,Clearwater River,Natural stand
+Sample_0077,18NS067,Clearwater River,Clearwater River,Natural stand
+Sample_0089,18NS068,Clearwater River,Clearwater River,Natural stand
+Sample_0009,18NS069,Clearwater River,Clearwater River,Natural stand
+Sample_0020,18NS070,Clearwater River,Clearwater River,Natural stand
+Sample_0031,18NS071,Clearwater River,Clearwater River,Natural stand
+Sample_0042,18NS072,Clearwater River,Clearwater River,Natural stand
+Sample_0054,18NS073,Clearwater River,Clearwater River,Natural stand
+Sample_0066,18NS074,Clearwater River,Clearwater River,Natural stand
+Sample_0078,18NS075,Clearwater River,Clearwater River,Natural stand
+Sample_0090,18NS076,Clearwater River,Clearwater River,Natural stand
+Sample_0010,18NS077,Clearwater River,Clearwater River,Natural stand
+Sample_0021,18NS078,Clearwater River,Clearwater River,Natural stand
+Sample_0032,18NS079,Clearwater River,Clearwater River,Natural stand
+Sample_0043,18NS080,Clearwater River,Clearwater River,Natural stand
+Sample_0055,18NS081,Clearwater River,Clearwater River,Natural stand
+Sample_0067,18NS082,Clearwater River,Clearwater River,Natural stand
+Sample_0079,18NS083,Clearwater River,Clearwater River,Natural stand
+Sample_0091,18NS084,Clearwater River,Clearwater River,Natural stand
+Sample_0011,18NS085,Clearwater River,Clearwater River,Natural stand
+Sample_0022,18NS086,Clearwater River,Clearwater River,Natural stand
+Sample_0033,18NS087,Clearwater River,Clearwater River,Natural stand
+Sample_0044,18NS088,Clearwater River,Clearwater River,Natural stand
+Sample_0056,18NS089,Clearwater River,Clearwater River,Natural stand
+Sample_0068,18NS090,Clearwater River,Clearwater River,Natural stand
+Sample_0080,18NS091,Clearwater River,Clearwater River,Natural stand
+Sample_0092,18NS092,Clearwater River,Clearwater River,Natural stand
+Sample_0093,18NS093,Clearwater River,Clearwater River,Natural stand
+Sample_0105,18NS094,Clearwater River,Clearwater River,Natural stand
+Sample_0117,18NS095,Clearwater River,Clearwater River,Natural stand
+Sample_0129,18NS096,Clearwater River,Clearwater River,Natural stand
+Sample_0094,18NS097,Clearwater River,Clearwater River,Natural stand
+Sample_0106,18NS098,Clearwater River,Clearwater River,Natural stand
+Sample_0118,18NS099,Clearwater River,Clearwater River,Natural stand
+Sample_0130,18NS100,Clearwater River,Clearwater River,Natural stand
+Sample_0355,18NS351,Dahler Lake,Dahler Lake,Natural stand
+Sample_0366,18NS352,Dahler Lake,Dahler Lake,Natural stand
+Sample_0287,18NS353,Dahler Lake,Dahler Lake,Natural stand
+Sample_0299,18NS354,Dahler Lake,Dahler Lake,Natural stand
+Sample_0311,18NS355,Dahler Lake,Dahler Lake,Natural stand
+Sample_0323,18NS356,Dahler Lake,Dahler Lake,Natural stand
+Sample_0334,18NS357,Dahler Lake,Dahler Lake,Natural stand
+Sample_0345,18NS358,Dahler Lake,Dahler Lake,Natural stand
+Sample_0356,18NS359,Dahler Lake,Dahler Lake,Natural stand
+Sample_0367,18NS360,Dahler Lake,Dahler Lake,Natural stand
+Sample_0288,18NS361,Dahler Lake,Dahler Lake,Natural stand
+Sample_0300,18NS362,Dahler Lake,Dahler Lake,Natural stand
+Sample_0312,18NS363,Dahler Lake,Dahler Lake,Natural stand
+Sample_0324,18NS364,Dahler Lake,Dahler Lake,Natural stand
+Sample_0335,18NS365,Dahler Lake,Dahler Lake,Natural stand
+Sample_0346,18NS366,Dahler Lake,Dahler Lake,Natural stand
+Sample_0357,18NS367,Dahler Lake,Dahler Lake,Natural stand
+Sample_0368,18NS368,Dahler Lake,Dahler Lake,Natural stand
+Sample_0369,18NS369,Dahler Lake,Dahler Lake,Natural stand
+Sample_0380,18NS370,Dahler Lake,Dahler Lake,Natural stand
+Sample_0391,18NS371,Dahler Lake,Dahler Lake,Natural stand
+Sample_0402,18NS372,Dahler Lake,Dahler Lake,Natural stand
+Sample_0413,18NS373,Dahler Lake,Dahler Lake,Natural stand
+Sample_0425,18NS374,Dahler Lake,Dahler Lake,Natural stand
+Sample_0437,18NS375,Dahler Lake,Dahler Lake,Natural stand
+Sample_0449,18NS376,Dahler Lake,Dahler Lake,Natural stand
+Sample_0370,18NS377,Dahler Lake,Dahler Lake,Natural stand
+Sample_0381,18NS378,Dahler Lake,Dahler Lake,Natural stand
+Sample_0392,18NS379,Dahler Lake,Dahler Lake,Natural stand
+Sample_0403,18NS380,Dahler Lake,Dahler Lake,Natural stand
+Sample_0414,18NS381,Dahler Lake,Dahler Lake,Natural stand
+Sample_0426,18NS382,Dahler Lake,Dahler Lake,Natural stand
+Sample_0438,18NS383,Dahler Lake,Dahler Lake,Natural stand
+Sample_0450,18NS384,Dahler Lake,Dahler Lake,Natural stand
+Sample_0415,18NS385,Dahler Lake,Dahler Lake,Natural stand
+Sample_0427,18NS386,Dahler Lake,Dahler Lake,Natural stand
+Sample_0439,18NS387,Dahler Lake,Dahler Lake,Natural stand
+Sample_0451,18NS388,Dahler Lake,Dahler Lake,Natural stand
+Sample_0371,18NS389,Dahler Lake,Dahler Lake,Natural stand
+Sample_0382,18NS390,Dahler Lake,Dahler Lake,Natural stand
+Sample_0393,18NS391,Dahler Lake,Dahler Lake,Natural stand
+Sample_0404,18NS392,Dahler Lake,Dahler Lake,Natural stand
+Sample_0416,18NS393,Dahler Lake,Dahler Lake,Natural stand
+Sample_0428,18NS394,Dahler Lake,Dahler Lake,Natural stand
+Sample_0440,18NS395,Dahler Lake,Dahler Lake,Natural stand
+Sample_0452,18NS396,Dahler Lake,Dahler Lake,Natural stand
+Sample_0372,18NS397,Dahler Lake,Dahler Lake,Natural stand
+Sample_0383,18NS398,Dahler Lake,Dahler Lake,Natural stand
+Sample_0394,18NS399,Dahler Lake,Dahler Lake,Natural stand
+Sample_0405,18NS400,Dahler Lake,Dahler Lake,Natural stand
+Sample_0551,18NS451,Decker Lake,Decker Lake,Natural stand
+Sample_0562,18NS452,Decker Lake,Decker Lake,Natural stand
+Sample_0573,18NS453,Decker Lake,Decker Lake,Natural stand
+Sample_0584,18NS454,Decker Lake,Decker Lake,Natural stand
+Sample_0595,18NS455,Decker Lake,Decker Lake,Natural stand
+Sample_0607,18NS456,Decker Lake,Decker Lake,Natural stand
+Sample_0619,18NS457,Decker Lake,Decker Lake,Natural stand
+Sample_0631,18NS458,Decker Lake,Decker Lake,Natural stand
+Sample_0552,18NS459,Decker Lake,Decker Lake,Natural stand
+Sample_0563,18NS460,Decker Lake,Decker Lake,Natural stand
+Sample_0574,18NS461,Decker Lake,Decker Lake,Natural stand
+Sample_0585,18NS462,Decker Lake,Decker Lake,Natural stand
+Sample_0596,18NS463,Decker Lake,Decker Lake,Natural stand
+Sample_0608,18NS464,Decker Lake,Decker Lake,Natural stand
+Sample_0620,18NS465,Decker Lake,Decker Lake,Natural stand
+Sample_0632,18NS466,Decker Lake,Decker Lake,Natural stand
+Sample_0553,18NS467,Decker Lake,Decker Lake,Natural stand
+Sample_0564,18NS468,Decker Lake,Decker Lake,Natural stand
+Sample_0575,18NS469,Decker Lake,Decker Lake,Natural stand
+Sample_0586,18NS470,Decker Lake,Decker Lake,Natural stand
+Sample_0597,18NS471,Decker Lake,Decker Lake,Natural stand
+Sample_0609,18NS472,Decker Lake,Decker Lake,Natural stand
+Sample_0621,18NS473,Decker Lake,Decker Lake,Natural stand
+Sample_0633,18NS474,Decker Lake,Decker Lake,Natural stand
+Sample_0598,18NS475,Decker Lake,Decker Lake,Natural stand
+Sample_0610,18NS476,Decker Lake,Decker Lake,Natural stand
+Sample_0622,18NS477,Decker Lake,Decker Lake,Natural stand
+Sample_0634,18NS478,Decker Lake,Decker Lake,Natural stand
+Sample_0554,18NS479,Decker Lake,Decker Lake,Natural stand
+Sample_0565,18NS480,Decker Lake,Decker Lake,Natural stand
+Sample_0576,18NS481,Decker Lake,Decker Lake,Natural stand
+Sample_0587,18NS482,Decker Lake,Decker Lake,Natural stand
+Sample_0599,18NS483,Decker Lake,Decker Lake,Natural stand
+Sample_0611,18NS484,Decker Lake,Decker Lake,Natural stand
+Sample_0623,18NS485,Decker Lake,Decker Lake,Natural stand
+Sample_0635,18NS486,Decker Lake,Decker Lake,Natural stand
+Sample_0555,18NS487,Decker Lake,Decker Lake,Natural stand
+Sample_0566,18NS488,Decker Lake,Decker Lake,Natural stand
+Sample_0577,18NS489,Decker Lake,Decker Lake,Natural stand
+Sample_0588,18NS490,Decker Lake,Decker Lake,Natural stand
+Sample_0600,18NS491,Decker Lake,Decker Lake,Natural stand
+Sample_0612,18NS492,Decker Lake,Decker Lake,Natural stand
+Sample_0624,18NS493,Decker Lake,Decker Lake,Natural stand
+Sample_0636,18NS494,Decker Lake,Decker Lake,Natural stand
+Sample_0556,18NS495,Decker Lake,Decker Lake,Natural stand
+Sample_0567,18NS496,Decker Lake,Decker Lake,Natural stand
+Sample_0578,18NS497,Decker Lake,Decker Lake,Natural stand
+Sample_0589,18NS498,Decker Lake,Decker Lake,Natural stand
+Sample_0601,18NS499,Decker Lake,Decker Lake,Natural stand
+Sample_0613,18NS500,Decker Lake,Decker Lake,Natural stand
+Sample_0873,18BL249,Dovetail,DV3-3,Breeding line
+Sample_0885,18BL266,Dovetail,DV3-3,Breeding line
+Sample_0865,18BL333,Dovetail,DV3-3,Breeding line
+Sample_0882,18BL335,Dovetail,DV4-2,Breeding line
+Sample_0893,18BL336,Dovetail,DV4-2,Breeding line
+Sample_0993,18DV001,Dovetail,DV,Breeding line
+Sample_1002,18DV002,Dovetail,DV,Breeding line
+Sample_1011,18DV003,Dovetail,DV,Breeding line
+Sample_1019,18DV004,Dovetail,DV,Breeding line
+Sample_1026,18DV005,Dovetail,DV,Breeding line
+Sample_1033,18DV006,Dovetail,DV,Breeding line
+Sample_1040,18DV007,Dovetail,DV,Breeding line
+Sample_1046,18DV008,Dovetail,DV,Breeding line
+Sample_0994,18DV009,Dovetail,DV,Breeding line
+Sample_1003,18DV010,Dovetail,DV,Breeding line
+Sample_0747,18BL168,FY-C20,FY-C20,Breeding line
+Sample_0758,18BL169,FY-C20,FY-C20,Breeding line
+Sample_0807,18BL186,FY-C20,FYC20Gun91N,Breeding line
+Sample_0739,18BL187,FY-C20,FYC20Gun91N,Breeding line
+Sample_0749,18BL188,FY-C20,FYC20Gun91N,Breeding line
+Sample_0778,18BL191,FY-C20,FYC20Gun27A,Breeding line
+Sample_0788,18BL192,FY-C20,FYC20Gun27A,Breeding line
+Sample_0798,18BL193,FY-C20,FYC20Gun27A,Breeding line
+Sample_0812,18BL234,FY-C20,FYC20IMLO2,Breeding line
+Sample_0744,18BL235,FY-C20,FYC20IMLO2,Breeding line
+Sample_0755,18BL236,FY-C20,FYC20IMLO2,Breeding line
+Sample_0813,18BL242,FY-C20,FY-C20 (BS),Breeding line
+Sample_0814,18BL243,FY-C20,FY-C20 (BS),Breeding line
+Sample_0826,18BL244,FY-C20,FY-C20 (BS),Breeding line
+Sample_0838,18BL245,FY-C20,FY-C20 (BS),Breeding line
+Sample_0848,18BL246,FY-C20,FY-C20 (BS),Breeding line
+Sample_0858,18BL247,FY-C20,FY-C20 (BS),Breeding line
+Sample_0866,18BL248,FY-C20,FY-C20 (BS),Breeding line
+Sample_0818,18BL275,FY-C20,FY-C20,Breeding line
+Sample_0830,18BL276,FY-C20,FY-C20,Breeding line
+Sample_0840,18BL277,FY-C20,FY-C20,Breeding line
+Sample_0850,18BL278,FY-C20,FY-C20,Breeding line
+Sample_0875,18BL279,FY-C20,FY-C20,Breeding line
+Sample_0886,18BL280,FY-C20,FY-C20,Breeding line
+Sample_0819,18BL281,FY-C20,FY-C20,Breeding line
+Sample_0831,18BL282,FY-C20,FY-C20,Breeding line
+Sample_0841,18BL283,FY-C20,FY-C20,Breeding line
+Sample_0851,18BL284,FY-C20,FY-C20,Breeding line
+Sample_0857,18BL332,FY-C20,FY-C20-6,Breeding line
+Sample_1047,FY-C20,FY-C20,FY-C20,Breeding line
+Sample_0169,18NS151,Garfield Lake,Garfield Lake,Natural stand
+Sample_0180,18NS152,Garfield Lake,Garfield Lake,Natural stand
+Sample_0101,18NS153,Garfield Lake,Garfield Lake,Natural stand
+Sample_0113,18NS154,Garfield Lake,Garfield Lake,Natural stand
+Sample_0125,18NS155,Garfield Lake,Garfield Lake,Natural stand
+Sample_0137,18NS156,Garfield Lake,Garfield Lake,Natural stand
+Sample_0148,18NS157,Garfield Lake,Garfield Lake,Natural stand
+Sample_0159,18NS158,Garfield Lake,Garfield Lake,Natural stand
+Sample_0170,18NS159,Garfield Lake,Garfield Lake,Natural stand
+Sample_0181,18NS160,Garfield Lake,Garfield Lake,Natural stand
+Sample_0102,18NS161,Garfield Lake,Garfield Lake,Natural stand
+Sample_0114,18NS162,Garfield Lake,Garfield Lake,Natural stand
+Sample_0126,18NS163,Garfield Lake,Garfield Lake,Natural stand
+Sample_0138,18NS164,Garfield Lake,Garfield Lake,Natural stand
+Sample_0149,18NS165,Garfield Lake,Garfield Lake,Natural stand
+Sample_0160,18NS166,Garfield Lake,Garfield Lake,Natural stand
+Sample_0171,18NS167,Garfield Lake,Garfield Lake,Natural stand
+Sample_0182,18NS168,Garfield Lake,Garfield Lake,Natural stand
+Sample_0103,18NS169,Garfield Lake,Garfield Lake,Natural stand
+Sample_0115,18NS170,Garfield Lake,Garfield Lake,Natural stand
+Sample_0127,18NS171,Garfield Lake,Garfield Lake,Natural stand
+Sample_0139,18NS172,Garfield Lake,Garfield Lake,Natural stand
+Sample_0150,18NS173,Garfield Lake,Garfield Lake,Natural stand
+Sample_0161,18NS174,Garfield Lake,Garfield Lake,Natural stand
+Sample_0172,18NS175,Garfield Lake,Garfield Lake,Natural stand
+Sample_0183,18NS176,Garfield Lake,Garfield Lake,Natural stand
+Sample_0104,18NS177,Garfield Lake,Garfield Lake,Natural stand
+Sample_0116,18NS178,Garfield Lake,Garfield Lake,Natural stand
+Sample_0128,18NS179,Garfield Lake,Garfield Lake,Natural stand
+Sample_0140,18NS180,Garfield Lake,Garfield Lake,Natural stand
+Sample_0151,18NS181,Garfield Lake,Garfield Lake,Natural stand
+Sample_0162,18NS182,Garfield Lake,Garfield Lake,Natural stand
+Sample_0173,18NS183,Garfield Lake,Garfield Lake,Natural stand
+Sample_0184,18NS184,Garfield Lake,Garfield Lake,Natural stand
+Sample_0185,18NS185,Garfield Lake,Garfield Lake,Natural stand
+Sample_0196,18NS186,Garfield Lake,Garfield Lake,Natural stand
+Sample_0207,18NS187,Garfield Lake,Garfield Lake,Natural stand
+Sample_0218,18NS188,Garfield Lake,Garfield Lake,Natural stand
+Sample_0229,18NS189,Garfield Lake,Garfield Lake,Natural stand
+Sample_0241,18NS190,Garfield Lake,Garfield Lake,Natural stand
+Sample_0253,18NS191,Garfield Lake,Garfield Lake,Natural stand
+Sample_0265,18NS192,Garfield Lake,Garfield Lake,Natural stand
+Sample_0230,18NS193,Garfield Lake,Garfield Lake,Natural stand
+Sample_0242,18NS194,Garfield Lake,Garfield Lake,Natural stand
+Sample_0254,18NS195,Garfield Lake,Garfield Lake,Natural stand
+Sample_0266,18NS196,Garfield Lake,Garfield Lake,Natural stand
+Sample_0186,18NS197,Garfield Lake,Garfield Lake,Natural stand
+Sample_0197,18NS198,Garfield Lake,Garfield Lake,Natural stand
+Sample_0208,18NS199,Garfield Lake,Garfield Lake,Natural stand
+Sample_0219,18NS200,Garfield Lake,Garfield Lake,Natural stand
+Sample_1049,GarfieldLake,Garfield Lake,Garfield Lake,Natural stand
+Sample_0447,18NS601,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0459,18NS602,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0379,18NS603,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0390,18NS604,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0401,18NS605,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0412,18NS606,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0424,18NS607,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0436,18NS608,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0448,18NS609,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0460,18NS610,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0461,18NS611,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0473,18NS612,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0485,18NS613,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0497,18NS614,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0509,18NS615,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0520,18NS616,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0531,18NS617,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0541,18NS618,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0462,18NS619,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0474,18NS620,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0486,18NS621,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0498,18NS622,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0510,18NS623,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0521,18NS624,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0532,18NS625,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0542,18NS626,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0463,18NS627,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0475,18NS628,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0487,18NS629,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0499,18NS630,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0464,18NS631,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0476,18NS632,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0488,18NS633,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0500,18NS634,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0511,18NS635,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0522,18NS636,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0533,18NS637,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0543,18NS638,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0465,18NS639,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0477,18NS640,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0489,18NS641,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0501,18NS642,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0512,18NS643,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0523,18NS644,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0534,18NS645,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0544,18NS646,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0466,18NS647,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0478,18NS648,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0490,18NS649,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0502,18NS650,Garfield Lake Old,GarfieldLakeOld,Natural stand
+Sample_0752,18BL212,GPB/K2B-C2,GPB/K2B-C2,Breeding line
+Sample_0889,18BL304,GPB/K2B-C2,GPB/K2B-C2,Breeding line
+Sample_0822,18BL305,GPB/K2B-C2,GPB/K2B-C2,Breeding line
+Sample_0781,18BL215,GPN-1.20,GPN-1.20,Breeding line
+Sample_0791,18BL216,GPN-1.20,GPN-1.20,Breeding line
+Sample_0801,18BL217,GPP-1.20,GPP-1.20,Breeding line
+Sample_0810,18BL218,GPP-1.20,GPP-1.20,Breeding line
+Sample_0870,18BL310,GPP-1.20,GPP-1.20,Breeding line
+Sample_0879,18BL311,GPP-1.20,GPP-1.20,Breeding line
+Sample_0890,18BL312,GPP-1.20,GPP-1.20,Breeding line
+Sample_0823,18BL313,GPP-1.20,GPP-1.20,Breeding line
+Sample_1039,18BL524,Itasca Haploid,ItascaHaploid,Breeding line
+Sample_1045,18BL525,Itasca Haploid,ItascaHaploid,Breeding line
+Sample_0654,18BL076,Itasca-C12,Itasca-C12 Dur,Breeding line
+Sample_0666,18BL077,Itasca-C12,Itasca-C12 Dur,Breeding line
+Sample_0678,18BL078,Itasca-C12,Itasca-C12 Dur,Breeding line
+Sample_0690,18BL079,Itasca-C12,Itasca-C12 Dur,Breeding line
+Sample_0701,18BL080,Itasca-C12,Itasca-C12 Dur,Breeding line
+Sample_0712,18BL081,Itasca-C12,Itasca-C12 Dur,Breeding line
+Sample_0723,18BL082,Itasca-C12,Itasca-C12 Dur,Breeding line
+Sample_0734,18BL083,Itasca-C12,Itasca-C12 Dur,Breeding line
+Sample_0773,18BL155,Itasca-C12,Itasca-C12GWK2,Breeding line
+Sample_0784,18BL156,Itasca-C12,Itasca-C12GWK2,Breeding line
+Sample_0794,18BL157,Itasca-C12,Itasca-C12GWK2,Breeding line
+Sample_0736,18BL159,Itasca-C12,Itasca-C12GWDCO6,Breeding line
+Sample_0746,18BL160,Itasca-C12,ItascaC12IMLPG3,Breeding line
+Sample_0757,18BL161,Itasca-C12,ItascaC12IMLPG3,Breeding line
+Sample_0765,18BL162,Itasca-C12,ItascaC12IMLPG3,Breeding line
+Sample_0795,18BL165,Itasca-C12,ItascaC12IMLS7,Breeding line
+Sample_0804,18BL166,Itasca-C12,ItascaC12IMLS7,Breeding line
+Sample_0737,18BL167,Itasca-C12,ItascaC12IMLS7,Breeding line
+Sample_0766,18BL170,Itasca-C12,Itasca-C12,Breeding line
+Sample_0775,18BL171,Itasca-C12,Itasca-C12,Breeding line
+Sample_0786,18BL172,Itasca-C12,Itasca-C12,Breeding line
+Sample_0796,18BL173,Itasca-C12,Itasca-C12,Breeding line
+Sample_0805,18BL174,Itasca-C12,Itasca-C12,Breeding line
+Sample_0738,18BL175,Itasca-C12,ItascaC12DUR,Breeding line
+Sample_0748,18BL176,Itasca-C12,ItascaC12DUR,Breeding line
+Sample_0759,18BL177,Itasca-C12,ItascaC12DUR,Breeding line
+Sample_0767,18BL178,Itasca-C12,ItascaC12DUR,Breeding line
+Sample_0817,18BL267,Itasca-C12,Itasca-C12GWDCO6,Breeding line
+Sample_0829,18BL268,Itasca-C12,Itasca-C12GWDCO6,Breeding line
+Sample_0888,18BL296,Itasca-C12,Itasca-C12,Breeding line
+Sample_0821,18BL297,Itasca-C12,Itasca-C12,Breeding line
+Sample_1050,Itasca-C12,Itasca-C12,Itasca-C12,Breeding line
+Sample_0940,18BL413,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0952,18BL414,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0964,18BL415,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0976,18BL416,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0897,18BL417,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0908,18BL418,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0919,18BL419,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0930,18BL420,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0941,18BL421,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0953,18BL422,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0965,18BL423,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0977,18BL424,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0898,18BL425,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0909,18BL426,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0920,18BL427,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0931,18BL428,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0942,18BL429,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0954,18BL430,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0966,18BL431,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0978,18BL432,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0943,18BL433,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0955,18BL434,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0967,18BL435,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0979,18BL436,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0899,18BL437,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0910,18BL438,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0921,18BL439,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0932,18BL440,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0944,18BL441,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0956,18BL442,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0968,18BL443,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0980,18BL444,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0900,18BL445,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0911,18BL446,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0922,18BL447,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0933,18BL448,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0945,18BL449,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0957,18BL450,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0969,18BL451,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0981,18BL452,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0901,18BL453,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0912,18BL454,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0923,18BL455,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0934,18BL456,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0946,18BL457,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0958,18BL458,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0970,18BL459,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0982,18BL460,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0902,18BL461,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0913,18BL462,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0924,18BL463,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0935,18BL464,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0947,18BL465,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0959,18BL466,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0971,18BL467,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0983,18BL468,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0903,18BL469,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0914,18BL470,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0925,18BL471,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0936,18BL472,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0948,18BL473,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0960,18BL474,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0972,18BL475,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0984,18BL476,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0904,18BL477,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0915,18BL478,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0926,18BL479,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0937,18BL480,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0949,18BL481,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0961,18BL482,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0973,18BL483,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0985,18BL484,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0986,18BL485,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0995,18BL486,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1004,18BL487,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1012,18BL488,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1020,18BL489,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1027,18BL490,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1034,18BL491,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1041,18BL492,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0987,18BL493,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0996,18BL494,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1005,18BL495,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1013,18BL496,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1021,18BL497,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1028,18BL498,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1035,18BL499,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1042,18BL500,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0988,18BL501,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0997,18BL502,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1006,18BL503,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1014,18BL504,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1022,18BL505,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1029,18BL506,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1036,18BL507,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1043,18BL508,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0989,18BL509,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0998,18BL510,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1007,18BL511,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1015,18BL512,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1023,18BL513,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1030,18BL514,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1037,18BL515,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1044,18BL516,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0990,18BL517,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0999,18BL518,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1008,18BL519,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1016,18BL520,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1024,18BL521,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1031,18BL522,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_1038,18BL523,Johnson X Dora F4,Johnson X Dora F4,Breeding line
+Sample_0699,18BL381,K2B-C16,K2B-C16,Breeding line
+Sample_0710,18BL382,K2B-C16,K2B-C16,Breeding line
+Sample_0721,18BL383,K2B-C16,K2B-C16,Breeding line
+Sample_0732,18BL384,K2B-C16,K2B-C16,Breeding line
+Sample_0894,18BL393,K2EF-C16,K2EF-C16,Breeding line
+Sample_0905,18BL394,K2EF-C16,K2EF-C16,Breeding line
+Sample_0916,18BL395,K2EF-C16,K2EF-C16,Breeding line
+Sample_0927,18BL396,K2EF-C16,K2EF-C16,Breeding line
+Sample_0938,18BL397,K2EF-C16,K2EF-C16,Breeding line
+Sample_0950,18BL398,K2EF-C16,K2EF-C16,Breeding line
+Sample_0962,18BL399,K2EF-C16,K2EF-C16,Breeding line
+Sample_0974,18BL400,K2EF-C16,K2EF-C16,Breeding line
+Sample_0895,18BL401,K2EF-C16,K2EF-C16,Breeding line
+Sample_0906,18BL402,K2EF-C16,K2EF-C16,Breeding line
+Sample_0917,18BL403,K2EF-C16,K2EF-C16,Breeding line
+Sample_0928,18BL404,K2EF-C16,K2EF-C16,Breeding line
+Sample_0939,18BL405,K2EF-C16,K2EF-C16,Breeding line
+Sample_0951,18BL406,K2EF-C16,K2EF-C16,Breeding line
+Sample_0963,18BL407,K2EF-C16,K2EF-C16,Breeding line
+Sample_0975,18BL408,K2EF-C16,K2EF-C16,Breeding line
+Sample_0896,18BL409,K2EF-C16,K2EF-C16,Breeding line
+Sample_0907,18BL410,K2EF-C16,K2EF-C16,Breeding line
+Sample_0918,18BL411,K2EF-C16,K2EF-C16,Breeding line
+Sample_0929,18BL412,K2EF-C16,K2EF-C16,Breeding line
+Sample_0750,18BL196,K2EFBP-C1,K2EFBP-C1,Breeding line
+Sample_0760,18BL197,K2EFBP-C1,K2EFBP-C1,Breeding line
+Sample_0768,18BL198,K2EFBP-C1,K2EFBP-C1,Breeding line
+Sample_0779,18BL199,K2EFBP-C1,K2EFBP-C1,Breeding line
+Sample_0878,18BL303,K2EFBP-C1,K2EFBP-C1,Breeding line
+Sample_0652,18BL377,KPVN-C4,KPVN-C4,Breeding line
+Sample_0664,18BL378,KPVN-C4,KPVN-C4,Breeding line
+Sample_0676,18BL379,KPVN-C4,KPVN-C4,Breeding line
+Sample_0688,18BL380,KPVN-C4,KPVN-C4,Breeding line
+Sample_0687,18BL372,KSVN-C4,KSVN-C4,Breeding line
+Sample_0698,18BL373,KSVN-C4,KSVN-C4,Breeding line
+Sample_0709,18BL374,KSVN-C4,KSVN-C4,Breeding line
+Sample_0720,18BL375,KSVN-C4,KSVN-C4,Breeding line
+Sample_0731,18BL376,KSVN-C4,KSVN-C4,Breeding line
+Sample_1051,Latifolia,Latifolia,Latifolia,Natural stand
+Sample_0991,18NS571,Mud Hen Lake,Mud Hen Lake,Natural stand
+Sample_1000,18NS572,Mud Hen Lake,Mud Hen Lake,Natural stand
+Sample_1009,18NS573,Mud Hen Lake,Mud Hen Lake,Natural stand
+Sample_1017,18NS574,Mud Hen Lake,Mud Hen Lake,Natural stand
+Sample_0992,18NS575,Mud Hen Lake,Mud Hen Lake,Natural stand
+Sample_1001,18NS576,Mud Hen Lake,Mud Hen Lake,Natural stand
+Sample_1010,18NS577,Mud Hen Lake,Mud Hen Lake,Natural stand
+Sample_1018,18NS578,Mud Hen Lake,Mud Hen Lake,Natural stand
+Sample_1025,18NS579,Mud Hen Lake,Mud Hen Lake,Natural stand
+Sample_1032,18NS580,Mud Hen Lake,Mud Hen Lake,Natural stand
+Sample_0045,18NS001,Necktie River,Necktie River,Natural stand
+Sample_0057,18NS002,Necktie River,Necktie River,Natural stand
+Sample_0069,18NS003,Necktie River,Necktie River,Natural stand
+Sample_0081,18NS004,Necktie River,Necktie River,Natural stand
+Sample_0001,18NS005,Necktie River,Necktie River,Natural stand
+Sample_0012,18NS006,Necktie River,Necktie River,Natural stand
+Sample_0023,18NS007,Necktie River,Necktie River,Natural stand
+Sample_0034,18NS008,Necktie River,Necktie River,Natural stand
+Sample_0046,18NS009,Necktie River,Necktie River,Natural stand
+Sample_0058,18NS010,Necktie River,Necktie River,Natural stand
+Sample_0070,18NS011,Necktie River,Necktie River,Natural stand
+Sample_0082,18NS012,Necktie River,Necktie River,Natural stand
+Sample_0002,18NS013,Necktie River,Necktie River,Natural stand
+Sample_0013,18NS014,Necktie River,Necktie River,Natural stand
+Sample_0024,18NS015,Necktie River,Necktie River,Natural stand
+Sample_0035,18NS016,Necktie River,Necktie River,Natural stand
+Sample_0047,18NS017,Necktie River,Necktie River,Natural stand
+Sample_0059,18NS018,Necktie River,Necktie River,Natural stand
+Sample_0071,18NS019,Necktie River,Necktie River,Natural stand
+Sample_0083,18NS020,Necktie River,Necktie River,Natural stand
+Sample_0003,18NS021,Necktie River,Necktie River,Natural stand
+Sample_0014,18NS022,Necktie River,Necktie River,Natural stand
+Sample_0025,18NS023,Necktie River,Necktie River,Natural stand
+Sample_0036,18NS024,Necktie River,Necktie River,Natural stand
+Sample_0048,18NS025,Necktie River,Necktie River,Natural stand
+Sample_0060,18NS026,Necktie River,Necktie River,Natural stand
+Sample_0072,18NS027,Necktie River,Necktie River,Natural stand
+Sample_0084,18NS028,Necktie River,Necktie River,Natural stand
+Sample_0004,18NS029,Necktie River,Necktie River,Natural stand
+Sample_0015,18NS030,Necktie River,Necktie River,Natural stand
+Sample_0026,18NS031,Necktie River,Necktie River,Natural stand
+Sample_0037,18NS032,Necktie River,Necktie River,Natural stand
+Sample_0049,18NS033,Necktie River,Necktie River,Natural stand
+Sample_0061,18NS034,Necktie River,Necktie River,Natural stand
+Sample_0073,18NS035,Necktie River,Necktie River,Natural stand
+Sample_0085,18NS036,Necktie River,Necktie River,Natural stand
+Sample_0005,18NS037,Necktie River,Necktie River,Natural stand
+Sample_0016,18NS038,Necktie River,Necktie River,Natural stand
+Sample_0027,18NS039,Necktie River,Necktie River,Natural stand
+Sample_0038,18NS040,Necktie River,Necktie River,Natural stand
+Sample_0050,18NS041,Necktie River,Necktie River,Natural stand
+Sample_0062,18NS042,Necktie River,Necktie River,Natural stand
+Sample_0074,18NS043,Necktie River,Necktie River,Natural stand
+Sample_0086,18NS044,Necktie River,Necktie River,Natural stand
+Sample_0006,18NS045,Necktie River,Necktie River,Natural stand
+Sample_0017,18NS046,Necktie River,Necktie River,Natural stand
+Sample_0028,18NS047,Necktie River,Necktie River,Natural stand
+Sample_0039,18NS048,Necktie River,Necktie River,Natural stand
+Sample_0051,18NS049,Necktie River,Necktie River,Natural stand
+Sample_0063,18NS050,Necktie River,Necktie River,Natural stand
+Sample_1052,NecktieLake,Necktie River,Necktie River,Natural stand
+Sample_0625,18NS501,Ottertail River,Ottertail River,Natural stand
+Sample_0637,18NS502,Ottertail River,Ottertail River,Natural stand
+Sample_0557,18NS503,Ottertail River,Ottertail River,Natural stand
+Sample_0568,18NS504,Ottertail River,Ottertail River,Natural stand
+Sample_0579,18NS505,Ottertail River,Ottertail River,Natural stand
+Sample_0590,18NS506,Ottertail River,Ottertail River,Natural stand
+Sample_0602,18NS507,Ottertail River,Ottertail River,Natural stand
+Sample_0614,18NS508,Ottertail River,Ottertail River,Natural stand
+Sample_0626,18NS509,Ottertail River,Ottertail River,Natural stand
+Sample_0638,18NS510,Ottertail River,Ottertail River,Natural stand
+Sample_0558,18NS511,Ottertail River,Ottertail River,Natural stand
+Sample_0569,18NS512,Ottertail River,Ottertail River,Natural stand
+Sample_0580,18NS513,Ottertail River,Ottertail River,Natural stand
+Sample_0591,18NS514,Ottertail River,Ottertail River,Natural stand
+Sample_0603,18NS515,Ottertail River,Ottertail River,Natural stand
+Sample_0615,18NS516,Ottertail River,Ottertail River,Natural stand
+Sample_0627,18NS517,Ottertail River,Ottertail River,Natural stand
+Sample_0639,18NS518,Ottertail River,Ottertail River,Natural stand
+Sample_0559,18NS519,Ottertail River,Ottertail River,Natural stand
+Sample_0570,18NS520,Ottertail River,Ottertail River,Natural stand
+Sample_0581,18NS521,Ottertail River,Ottertail River,Natural stand
+Sample_0592,18NS522,Ottertail River,Ottertail River,Natural stand
+Sample_0604,18NS523,Ottertail River,Ottertail River,Natural stand
+Sample_0616,18NS524,Ottertail River,Ottertail River,Natural stand
+Sample_0628,18NS525,Ottertail River,Ottertail River,Natural stand
+Sample_0640,18NS526,Ottertail River,Ottertail River,Natural stand
+Sample_0560,18NS527,Ottertail River,Ottertail River,Natural stand
+Sample_0571,18NS528,Ottertail River,Ottertail River,Natural stand
+Sample_0582,18NS529,Ottertail River,Ottertail River,Natural stand
+Sample_0593,18NS530,Ottertail River,Ottertail River,Natural stand
+Sample_0605,18NS531,Ottertail River,Ottertail River,Natural stand
+Sample_0617,18NS532,Ottertail River,Ottertail River,Natural stand
+Sample_0629,18NS533,Ottertail River,Ottertail River,Natural stand
+Sample_0641,18NS534,Ottertail River,Ottertail River,Natural stand
+Sample_0561,18NS535,Ottertail River,Ottertail River,Natural stand
+Sample_0572,18NS536,Ottertail River,Ottertail River,Natural stand
+Sample_0583,18NS537,Ottertail River,Ottertail River,Natural stand
+Sample_0594,18NS538,Ottertail River,Ottertail River,Natural stand
+Sample_0606,18NS539,Ottertail River,Ottertail River,Natural stand
+Sample_0618,18NS540,Ottertail River,Ottertail River,Natural stand
+Sample_0630,18NS541,Ottertail River,Ottertail River,Natural stand
+Sample_0642,18NS542,Ottertail River,Ottertail River,Natural stand
+Sample_0643,18NS543,Ottertail River,Ottertail River,Natural stand
+Sample_0655,18NS544,Ottertail River,Ottertail River,Natural stand
+Sample_0667,18NS545,Ottertail River,Ottertail River,Natural stand
+Sample_0679,18NS546,Ottertail River,Ottertail River,Natural stand
+Sample_0691,18NS547,Ottertail River,Ottertail River,Natural stand
+Sample_0702,18NS548,Ottertail River,Ottertail River,Natural stand
+Sample_0713,18NS549,Ottertail River,Ottertail River,Natural stand
+Sample_0724,18NS550,Ottertail River,Ottertail River,Natural stand
+Sample_0860,18BL285,Itasca-C20,Itasca-C20,Breeding line
+Sample_0868,18BL286,Itasca-C20,Itasca-C20,Breeding line
+Sample_0876,18BL287,Itasca-C20,Itasca-C20,Breeding line
+Sample_0887,18BL288,Itasca-C20,Itasca-C20,Breeding line
+Sample_0820,18BL289,Itasca-C20,Itasca-C20,Breeding line
+Sample_0832,18BL290,Itasca-C20,Itasca-C20,Breeding line
+Sample_0842,18BL291,Itasca-C20,Itasca-C20,Breeding line
+Sample_0852,18BL292,Itasca-C20,Itasca-C20,Breeding line
+Sample_0861,18BL293,Itasca-C20,Itasca-C20,Breeding line
+Sample_0869,18BL294,Itasca-C20,Itasca-C20,Breeding line
+Sample_0877,18BL295,Itasca-C20,Itasca-C20,Breeding line
+Sample_0644,18NS551,Phantom Lake,Phantom Lake,Natural stand
+Sample_0656,18NS552,Phantom Lake,Phantom Lake,Natural stand
+Sample_0668,18NS553,Phantom Lake,Phantom Lake,Natural stand
+Sample_0680,18NS554,Phantom Lake,Phantom Lake,Natural stand
+Sample_0692,18NS555,Phantom Lake,Phantom Lake,Natural stand
+Sample_0703,18NS556,Phantom Lake,Phantom Lake,Natural stand
+Sample_0714,18NS557,Phantom Lake,Phantom Lake,Natural stand
+Sample_0725,18NS558,Phantom Lake,Phantom Lake,Natural stand
+Sample_0645,18NS559,Phantom Lake,Phantom Lake,Natural stand
+Sample_0657,18NS560,Phantom Lake,Phantom Lake,Natural stand
+Sample_0669,18NS561,Phantom Lake,Phantom Lake,Natural stand
+Sample_0681,18NS562,Phantom Lake,PhantomLake,Natural stand
+Sample_0693,18NS563,Phantom Lake,PhantomLake,Natural stand
+Sample_0704,18NS564,Phantom Lake,PhantomLake,Natural stand
+Sample_0715,18NS565,Phantom Lake,PhantomLake,Natural stand
+Sample_0726,18NS566,Phantom Lake,PhantomLake,Natural stand
+Sample_0646,18NS567,Phantom Lake,PhantomLake,Natural stand
+Sample_0658,18NS568,Phantom Lake,PhantomLake,Natural stand
+Sample_0670,18NS569,Phantom Lake,PhantomLake,Natural stand
+Sample_0682,18NS570,Phantom Lake,PhantomLake,Natural stand
+Sample_0231,18NS201,Plantagenet,Plantagenet,Natural stand
+Sample_0243,18NS202,Plantagenet,Plantagenet,Natural stand
+Sample_0255,18NS203,Plantagenet,Plantagenet,Natural stand
+Sample_0267,18NS204,Plantagenet,Plantagenet,Natural stand
+Sample_0187,18NS205,Plantagenet,Plantagenet,Natural stand
+Sample_0198,18NS206,Plantagenet,Plantagenet,Natural stand
+Sample_0209,18NS207,Plantagenet,Plantagenet,Natural stand
+Sample_0220,18NS208,Plantagenet,Plantagenet,Natural stand
+Sample_0232,18NS209,Plantagenet,Plantagenet,Natural stand
+Sample_0244,18NS210,Plantagenet,Plantagenet,Natural stand
+Sample_0256,18NS211,Plantagenet,Plantagenet,Natural stand
+Sample_0268,18NS212,Plantagenet,Plantagenet,Natural stand
+Sample_0188,18NS213,Plantagenet,Plantagenet,Natural stand
+Sample_0199,18NS214,Plantagenet,Plantagenet,Natural stand
+Sample_0210,18NS215,Plantagenet,Plantagenet,Natural stand
+Sample_0221,18NS216,Plantagenet,Plantagenet,Natural stand
+Sample_0233,18NS217,Plantagenet,Plantagenet,Natural stand
+Sample_0245,18NS218,Plantagenet,Plantagenet,Natural stand
+Sample_0257,18NS219,Plantagenet,Plantagenet,Natural stand
+Sample_0269,18NS220,Plantagenet,Plantagenet,Natural stand
+Sample_0189,18NS221,Plantagenet,Plantagenet,Natural stand
+Sample_0200,18NS222,Plantagenet,Plantagenet,Natural stand
+Sample_0211,18NS223,Plantagenet,Plantagenet,Natural stand
+Sample_0222,18NS224,Plantagenet,Plantagenet,Natural stand
+Sample_0234,18NS225,Plantagenet,Plantagenet,Natural stand
+Sample_0246,18NS226,Plantagenet,Plantagenet,Natural stand
+Sample_0258,18NS227,Plantagenet,Plantagenet,Natural stand
+Sample_0270,18NS228,Plantagenet,Plantagenet,Natural stand
+Sample_0190,18NS229,Plantagenet,Plantagenet,Natural stand
+Sample_0201,18NS230,Plantagenet,Plantagenet,Natural stand
+Sample_0212,18NS231,Plantagenet,Plantagenet,Natural stand
+Sample_0223,18NS232,Plantagenet,Plantagenet,Natural stand
+Sample_0235,18NS233,Plantagenet,Plantagenet,Natural stand
+Sample_0247,18NS234,Plantagenet,Plantagenet,Natural stand
+Sample_0259,18NS235,Plantagenet,Plantagenet,Natural stand
+Sample_0271,18NS236,Plantagenet,Plantagenet,Natural stand
+Sample_0191,18NS237,Plantagenet,Plantagenet,Natural stand
+Sample_0202,18NS238,Plantagenet,Plantagenet,Natural stand
+Sample_0213,18NS239,Plantagenet,Plantagenet,Natural stand
+Sample_0224,18NS240,Plantagenet,Plantagenet,Natural stand
+Sample_0236,18NS241,Plantagenet,Plantagenet,Natural stand
+Sample_0248,18NS242,Plantagenet,Plantagenet,Natural stand
+Sample_0260,18NS243,Plantagenet,Plantagenet,Natural stand
+Sample_0272,18NS244,Plantagenet,Plantagenet,Natural stand
+Sample_0192,18NS245,Plantagenet,Plantagenet,Natural stand
+Sample_0203,18NS246,Plantagenet,Plantagenet,Natural stand
+Sample_0214,18NS247,Plantagenet,Plantagenet,Natural stand
+Sample_0225,18NS248,Plantagenet,Plantagenet,Natural stand
+Sample_0237,18NS249,Plantagenet,Plantagenet,Natural stand
+Sample_0249,18NS250,Plantagenet,Plantagenet,Natural stand
+Sample_0700,18BL389,PLaR-C20,PLaR-C20,Breeding line
+Sample_0711,18BL390,PLaR-C20,PLaR-C20,Breeding line
+Sample_0722,18BL391,PLaR-C20,PLaR-C20,Breeding line
+Sample_0733,18BL392,PLaR-C20,PLaR-C20,Breeding line
+Sample_0762,18BL213,PM3/3*PBM-C3,PM3/3*PBM-C3,Breeding line
+Sample_0770,18BL214,PM3/3*PBM-C3,PM3/3*PBM-C3,Breeding line
+Sample_0834,18BL306,PM3/3*PBM-C3,PM3/3*PBM-C3,Breeding line
+Sample_0844,18BL307,PM3/3*PBM-C3,PM3/3*PBM-C3,Breeding line
+Sample_0854,18BL308,PM3/3*PBM-C3,PM3/3*PBM-C3,Breeding line
+Sample_0862,18BL309,PM3/3*PBM-C3,PM3/3*PBM-C3,Breeding line
+Sample_0793,18BL232,PM3/7*K2EF,PM3/7*K2EF,Breeding line
+Sample_0892,18BL328,PM3/7*K2EF,PM3/7*K2EF,Breeding line
+Sample_0825,18BL329,PM3/7*K2EF,PM3/7*K2EF,Breeding line
+Sample_0742,18BL219,PM3E,PM3E-C24,Breeding line
+Sample_0753,18BL220,PM3E,PM3E-C24,Breeding line
+Sample_0763,18BL221,PM3E,PM3E-C24,Breeding line
+Sample_0771,18BL222,PM3E,PM3E-C24,Breeding line
+Sample_0782,18BL223,PM3E,PM3E-C24,Breeding line
+Sample_0792,18BL224,PM3E,PM3E-C24,Breeding line
+Sample_0802,18BL225,PM3E,PM3E-C24,Breeding line
+Sample_0811,18BL226,PM3E,PM3E-C24,Breeding line
+Sample_0835,18BL314,PM3E,PM3E-C24,Breeding line
+Sample_0845,18BL315,PM3E,PM3E-C24,Breeding line
+Sample_0855,18BL316,PM3E,PM3E-C24,Breeding line
+Sample_0863,18BL317,PM3E,PM3E-C24,Breeding line
+Sample_0871,18BL318,PM3E,PM3E-C24,Breeding line
+Sample_0880,18BL319,PM3E,PM3E-C24,Breeding line
+Sample_0891,18BL320,PM3E,PM3E-C24,Breeding line
+Sample_0824,18BL321,PM3E,PM3E-C24,Breeding line
+Sample_0836,18BL322,PM3E,PM3E-C24,Breeding line
+Sample_1053,PM3E,PM3E,PM3E,Breeding line
+Sample_0417,18NS401,Shell Lake,Shell Lake,Natural stand
+Sample_0429,18NS402,Shell Lake,Shell Lake,Natural stand
+Sample_0441,18NS403,Shell Lake,Shell Lake,Natural stand
+Sample_0453,18NS404,Shell Lake,Shell Lake,Natural stand
+Sample_0373,18NS405,Shell Lake,Shell Lake,Natural stand
+Sample_0384,18NS406,Shell Lake,Shell Lake,Natural stand
+Sample_0395,18NS407,Shell Lake,Shell Lake,Natural stand
+Sample_0406,18NS408,Shell Lake,Shell Lake,Natural stand
+Sample_0418,18NS409,Shell Lake,Shell Lake,Natural stand
+Sample_0430,18NS410,Shell Lake,Shell Lake,Natural stand
+Sample_0442,18NS411,Shell Lake,Shell Lake,Natural stand
+Sample_0454,18NS412,Shell Lake,Shell Lake,Natural stand
+Sample_0374,18NS413,Shell Lake,Shell Lake,Natural stand
+Sample_0385,18NS414,Shell Lake,Shell Lake,Natural stand
+Sample_0396,18NS415,Shell Lake,Shell Lake,Natural stand
+Sample_0407,18NS416,Shell Lake,Shell Lake,Natural stand
+Sample_0419,18NS417,Shell Lake,Shell Lake,Natural stand
+Sample_0431,18NS418,Shell Lake,Shell Lake,Natural stand
+Sample_0443,18NS419,Shell Lake,Shell Lake,Natural stand
+Sample_0455,18NS420,Shell Lake,Shell Lake,Natural stand
+Sample_0375,18NS421,Shell Lake,Shell Lake,Natural stand
+Sample_0386,18NS422,Shell Lake,Shell Lake,Natural stand
+Sample_0397,18NS423,Shell Lake,Shell Lake,Natural stand
+Sample_0408,18NS424,Shell Lake,Shell Lake,Natural stand
+Sample_0420,18NS425,Shell Lake,Shell Lake,Natural stand
+Sample_0432,18NS426,Shell Lake,Shell Lake,Natural stand
+Sample_0444,18NS427,Shell Lake,Shell Lake,Natural stand
+Sample_0456,18NS428,Shell Lake,Shell Lake,Natural stand
+Sample_0376,18NS429,Shell Lake,Shell Lake,Natural stand
+Sample_0387,18NS430,Shell Lake,Shell Lake,Natural stand
+Sample_0398,18NS431,Shell Lake,Shell Lake,Natural stand
+Sample_0409,18NS432,Shell Lake,Shell Lake,Natural stand
+Sample_0421,18NS433,Shell Lake,Shell Lake,Natural stand
+Sample_0433,18NS434,Shell Lake,Shell Lake,Natural stand
+Sample_0445,18NS435,Shell Lake,Shell Lake,Natural stand
+Sample_0457,18NS436,Shell Lake,Shell Lake,Natural stand
+Sample_0377,18NS437,Shell Lake,Shell Lake,Natural stand
+Sample_0388,18NS438,Shell Lake,Shell Lake,Natural stand
+Sample_0399,18NS439,Shell Lake,Shell Lake,Natural stand
+Sample_0410,18NS440,Shell Lake,Shell Lake,Natural stand
+Sample_0422,18NS441,Shell Lake,Shell Lake,Natural stand
+Sample_0434,18NS442,Shell Lake,Shell Lake,Natural stand
+Sample_0446,18NS443,Shell Lake,Shell Lake,Natural stand
+Sample_0458,18NS444,Shell Lake,Shell Lake,Natural stand
+Sample_0378,18NS445,Shell Lake,Shell Lake,Natural stand
+Sample_0389,18NS446,Shell Lake,Shell Lake,Natural stand
+Sample_0400,18NS447,Shell Lake,Shell Lake,Natural stand
+Sample_0411,18NS448,Shell Lake,Shell Lake,Natural stand
+Sample_0423,18NS449,Shell Lake,Shell Lake,Natural stand
+Sample_0435,18NS450,Shell Lake,Shell Lake,Natural stand
+Sample_0513,18NS651,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0524,18NS652,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0535,18NS653,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0545,18NS654,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0467,18NS655,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0479,18NS656,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0491,18NS657,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0503,18NS658,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0514,18NS659,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0525,18NS660,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0536,18NS661,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0546,18NS662,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0468,18NS663,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0480,18NS664,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0492,18NS665,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0504,18NS666,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0515,18NS667,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0526,18NS668,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0537,18NS669,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0547,18NS670,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0469,18NS671,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0481,18NS672,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0493,18NS673,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0505,18NS674,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0516,18NS675,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0527,18NS676,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0538,18NS677,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0548,18NS678,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0470,18NS679,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0482,18NS680,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0494,18NS681,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0506,18NS682,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0517,18NS683,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0528,18NS684,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0539,18NS685,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0549,18NS686,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0471,18NS687,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0483,18NS688,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0495,18NS689,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0507,18NS690,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0518,18NS691,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0529,18NS692,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0540,18NS693,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0550,18NS694,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0472,18NS695,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0484,18NS696,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0496,18NS697,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0508,18NS698,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0519,18NS699,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0530,18NS700,Shell Lake Old,ShellLakeOld,Natural stand
+Sample_0837,18BL330,unknown,unknown,Breeding line
+Sample_0141,18NS101,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0152,18NS102,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0163,18NS103,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0174,18NS104,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0095,18NS105,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0107,18NS106,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0119,18NS107,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0131,18NS108,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0142,18NS109,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0153,18NS110,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0164,18NS111,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0175,18NS112,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0096,18NS113,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0108,18NS114,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0120,18NS115,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0132,18NS116,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0143,18NS117,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0154,18NS118,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0165,18NS119,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0176,18NS120,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0097,18NS121,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0109,18NS122,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0121,18NS123,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0133,18NS124,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0144,18NS125,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0155,18NS126,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0166,18NS127,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0177,18NS128,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0098,18NS129,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0110,18NS130,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0122,18NS131,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0134,18NS132,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0145,18NS133,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0156,18NS134,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0167,18NS135,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0178,18NS136,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0099,18NS137,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0111,18NS138,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0123,18NS139,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0135,18NS140,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0146,18NS141,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0157,18NS142,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0168,18NS143,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0179,18NS144,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0100,18NS145,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0112,18NS146,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0124,18NS147,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0136,18NS148,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0147,18NS149,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0158,18NS150,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_1054,UpperRiceLake,Upper Rice Lake,Upper Rice Lake,Natural stand
+Sample_0803,18BL233,VE/2*14WS/*4K2EF,VE/2*14WS/*4K2EF,Breeding line
+Sample_0847,18BL331,VE/2*14WS/*4K2EF,VE/2*14WS/*4K2EF,Breeding line
+Sample_0653,18BL385,VN/3*K2EF,VN/3*K2EF,Breeding line
+Sample_0665,18BL386,VN/3*K2EF,VN/3*K2EF,Breeding line
+Sample_0677,18BL387,VN/3*K2EF,VN/3*K2EF,Breeding line
+Sample_0689,18BL388,VN/3*K2EF,VN/3*K2EF,Breeding line
