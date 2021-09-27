@@ -37,24 +37,19 @@ The script [merge_fastq_read_counts.py](merge_fastq_read_counts.py) was used to 
 
 **Figure 4**<br>
 
-**Figure 5a**<br>
-STRUCTURE results for _K_ = 2<br>
+**Figure 5a** STRUCTURE results for _K_ = 2<br>
 <img src="images/STRUCTURE_K2_plot.png" width="500">
 
-**Figure 5b**<br>
-STRUCTURE results for _K_ = 3<br>
+**Figure 5b** STRUCTURE results for _K_ = 3<br>
 <img src="images/STRUCTURE_K3_plot.png" width="500">
 
-**Figure 5c**<br>
-STRUCTURE results for _K_ = 4<br>
+**Figure 5c** STRUCTURE results for _K_ = 4<br>
 <img src="images/STRUCTURE_K4_plot.png" width="500">
 
-**Figure 5d**<br>
-STRUCTURE results for _K_ = 5<br>
+**Figure 5d** STRUCTURE results for _K_ = 5<br>
 <img src="images/STRUCTURE_K5_plot.png" width="500">
 
-**Figure 5e**<br>
-STRUCTURE results for _K_ = 6<br>
+**Figure 5e** STRUCTURE results for _K_ = 6<br>
 <img src="images/STRUCTURE_K6_plot.png" width="500">
 
 # Tables
