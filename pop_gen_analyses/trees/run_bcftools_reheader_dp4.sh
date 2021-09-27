@@ -7,7 +7,11 @@
 #SBATCH --mail-user=haasx092@umn.edu
 #SBATCH -p amdsmall
 #SBATCH --account=jkimball
-#SBATCH -o bcftools_reheader_dp4.out
-#SBATCH -e bcftools_reheader_dp4.err
+#SBATCH -o bcftools_reheader.out
+#SBATCH -e bcftools_reheader.err
 
-cd /home/jkimball/haasx092/main_GBS/210306_samtools
+ccd /home/jkimball/haasx092/trees_for_diversity_study
+
+module load bcftools
+
+bcftools reheader --samples gbs_sample_names_919_indv.txt -o filt_20_NA_vcf_files_concat_incl_nonbiallelicshort_sample_names.vcf filt_20_NA_vcf_files_concat_incl_nonbiallelic_snps.vcf
