@@ -6,6 +6,12 @@ This repository contains all of the scripts that were used to develop the genoty
 2. [Figure 2a](#Figure-2a)
 3. [Figure 2b](#Figure-2b)
 4. [Figure 2c](#Figure-2c)
+5. [Figure 3](#Figure-3)
+6. [Figure 5a](#Figure-5a)
+7. [Figure 5b](#Figure-5b)
+8. [Figure 5c](#Figure-5c)
+9. [Figure 5d](#Figure-5d)
+10. [Figure 5e(#Figure-5e)
 
 We used multiple SNP-calling pipelines in the development of this project.
 1. [SAMtools/BCFtools](SAMtools-BCFtools)
@@ -41,24 +47,30 @@ Principal component analysis plot (PC1 vs PC2) for the natural stands only<br>
 Principal component analysis plot (PC1 vs PC2) for the cultivated material only<br>
 <img src="images/210818_breeding_lines_pca_incl_nonbiallelic.png" width="500">
 
-**Figure 3.** Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
+### Figure 3
+Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
 <img src="images/Figure_4_210820_temporal_pca_incl_nonbiallelic.png" width="500">
 
 **Figure 4**<br>
 
-**Figure 5a** STRUCTURE results for _K_ = 2<br>
+### Figure 5a
+STRUCTURE results for _K_ = 2<br>
 <img src="images/STRUCTURE_K2_plot.png" width="500">
 
-**Figure 5b** STRUCTURE results for _K_ = 3<br>
+### Figure 5b
+STRUCTURE results for _K_ = 3<br>
 <img src="images/STRUCTURE_K3_plot.png" width="500">
 
-**Figure 5c** STRUCTURE results for _K_ = 4<br>
+### Figure 5c
+STRUCTURE results for _K_ = 4<br>
 <img src="images/STRUCTURE_K4_plot.png" width="500">
 
-**Figure 5d** STRUCTURE results for _K_ = 5<br>
+### Figure 5d
+STRUCTURE results for _K_ = 5<br>
 <img src="images/STRUCTURE_K5_plot.png" width="500">
 
-**Figure 5e** STRUCTURE results for _K_ = 6<br>
+### Figure 5e
+STRUCTURE results for _K_ = 6<br>
 <img src="images/STRUCTURE_K6_plot.png" width="500">
 
 # Tables
