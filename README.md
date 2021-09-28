@@ -11,7 +11,7 @@ This repository contains all of the scripts that were used to develop the genoty
 7. [Figure 5b](#Figure-5b)
 8. [Figure 5c](#Figure-5c)
 9. [Figure 5d](#Figure-5d)
-10. [Figure 5e(#Figure-5e)
+10. [Figure 5e](#Figure-5e)
 
 We used multiple SNP-calling pipelines in the development of this project.
 1. [SAMtools/BCFtools](SAMtools-BCFtools)
