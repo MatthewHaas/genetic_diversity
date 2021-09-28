@@ -52,7 +52,7 @@ for (color in myColors){
 	hexColorList <- c(hexColorList, hexColor)
 }
 
-pdf(args[4], height = 30, width = 15)
+pdf(args[4], height = 60, width = 15)
 plot.phylo(tree, cex = 0.8, font = 2, adj = 0, tip.color =  hexColorList[pop(gen_light_x)])
 nodelabels(tree$node.label, adj = c(1.3, -0.5), frame = "n", cex = 0.8, font = 3, xpd = TRUE)
 axis(side = 1)
