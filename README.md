@@ -21,6 +21,10 @@ This repository contains all of the scripts that were used to develop the genoty
 1. [Table 1](#Table-1)
 2. [Table 2](#Table-2)
 
+## Supplemental Figures
+1. [Figure S1](#Figure-S1)
+2. [Figure S2](#Figure-S2)
+
 We used multiple SNP-calling pipelines in the development of this project.
 1. [SAMtools/BCFtools](SAMtools-BCFtools)
 2. [FreeBayes](FreeBayes)
@@ -132,10 +136,12 @@ Analysis of Molecular Variance (AMOVA). The AMOVA was performed using the [AMOVA
 
 # Supplementary Figures
 
-**Figure S1** Evanno method implemented by STRUCTURE harvester to show the ideal number of _K_ populations from STRUCTURE results<br>
+### Figure S1
+Evanno method implemented by STRUCTURE harvester to show the ideal number of _K_ populations from STRUCTURE results<br>
 <img src="images/deltaK.png" width="500">
 
-**Figure S2** Temporal samples tree. This was produced with the same base scripts at the Cultivated and Natural Stands trees.
+### Figure S2
+Temporal samples tree. This was produced with the same base scripts at the Cultivated and Natural Stands trees.
 <img src ="images/temporal_samples_tree.png" width="500">
 
 ## awk_filtering_scripts (directory)
