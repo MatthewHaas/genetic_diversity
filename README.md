@@ -3,6 +3,9 @@ This repository contains all of the scripts that were used to develop the genoty
 
 # Directory
 1. [Figure 1](#Figure-1)
+2. [Figure 2a](#Figure-2a)
+3. [Figure 2b](#Figure-2b)
+4. [Figure 2c](#Figure-2c)
 
 We used multiple SNP-calling pipelines in the development of this project.
 1. [SAMtools/BCFtools](SAMtools-BCFtools)
@@ -26,13 +29,16 @@ The script [merge_fastq_read_counts.py](merge_fastq_read_counts.py) was used to 
 This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin. The map uses watershed boundaries provided by the Minnesota Department of Natural Resources.<br>
 <img src="images/watershed_map_export.png" width="500">
 
-**Figure 2a.** Principal component analysis plot (PC1 vs PC2) for the complete set<br>
+### Figure 2a
+Principal component analysis plot (PC1 vs PC2) for the complete set<br>
 <img src="images/210306_main_gbs_20percent_NA_Page_1.png" width="500">
 
-**Figure 2b.** Principal component analysis plot (PC1 vs PC2) for the natural stands only<br>
+### Figure 2b
+Principal component analysis plot (PC1 vs PC2) for the natural stands only<br>
 <img src="images/210818_natural_stands_pca_incl_nonbiallelic.png" width="500">
 
-**Figure 2c.** Principal component analysis plot (PC1 vs PC2) for the cultivated material only<br>
+### Figure 2c
+Principal component analysis plot (PC1 vs PC2) for the cultivated material only<br>
 <img src="images/210818_breeding_lines_pca_incl_nonbiallelic.png" width="500">
 
 **Figure 3.** Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
