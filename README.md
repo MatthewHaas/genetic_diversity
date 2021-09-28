@@ -8,11 +8,14 @@ This repository contains all of the scripts that were used to develop the genoty
 3. [Figure 2b](#Figure-2b)
 4. [Figure 2c](#Figure-2c)
 5. [Figure 3](#Figure-3)
-6. [Figure 5a](#Figure-5a)
-7. [Figure 5b](#Figure-5b)
-8. [Figure 5c](#Figure-5c)
-9. [Figure 5d](#Figure-5d)
-10. [Figure 5e](#Figure-5e)
+6. [Figure 4a](#Figure-4a)
+7. [Figure 4b](#Figure-4b)
+8. [Figure 4c](#Figure-4c)
+9. [Figure 5a](#Figure-5a)
+10. [Figure 5b](#Figure-5b)
+11. [Figure 5c](#Figure-5c)
+12. [Figure 5d](#Figure-5d)
+13. [Figure 5e](#Figure-5e)
 
 ## Tables
 1. [Table 1](#Table-1)
@@ -56,7 +59,13 @@ Principal component analysis plot (PC1 vs PC2) for the cultivated material only<
 Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
 <img src="images/Figure_4_210820_temporal_pca_incl_nonbiallelic.png" width="500">
 
-**Figure 4**<br>
+### Figure 4a
+
+### Figure 4b
+Unweighted pair group method with arithmetic averaging (UPGMA) tree for the Natural Stands panel. In this example, 10 samples were chosen from each lake/river to make the tree easier to visualize/interpret. The annotation/labels were manually added in PowerPoint.<br>
+<img src="images/natural_stands_slim_iteration_1_annotated.png" width="500">
+
+### Figure 4c
 
 ### Figure 5a
 STRUCTURE results for _K_ = 2<br>
