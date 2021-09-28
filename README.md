@@ -2,7 +2,7 @@
 This repository contains all of the scripts that were used to develop the genotyping-by-sequencing (GBS) pipeline for the wild rice (_Zizania palustris_ L.) breeding and conservation program at the University of Minnesota.
 
 # Directory
-1. [Figure 1](### Figure-1)
+1. [Figure 1](###Figure-1)
 
 We used multiple SNP-calling pipelines in the development of this project.
 1. [SAMtools/BCFtools](SAMtools-BCFtools)
@@ -22,7 +22,6 @@ The directory [umgc_pilot_study](umgc_pilot_study) contains some scripts that we
 The script [merge_fastq_read_counts.py](merge_fastq_read_counts.py) was used to merge the fastq read counts from each of the reports from two sequening runs ([file 1](Sequencing_report_data/190730_A00223_0174_BHCN5GDRXX_metrics.csv) and [file 2](Sequencing_report_data/190819_A00223_0191_AHF3V3DRXX_metrics.csv) and sum them based on sample identity. The average read count from the FASTQC report (this one run by the University of Minnesota Genomics Center) was 2.1 million reads/sample. I used the [CSV output file](Sequencing_report_data/merged_fastq_sequence_counts.csv) from this script to reaffirm the average count of 2.1 million reads/sample and to find the total read count (1.8 billion reads for 873 samples). We filtered out some samples which were included in the sequencing run, but which were not part of the diversity study. This was done in Excel using the ```VLOOKUP()``` function on the [sample key](191021_main_GBS_sample_key_PBML-C20_renamed.csv).
 
 # Figures
-
 ### Figure 1
 This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin. The map uses watershed boundaries provided by the Minnesota Department of Natural Resources.<br>
 <img src="images/watershed_map_export.png" width="500">
