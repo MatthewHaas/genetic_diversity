@@ -16,7 +16,7 @@ This repository contains all of the scripts that were used to develop the genoty
 
 ## Tables
 1. [Table 1](#Table-1)
-2. [Table_2](#Table-2)
+2. [Table 2](#Table-2)
 
 We used multiple SNP-calling pipelines in the development of this project.
 1. [SAMtools/BCFtools](SAMtools-BCFtools)
