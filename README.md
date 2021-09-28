@@ -2,6 +2,7 @@
 This repository contains all of the scripts that were used to develop the genotyping-by-sequencing (GBS) pipeline for the wild rice (_Zizania palustris_ L.) breeding and conservation program at the University of Minnesota.
 
 # Directory
+## Figures
 1. [Figure 1](#Figure-1)
 2. [Figure 2a](#Figure-2a)
 3. [Figure 2b](#Figure-2b)
@@ -12,6 +13,10 @@ This repository contains all of the scripts that were used to develop the genoty
 8. [Figure 5c](#Figure-5c)
 9. [Figure 5d](#Figure-5d)
 10. [Figure 5e](#Figure-5e)
+
+## Tables
+1. [Table 1](#Table-1)
+2. [Table_2](#Table-2)
 
 We used multiple SNP-calling pipelines in the development of this project.
 1. [SAMtools/BCFtools](SAMtools-BCFtools)
@@ -75,7 +80,7 @@ STRUCTURE results for _K_ = 6<br>
 
 # Tables
 
-**Table 1**<br>
+### Table 1
 The Transition/Transversion ratios were generated using the script [calculate_TsTv_vcftools.sh](vcftools_scripts_incl_nonbiallelic/calculate_TsTv_vcftools.sh). Additional details can be found within the directory containing the script.
 <!---
 Note: In order to get non-breaking white space in 'original scaffold name' and 'genome wide', I had to hold down the alt/option button on my Mac while typing the space. Otherwise the table looks ugly due to text wrapping for those columns. Other computer types like a PC may have different keystrokes to achieve same goal.
@@ -96,7 +101,7 @@ Note: In order to get non-breaking white space in 'original scaffold name' and '
 | Transversions (Tv) | 117 | 90 | 85 | 108 | 72 | 168 | 66 | 87 | 104 | 145 | 62 | 107 | 137 | 22 | 47 | 17 | 2 | 1436 |
 | TsTv ratio | 3.13 | 3.83 | 2.55 | 3.55 | 3.86| 2.56 | 1.74 | 3.22 | 3.63 | 2.92 | 3.60 | 2.83 | 3.26 | 3.14 | 4.04 | 4.18 | 1.50 | 3.15 |
 
-**Table 2**<br>
+### Table 2
 Analysis of Molecular Variance (AMOVA). The AMOVA was performed using the [AMOVA.R](pop_gen_analyses/AMOVA/AMOVA.R) R script launched by [run_AMOVA.sh](pop_gen_analyses/AMOVA/run_AMOVA.sh).
 
 | Grouping | Source of variation | df | MS | Sigma | % | Probability |
