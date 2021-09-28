@@ -63,7 +63,7 @@ Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
 
 ### Figure 4b
 Unweighted pair group method with arithmetic averaging (UPGMA) tree for the Natural Stands panel. In this example, 10 samples were chosen from each lake/river to make the tree easier to visualize/interpret. The annotation/labels were manually added in PowerPoint.<br>
-<img src="images/natural_stands_slim_iteration_1_annotated.png" width="500">
+<img src="images/natural_stands_slim_iteration_1_annotated.png" width="1500">
 
 ### Figure 4c
 
