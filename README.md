@@ -80,16 +80,16 @@ Analysis of Molecular Variance (AMOVA). The AMOVA was performed using the [AMOVA
 
 | Grouping | Source of variation | df | MS | Sigma | % | Probability |
 | :--- | :--- | ---: | ---: | ---: | ---: | ---: |
-| Natural stands vs. Natural stands | Variations between individuals | 12 | 7440.64 | 133.71 | 8.10 | 0.001 |
+| Natural stands vs. Natural stands | Variations between individuals | 12 | 7440.64 | 133.71 | 8.10 | 0.001 |
 |                                   | Variations within individuals  | 567 | 1516.08 | 1516.08 | 91.90 | 0.001 |
 |                                   | Total variation                | 579 | 1638.87 | 1649.78 | 100.00 | 0.001 |
-| Cultivated vs. Cultivated         | Variations between individuals | 20  | 1841.49  | 49.61   | 3.37 | 0.001 |
+| Cultivated vs. Cultivated         | Variations between individuals | 20  | 1841.49  | 49.61   | 3.37 | 0.001 |
 |                                   | Variations within individuals  | 166 | 1421.51 | 1421.51 | 96.63 | 0.001 |
 |                                   | Total variation                | 186 | 1466.67 | 1471.11 | 100.00 | 0.001 |
-| Natural stands vs. Cultivated     | Variations between individuals | 1 | 20,955.05 | 68.42 | 4.09 | 0.001 |
+| Natural stands vs. Cultivated     | Variations between individuals | 1 | 20,955.05 | 68.42 | 4.09 | 0.001 |
 |                                   | Variations within indiviuduals | 765 | 1604.18 | 1604.17 | 95.91 | 0.001 |
 |                                   | Total variation                | 766 | 1629.44 | 1672.60 | 100.00 | 0.001 |
-| STRUCTURE grouping _K_ = 5        | Variations between individuals | 5 | 8508.68 | 57.96 | 3.53 | 0.001 |
+| STRUCTURE grouping _K_ = 5        | Variations between individuals | 5 | 8508.68 | 57.96 | 3.53 | 0.001 |
 |                                   | Variations within individuals  | 761 | 1584.24 | 1584.24 | 96.47 | 0.001 |
 |                                   | Total variation                | 766 | 1629.44 | 1642.20 | 100.00 | 0.001 |
 
