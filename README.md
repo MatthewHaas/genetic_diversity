@@ -64,7 +64,7 @@ Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
 <img src="images/Figure_4_210820_temporal_pca_incl_nonbiallelic.png" width="500">
 
 ### Figure 4a
-Unweighted pair group method with arithmetic averaging (UPGMA) tree for the combined Natural Stands and Cultivated Material panel. The first step in the pipeline to create the UPGMA trees is [run_bcftools_reheader.sh](pop_gen_analyses/trees/run_bcftools_reheader.sh) which makes a new VCF file with shortened sample names (e.g., only ```Sample_0001``` instead of ```Sample_0001/Sample_0001_sorted.bam```<br>
+Unweighted pair group method with arithmetic averaging (UPGMA) tree for the combined Natural Stands and Cultivated Material panel. The first step in the pipeline to create the UPGMA trees is [run_bcftools_reheader.sh](pop_gen_analyses/trees/run_bcftools_reheader.sh) which makes a new VCF file with shortened sample names (e.g., only ```Sample_0001``` instead of ```Sample_0001/Sample_0001_sorted.bam```). The next step is to use [filter_with_vcftools_by_ind_natural_stands_and_breed_lines.sh](pop_gen_analyses/trees/filter_with_vcftools_by_ind_natural_stands_and_breed_lines.sh) in order to filter the complete VCF file (with all individuals) so that it only contains the samples that you want to include in the tree (specified by the ```.txt``` file (which also needs to contain the same individuals as the ```.csv``` file used by the R script otherwise you will get an error.<br>
 <img src="images/natural_stand_and_breeding_lines_tree.png" width="500">
 
 ### Figure 4b
