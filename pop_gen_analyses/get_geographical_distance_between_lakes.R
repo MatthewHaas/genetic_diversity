@@ -28,7 +28,7 @@ for (i in lakes){
 }
 
 # Write to CSV file
-write.csv(geogrDist, file = "210519_geographical_distance_between_lakes.csv")
+write.csv(geogrDist, file = "211025_geographical_distance_between_lakes.csv")
 
 # Save data
-save(data, geogrDist, lakes, file="210519_calculation_of_geographical_distance.Rdata")
+save(data, geogrDist, lakes, file="211025_calculation_of_geographical_distance.Rdata")
