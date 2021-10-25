@@ -5,7 +5,7 @@ library(data.table)
 library(geosphere)
 
 # Read in data
-data <- fread("191106_wild_rice_samples.csv")
+data <- fread("200224_wild_rice_samples.csv")
 
 # Get geographical distance (output is in meters)
 distm(c(data[Location == i]$Long, data[Location == i]$Lat), c(data[Location == 2]$Long, data[Location == 2]$Lat), fun = distHaversine)
