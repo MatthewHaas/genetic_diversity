@@ -2,8 +2,10 @@
 library(data.table)
 library(tidyr)
 
+args = commandArgs(trailingOnly = TRUE)
+
 # Read in data
-data <- fread(snp_file.csv)
+data <- fread(args[1])
 
 # Make vectors for each sample containing SNP data
 Sample_0001 <- as.vector(as.matrix(data[1])[1,-1])
@@ -32,4 +34,5 @@ for(i in sample_names){
 	}
 }
 
-similarityCalc(sample_names,sample_names_2)
+write.csv(similarityTable, file = args[2])
+
