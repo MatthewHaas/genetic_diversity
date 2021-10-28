@@ -26,7 +26,7 @@ similarityTable <- as.data.table(tidyr::expand_grid(sample_names, sample_names_2
 
 for(i in sample_names){
 	for(j in sample_names_2){
-		similarityTable[sample_names == i & sample_names_2 == j, similarity := similarityCalc(a, b)]
+		similarityTable[sample_names == rep(i, length=.N) & sample_names_2 == rep(j, length=.N), similarity := similarityCalc(a, b)]
 	}
 }
 
