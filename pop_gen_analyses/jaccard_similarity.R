@@ -7,11 +7,6 @@ args = commandArgs(trailingOnly = TRUE)
 # Read in data
 data <- fread(args[1])
 
-# Make vectors for each sample containing SNP data
-Sample_0001 <- as.vector(as.matrix(data[1])[1,-1])
-Sample_0002 <- as.vector(as.matrix(data[2])[1,-1])
-Sample_0003 <- as.vector(as.matrix(data[3])[1,-1])
-
 # Define similarityCalc() function
 similarityCalc <- function(a,b) {
 	a = as.vector(as.matrix(data[V1 == i])[1,-1])
