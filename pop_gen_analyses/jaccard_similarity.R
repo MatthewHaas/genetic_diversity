@@ -20,3 +20,8 @@ jaccard <- function(a, b) {
 
 # Find Jaccard Similarity between the two sets 
 jaccard(a, b)
+
+# This finds the # of times a SNP has the same allele call in both vectors. Does not count NA values like the IF function in Excel
+length(which(Sample_0001 == Sample_0002))
+
+similarity = length(which(Sample_0001 == Sample_0002))/length(Sample_0001)
