@@ -1,5 +1,6 @@
 # Load required packages
 library(data.table)
+library(tidyr)
 
 # Read in data
 data <- fread(snp_file.csv)
@@ -9,19 +10,26 @@ Sample_0001 <- as.vector(as.matrix(data[1])[1,-1])
 Sample_0002 <- as.vector(as.matrix(data[2])[1,-1])
 Sample_0003 <- as.vector(as.matrix(data[3])[1,-1])
 
-# Define Jaccard Similarity function
-# This doesn't really work for GBS data--the intersection only yield a length of 4 (genotype values 0, 1, 2, and the missing value "NA")
-# As a result, the jaccard value is absurdly low
-jaccard <- function(a, b) {
-    intersection = length(intersect(a, b))
-    union = length(a) + length(b) - intersection
-    return (intersection/union)
+# Define similarityCalc() function
+similarityCalc <- function(a,b) {
+	a = as.vector(as.matrix(data[V1 == i])[1,-1])
+	b = as.vector(as.matrix(data[V1 == j])[1,-1])
+	similarity = length(which(a == b))/length(a)
+	return(similarity)
 }
 
-# Find Jaccard Similarity between the two sets 
-jaccard(a, b)
+# Make a vector of sample names to iterate over
+sample_names <- unique(data$V1)
+# Make a duplicate vector so I can use tidyr's expand_grid() function to make a data.table with all possible pair-wise comparisons
+sample_names_2 <- sample_names
 
-# This finds the # of times a SNP has the same allele call in both vectors. Does not count NA values like the IF function in Excel
-length(which(Sample_0001 == Sample_0002))
+similarityTable <- as.data.table(tidyr::expand_grid(sample_names, sample_names_2))
 
-similarity = length(which(Sample_0001 == Sample_0002))/length(Sample_0001)
+
+for(i in sample_names){
+	for(j in sample_names_2){
+		similarityTable[sample_names == i & sample_names_2 == j, similarity := similarityCalc(a, b)]
+	}
+}
+
+similarityCalc(sample_names,sample_names_2)
