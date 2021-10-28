@@ -25,6 +25,7 @@ sample_names <- unique(data$V1)
 # Make a duplicate vector so I can use tidyr's expand_grid() function to make a data.table with all possible pair-wise comparisons
 sample_names_2 <- sample_names
 
+# Note: when I ran this on my computer using Rstudio, the code ```tidyr:expand_grid()``` worked just fine; however, it failed when I used it on the Minnesota Supercomputing Institute's servers.
 similarityTable <- as.data.table(tidyr::expand_grid(sample_names, sample_names_2))
 
 
