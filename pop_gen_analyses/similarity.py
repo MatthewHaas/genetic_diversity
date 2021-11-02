@@ -15,7 +15,7 @@ sampleNames = data[0].tolist()
 sampleNames2 = sampleNames
 
 # Make a csv file with two columns for sample names to prep for pairwise similarity comparisons
-outfile.write('sampleName1' + ',' + 'sampleName2' + 'similarity' + '\n')
+outfile.write('sampleName1' + ',' + 'sampleName2' + ',' + 'similarity' + '\n')
 
 
 for sample in sampleNames:
