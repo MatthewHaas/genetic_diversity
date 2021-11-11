@@ -22,3 +22,6 @@ The GFF3 file that I used still contained the old scaffold names (Scaffold_1, Sc
 
 After removing overlapping regions, I noticed that the number of SNPs in genes was still inflated. To rectify this, I used a simple ```awk``` one-liner to retain only lines in the file that say "gene" in the third column/field.<br>
 ```awk '{if($3 == "gene") print $0}' rice.gene_structures_no_overlap.gff > rice.gene_structures_no_overlap_genes_only.gff```
+
+The following one-liner was then used to get a summary of the total number of SNPs in genes on a per-chromosome basis. The VCF file ```snps_in_genes.vcf``` is the output of [bedtools_find_snps_in_genes.sh](bedtools_find_snps_in_genes.sh)<br>
+```grep -v "^#" snps_in_genes.vcf | cut -f 1 | sort | uniq -c```<br>
