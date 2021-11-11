@@ -19,3 +19,6 @@ The GFF3 file that I used still contained the old scaffold names (Scaffold_1, Sc
 ```%s/\<Scaffold_1063\>/ZPchr0007/g```<br>
 ```%s/\<Scaffold_1064\>/ZPchr0013/g```<br>
 ```%s/\<Scaffold_1065\>/ZPchr0005/g```<br>
+
+After removing overlapping regions, I noticed that the number of SNPs in genes was still inflated. To rectify this, I used a simple ```awk``` one-liner to retain only lines in the file that say "gene" in the third column/field.<br>
+```awk '{if($3 == "gene") print $0}' rice.gene_structures_no_overlap.gff > rice.gene_structures_no_overlap_genes_only.gff```
