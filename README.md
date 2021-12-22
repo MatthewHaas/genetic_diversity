@@ -71,7 +71,7 @@ In this case, the first argument (```args[1]``` in R) is the _eigenvector_ file,
 ```r 
 fread(args[1]) -> x
 ```
-**Note:** this line is required near the top of your script for ```args[1]```, ```args[2]```, etc to work properly.
+**Note:** this line is required near the top of the R script for ```args[1]```, ```args[2]```, etc to work properly.
 ```r 
 args <- commandArgs(trailingOnly = TRUE)
 ```
