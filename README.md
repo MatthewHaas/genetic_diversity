@@ -101,6 +101,33 @@ Unweighted pair group method with arithmetic averaging (UPGMA) tree for the Natu
 
 ### Figure 4c
 
+## Figure 5 code explanation
+I wrote the script [empulateStructurePlots.py](pop_gen_analyses/emulateStructurePlots.py) to make these figures which emulate the ones automatically produced by STRUCTURE. My primary motivation was so that I could add labels to the bottom of each cluster in a reproducible way and not resort to using PowerPoint.
+A majority of the script consists of functions that I wrote to do the work. A brief overview is provided here.<br>
+**Note:** ```sys.argv[1]``` serves the same function in python as ```args[1]``` does in R. To use it, you should have two lines at the beginning of your script in addition to any other modules you want to use:
+```python
+import os
+import sys
+```
+The main function is called 
+```python
+emulateStructure()
+``` 
+which uses the number of columns in the ```CSV``` input file to tell the script how many _K_ populations there are in the file. That information is used to give a _K_ value to the 
+```python
+makePlot()
+```
+function. This is the function that actually makes the plots. It uses the function
+```python
+assignClusterMembership()
+```
+to assign each cluster to the correct population (Natural Stand I, II, or III; Cultivated Material; or _Zizania aquatica_). The last few lines of the script are where this all comes together. The ```CSV``` file is 1) loaded into python; 2) sorted first by the most probable cluster and then by likelihood; and 3) the functions described above are executed.
+```python
+df = pd.read_csv(sys.argv[1])
+dfSorted = df.sort_values(by = ['Most_likely', 'Likelihood'], ascending = (True, False))
+emulateStructure(df)
+```
+
 ### Figure 5a
 STRUCTURE results for _K_ = 2<br>
 <img src="images/STRUCTURE_K2_plot.png" width="500">
