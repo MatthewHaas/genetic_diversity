@@ -109,19 +109,7 @@ A majority of the script consists of functions that I wrote to do the work. A br
 import os
 import sys
 ```
-The main function is called 
-```python
-emulateStructure()
-``` 
-which uses the number of columns in the ```CSV``` input file to tell the script how many _K_ populations there are in the file. That information is used to give a _K_ value to the 
-```python
-makePlot()
-```
-function. This is the function that actually makes the plots. It uses the function
-```python
-assignClusterMembership()
-```
-to assign each cluster to the correct population (Natural Stand I, II, or III; Cultivated Material; or _Zizania aquatica_). The last few lines of the script are where this all comes together. The ```CSV``` file is 1) loaded into python; 2) sorted first by the most probable cluster and then by likelihood; and 3) the functions described above are executed.
+The main function is called ```emulateStructure()``` which uses the number of columns in the ```CSV``` input file to tell the script how many _K_ populations there are in the file. That information is used to give a _K_ value to the ```makePlot()``` function. This is the function that actually makes the plots. It uses the function ```assignClusterMembership()``` to assign each cluster to the correct population (Natural Stand I, II, or III; Cultivated Material; or _Zizania aquatica_). The last few lines of the script are where this all comes together. The ```CSV``` file is 1) loaded into python; 2) sorted first by the most probable cluster and then by likelihood; and 3) the functions described above are executed.
 ```python
 df = pd.read_csv(sys.argv[1])
 dfSorted = df.sort_values(by = ['Most_likely', 'Likelihood'], ascending = (True, False))
