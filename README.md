@@ -1,4 +1,4 @@
-# README for genetic_diversity
+# README for genetic_diversity :dna:
 This repository contains all of the scripts that were used to develop the genotyping-by-sequencing (GBS) pipeline for the wild rice (_Zizania palustris_ L.) breeding and conservation program at the University of Minnesota.
 
 # Directory
