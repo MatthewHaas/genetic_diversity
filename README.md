@@ -48,6 +48,33 @@ This figure shows the location of collection sites on public, non-tribal land in
 <img src="images/watershed_map_export.png" width="500">
 
 ### Figure 2a
+The PCA plots were made with R using input from plink. The ```R``` script itself is called from the ```bash``` script that I submitted to the SLURM scheduler. This allows me to recycle the same R script using different input files without needing to constantly edit & re-edit input our output file names. The bash script to make the PCA plot looks like:
+```bash
+#!/bin/bash -l
+#SBATCH --nodes=1
+#SBATCH --ntasks=32
+#SBATCH --time=24:00:00
+#SBATCH --mem=30g
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=haasx092@umn.edu
+#SBATCH -p amdsmall
+#SBATCH --account=jkimball
+#SBATCH -o plot_plink_pca_20NA_dp4.out
+#SBATCH -e plot_plink_pca_20NA_dp4.err
+
+cd /home/jkimball/haasx092/main_GBS/210306_samtools
+
+module load R/3.6.0
+Rscript plot_plink_pca.R  plink_20percent_NA_pca_dp4.eigenvec plink_20percent_NA_pca_dp4.eigenval 210306_main_gbs_20percent_NA_dp4.pdf 210306_main_gbs_20percent_NA_dp4.Rdata
+```
+In this case, the first argument (```args[1]``` in R) is the _eigenvector_ file, the second argument (```args[2]```) is the _eigenvalue_ file, and the third argument (```args[3]``` is the ouput PDF file which contains the plots themselves.
+```r 
+fread(args[1]) -> x
+```
+**Note:** this line is required near the top of your script for ```args[1]```, ```args[2]```, etc to work properly.
+```r 
+args <- commandArgs(trailingOnly = TRUE)
+```
 Principal component analysis plot (PC1 vs PC2) for the complete set<br>
 <img src="images/210306_main_gbs_20percent_NA_Page_1.png" width="500">
 
