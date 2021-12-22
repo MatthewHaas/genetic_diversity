@@ -67,7 +67,7 @@ cd /home/jkimball/haasx092/main_GBS/210306_samtools
 module load R/3.6.0
 Rscript plot_plink_pca.R  plink_20percent_NA_pca_dp4.eigenvec plink_20percent_NA_pca_dp4.eigenval 210306_main_gbs_20percent_NA_dp4.pdf 210306_main_gbs_20percent_NA_dp4.Rdata
 ```
-In this case, the first argument (```args[1]``` in R) is the _eigenvector_ file, the second argument (```args[2]```) is the _eigenvalue_ file, and the third argument (```args[3]``` is the ouput PDF file which contains the plots themselves.
+In this case, the first argument (```args[1]``` in R) is the _eigenvector_ file, the second argument (```args[2]```) is the _eigenvalue_ file, and the third argument (```args[3]``` is the ouput PDF file which contains the plots themselves. In the R script (```plot_plink_pca.R```), the code looks like this (only the first instance is shown here. Look at the script itself if you want to see the other two instances):
 ```r 
 fread(args[1]) -> x
 ```
