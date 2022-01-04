@@ -20,3 +20,7 @@ In order to get the sample names out of my `VCF` file so that I could assign the
 ```bash
 bcftools query -l biallelic_snps_only.recode.vcf > sample_names_from_vcf.txt
 ```
+
+The actual analysis was carried out using the script [run_Dsuite_ABBA-BABA.sh](run_Dsuite_ABBA-BABA.sh).
+
+The results suggest that there have been no introgressions.
