@@ -21,9 +21,9 @@ In order to get the sample names out of my `VCF` file so that I could assign the
 bcftools query -l biallelic_snps_only.recode.vcf > sample_names_from_vcf.txt
 ```
 
-I wrote the script [prep_sample_list_for_ABBA-BABA.py](prep_sample_list_for_ABBA-BABA.py) to process the file [sample_names_from_vcf.txt](sample_names_from_vcf.txt) and convert it into the format needed to run Dsuite. For example, the sample names from the `VCF` file look like `Sample_0001/Sample_0001_sorted.bam`, but in the key the sample is just listed as `Sample_0001`. The goal of the script is to connect each sample name to its population assignment from STRUCTURE where _K_=4.
+I wrote the script [prep_sample_list_for_ABBA-BABA.py](prep_sample_list_for_ABBA-BABA.py) to process the file [sample_names_from_vcf.txt](sample_names_from_vcf.txt) and convert it into the format needed to run Dsuite. For example, the sample names from the `VCF` file look like `Sample_0001/Sample_0001_sorted.bam`, but in the key the sample is just listed as `Sample_0001`. The goal of the script is to connect each sample name to its population assignment from STRUCTURE where _K_=4. As of 4 January 2022, the script does a good job of making the file, except I should update it so that _Zizania aquatica_ samples are labeled as "Outgroup" and samples that don't belong to any population ("None") are labeled as "xxx" so they aren't included in the ABBA-BABA analysis. These correspond to the old/2010 temporal samples so we don't want to include them here. Otherwise, these changes can be made manually but it is better to do it in a robust, reproducible way.
 
-This is a preview of what the file should look like.
+This is a preview of what the file should look like. The complete file can be found [here](sample_list_with_key.txt).
 ```bash
 Sample_0001/Sample_0001_sorted.bam  Natural_stand_2
 Sample_0002/Sample_0002_sorted.bam  Natural_stand_2
