@@ -44,7 +44,7 @@ The script [merge_fastq_read_counts.py](merge_fastq_read_counts.py) was used to 
 
 # Figures
 ### Figure 1
-This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin. The map uses watershed boundaries provided by the Minnesota Department of Natural Resources.<br>
+This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin. The original map (featuring only the Minnesota watersheds) used watershed boundaries provided by the Minnesota Department of Natural Resources. The updated watershed map featuring watersheds of both Minnesota and Wisconsin was provided by the Wisconsin Department of Natural Resources. **Note:** The shape files for both versions are available in our Google Drive.<br>
 <img src="images/nrw_collection_sites_watersheds.png" width="500">
 
 ## Figure 2 code explanation
