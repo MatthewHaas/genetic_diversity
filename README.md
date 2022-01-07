@@ -45,7 +45,7 @@ The script [merge_fastq_read_counts.py](merge_fastq_read_counts.py) was used to 
 # Figures
 ### Figure 1
 This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin. The map uses watershed boundaries provided by the Minnesota Department of Natural Resources.<br>
-<img src="images/watershed_map_export.png" width="500">
+<img src="images/nrw_collection_sites_watersheds.png" width="500">
 
 ## Figure 2 code explanation
 The PCA plots were made with R using input from plink. The ```R``` script itself is called from the ```bash``` script that I submitted to the SLURM scheduler. This allows me to recycle the same R script using different input files without needing to constantly edit & re-edit input our output file names. The bash script to make the PCA plot looks like:
