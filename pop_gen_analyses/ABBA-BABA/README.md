@@ -3,8 +3,8 @@
 For this analysis, I was working in `/home/jkimball/haasx092/ABBA-BABA`
 
 # Directory
-1. [Dsuite](#-Dsuite)
-2. [AdmixTools](#-AdmixTools)
+1. [Dsuite](#Dsuite)
+2. [AdmixTools](#AdmixTools)
 
 # Dsuite
 I am using a program called [Dsuite](https://github.com/millanek/Dsuite).
