@@ -2,6 +2,11 @@
 
 For this analysis, I was working in `/home/jkimball/haasx092/ABBA-BABA`
 
+# Directory
+1. [Dsuite](#-Dsuite)
+2. [AdmixTools](#-AdmixTools)
+
+# Dsuite
 I am using a program called [Dsuite](https://github.com/millanek/Dsuite).
 
 It was relatively easy to install using instructions from the authors' GitHub page.
@@ -35,3 +40,5 @@ Sample_0005/Sample_0005_sorted.bam  Natural_stand_2
 The actual analysis was carried out using the script [run_Dsuite_ABBA-BABA.sh](run_Dsuite_ABBA-BABA.sh).
 
 The results suggest that there have been no introgressions.
+
+# AdmixTools
