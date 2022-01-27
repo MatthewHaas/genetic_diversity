@@ -42,3 +42,13 @@ The actual analysis was carried out using the script [run_Dsuite_ABBA-BABA.sh](r
 The results suggest that there have been no introgressions.
 
 # AdmixTools
+
+There were a number of issues in getting AdmixTools to work. I followed the instructions to install AdmixTools [here](https://github.com/uqrmaie1/admixtools)
+
+The first two steps worked without error:
+```bash
+install.packages("Rcpp")
+install.packages("igraph")
+```
+
+But installation of both `tidyverse` and `plotly` failed.
