@@ -43,6 +43,8 @@ The results suggest that there have been no introgressions.
 
 # AdmixTools
 
+I also used [AdmixTools2](https://github.com/uqrmaie1/admixtools) for the ABBA-BABA/_D_-statistics analysis. The original AdmixTools can be found [here](https://github.com/DReichLab/AdmixTools/tree/master/src). I chose to go with AdmixTools2 because it has the same functionality, but is more user-friendly.
+
 I followed the instructions to install AdmixTools [here](https://github.com/uqrmaie1/admixtools). Initially, I had issues getting `tidyverse` and `plotly` installed. The final solution that enabled me to install them was to switch from `R/3.6.0` to `R/4.1.0`.
 
 Since I did not already have these R packages installed, I needed to install them so that I could use them in my analysis. The `Rcpp` package was already installed.
