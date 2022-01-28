@@ -59,3 +59,8 @@ devtools::install_github("uqrmaie1/admixtools")
 library("admixtools")
 ```
 **Note:** You do not need to carry out these installation steps every time you open R. Once they are installed, you're good to go.
+
+AdmixTools can take genotype data in binary plink format. In order to convert my existing plink files into binary format, I used the following code. Make sure you use `module load plink` first!
+```bash
+plink --file plink_incl_nonbiallelic --make-bed --allow-extra-chr --out plink_binary
+```
