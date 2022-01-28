@@ -64,3 +64,9 @@ AdmixTools can take genotype data in binary plink format. In order to convert my
 ```bash
 plink --file plink_incl_nonbiallelic --make-bed --allow-extra-chr --out plink_binary
 ```
+
+Perhaps a more descriptive name would be useful, but for now I just wanted to get this up and working. Inside your R script, you can use the following command to load the genotypic data:
+```R
+geno = read_plink("plink_binary")
+```
+Voilà! Works like a charm.
