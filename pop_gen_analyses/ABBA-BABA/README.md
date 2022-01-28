@@ -72,3 +72,8 @@ Perhaps a more descriptive name would be useful, but for now I just wanted to ge
 geno = read_plink("plink_binary")
 ```
 Voilà! Works like a charm.
+
+Calculate allele frequencies.
+```R
+afs = plink_to_afs("plink_binary")
+```
