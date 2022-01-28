@@ -1,4 +1,4 @@
-# _D-statistics_ (ABBA-BABA analysis)
+# _D_-statistics (ABBA-BABA analysis)
 
 For this analysis, I was working in `/home/jkimball/haasx092/ABBA-BABA`
 
@@ -7,7 +7,7 @@ For this analysis, I was working in `/home/jkimball/haasx092/ABBA-BABA`
 2. [AdmixTools](#AdmixTools)
 
 # Dsuite
-I am using a program called [Dsuite](https://github.com/millanek/Dsuite).
+THe first program that I tried for ABBA-BABA/_D_-statistics is called [Dsuite](https://github.com/millanek/Dsuite).
 
 It was relatively easy to install using instructions from the authors' GitHub page.
 ```bash
