@@ -77,3 +77,8 @@ Calculate allele frequencies.
 ```R
 afs = plink_to_afs("plink_binary")
 ```
+
+_D_-statistics are calculated with the following code:
+```R
+out = f4(data, f4mode = FALSE)
+```
