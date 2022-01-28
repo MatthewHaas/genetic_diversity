@@ -86,4 +86,7 @@ out = f4(data, f4mode = FALSE)
 One of the challenges here is how to assign population membership. It was relatively simple with Dsuite but is not as clear with AdmixTools. I think this is because they assume population/family membership is already embedded into the plink data which it is not for me. However, I think I can assign population membership within R. I used the following code to pull population membership from a text file because the sample names are long and convoluted. This is something that could be addressed by shortening the sample names within the VCF file before converting to a plink object, but for now this is what I am doing to solve the issue.
 ```R
 cluster1 <- scan("cluster_1.txt", character())
+aquatica <- scan("aquatica.txt", character())
+cultivated <- scan("cultivated_material.txt", character())
+cluster4 <- scan("cluster_4.txt", character())
 ```
