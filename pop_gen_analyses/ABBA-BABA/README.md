@@ -42,7 +42,7 @@ The actual analysis was carried out using the script [run_Dsuite_ABBA-BABA.sh](r
 The results suggest that there have been no introgressions.
 
 # AdmixTools
-
+## Installation
 I also used [AdmixTools2](https://github.com/uqrmaie1/admixtools) for the ABBA-BABA/_D_-statistics analysis. The original AdmixTools can be found [here](https://github.com/DReichLab/AdmixTools/tree/master/src). I chose to go with AdmixTools2 because it has the same functionality but is more user-friendly, thanks to the R interface. **Note:** I did the installation and carried out the analysis on the Minnesota Supercomputing Institute servers rather than on my personal device.
 
 I followed the instructions to install AdmixTools [here](https://github.com/uqrmaie1/admixtools). Initially, I had issues getting `tidyverse` and `plotly` installed. The final solution that enabled me to install them was to switch from `R/3.6.0` to `R/4.1.0`.
@@ -59,6 +59,8 @@ devtools::install_github("uqrmaie1/admixtools")
 library("admixtools")
 ```
 **Note:** You do not need to carry out these installation steps every time you open R. Once they are installed, you're good to go.
+
+## Getting the program up and running
 
 AdmixTools can take genotype data in binary plink format. In order to convert my existing plink files into binary format, I used the following code. Make sure you use `module load plink` first!
 ```bash
