@@ -90,3 +90,8 @@ aquatica <- scan("aquatica.txt", character())
 cultivated <- scan("cultivated_material.txt", character())
 cluster4 <- scan("cluster_4.txt", character())
 ```
+
+I may have a problem with my approach. It's currently not working, so something is off with my understanding. The `sure = TRUE` setting was suggested by the program, but it needs to be submtited to the queue because it consumes too much memory. Casts doubt on whether this is actually what I want to do.
+```R
+f4(geno, cluster1, aquatica, cultivated, cluster4, f4mode = FALSE, sure = TRUE)
+```
