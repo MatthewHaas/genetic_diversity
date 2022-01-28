@@ -46,8 +46,13 @@ The results suggest that there have been no introgressions.
 I followed the instructions to install AdmixTools [here](https://github.com/uqrmaie1/admixtools). Initially, I had issues getting `tidyverse` and `plotly` installed. The final solution that enabled me to install them was to switch from `R/3.6.0` to `R/4.1.0`.
 
 Since I did not already have these R packages installed, I needed to install them so that I could use them in my analysis. The `Rcpp` package was already installed.
-```bash
+```R
 install.packages("tidyverse")
 install.packages("igraph")
 install.packages("plotly")
+```
+**Note:** the R package `devtools` is also requried, but I didn't need to install it because it was already installed.
+```R
+devtools::install_github("uqrmaie1/admixtools")
+library("admixtools")
 ```
