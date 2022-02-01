@@ -35,5 +35,14 @@ class(data_t_m) <- "numeric"
 # Set column names
 colnames(data_t_m) <- map_data$Locus
 
+# Create vector of individual names (based on row number)
+named_samples = vector()
+for(i in c(1:nrow(data_t_m))){
+named_samples <- append(named_samples, paste0("Individual_", i))
+}
+
+# Set rownames
+rownames(data_t_m) <- named_samples
+
 # Calculate LD decay
 LD.decay(data_t_m, map_data)
