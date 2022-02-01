@@ -29,6 +29,9 @@ data_t <- t(data)
 # Convert data to matrix
 data_t_m <- as.matrix(data_t)
 
+# Convert data type back to numeric/integer from character. I thought it would help solve the issue of empty results. I was wrong-it didn't solve the problem--but also didn't appear to cause any problems.
+class(data_t_m) <- "numeric"
+
 # Set column names
 colnames(data_t_m) <- map_data$Locus
 
