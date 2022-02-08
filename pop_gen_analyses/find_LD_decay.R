@@ -7,21 +7,13 @@ library(sommer) # needed for the LD.decay() function
 # Program asks for SNP data in -1,0,1 format. I have no clue why they chose such an odd format, but it seems like their functions are able to recognize 0,1,2 and convert it to -1,0,-1
 
 # Read in SNP data. This will need to be converted to a matrix
-# But first make sure to use `colClasses = 'string'` so that you can use the `mutate_if` function  to easily do the "find and replace"
-data <- fread("211202_gbs_nov_2021_snps_10percent_miss_dp6_maf05_no_row_or_col_names.csv", colClasses = 'string')
+data <- fread("210713_normalize_incl_nonbiallelic_imputed_zeros.csv")
 
 # Read in map data. This can remain as a data.table (or data.frame if you are into that)
-map_data <- fread("reneth_gbs_map_data.csv")
+map_data <- fread("/panfs/roc/groups/1/jkimball/haasx092/genetic_diversity_map_data_for_LD_decay.csv")
 
 # Change column names of map_data to suit needs of LD.decay() function
 setnames(map_data, c("Locus", "LG", "Position"))
-
-data <- as_tibble(data) # convert data.table to tibble in order to do the "find and replace"
-
-# Convert to -1,0,1 format; requires tidyverse
-data <- data %>% mutate_if(is.character, str_replace_all, pattern = '0', replacement = '-1')
-data <- data %>% mutate_if(is.character, str_replace_all, pattern = '1', replacement = '0')
-data <- data %>% mutate_if(is.character, str_replace_all, pattern = '2', replacement = '1')
 
 # Transpose data so that columns are markers and rows are individuals
 data_t <- t(data)
@@ -44,5 +36,12 @@ named_samples <- append(named_samples, paste0("Individual_", i))
 # Set rownames
 rownames(data_t_m) <- named_samples
 
+map_data[, LG := sub("ZPchr", "", LG)]
+map_data[, LG :=  as.numeric(map_data$LG)]
+map_data[LG == 458, LG := 17]
+
 # Calculate LD decay
-LD.decay(data_t_m, map_data)
+LD.decay(data_t_m, map_data, unlinked = TRUE)
+
+
+# Print session informationsessionInfo()
