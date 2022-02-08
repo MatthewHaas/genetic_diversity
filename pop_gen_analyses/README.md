@@ -14,6 +14,23 @@ The Mantel test was conducted using the R script ```mantel_test.R```. The script
 **Similarity**<br>
 The script [similarity.py](similarity.py) was written to calculate pairwise similarity between each sample in our dataset. The script creates two identical lists containing each of the sample names in order to compare two variables simultaneously (in a nested for loop). The genotype calls (SNPs) are stored in lists and compared to one another by counting the number of occurrence where the _i_-th genotype call in one sample matches the _i_-th genotype call in the seond sample in the comparison. The count is then divided by 5,955 (the total number of SNPs--note that this is hard-coded) to yield a similarity value (which should be between 0 and 1). The results are then written to a CSV file in a three-column format. The first two columns give the two samples being compared and the third column gives the similarity value.
 
+## Linkage Disequilibrium
+I used the R script [find_LD_decay.R](pop_gen_analyses/find_LD_decay.R) to calculate Linkage Disequilibrium (LD) Decay. It requires two inputs: **the first file** contains the SNP data. My data are organized in a CSV file so that rows represent individual SNPs and columns represent individuals. However, the [`The LD.decay()`](https://rdrr.io/cran/sommer/man/LD.decay.html#heading-5) function requires that the data are organized so that rows are _individuals_ and columns are _SNPs_. It also requires that the data are in a matrix rather than a data.table (or data.frame, if you're old school).
+
+The code block shown below is how I converted the data from data.table to matrix.
+```R
+# Transpose data so that columns are markers and rows are individuals
+data_t <- t(data)
+# Convert data to matrix
+data_t_m <- as.matrix(data_t)
+```
+This isn't a complete summary of how I processed my data, but it's enough for the README file.<br>
+
+**The second input file** contains the map data with three columns. The first column contains the SNP names (which are somewhat arbitrary); the second column contains the chromosome/linkage group names; and the third column contains the position of the SNP (either in basepairs as in our data or in centiMorgans).
+
+-----------------------------
+_The information below is related to using Arlequin which we have more or less abandoned because it didn't seem useful for high-throughput SNP data_
+
 **Prep files for input into Arlequin**<br>
 The script [convert_csv_to_arlequin_input_format.py](convert_csv_to_arlequin_input_format.py) was written to convert the SNP matrix from the comma-separated value (CSV) format to Arlequin input format. Arlequin requires somewhat unique formatting. For a diploid individual, each locus requires two lines. There needs to be a name for the haplotype, the number of individuals with that haplotype, followed by the SNP calls. The second line only need the SNP calls. For homozygous calls (0 or 1), the ref (0) or alt (2) calls are used for both lines.
 
