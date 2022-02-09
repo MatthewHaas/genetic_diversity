@@ -2,10 +2,10 @@
 
 ## Directory
 1. [STRUCTURE analysis](#STRUCTURE-analysis)
-2. [Analysis of Molecular Variance (AMOVA](#Analysis-of-Molecular-Variance-(AMOVA)-)
+2. [Analysis of Molecular Variance (AMOVA](#Analysis-of-Molecular-Variance)
 3. [Mantel test](#Mantel-test)
 4. [Similarity](#Similarity)
-5. [_D_-statistics/ABBA-BABA](#D-statistics/ABBA-BABA)
+5. [_D_-statistics/ABBA-BABA](#_D_-statistics/ABBA-BABA)
 6. [Linkage Disequilibrium](#Linkage-Disequilibrium)
 
 ## STRUCTURE analysis
@@ -13,7 +13,7 @@ The [emulateStructurePlots.py](emulateStructurePlots.py) script was written to m
 
 To use this script on the command line, type: ```python emulateStructurePlots.py sys.argv[1] sys.argv[2]``` where ```sys.argv[1]``` is the CSV file and ```sys.argv[2]``` is the desired output (PNG format).
 
-## Analysis of Molecular Variance (AMOVA)
+## Analysis of Molecular Variance
 The Rscript [AMOVA.R](AMOVA.R) conducts the Analysis of Molecular Variance analysis. The R script uses the [```poppr.amova()```](https://search.r-project.org/CRAN/refmans/poppr/html/poppr.amova.html) function from the [_poppr_](https://cran.r-project.org/web/packages/poppr/index.html) R package. We used the "farthest neighbor" algorithm because it is the most strict option. The ```poppr.amova()``` function gives users the choice between the [_ade4_](https://cran.r-project.org/web/packages/ade4/index.html) implementation or the [_pegas_](https://cran.r-project.org/web/packages/pegas/index.html) implementation. We chose to use the _ade4_ implementation. To correct for non-Euclidean distance, we used the ```quasieuclid``` correction. We chose this over the ```lingoes``` or ```cailliez``` correction methods because ```quasieuclid``` does not introduce a modification of the original distances like the other two methods. The [AMOVA.R](AMOVA.R) script is launched using the shell script [run_AMOVA.sh](run_AMOVA.sh).
 
 ## Mantel test
