@@ -14,6 +14,24 @@ The Mantel test was conducted using the R script ```mantel_test.R```. The script
 **Similarity**<br>
 The script [similarity.py](similarity.py) was written to calculate pairwise similarity between each sample in our dataset. The script creates two identical lists containing each of the sample names in order to compare two variables simultaneously (in a nested for loop). The genotype calls (SNPs) are stored in lists and compared to one another by counting the number of occurrence where the _i_-th genotype call in one sample matches the _i_-th genotype call in the seond sample in the comparison. The count is then divided by 5,955 (the total number of SNPs--note that this is hard-coded) to yield a similarity value (which should be between 0 and 1). The results are then written to a CSV file in a three-column format. The first two columns give the two samples being compared and the third column gives the similarity value.
 
+## _D_-statistics (ABBA-BABA)
+There is a lot to unpack with the _D_-statistics. I tried two approaches here. The first approach was relatively simple and involved a program called D-suite.
+
+The second approach was using AdmixTools2. This program was a bit more involved to use. Population membership comes in a the form of a plink family (.fam) file. The first few lines of my `plink.fam` file look something like this:
+```bash
+Sample_0001/Sample_0001_sorted.bam Sample_0001/Sample_0001_sorted.bam 0 0 0 -9
+Sample_0002/Sample_0002_sorted.bam Sample_0002/Sample_0002_sorted.bam 0 0 0 -9
+Sample_0003/Sample_0003_sorted.bam Sample_0003/Sample_0003_sorted.bam 0 0 0 -9
+```
+That is, each line contains sample names exactly as they were recorded in the VCF file. It works just fine within plink for making PCA plots, etc. However, AdmixTools2 requires each of these lines to contain info about population membership. I tried writing some simple `awk` or `sed` one-liners, but nothing ended up working. (Code given below partially works-but it only returns one column in the output file and I need 6 so that it resembles the excerpt above).
+```awk
+awk -F':' 'NR==FNR{a[$1]=$2} NR>FNR{$1=a[$1];print}' plink_binary.fam genetic_diversity_key_for_AdmixTools.txt > plink_edited.fam
+```
+
+So, I ended up using the `VLOOKUP` function in Excel to replace each sample name with their STRUCTURE-defined population (where _K_=4). This is important because I initially started replacing sample names with the identity of that sample (e.g., lake/river of origin or cultivar/breeding line). _D_-statistics/ABBA-BABA analysis uses 4 groups so our grouping of samples into four populations (Natural Stands I, Natural Stands II, Cultivated Material, _Z. aquatica_) works out nicely.
+
+The R script that does the analysis is [admixTools.R](admixTools.R) and is launched by [run_admixtools.sh](run_admixtools.sh).
+
 ## Linkage Disequilibrium
 I used the R script [find_LD_decay.R](pop_gen_analyses/find_LD_decay.R) to calculate Linkage Disequilibrium (LD) Decay. It requires two inputs: **the first file** contains the SNP data. My data are organized in a CSV file so that rows represent individual SNPs and columns represent individuals. However, the [`The LD.decay()`](https://rdrr.io/cran/sommer/man/LD.decay.html#heading-5) function requires that the data are organized so that rows are _individuals_ and columns are _SNPs_. It also requires that the data are in a matrix rather than a data.table (or data.frame, if you're old school).
 
