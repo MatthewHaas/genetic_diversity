@@ -5,7 +5,7 @@
 2. [Analysis of Molecular Variance](#Analysis-of-Molecular-Variance)
 3. [Mantel test](#Mantel-test)
 4. [Similarity](#Similarity)
-5. [_D_-statistics (ABBA-BABA)](#D-statistics-(ABBA-BABA))
+5. [_D_-statistics (ABBA-BABA)](#D-statistics)
 6. [Linkage Disequilibrium](#Linkage-Disequilibrium)
 
 ## STRUCTURE analysis
@@ -22,7 +22,7 @@ The Mantel test was conducted using the R script ```mantel_test.R```. The script
 ## Similarity
 The script [similarity.py](similarity.py) was written to calculate pairwise similarity between each sample in our dataset. The script creates two identical lists containing each of the sample names in order to compare two variables simultaneously (in a nested for loop). The genotype calls (SNPs) are stored in lists and compared to one another by counting the number of occurrence where the _i_-th genotype call in one sample matches the _i_-th genotype call in the seond sample in the comparison. The count is then divided by 5,955 (the total number of SNPs--note that this is hard-coded) to yield a similarity value (which should be between 0 and 1). The results are then written to a CSV file in a three-column format. The first two columns give the two samples being compared and the third column gives the similarity value.
 
-## _D_-statistics (ABBA-BABA)
+## _D_-statistics
 There is a lot to unpack with the _D_-statistics. I tried two approaches here. The first approach was relatively simple and involved a program called D-suite.
 
 The second approach was using AdmixTools2. This program was a bit more involved to use. Population membership comes in a the form of a plink family (.fam) file. The first few lines of my `plink.fam` file look something like this:
