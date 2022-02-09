@@ -2,10 +2,10 @@
 
 ## Directory
 1. [STRUCTURE analysis](#STRUCTURE-analysis)
-2. [Analysis of Molecular Variance (AMOVA](#Analysis-of-Molecular-Variance)
+2. [Analysis of Molecular Variance](#Analysis-of-Molecular-Variance)
 3. [Mantel test](#Mantel-test)
 4. [Similarity](#Similarity)
-5. [_D_-statistics/ABBA-BABA](#_D_-statistics/ABBA-BABA)
+5. [_D_-statistics (ABBA-BABA)](#_D_-statistics-(ABBA-BABA))
 6. [Linkage Disequilibrium](#Linkage-Disequilibrium)
 
 ## STRUCTURE analysis
