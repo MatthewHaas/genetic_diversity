@@ -154,8 +154,8 @@ def makePlot(K):
         x1 = len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_1') & (dfSorted['Likelihood'] > 0.6)])/2
         x2 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2') & (dfSorted['Likelihood'] > 0.6)])/2
         y = -0.1 # only a single, constant value for y is needed
-        plt.text(x1, y, s = clusterA[0], fontsize = 12, ha = 'center')
-        plt.text(x2, y, s = clusterB[0], fontsize = 12, ha = 'center')
+        plt.text(x1, y, s = clusterA[0], fontsize = 24, ha = 'center')
+        plt.text(x2, y, s = clusterB[0], fontsize = 24, ha = 'center')
         plt.savefig(sys.argv[2])
     elif K == 3:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
@@ -169,9 +169,9 @@ def makePlot(K):
         x2 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')])/2
         x3 = x1*2 + + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')])/2
         y = -0.1 # constant--different y values are not necessary for plotting text
-        plt.text(x1, y, s = clusterA[0], fontsize = 12, ha = 'center')
-        plt.text(x2, y, s = clusterB[0], fontsize = 12, ha = 'center')
-        plt.text(x3, y, s = clusterC[0], fontsize = 12, ha = 'center')
+        plt.text(x1, y, s = clusterA[0], fontsize = 24, ha = 'center')
+        plt.text(x2, y, s = clusterB[0], fontsize = 24, ha = 'center')
+        plt.text(x3, y, s = clusterC[0], fontsize = 24, ha = 'center')
         plt.savefig(sys.argv[2])
     elif K == 4:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
@@ -186,10 +186,10 @@ def makePlot(K):
         x3 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')])/2
         x4 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_4')])/2
         y = -0.1
-        plt.text(x1, y, s = clusterA[0], fontsize = 12, ha = 'center')
-        plt.text(x2, y, s = clusterB[0], fontsize = 12, ha = 'center')
-        plt.text(x3, y, s = clusterC[0], fontsize = 12, ha = 'center')
-        plt.text(x4, y, s = clusterD[0], fontsize = 12, ha = 'center')
+        plt.text(x1, y, s = clusterA[0], fontsize = 24, ha = 'center')
+        plt.text(x2, y, s = clusterB[0], fontsize = 24, ha = 'center')
+        plt.text(x3, y, s = clusterC[0], fontsize = 24, ha = 'center')
+        plt.text(x4, y, s = clusterD[0], fontsize = 24, ha = 'center')
         plt.savefig(sys.argv[2])
     elif K == 5:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
@@ -207,11 +207,11 @@ def makePlot(K):
         x4 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_4')])/2
         x5 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_4')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_5')])/2
         y = -0.1
-        plt.text(x1, y, s = clusterA[0], fontsize = 12, ha = 'center')
-        plt.text(x2, y, s = clusterB[0], fontsize = 12, ha = 'center')
-        plt.text(x3, y, s = clusterC[0], fontsize = 12, ha = 'center')
-        plt.text(x4, y, s = clusterD[0], fontsize = 12, ha = 'center')
-        plt.text(x5, y, s = clusterE[0], fontsize = 12, ha = 'center')
+        plt.text(x1, y, s = clusterA[0], fontsize = 24, ha = 'center')
+        plt.text(x2, y, s = clusterB[0], fontsize = 24, ha = 'center')
+        plt.text(x3, y, s = clusterC[0], fontsize = 24, ha = 'center')
+        plt.text(x4, y, s = clusterD[0], fontsize = 24, ha = 'center')
+        plt.text(x5, y, s = clusterE[0], fontsize = 24, ha = 'center')
         plt.savefig(sys.argv[2])
     elif K == 6:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
@@ -231,12 +231,12 @@ def makePlot(K):
         x5 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_4')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_5')])/2
         x6 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_4')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_5')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_6')])/2
         y = -0.1
-        plt.text(x1, y, s = clusterA[0], fontsize = 12, ha = 'center')
-        plt.text(x2, y, s = clusterB[0], fontsize = 12, ha = 'center')
-        plt.text(x3, y, s = clusterC[0], fontsize = 12, ha = 'center')
-        plt.text(x4, y, s = clusterD[0], fontsize = 12, ha = 'center')
-        plt.text(x5, y, s = clusterE[0], fontsize = 12, ha = 'center')
-        plt.text(x6, y, s = clusterF[0], fontsize = 12, ha = 'center')
+        plt.text(x1, y, s = clusterA[0], fontsize = 24, ha = 'center')
+        plt.text(x2, y, s = clusterB[0], fontsize = 24, ha = 'center')
+        plt.text(x3, y, s = clusterC[0], fontsize = 24, ha = 'center')
+        plt.text(x4, y, s = clusterD[0], fontsize = 24, ha = 'center')
+        plt.text(x5, y, s = clusterE[0], fontsize = 24, ha = 'center')
+        plt.text(x6, y, s = clusterF[0], fontsize = 24, ha = 'center')
         plt.savefig(sys.argv[2])
     else:
         print('Not an acceptable value of K!')
