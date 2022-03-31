@@ -147,6 +147,7 @@ def makePlot(K):
     if K == 2:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([]) # hide x-axis tick marks
+        plt.yticks(fontsize = 18) # make tick marks and numbers larger (default = 12)
         assignClusterMembership(K)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
@@ -160,6 +161,7 @@ def makePlot(K):
     elif K == 3:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([])
+        plt.yticks(fontsize = 18) # make tick marks and numbers larger (default = 12)
         assignClusterMembership(K)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
@@ -176,6 +178,7 @@ def makePlot(K):
     elif K == 4:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([])
+        plt.yticks(fontsize = 18) # make tick marks and numbers larger (default = 12)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_3'], bottom = dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[2], width = 1)
@@ -194,6 +197,7 @@ def makePlot(K):
     elif K == 5:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([])
+        plt.yticks(fontsize = 18) # make tick marks and numbers larger (default = 12)
         assignClusterMembership(K)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
@@ -216,6 +220,7 @@ def makePlot(K):
     elif K == 6:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([])
+        plt.yticks(fontsize = 18) # make tick marks and numbers larger (default = 12)
         assignClusterMembership(K)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
