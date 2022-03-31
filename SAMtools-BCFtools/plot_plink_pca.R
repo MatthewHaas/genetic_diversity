@@ -14,7 +14,7 @@ y <- fread("~/main_GBS/191021_main_GBS_sample_key.csv")
 
 # set column names
 setnames(x, c("sample", "PC1", "PC2", "PC3", "PC4", "PC5", "PC6", "PC7", "PC8", "PC9", "PC10", "PC11", "PC12", "PC13",
-                        "PC14", "PC15", "PC16", "PC17", "PC18", "PC19", "PC20"))
+			"PC14", "PC15", "PC16", "PC17", "PC18", "PC19", "PC20"))
 
 setnames(y, c("sample", "ID", "simplified", "extended", "class"))
 
@@ -31,7 +31,7 @@ percentVar = c(PC1=v[1, V1] / sum(v$V1), PC2=v[2, V1] / sum(v$V1), PC3=v[3, V1] 
 # Merge data tables
 x[y, on="sample"] -> z
 
-# Pick colors for individual natural stand accessions
+# Pick colors for individual natural stand accessions 
 z[simplified == "Aquatica_species", col := "red3"]
 z[simplified == "Bass Lake", col := "red"]
 #z[simplified == "Big Fork River", col := "orange3"]
@@ -65,31 +65,33 @@ z[simplified == "Aquatica_species" | simplified == "AquaticaSpecies", pch := 17]
 # pch = plotting character parameter (in the context of this script, you only need to inclue the pch as an argument in the function (written just like that: pch -no quotes- because it's a column in the data table, just like PC1, PC2, etc)
 # col = color parameter (same situation as pch)
 plot_pcs <- function(arg1, arg2, arg3, arg4, arg5, arg6, pch, col){
-par(mar = c(4, 4, 2, 16))
-plot(arg1, arg2, xlab = paste0(arg3, round(percentVar[arg4]*100), "%"),
-                     ylab = paste0(arg5, round(percentVar[arg6]*100), "%"),
-                     main = "main GBS",
-                     pch = pch,
-                     col = col,
-                     cex = 1.5,
-                     yaxt = 'n')
-axis(2, las = 1)
+par(mar = c(4, 8, 2, 19))
+plot(arg1, arg2, xlab = paste0(arg3, round(percentVar[arg4]*100), "%"), 
+		     ylab = "",
+		     main = "",
+		     pch = pch,
+		     col = col,
+		     cex = 2,
+		     cex.lab = 2,
+		     cex.axis = 2,
+	             las = 1)
+#axis(2, las = 1, cex.lab = 2, cex.axis = 2)
+mtext(paste0(arg5, round(percentVar[arg6]*100), "%"), outer = FALSE, side = 2, line = 5.5, cex = 2)
 
-par(oma = c(0, 0, 0, 0))
-legend("topright", inset = c(-0.2,0.3), xpd = TRUE,
-                legend = c(expression(italic("Z. aquatica")), "Bass Lake", "Clearwater River", "Dahler Lake", "Decker Lake",
-                        "Garfield Lake", "Mud Hen Lake", "Necktie River", "Ottertail River", "Phantom Lake", "Plantagenet",
-                        "Shell Lake", "Upper Rice Lake", "Breeding Line"),
-                pch = c(17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16),
-                col = c("red3", "red", "orange", "yellow3", "yellow", "green3", "green", "blue4", "blue", "violetred3", "violet",
-                      "purple4", "purple", "grey"),
-                ncol = 1,
-                cex = 1.2)
+par(oma = c(1, 1, 0, 1))
+legend("topright", inset = c(-0.32,0.3), xpd = TRUE,
+		legend = c(expression(italic("Z. aquatica")), "Bass Lake", "Clearwater River", "Dahler Lake", "Decker Lake", "Garfield Lake",
+			"Mud Hen Lake", "Necktie River", "Ottertail River", "Phantom Lake", "Plantagenet", "Shell Lake", "Upper Rice Lake", "Breeding Line"),
+		pch = c(17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16),
+		col = c("red3", "red", "orange", "yellow3", "yellow", "green3", "green", "blue4", "blue", "violetred3", "violet", "purple4", "purple", "grey"),
+		ncol = 1,
+		bty = 'n',
+		cex = 2)		
 }
 
 # Make the plot
 pdf(args[3], height=12, width=16)
-z[, plot_pcs(PC1, PC2, "PC1: ", 1, "PC2: ", 2, pch, col)]
+z[, plot_pcs(PC1, PC2, "PC1: ", 1, "PC2: ", 2, pch, col)] 
 z[, plot_pcs(PC2, PC3, "PC2: ", 2, "PC3: ", 3, pch, col)]
 z[, plot_pcs(PC3, PC4, "PC3: ", 3, "PC4: ", 4, pch, col)]
 z[, plot_pcs(PC4, PC5, "PC4: ", 4, "PC5: ", 5, pch, col)]
