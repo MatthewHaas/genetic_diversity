@@ -150,7 +150,7 @@ def makePlot(K):
         assignClusterMembership(K)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
-        plt.ylabel('Population membership probability')
+        plt.ylabel('Population membership probability', fontsize = 18)
         x1 = len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_1') & (dfSorted['Likelihood'] > 0.6)])/2
         x2 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2') & (dfSorted['Likelihood'] > 0.6)])/2
         y = -0.1 # only a single, constant value for y is needed
@@ -164,7 +164,7 @@ def makePlot(K):
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_3'], bottom = dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[2], width = 1)
-        plt.ylabel('Population membership probability')
+        plt.ylabel('Population membership probability', fontsize = 18)
         x1 = len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_1')])/2
         x2 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')])/2
         x3 = x1*2 + + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')])/2
@@ -180,7 +180,7 @@ def makePlot(K):
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_3'], bottom = dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[2], width = 1)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_4'], bottom = dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[3], width = 1)
-        plt.ylabel('Population membership probability')
+        plt.ylabel('Population membership probability', fontsize = 18)
         x1 = len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_1')])/2
         x2 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')])/2
         x3 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')])/2
@@ -200,7 +200,7 @@ def makePlot(K):
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_3'], bottom = dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[2], width = 1)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_4'], bottom = dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[3], width = 1)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_5'], bottom = dfSorted['Cluster_4'] + dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[4], width = 1)
-        plt.ylabel('Population membership probability')
+        plt.ylabel('Population membership probability', fontsize = 18)
         x1 = len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_1')])/2
         x2 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')])/2
         x3 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')])/2
@@ -223,7 +223,7 @@ def makePlot(K):
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_4'], bottom = dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[3], width = 1)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_5'], bottom = dfSorted['Cluster_4'] + dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[4], width = 1)
         plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_6'], bottom = dfSorted['Cluster_5'] + dfSorted['Cluster_4'] + dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[5], width = 1)
-        plt.ylabel('Population membership probability')
+        plt.ylabel('Population membership probability', fontsize = 18)
         x1 = len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_1')])/2
         x2 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')])/2
         x3 = x1*2 + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_2')]) + len(dfSorted[(dfSorted['Most_likely'] == 'Cluster_3')])/2
