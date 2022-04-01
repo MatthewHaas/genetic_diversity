@@ -102,4 +102,5 @@ cultivated_results_linked <- LD.decay(cm_dat_t_m, map_data)
 natural_stands_results <- LD.decay(ns_dat_t_m, map_data, unlinked = TRUE)
 natural_stands_results_linked <- LD.decay(ns_dat_t_m, map_data)
 
-
+# Save data
+save(cultivated_results, cultivated_results_linked , natural_stands_results, natural_stands_results_linked, file = "220401_LD_decay_separate_classes.Rdata")
