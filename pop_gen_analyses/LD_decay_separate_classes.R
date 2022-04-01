@@ -104,3 +104,114 @@ natural_stands_results_linked <- LD.decay(ns_dat_t_m, map_data)
 
 # Save data
 save(cultivated_results, cultivated_results_linked , natural_stands_results, natural_stands_results_linked, file = "220401_LD_decay_separate_classes.Rdata")
+
+
+# Make plots
+# Natural stands
+pdf("LD_plots_natural_stands.pdf", height = 15, width = 15)
+layout(matrix(c(1, 5, 9, 13, 17,
+                2, 6, 10, 14, 0,
+                3, 7, 11, 15, 0,
+                4, 8, 12, 16, 0), nrow = 5), widths = c(1,1,1,1))
+par(oma = c(3,6,3,0))
+par(mar = c(4,4,4,2))
+for (i in c(1:17)){
+	if(i <= 15){
+		data <- as.data.table(natural_stands_results_linked$by.LG[i])
+		data <- data[p <= 0.05] # filter out all insignificant p-values
+		data[p <= 0.05, col := "black"]
+		data[p <= 0.01, col := "#235e39"]
+		data[p <= 0.001, col := "#00a54c"]
+	    data[, plot(x = d, y = r2, main = paste0("Chromosome ", i),
+	                           xlab = "distance",
+	                           ylab = "R^2",
+	                           family = "serif",
+	                           col = col,
+	                           pch = 16, 
+	                           las = 1)]
+	  }
+	  if(i == 16){
+	  	data <- as.data.table(natural_stands_results_linked$by.LG[i])
+		data <- data[p <= 0.05] # filter out all insignificant p-values
+		data[p <= 0.05, col := "black"]
+		data[p <= 0.01, col := "#235e39"]
+		data[p <= 0.001, col := "#00a54c"]
+	    data[, plot(x = d, y = r2, main = paste0("Scaffold 51"),
+	                           xlab = "distance",
+	                           ylab = "R^2",
+	                           family = "serif",
+	                           col = col,
+	                           pch = 16,
+	                           las = 1)]
+	  }
+	  if(i == 17){
+	  	data <- as.data.table(natural_stands_results_linked$by.LG[i])
+		data <- data[p <= 0.05] # filter out all insignificant p-values
+		data[p <= 0.05, col := "black"]
+		data[p <= 0.01, col := "#235e39"]
+		data[p <= 0.001, col := "#00a54c"]
+	    data[, plot(x = d, y = r2, main = paste0("Scaffold 458"),
+	                           xlab = "distance",
+	                           ylab = "R^2",
+	                           family = "serif",
+	                           col = col,
+	                           pch = 16,
+	                           las = 1)]
+	  }
+}
+dev.off()
+
+# Make plots
+# Cultivated
+pdf("LD_plots_cultivated.pdf", height = 15, width = 15)
+layout(matrix(c(1, 5, 9, 13, 17,
+                2, 6, 10, 14, 0,
+                3, 7, 11, 15, 0,
+                4, 8, 12, 16, 0), nrow = 5), widths = c(1,1,1,1))
+par(oma = c(3,6,3,0))
+par(mar = c(4,4,4,2))
+for (i in c(1:17)){
+	if(i <= 15){
+		data <- as.data.table(cultivated_results_linked$by.LG[i])
+		data <- data[p <= 0.05] # filter out all insignificant p-values
+		data[p <= 0.05, col := "black"]
+		data[p <= 0.01, col := "#235e39"]
+		data[p <= 0.001, col := "#00a54c"]
+	    data[, plot(x = d, y = r2, main = paste0("Chromosome ", i),
+	                           xlab = "distance",
+	                           ylab = "R^2",
+	                           family = "serif",
+	                           col = col,
+	                           pch = 16, 
+	                           las = 1)]
+	  }
+	  if(i == 16){
+	  	data <- as.data.table(cultivated_results_linked$by.LG[i])
+		data <- data[p <= 0.05] # filter out all insignificant p-values
+		data[p <= 0.05, col := "black"]
+		data[p <= 0.01, col := "#235e39"]
+		data[p <= 0.001, col := "#00a54c"]
+	    data[, plot(x = d, y = r2, main = paste0("Scaffold 51"),
+	                           xlab = "distance",
+	                           ylab = "R^2",
+	                           family = "serif",
+	                           col = col,
+	                           pch = 16,
+	                           las = 1)]
+	  }
+	  if(i == 17){
+	  	data <- as.data.table(cultivated_results_linked$by.LG[i])
+		data <- data[p <= 0.05] # filter out all insignificant p-values
+		data[p <= 0.05, col := "black"]
+		data[p <= 0.01, col := "#235e39"]
+		data[p <= 0.001, col := "#00a54c"]
+	    data[, plot(x = d, y = r2, main = paste0("Scaffold 458"),
+	                           xlab = "distance",
+	                           ylab = "R^2",
+	                           family = "serif",
+	                           col = col,
+	                           pch = 16,
+	                           las = 1)]
+	  }
+}
+dev.off()
