@@ -43,3 +43,6 @@ filt_no_pilot[, plot(x = F_plink, y = F_vcf,
 					 las = 1,
 					 pch = 16)]
 dev.off()
+
+# Save data
+save(filtered, filt_no_pilot, key, merged, plink, vcftools, samples_to_exclude, file = "220404_heterozygosity_calculation_correlation.Rdata")
