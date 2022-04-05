@@ -56,7 +56,7 @@ axis(side = 1,
 dev.off()
 
 # Single plot
-pdf("out.pdf")
+pdf("genome-wide_LD_separate_classes_single_plot.pdf")
 par(mar = c(6, 6, 2, 10))
 par(oma = c(0, 0, 0, 0))
 cm_sig[, plot(x = d, y = r2, xlab = "Distance (bp)",
