@@ -53,6 +53,7 @@ par(oma = c(0, 0, 0, 0))
 cm_sig[, plot(x = d, y = r2, xlab = "Distance (bp)",
 						  ylab = expression("R"^"2"),
 						  ylim = c(0,1.0),
+	      					  xaxt = "n",
 						  pch = 1,
 						  col = "#a3aaad",
 						  cex.lab = 1.5,
@@ -65,6 +66,9 @@ ns_sig[, points(x = d, y = r2, xlab = "Distance (bp)",
 						  las = 1)]
 cm_sig[, lines(cm_xvals, predict(cm_loess_values, cm_xvals), col = "#00a54c", lwd = 2)]
 ns_sig[, lines(ns_xvals, predict(ns_loess_values, ns_xvals), col = "#235e39", lwd = 2)]
+axis(side = 1,
+     at = c(0, 2e7, 4e7, 6e7, 8e7, 1e8),
+     labels = c(0, expression("2×10"^"7"), expression("4×10"^"7"), expression("6×10"^"7"), expression("8×10"^"7"), expression("1×10"^"8")))
 legend("topright", inset = c(-0.45, 0.3), xpd = TRUE, legend = c("Cultivated", "Natural Stand"), col = c("#00a54c", "#235e39"), lwd = 2, bty = "n") # legend for loess curve lines
 legend("topright", inset = c(-0.45, 0.4), xpd = TRUE, legend = c("Cultivated", "Natural Stand"), col = c("#a3aaad", "#a3aaad"), pch = c(1,2), bty = "n") # legend for points
 dev.off()
