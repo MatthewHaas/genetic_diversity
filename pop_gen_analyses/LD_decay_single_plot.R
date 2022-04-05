@@ -48,8 +48,8 @@ dev.off()
 
 # Single plot
 pdf("out.pdf")
-par(mar = c(6,6,2,1))
-par(oma = c(1,1,1,6))
+par(mar = c(6, 6, 2, 10))
+par(oma = c(0, 0, 0, 0))
 cm_sig[, plot(x = d, y = r2, xlab = "Distance (bp)",
 						  ylab = expression("R"^"2"),
 						  ylim = c(0,1.0),
