@@ -29,20 +29,20 @@ layout(matrix(c(1,2), nrow = 1), widths = c(5,5))
 par(oma = c(1,1,1,1))
 par(mar = c(5,5,2,1))
 cm_sig[, plot(x = d, y = r2, xlab = "Distance (bp)",
-						  ylab = expression("R"^"2"),
-						  main = "Cultivated",
-						  pch = 16,
-						  col = "#a3aaad",
-						  cex.lab = 1.5,
-						  las = 1)]
+			     ylab = expression("R"^"2"),
+			     main = "Cultivated",
+			     pch = 16,
+			     col = "#a3aaad",
+			     cex.lab = 1.5,
+			     las = 1)]
 cm_sig[, lines(cm_xvals, predict(cm_loess_values, cm_xvals), col = "#235e39", lwd = 2)]
 ns_sig[, plot(x = d, y = r2, xlab = "Distance (bp)",
-						  ylab = expression("R"^"2"),
-						  main = "Natural Stands",
-						  pch = 16,
-						  col = "#a3aaad",
-						  cex.lab = 1.5,
-						  las = 1)]
+			     ylab = expression("R"^"2"),
+			     main = "Natural Stands",
+			     pch = 16,
+			     col = "#a3aaad",
+			     cex.lab = 1.5,
+			     las = 1)]
 ns_sig[, lines(ns_xvals, predict(ns_loess_values, ns_xvals), col = "#235e39", lwd = 2)]
 dev.off()
 
@@ -51,19 +51,19 @@ pdf("out.pdf")
 par(mar = c(6, 6, 2, 10))
 par(oma = c(0, 0, 0, 0))
 cm_sig[, plot(x = d, y = r2, xlab = "Distance (bp)",
-						  ylab = expression("R"^"2"),
-						  ylim = c(0,1.0),
-	      					  xaxt = "n",
-						  pch = 1,
-						  col = "#a3aaad",
-						  cex.lab = 1.5,
-						  las = 1)]
+			     ylab = expression("R"^"2"),
+			     ylim = c(0,1.0),
+	      		     xaxt = "n",
+			     pch = 1,
+			     col = "#a3aaad",
+			     cex.lab = 1.5,
+			     las = 1)]
 ns_sig[, points(x = d, y = r2, xlab = "Distance (bp)",
-						  ylab = expression("R"^"2"),
-						  pch = 2,
-						  col = "#a3aaad",
-						  cex.lab = 1.5,
-						  las = 1)]
+			       ylab = expression("R"^"2"),
+			       pch = 2,
+			       col = "#a3aaad",
+			       cex.lab = 1.5,
+			       las = 1)]
 cm_sig[, lines(cm_xvals, predict(cm_loess_values, cm_xvals), col = "#00a54c", lwd = 2)]
 ns_sig[, lines(ns_xvals, predict(ns_loess_values, ns_xvals), col = "#235e39", lwd = 2)]
 axis(side = 1,
