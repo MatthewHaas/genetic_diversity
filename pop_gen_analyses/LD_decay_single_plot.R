@@ -81,3 +81,6 @@ axis(side = 1,
 legend("topright", inset = c(-0.45, 0.3), xpd = TRUE, legend = c("Cultivated", "Natural Stand"), col = c("#00a54c", "#235e39"), lwd = 2, bty = "n") # legend for loess curve lines
 legend("topright", inset = c(-0.45, 0.4), xpd = TRUE, legend = c("Cultivated", "Natural Stand"), col = c("#a3aaad", "#a3aaad"), pch = c(1,2), bty = "n") # legend for points
 dev.off()
+
+# Save data (note: only saving "new" data since the original `LD.decay()` resuts are found in the file "220401_LD_decay_separate_classes.Rdata" which can also be re-loaded if necessary)
+save(cm_data, cm_sig, cm_loess_values, cm_xvals, ns_data, ns_sig, ns_loess_values, ns_xvals, file = "220405_LD_decay_separate_classes_plot_data.Rdata")
