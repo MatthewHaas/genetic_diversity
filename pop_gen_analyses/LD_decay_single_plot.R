@@ -24,6 +24,7 @@ ns_xvals <- seq(min(ns_sig$d), max(ns_sig$d), (max(ns_sig$d) - min(ns_sig$d))/1e
 
 # other good green color: "#00a54c"
 
+# Side by side plots
 pdf("genome-wide_LD_separate_classes_side_by_side.pdf", height = 10, width = 20)
 layout(matrix(c(1,2), nrow = 1), widths = c(5,5))
 par(oma = c(1,1,1,1))
@@ -31,19 +32,27 @@ par(mar = c(5,5,2,1))
 cm_sig[, plot(x = d, y = r2, xlab = "Distance (bp)",
 			     ylab = expression("R"^"2"),
 			     main = "Cultivated",
+			     xaxt = "n",
 			     pch = 16,
 			     col = "#a3aaad",
 			     cex.lab = 1.5,
 			     las = 1)]
 cm_sig[, lines(cm_xvals, predict(cm_loess_values, cm_xvals), col = "#235e39", lwd = 2)]
+axis(side = 1,
+	 at = c(0, 2e7, 4e7, 6e7, 8e7, 1e8),
+	 labels = c(0, expression("2×10"^"7"), expression("4×10"^"7"), expression("6×10"^"7"), expression("8×10"^"7"), expression("1×10"^"8")))
 ns_sig[, plot(x = d, y = r2, xlab = "Distance (bp)",
 			     ylab = expression("R"^"2"),
 			     main = "Natural Stands",
+			     xaxt = "n",
 			     pch = 16,
 			     col = "#a3aaad",
 			     cex.lab = 1.5,
 			     las = 1)]
 ns_sig[, lines(ns_xvals, predict(ns_loess_values, ns_xvals), col = "#235e39", lwd = 2)]
+axis(side = 1,
+	 at = c(0, 2e7, 4e7, 6e7, 8e7, 1e8),
+	 labels = c(0, expression("2×10"^"7"), expression("4×10"^"7"), expression("6×10"^"7"), expression("8×10"^"7"), expression("1×10"^"8")))
 dev.off()
 
 # Single plot
