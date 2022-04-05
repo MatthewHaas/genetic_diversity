@@ -45,3 +45,25 @@ ns_sig[, plot(x = d, y = r2, xlab = "Distance (bp)",
 						  las = 1)]
 ns_sig[, lines(ns_xvals, predict(ns_loess_values, ns_xvals), col = "#235e39", lwd = 2)]
 dev.off()
+
+# Single plot
+pdf("out.pdf")
+par(mar = c(6,6,2,1))
+par(oma = c(1,1,1,6))
+cm_sig[, plot(x = d, y = r2, xlab = "Distance (bp)",
+						  ylab = expression("R"^"2"),
+						  ylim = c(0,1.0),
+						  pch = 1,
+						  col = "#a3aaad",
+						  cex.lab = 1.5,
+						  las = 1)]
+ns_sig[, points(x = d, y = r2, xlab = "Distance (bp)",
+						  ylab = expression("R"^"2"),
+						  pch = 2,
+						  col = "#a3aaad",
+						  cex.lab = 1.5,
+						  las = 1)]
+cm_sig[, lines(cm_xvals, predict(cm_loess_values, cm_xvals), col = "#00a54c", lwd = 2)]
+ns_sig[, lines(ns_xvals, predict(ns_loess_values, ns_xvals), col = "#235e39", lwd = 2)]
+legend("topright", inset = c(-0.4, 0.3), xpd = TRUE, legend = c("Cultivated", "Natural Stand"), col = c("#00a54c", "#235e39"), lwd = 2, bty = "n")
+dev.off()
