@@ -49,3 +49,71 @@ popgen_res <- popgen(M = M, subgroups = subgroups)
 
 # Save data
 save(data, data_m, geno.ready, M, popgen_res, populations, sample_names, subgroups, file = "220407_snpReady_results.Rdata")
+
+
+
+# Define where to find data for plotting
+popgen_data <- as.data.table(cbind(BassLake = popgen_res$bygroup$BassLake$Markers$GD, ClearwaterRiver = popgen_res$bygroup$ClearwaterRiver$Markers$GD,
+								   DahlerLake = popgen_res$bygroup$DahlerLake$Markers$GD, DeckerLake = popgen_res$bygroup$DeckerLake$Markers$GD,
+								   GarfieldLake = popgen_res$bygroup$GarfieldLake$Markers$GD, MudHenLake = popgen_res$bygroup$MudHenLake$Markers$GD,
+								   NecktieRiver = popgen_res$bygroup$NecktieRiver$Markers$GD, OttertailRiver = popgen_res$bygroup$OttertailRiver$Markers$GD,
+								   PhantomLake = popgen_res$bygroup$PhantomLake$Markers$GD, Plantagenet = popgen_res$bygroup$Plantagenet$Markers$GD,
+								   ShellLake = popgen_res$bygroup$ShellLake$Markers$GD, UpperRiceLake = popgen_res$bygroup$UpperRiceLake$Markers$GD))
+
+# build data table for plotting purposes
+# first build individual data.tables for each population...
+bassLake_data <- as.data.table(cbind(population = rep("BassLake",length(popgen_res$bygroup$BassLake$Markers$GD)), GD = popgen_res$bygroup$BassLake$Markers$GD))
+clearwaterRiver_data <- as.data.table(cbind(population = rep("ClearwaterRiver",length(popgen_res$bygroup$ClearwaterRiver$Markers$GD)), GD = popgen_res$bygroup$ClearwaterRiver$Markers$GD))
+dahlerLake_data <- as.data.table(cbind(population = rep("DahlerLake",length(popgen_res$bygroup$DahlerLake$Markers$GD)), GD = popgen_res$bygroup$DahlerLake$Markers$GD))
+deckerLake_data <- as.data.table(cbind(population = rep("DeckerLake",length(popgen_res$bygroup$DeckerLake$Markers$GD)), GD = popgen_res$bygroup$DeckerLake$Markers$GD))
+garfieldLake_data <- as.data.table(cbind(population = rep("GarfieldLake",length(popgen_res$bygroup$GarfieldLake$Markers$GD)), GD = popgen_res$bygroup$GarfieldLake$Markers$GD))
+mudhenLake_data <- as.data.table(cbind(population = rep("MudHenLake",length(popgen_res$bygroup$MudHenLake$Markers$GD)), GD = popgen_res$bygroup$MudHenLake$Markers$GD))
+necktieRiver_data <- as.data.table(cbind(population = rep("NecktieRiver",length(popgen_res$bygroup$NecktieRiver$Markers$GD)), GD = popgen_res$bygroup$NecktieRiver$Markers$GD))
+ottertailRiver_data <- as.data.table(cbind(population = rep("OttertailRiver",length(popgen_res$bygroup$OttertailRiver$Markers$GD)), GD = popgen_res$bygroup$OttertailRiver$Markers$GD))
+phantomLake_data <- as.data.table(cbind(population = rep("PhantomLake",length(popgen_res$bygroup$PhantomLake$Markers$GD)), GD = popgen_res$bygroup$PhantomLake$Markers$GD))
+plantagenet_data <- as.data.table(cbind(population = rep("Plantagenet",length(popgen_res$bygroup$Plantagenet$Markers$GD)), GD = popgen_res$bygroup$Plantagenet$Markers$GD))
+shellLake_data <- as.data.table(cbind(population = rep("ShellLake",length(popgen_res$bygroup$ShellLake$Markers$GD)), GD = popgen_res$bygroup$ShellLake$Markers$GD))
+upperriceLake_data <- as.data.table(cbind(population = rep("UpperRiceLake",length(popgen_res$bygroup$UpperRiceLake$Markers$GD)), GD = popgen_res$bygroup$UpperRiceLake$Markers$GD))
+
+# now use `rbind()` to put them all into a single data.table
+geneDiversityData <- rbind(bassLake_data, clearwaterRiver_data, dahlerLake_data, deckerLake_data, garfieldLake_data, mudhenLake_data, necktieRiver_data, ottertailRiver_data, phantomLake_data, plantagenet_data, shellLake_data, upperriceLake_data)
+
+# make population list to iterate over so we can create a population index in the geneDiversityData data.table
+# I could have just used `unique(populations)` for the for loop to iterate through, but then it doesn't put the populations in alphabetical order ;)
+poplist = c("BassLake", "ClearwaterRiver", "DahlerLake", "DeckerLake", "GarfieldLake", "MudHenLake", "NecktieRiver", "OttertailRiver", "PhantomLake", "Plantagenet", "ShellLake", "UpperRiceLake")
+
+# Add a population index column so we can make a boxplot
+j = 1
+for(i in poplist){
+geneDiversityData[population == i, population_index := j]
+j = j + 1
+}
+
+# The gene diversity data (in the column GD) is currently a character string nand needs to be converted to numeric otherwise `boxplot()` won't work
+geneDiversityData[, GD := as.numeric(geneDiversityData$GD)]
+
+pdf("natural_stands_nei_gene_diversity.pdf")
+boxplot(GD ~ population_index, data = geneDiversityData,
+		xaxt = "n",
+		xlab = "Population",
+		ylab = "Nei's Gene Diversity",
+		las = 1,
+		border = c("red", "orange", "yellow3", "yellow", "green3", "green", "blue4", "blue", "violetred3", "violet", "purple4", "purple"))
+
+# Add labels
+text(x = 1:length(poplist),
+     ## Move labels to just below bottom of chart.
+     y = par("usr")[3] - 0.01,
+     ## Use names from the data list.
+     labels = c("Bass Lake (50)", "Clearwater River (50)", "Dahler Lake (50)", "Decker Lake (50)", "Garfield Lake (50)", "Mud Hen Lake (10)", "Necktie River (50)", 	"Ottertail River (50)", "Phantom Lake (20)", "Lake Plantagenet (50)", "Shell Lake (50)", "Upper Rice Lake (50)"),
+     ## Change the clipping region.
+     xpd = NA,
+     ## Rotate the labels by 35 degrees.
+     srt = 35,
+     ## Adjust the labels to almost 100% right-justified.
+     adj = 0.965,
+     ## Decrease label size.
+     cex = 0.7,
+     # Color axis labels (natural stands) to match colors in the plot
+     col = c("red", "orange", "yellow3", "yellow", "green3", "green", "blue4", "blue", "violetred3", "violet", "purple4", "purple"))
+dev.off()
