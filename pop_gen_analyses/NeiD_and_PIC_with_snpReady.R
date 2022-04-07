@@ -1,4 +1,5 @@
 # purpose of this script is to calculate Nei's Diversity and Polymorphism Information Content with the R package snpReady
+# useful vignette: https://cran.r-project.org/web/packages/snpReady/vignettes/snpReady-vignette.html
 library(data.table)
 library(impute) # probably not required to call this explicitly because it's a dependency of snpReady
 library(snpReady)
