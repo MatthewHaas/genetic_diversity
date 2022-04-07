@@ -46,3 +46,6 @@ subgroups <- as.matrix(c(rep("BassLake", 50), rep("ClearwaterRiver", 50), rep("D
 # Do popgen analyses (they are all under this umbrella)
 # Before we can get the results we are looking for (namely, Nei's D and PIC) we need to define subgroups
 popgen_res <- popgen(M = M, subgroups = subgroups)
+
+# Save data
+save(data, data_m, geno.ready, M, popgen_res, populations, sample_names, subgroups, file = "220407_snpReady_results.Rdata")
