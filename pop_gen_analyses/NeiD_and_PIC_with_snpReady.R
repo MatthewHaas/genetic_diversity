@@ -117,3 +117,55 @@ text(x = 1:length(poplist),
      # Color axis labels (natural stands) to match colors in the plot
      col = c("red", "orange", "yellow3", "yellow", "green3", "green", "blue4", "blue", "violetred3", "violet", "purple4", "purple"))
 dev.off()
+
+# Now do polymorphism information content (PIC)
+bassLake_pic <- as.data.table(cbind(population = rep("BassLake",length(popgen_res$bygroup$BassLake$Markers$PIC)), PIC = popgen_res$bygroup$BassLake$Markers$PIC))
+clearwaterRiver_pic <- as.data.table(cbind(population = rep("ClearwaterRiver",length(popgen_res$bygroup$ClearwaterRiver$Markers$PIC)), PIC = popgen_res$bygroup$ClearwaterRiver$Markers$PIC))
+dahlerLake_pic <- as.data.table(cbind(population = rep("DahlerLake",length(popgen_res$bygroup$DahlerLake$Markers$PIC)), PIC = popgen_res$bygroup$DahlerLake$Markers$PIC))
+deckerLake_pic <- as.data.table(cbind(population = rep("DeckerLake",length(popgen_res$bygroup$DeckerLake$Markers$PIC)), PIC = popgen_res$bygroup$DeckerLake$Markers$PIC))
+garfieldLake_pic <- as.data.table(cbind(population = rep("GarfieldLake",length(popgen_res$bygroup$GarfieldLake$Markers$PIC)), PIC = popgen_res$bygroup$GarfieldLake$Markers$PIC))
+mudhenLake_pic <- as.data.table(cbind(population = rep("MudHenLake",length(popgen_res$bygroup$MudHenLake$Markers$PIC)), PIC = popgen_res$bygroup$MudHenLake$Markers$PIC))
+necktieRiver_pic <- as.data.table(cbind(population = rep("NecktieRiver",length(popgen_res$bygroup$NecktieRiver$Markers$PIC)), PIC = popgen_res$bygroup$NecktieRiver$Markers$PIC))
+ottertailRiver_pic <- as.data.table(cbind(population = rep("OttertailRiver",length(popgen_res$bygroup$OttertailRiver$Markers$PIC)), PIC = popgen_res$bygroup$OttertailRiver$Markers$PIC))
+phantomLake_pic <- as.data.table(cbind(population = rep("PhantomLake",length(popgen_res$bygroup$PhantomLake$Markers$PIC)), PIC = popgen_res$bygroup$PhantomLake$Markers$PIC))
+plantagenet_pic <- as.data.table(cbind(population = rep("Plantagenet",length(popgen_res$bygroup$Plantagenet$Markers$PIC)), PIC = popgen_res$bygroup$Plantagenet$Markers$PIC))
+shellLake_pic <- as.data.table(cbind(population = rep("ShellLake",length(popgen_res$bygroup$ShellLake$Markers$PIC)), PIC = popgen_res$bygroup$ShellLake$Markers$PIC))
+upperriceLake_pic <- as.data.table(cbind(population = rep("UpperRiceLake",length(popgen_res$bygroup$UpperRiceLake$Markers$PIC)), PIC = popgen_res$bygroup$UpperRiceLake$Markers$PIC))
+
+geneDiversityPIC <- rbind(bassLake_pic, clearwaterRiver_pic, dahlerLake_pic, deckerLake_pic, garfieldLake_pic, mudhenLake_pic, necktieRiver_pic, ottertailRiver_pic, phantomLake_pic, plantagenet_pic, shellLake_pic, upperriceLake_pic)
+
+# Add a population index column so we can make a boxplot
+j = 1
+for(i in poplist){
+geneDiversityPIC[population == i, population_index := j]
+j = j + 1
+}
+
+# The gene diversity data (in the column PIC) is currently a character string nand needs to be converted to numeric otherwise `boxplot()` won't work
+geneDiversityPIC[, PIC := as.numeric(geneDiversityPIC$PIC)]
+
+pdf("natural_stands_population_information_content.pdf")
+boxplot(PIC ~ population_index, data = geneDiversityPIC,
+		xaxt = "n",
+		xlab = "Population",
+		ylab = "Polymorphism Information Content",
+		las = 1,
+		border = c("red", "orange", "yellow3", "yellow", "green3", "green", "blue4", "blue", "violetred3", "violet", "purple4", "purple"))
+
+# Add labels
+text(x = 1:length(poplist),
+     ## Move labels to just below bottom of chart.
+     y = par("usr")[3] - 0.01,
+     ## Use names from the data list.
+     labels = c("Bass Lake (50)", "Clearwater River (50)", "Dahler Lake (50)", "Decker Lake (50)", "Garfield Lake (50)", "Mud Hen Lake (10)", "Necktie River (50)", 	"Ottertail River (50)", "Phantom Lake (20)", "Lake Plantagenet (50)", "Shell Lake (50)", "Upper Rice Lake (50)"),
+     ## Change the clipping region.
+     xpd = NA,
+     ## Rotate the labels by 35 degrees.
+     srt = 35,
+     ## Adjust the labels to almost 100% right-justified.
+     adj = 0.965,
+     ## Decrease label size.
+     cex = 0.7,
+     # Color axis labels (natural stands) to match colors in the plot
+     col = c("red", "orange", "yellow3", "yellow", "green3", "green", "blue4", "blue", "violetred3", "violet", "purple4", "purple"))
+dev.off()
