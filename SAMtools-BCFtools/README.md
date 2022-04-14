@@ -4,7 +4,7 @@ The R script [plot_plink_pca.R](plot_plink_pca.R) takes output from [PLINK](http
 * ```args[1]``` is the eigenvector file (input)
 * ```args[2]``` is the eivenvalue file (input)
 * ```args[3]``` is a PDF file (output)
-* ```args[4]``` is an Rdata file (output)
+* ```args[4]``` is an Rdata file (output)<br>
 In the updated scripts, there are actually _six_ arguments. `args[1]` through `args[3]` are the same as listed above, but `args[4]` is now a PDF file for PC1 vs PC2 only and `args[5]` is a PDF file for PC2 vs PC3 only. The Rdata file then is `args[6]`. I did this to make it easier to save a single frame from the main PDF (which is a multi-page PDF going through PC8) as PNG or TIFF format for putting into the paper. When I'm working on a PC (in my office) this wouldn't be necessary since Adobe allows us to export to PNG/TIFF and would save each frame as an independent file, but when I work at home on my Mac, this task becomes more difficult.
 
 The R script [plot_breeding_lines_plink_pca.R](plot_breeding_lines_plink_pca.R) is launched by the shell script [run_plot_breeding_lines_plink_pca.sh](run_plot_breeding_lines_plink_pca.sh) and is nearly identical to the R script/shell script combination above, except that it only plots Breeding Lines. The input is also slightly different. An independent PLINK run was performed with [run_plink_20percent_NA_breeding_lines.sh](run_plink_20percent_NA_breeding_lines.sh) so that only the Breeding Lines are retained and PCs are calculated without considering the Natural Stand materials. It uses the [breeding_lines.txt](breeding_lines.txt) file to tell PLINK which samples should be retained.
