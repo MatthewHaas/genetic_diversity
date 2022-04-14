@@ -55,6 +55,15 @@ z[class == "Breeding line", col := "grey"]
 z[, pch := 16]
 z[simplified == "Aquatica_species" | simplified == "AquaticaSpecies", pch := 17]
 
+# Red River of the North watershed
+z[simplified == "Clearwater River", pch := 15]
+z[simplified == "Ottertail River", pch := 15]
+z[simplified == "Upper Rice Lake", pch := 15]
+
+# St Croix River watershed
+z[simplified == "Mud Hen Lake", pch := 18]
+z[simplified == "Phantom Lake", pch := 18]
+
 # Define a custom plotting function
 # arg1 = PC to plot on x-axis (column name)
 # arg2 = PC to plot on y-axis (column name)
@@ -79,11 +88,28 @@ plot(arg1, arg2, xlab = paste0(arg3, round(percentVar[arg4]*100), "%"),
 mtext(paste0(arg5, round(percentVar[arg6]*100), "%"), outer = FALSE, side = 2, line = 5.5, cex = 2)
 
 par(oma = c(1, 1, 0, 1))
-legend("topright", inset = c(-0.32,0.3), xpd = TRUE,
-		legend = c(expression(italic("Z. aquatica")), "Bass Lake", "Clearwater River", "Dahler Lake", "Decker Lake", "Garfield Lake",
-			"Mud Hen Lake", "Necktie River", "Ottertail River", "Phantom Lake", "Plantagenet", "Shell Lake", "Upper Rice Lake", "Breeding Line"),
-		pch = c(17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16),
-		col = c("red3", "red", "orange", "yellow3", "yellow", "green3", "green", "blue4", "blue", "violetred3", "violet", "purple4", "purple", "grey"),
+legend("topright", inset = c(-0.36,0.13), xpd = TRUE,
+		legend = c(expression(italic("Z. aquatica")), "Bass Lake", "Dahler Lake", "Decker Lake", "Garfield Lake",
+			"Necktie River", "Plantagenet", "Shell Lake", "Breeding Line"),
+		pch = c(17, 16, 16, 16, 16, 16, 16, 16, 16),
+		col = c("red3", "red", "yellow3", "yellow", "green", "blue4", "violet", "purple4", "grey"),
+		title = "Upper Mississippi River",
+		ncol = 1,
+		bty = 'n',
+		cex = 2)
+legend("topright", inset = c(-0.37, 0.55), xpd = TRUE,
+		legend = c("Clearwater River", "Ottertail River", "Upper Rice Lake"),
+		pch = 15,
+		col = c("orange", "blue", "purple"),
+		title = "Red River of the North",
+		ncol = 1,
+		bty = 'n',
+		cex = 2)
+legend("topright", inset = c(-0.33, 0.75), xpd = TRUE,
+		legend = c("Mud Hen Lake", "Phantom Lake"),
+		pch = 18,
+		col = c("green3", "violetred3"),
+		title = "St. Croix River",
 		ncol = 1,
 		bty = 'n',
 		cex = 2)		
