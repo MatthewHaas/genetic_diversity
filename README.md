@@ -81,7 +81,7 @@ Principal component analysis plot (PC1 vs PC2) for the complete set<br>
 
 ### Figure 2b
 Principal component analysis plot (PC1 vs PC2) for the natural stands only<br>
-<img src="images/220414_natural_stands_pca_PC1_vs_PC2" width="500">
+<img src="images/220414_natural_stands_pca_PC1_vs_PC2.png" width="500">
 
 ### Figure 2c
 Principal component analysis plot (PC1 vs PC2) for the cultivated material only<br>
