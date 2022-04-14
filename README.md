@@ -77,11 +77,11 @@ args <- commandArgs(trailingOnly = TRUE)
 ```
 ### Figure 2a
 Principal component analysis plot (PC1 vs PC2) for the complete set<br>
-<img src="images/210306_main_gbs_20percent_NA_Page_1.png" width="500">
+<img src="images/220413_pca_all_PC1_vs_PC2_shapes_by_watershed.png" width="500">
 
 ### Figure 2b
 Principal component analysis plot (PC1 vs PC2) for the natural stands only<br>
-<img src="images/210818_natural_stands_pca_incl_nonbiallelic.png" width="500">
+<img src="images/220414_natural_stands_pca_PC1_vs_PC2" width="500">
 
 ### Figure 2c
 Principal component analysis plot (PC1 vs PC2) for the cultivated material only<br>
