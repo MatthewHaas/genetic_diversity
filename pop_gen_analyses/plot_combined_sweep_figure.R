@@ -42,16 +42,18 @@ nucleotideDiv[CLASS == "cultivated", plot(x = POS, y = MEAN_PI,
 			ylab = "average nucleotide diversity (pi)",
 			ylim = c(0,0.7),
 			xaxt = 'n',
-			col = "black",
+			col = "#be0f34",
 			pch = PCH,
 			type = "o",
+			cex.axis = 2,
+			cex.lab = 2,
 			las = 1)]
 nucleotideDiv[CLASS == "natural stands", lines(x = POS, y = MEAN_PI,
 			xlab = "Chromosomes",
 			ylab = "average nucleotide diversity (pi)",
 			ylim = c(0,0.7),
 			xaxt = 'n',
-			col = "#00a54c",
+			col = "#00a0df",
 			pch = PCH,
 			type = "o",
 			las = 1)]
@@ -65,6 +67,8 @@ Fst[,plot(x = POS, y = WEIR_AND_COCKERHAM_FST,
 			xaxt = 'n',
 			col = COL,
 			pch = 16,
+	  		cex.axis = 2,
+			cex.lab = 2,
 			las = 1)]
 axis(side = 1, at = Fst_mids, labels = c("ZPchr0001", "ZPchr0002", "ZPchr0003", "ZPchr0004", "ZPchr0005", "ZPchr0006", "ZPchr0007", "ZPchr0008", "ZPchr0009", "ZPchr0010", "ZPchr0011", "ZPchr0012", "ZPchr0013", "ZPchr0014", "ZPchr0015", "ZPchr0016"))
 # Last but not least, it's time for the XP-CLR plot
@@ -74,6 +78,8 @@ combined[, plot(x = genetic_pos, y = XPCLR_score,
 			ylim = c(0,110),
 			xaxt = 'n',
 			col = col,
+			cex.axis = 2,
+			cex.lab = 2,
 			las = 1)]
 axis(side = 1, at = XPCLR_mids, labels = c("ZPchr0001", "ZPchr0002", "ZPchr0003", "ZPchr0004", "ZPchr0005", "ZPchr0006", "ZPchr0007", "ZPchr0008", "ZPchr0009", "ZPchr0010", "ZPchr0011", "ZPchr0012", "ZPchr0013", "ZPchr0014", "ZPchr0015", "ZPchr0016", "ZPchr0458"))
 dev.off()
