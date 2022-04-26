@@ -35,6 +35,8 @@ chr_bounds <- append(chr_bounds, max(nucleotideDiv[CHROM_INDEX == i]$POS))
 }
 # Make combined plot
 pdf("220420_combined_sweep_figure.pdf", height = 15, width = 25)
+par(oma = c(1,2,1,1))
+par(mar = c(2,6,2,2))
 layout(matrix(c(1,2,3), ncol = 1))
 # Start with the nucleotide diversity figure
 nucleotideDiv[CLASS == "cultivated", plot(x = POS, y = MEAN_PI,
@@ -45,8 +47,8 @@ nucleotideDiv[CLASS == "cultivated", plot(x = POS, y = MEAN_PI,
 			col = "#be0f34",
 			pch = PCH,
 			type = "o",
-			cex.axis = 2,
-			cex.lab = 2,
+			cex.axis = 1.5,
+			cex.lab = 1.5,
 			las = 1)]
 nucleotideDiv[CLASS == "natural stands", lines(x = POS, y = MEAN_PI,
 			xlab = "Chromosomes",
@@ -57,7 +59,7 @@ nucleotideDiv[CLASS == "natural stands", lines(x = POS, y = MEAN_PI,
 			pch = PCH,
 			type = "o",
 			las = 1)]
-axis(side = 1, at = nucleotide_mids, labels = c("ZPchr0001", "ZPchr0002", "ZPchr0003", "ZPchr0004", "ZPchr0005", "ZPchr0006", "ZPchr0007", "ZPchr0008", "ZPchr0009", "ZPchr0010", "ZPchr0011", "ZPchr0012", "ZPchr0013", "ZPchr0014", "ZPchr0015", "ZPchr0016", "ZPchr0458"))
+axis(side = 1, cex.axis = 2, at = nucleotide_mids, labels = c("ZPchr0001", "ZPchr0002", "ZPchr0003", "ZPchr0004", "ZPchr0005", "ZPchr0006", "ZPchr0007", "ZPchr0008", "ZPchr0009", "ZPchr0010", "ZPchr0011", "ZPchr0012", "ZPchr0013", "ZPchr0014", "ZPchr0015", "ZPchr0016", "ZPchr0458"))
 abline(v = chr_bounds, col = "#a3aaad")
 # Now, Fst
 Fst[,plot(x = POS, y = WEIR_AND_COCKERHAM_FST,
@@ -67,11 +69,10 @@ Fst[,plot(x = POS, y = WEIR_AND_COCKERHAM_FST,
 			xaxt = 'n',
 			col = COL,
 			pch = 16,
-	  		cex.axis = 2,
-			cex.lab = 2,
+	  		cex.axis = 1.5,
+			cex.lab = 1.5,
 			las = 1)]
-axis(side = 1, at = Fst_mids, labels = c("ZPchr0001", "ZPchr0002", "ZPchr0003", "ZPchr0004", "ZPchr0005", "ZPchr0006", "ZPchr0007", "ZPchr0008", "ZPchr0009", "ZPchr0010", "ZPchr0011", "ZPchr0012", "ZPchr0013", "ZPchr0014", "ZPchr0015", "ZPchr0016"))
-abline(v = chr_bounds, col = "#a3aaad")
+axis(side = 1, cex.axis = 2, at = Fst_mids, labels = c("ZPchr0001", "ZPchr0002", "ZPchr0003", "ZPchr0004", "ZPchr0005", "ZPchr0006", "ZPchr0007", "ZPchr0008", "ZPchr0009", "ZPchr0010", "ZPchr0011", "ZPchr0012", "ZPchr0013", "ZPchr0014", "ZPchr0015", "ZPchr0016"))
 # Last but not least, it's time for the XP-CLR plot
 combined[, plot(x = genetic_pos, y = XPCLR_score,
 			xlab = "Chromosomes",
@@ -79,8 +80,8 @@ combined[, plot(x = genetic_pos, y = XPCLR_score,
 			ylim = c(0,110),
 			xaxt = 'n',
 			col = col,
-			cex.axis = 2,
-			cex.lab = 2,
+			cex.axis = 1.5,
+			cex.lab = 1.5,
 			las = 1)]
-axis(side = 1, at = XPCLR_mids, labels = c("ZPchr0001", "ZPchr0002", "ZPchr0003", "ZPchr0004", "ZPchr0005", "ZPchr0006", "ZPchr0007", "ZPchr0008", "ZPchr0009", "ZPchr0010", "ZPchr0011", "ZPchr0012", "ZPchr0013", "ZPchr0014", "ZPchr0015", "ZPchr0016", "ZPchr0458"))
+axis(side = 1, cex.axis = 2, at = XPCLR_mids, labels = c("ZPchr0001", "ZPchr0002", "ZPchr0003", "ZPchr0004", "ZPchr0005", "ZPchr0006", "ZPchr0007", "ZPchr0008", "ZPchr0009", "ZPchr0010", "ZPchr0011", "ZPchr0012", "ZPchr0013", "ZPchr0014", "ZPchr0015", "ZPchr0016", "ZPchr0458"))
 dev.off()
