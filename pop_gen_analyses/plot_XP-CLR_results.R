@@ -2,7 +2,10 @@ library(data.table)
 library(rlist) # needed for the `list.rbind()` function
 
 # Make a list of fienames to read in
-filelist = list.files(pattern = ".*.txt")
+#filelist = list.files(pattern = "*.txt") # the original results (includes all cultivated material, even non-cultivars)
+#filelist = list.files(pattern = "xp-clor_results_2*.txt") # includes only the following cultivars: Barron, Itasca-C12, Itasca-C20, FY-C20, K2 (mostly to check if we could ID shattering loci)
+filelist = list.files(pattern = "xp-clor_results_3*.txt") # switched the order of input files in shell script (so that natural stands were first) to see how that impacted the analysis
+
 
 # Make a list of data.tables
 datalist = lapply(filelist, function(x) fread(x, header=F))
