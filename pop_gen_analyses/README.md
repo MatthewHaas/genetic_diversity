@@ -62,9 +62,13 @@ The basic pattern for the code looks like this:<br>
 XPCLR -xpclr genofile1 genofile2 mapfile outputFile -w1 snpWin gridSize chrN -p corrLevel
 ```
 where:<br>
-genofile1 (cultivated material) is the genotype input for _object_ population
-genofile2 (natural stands) is the genotype input for _reference_ population
-mapfile contains snp information file (**for SNPs from a single chromosome**) 
+genofile1 (cultivated material) is the genotype input for _object_ population<br>
+genofile2 (natural stands) is the genotype input for _reference_ population<br>
+mapfile contains snp information file (**for SNPs from a single chromosome**)<br>
+
+**Note:** One thing to pay particularly close attention to is the fact that the analysis needs to be run separately for each chromosome. This is why each file (genofile1, genofile2, and the mapfile) have numbers as suffixes (".1", ".2", ".3", ... , ".17"). The ".17" corresponds to ZPchr0458. I used 17 rather than .458 for consistency with the other input files (and because when I did some other analyses such as the LD decay analysis, when there was a jump between "chromosome 16" and "chromosome 458", the program/function `LD.decay()` in R thought there should be additional chromosomes for each number between 16 and 458. The output file for "chromosome 17" reverts back to ZPchr0458 so it doesn't interfere with our consistent usage of the nomenclature elsewhere.
+
+**For the input file:** I opened the SNP matrix (CSV format) in Excel and converted the genotype calls to the format required by the XP-CLR program. The "0" that represents a _homozygous reference_ SNP call becomes "0 0"; the "1" that represents the _heterozygous_ SNP call becomes "0 1" and the "2" that representes the _homozygous alternate_ SNP call becomes "1 1". Then, because each genotype is in its own cell (being in comma-separated format), I decided to concatenate each of the individual SNP calls so that they were all in a single cell in Excel (separated by a single whitespace character). To do this, I used a custom Excel function called `CONCATENATEMULTIPLE` that allowed me to select an array/range of cells in Excel and concatenate them all, separated by a character of my choice. So, I chose a single white space character (`sep = " "`). Then, I copy and pasted the results _for each chromosome_ into their own text (.txt) files (but with a suffix that corresponds to the chromosome that they represent) and uploaded them all to the MSI system to run the analysis. This was done separately for the cultivated material (genofile1) and the natural stands (genofile2).
 
 -----------------------------
 _The information below is related to using Arlequin which we have more or less abandoned because it didn't seem useful for high-throughput SNP data_
