@@ -54,6 +54,17 @@ This isn't a complete summary of how I processed my data, but it's enough for th
 
 **The second input file** contains the map data with three columns. The first column contains the SNP names (which are somewhat arbitrary); the second column contains the chromosome/linkage group names; and the third column contains the position of the SNP (either in basepairs as in our data or in centiMorgans).
 
+## XP-CLR
+The XP-CLR analysis (Cross-Population Composite Likelihood Ratio) analysis tests for selective sweeps. The method we used was implemented by [Chen et al. 2010](https://genome.cshlp.org/content/20/3/393.short). The README can be found [here](https://vcru.wisc.edu/simonlab/bioinformatics/programs/xpclr/README.txt).<br>
+The basic pattern for the code looks like this:<br>
+```bash
+XPCLR -xpclr genofile1 genofile2 mapfile outputFile -w1 snpWin gridSize chrN -p corrLevel
+```
+where:<br>
+genofile1 (cultivated material) is the genotype input for _object_ population
+genofile2 (natural stands) is the genotype input for _reference_ population
+mapfile contains snp information file (**for SNPs from a single chromosome**) 
+
 -----------------------------
 _The information below is related to using Arlequin which we have more or less abandoned because it didn't seem useful for high-throughput SNP data_
 
