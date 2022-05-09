@@ -70,9 +70,9 @@ z[simplified == "Phantom Lake", pch := 18]
 # pch = plotting character parameter (in the context of this script, you only need to inclue the pch as an argument in the function (written just like that: pch -no quotes- because it's a column in the data table, just like PC1, PC2, etc)
 # col = color parameter (same situation as pch)
 plot_pcs <- function(arg1, arg2, arg3, arg4, arg5, arg6, pch, col){
-par(mar = c(4, 6, 2, 20))
+par(mar = c(4, 8, 2, 22))
 plot(arg1, arg2, xlab = paste0(arg3, round(percentVar[arg4]*100), "%"), 
-		     ylab = paste0(arg5, round(percentVar[arg6]*100), "%"),
+		     ylab = "",
 		     main = "",
 		     pch = pch,
 		     col = col,
@@ -80,10 +80,12 @@ plot(arg1, arg2, xlab = paste0(arg3, round(percentVar[arg4]*100), "%"),
 		     cex.lab = 2,
 		     cex.axis = 2,
 		     yaxt = 'n')
-axis(2, las = 1)
+
+mtext(paste0(arg5, round(percentVar[arg6]*100), "%"), outer = FALSE, side = 2, line = 5.5, cex = 2)
+axis(2, las = 1, cex.lab = 2, cex.axis = 2)
 
 par(oma = c(1, 1, 0, 2))
-legend("topright", inset = c(-0.37,0.13), xpd = TRUE,
+legend("topright", inset = c(-0.40,0.13), xpd = TRUE,
 		legend = c(expression(italic("Z. aquatica")), "Bass Lake", "Dahler Lake", "Decker Lake", "Garfield Lake",
 			"Necktie River", "Plantagenet", "Shell Lake"),
 		pch = c(17, 16, 16, 16, 16, 16, 16, 16),
@@ -92,7 +94,7 @@ legend("topright", inset = c(-0.37,0.13), xpd = TRUE,
 		ncol = 1,
 		bty = 'n',
 		cex = 2)
-legend("topright", inset = c(-0.37, 0.55), xpd = TRUE,
+legend("topright", inset = c(-0.40, 0.55), xpd = TRUE,
 		legend = c("Clearwater River", "Ottertail River", "Upper Rice Lake"),
 		pch = 15,
 		col = c("orange", "blue", "purple"),

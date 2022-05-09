@@ -14,7 +14,7 @@ y <- fread("~/main_GBS/191021_main_GBS_sample_key.csv")
 
 # set column names
 setnames(x, c("sample", "PC1", "PC2", "PC3", "PC4", "PC5", "PC6", "PC7", "PC8", "PC9", "PC10", "PC11", "PC12", "PC13",
-                        "PC14", "PC15", "PC16", "PC17", "PC18", "PC19", "PC20"))
+			"PC14", "PC15", "PC16", "PC17", "PC18", "PC19", "PC20"))
 
 setnames(y, c("sample", "ID", "simplified", "extended", "class"))
 
@@ -93,39 +93,48 @@ z[simplified == "KSVN-C4", pch := 17]
 # pch = plotting character parameter (in the context of this script, you only need to inclue the pch as an argument in the function (written just like that: pch -no quotes- because it's a column in the data table, just like PC1, PC2, etc)
 # col = color parameter (same situation as pch)
 plot_pcs <- function(arg1, arg2, arg3, arg4, arg5, arg6, pch, col){
-par(mar = c(4, 4, 2, 16))
-plot(arg1, arg2, xlab = paste0(arg3, round(percentVar[arg4]*100), "%"),
-                     ylab = paste0(arg5, round(percentVar[arg6]*100), "%"),
-                     main = "Breeding Lines",
-                     pch = pch,
-                     col = col,
-                     cex = 1.5,
-                     yaxt = 'n')
-axis(2, las = 1)
+par(mar = c(4, 8, 2, 22))
+plot(arg1, arg2, xlab = paste0(arg3, round(percentVar[arg4]*100), "%"), 
+		     ylab = "",,
+		     main = "",
+		     pch = pch,
+		     col = col,
+		     cex.lab = 2,
+		     cex.axis = 2,
+		     cex = 2,
+		     yaxt = 'n')
+mtext(paste0(arg5, round(percentVar[arg6]*100), "%"),outer = FALSE, side = 2, line = 5.5, cex = 2)
+axis(2, las = 1, cex.lab = 2, cex.axis = 2)
 
-par(oma = c(0, 0, 0, 0))
-legend("topright", inset = c(-0.2,0.3), xpd = TRUE,
-                legend = c("Itasca-C12", "PM3E", "PM3E/7*K2EF", "PM3/3*PBM-C3", "14S-PS",
-                           "14S*PS", "14S*PM3/PBM-C3", "14PD-C10", "K2EF-C16", "K2EFBP-C1", "K2B-C16", "VN/3*K2EF",
-                           "VE/2*14WS/*4K2EF", "GPB/K2B-C2", "GPP-1.20", "GPN-1.20", "FY-C20", "Barron", "PBML-C20",
-                           "PLaR-C20", "KPVN-C4", "KSVN-C4"),
-                pch = c(16, 16, 17, 18, 16, 17, 18, 15, 16, 17, 18, 15, 13, 16, 17, 18, 16, 16, 16, 16, 16, 17),
-                col = c("darkgoldenrod1", "hotpink", "hotpink", "hotpink",
-                        "chocolate2", "chocolate2", "chocolate2", "chocolate2", "blue4", "blue4", "blue4", "blue4", "blue4",
-                        "cyan4", "cyan4", "cyan4", "wheat4", "firebrick1", "darksalmon", "forestgreen", "darkviolet",
-                        "darkviolet"),
-                ncol = 1,
-                cex = 1.2)
+par(oma = c(1, 1, 0, 1))
+legend("topright", inset = c(-0.4,0.1), xpd = TRUE,
+		legend = c("Itasca-C12", "PM3E", "PM3E/7*K2EF", "PM3/3*PBM-C3", "14S-PS",
+			   "14S*PS", "14S*PM3/PBM-C3", "14PD-C10", "K2EF-C16", "K2EFBP-C1", "K2B-C16", "VN/3*K2EF", 
+			   "VE/2*14WS/*4K2EF", "GPB/K2B-C2", "GPP-1.20", "GPN-1.20", "FY-C20", "Barron", "PBML-C20", 
+			   "PLaR-C20", "KPVN-C4", "KSVN-C4"),
+		pch = c(16, 16, 17, 18, 16, 17, 18, 15, 16, 17, 18, 15, 13, 16, 17, 18, 16, 16, 16, 16, 16, 17),
+		col = c("darkgoldenrod1", "hotpink", "hotpink", "hotpink", 
+			"chocolate2", "chocolate2", "chocolate2", "chocolate2", "blue4", "blue4", "blue4", "blue4", "blue4",
+			"cyan4", "cyan4", "cyan4", "wheat4", "firebrick1", "darksalmon", "forestgreen", "darkviolet", 
+			"darkviolet"),
+		ncol = 1,
+		bty = 'n',
+		cex = 2)		
 }
 
 # Make the plot
 pdf(args[3], height=12, width=16)
-z[, plot_pcs(PC1, PC2, "PC1: ", 1, "PC2: ", 2, pch, col)]
+z[, plot_pcs(PC1, PC2, "PC1: ", 1, "PC2: ", 2, pch, col)] 
 z[, plot_pcs(PC2, PC3, "PC2: ", 2, "PC3: ", 3, pch, col)]
 z[, plot_pcs(PC3, PC4, "PC3: ", 3, "PC4: ", 4, pch, col)]
 z[, plot_pcs(PC4, PC5, "PC4: ", 4, "PC5: ", 5, pch, col)]
 z[, plot_pcs(PC5, PC6, "PC5: ", 5, "PC6: ", 6, pch, col)]
 dev.off()
 
+# PC1 vs PC2 plot only
+pdf(args[4], height=12, width=16)
+z[, plot_pcs(PC1, PC2, "PC1: ", 1, "PC2: ", 2, pch, col)]
+dev.off()
+
 # Save data
-save(v, x, y, z, percentVar, file=args[4])
+save(v, x, y, z, percentVar, file=args[5])

@@ -31,38 +31,18 @@ percentVar = c(PC1=v[1, V1] / sum(v$V1), PC2=v[2, V1] / sum(v$V1), PC3=v[3, V1] 
 # Merge data tables
 x[y, on="sample"] -> z
 
-# Pick colors for individual natural stand accessions 
-z[simplified == "Aquatica_species", col := "red3"]
-z[simplified == "Bass Lake", col := "red"]
-#z[simplified == "Big Fork River", col := "orange3"]
-z[simplified == "Clearwater River", col := "orange"]
-z[simplified == "Dahler Lake", col := "yellow3"]
-z[simplified == "Decker Lake", col := "yellow"]
+# Pick colors for individual natural stand accessions (same colors as complete set) 
 z[simplified == "Garfield Lake", col := "green3"]
-#z[simplified == "Latifolia", col := "black"]
-z[simplified == "Mud Hen Lake", col := "green"]
-z[simplified == "Necktie River", col := "blue4"]
-z[simplified == "Ottertail River", col := "blue"]
-z[simplified == "Phantom Lake", col := "violetred3"]
-z[simplified == "Plantagenet", col := "violet"]
 z[simplified == "Shell Lake", col := "purple4"]
-z[simplified == "Upper Rice Lake", col := "purple"]
+z[simplified == "Garfield Lake Old", col := "burlywood"]
+z[simplified == "Shell Lake Old", col := "hotpink"]
 
-# And color breeding lines grey
-z[class == "Breeding line", col := "grey"]
 
-# Add symbols to make some lines stand out better (circles-16 for most, triangles-17 for others)
-z[, pch := 16]
-z[simplified == "Aquatica_species" | simplified == "AquaticaSpecies", pch := 17]
-
-# Red River of the North watershed
-z[simplified == "Clearwater River", pch := 15]
-z[simplified == "Ottertail River", pch := 15]
-z[simplified == "Upper Rice Lake", pch := 15]
-
-# St Croix River watershed
-z[simplified == "Mud Hen Lake", pch := 18]
-z[simplified == "Phantom Lake", pch := 18]
+# Set plotting character
+z[simplified == "Garfield Lake", pch := 16]
+z[simplified == "Shell Lake", pch := 16]
+z[simplified == "Garfield Lake Old", pch := 16]
+z[simplified == "Shell Lake Old", pch := 16]
 
 # Define a custom plotting function
 # arg1 = PC to plot on x-axis (column name)
@@ -74,42 +54,24 @@ z[simplified == "Phantom Lake", pch := 18]
 # pch = plotting character parameter (in the context of this script, you only need to inclue the pch as an argument in the function (written just like that: pch -no quotes- because it's a column in the data table, just like PC1, PC2, etc)
 # col = color parameter (same situation as pch)
 plot_pcs <- function(arg1, arg2, arg3, arg4, arg5, arg6, pch, col){
-par(mar = c(4, 8, 2, 19))
+par(mar = c(4, 8, 2, 22))
 plot(arg1, arg2, xlab = paste0(arg3, round(percentVar[arg4]*100), "%"), 
 		     ylab = "",
 		     main = "",
 		     pch = pch,
 		     col = col,
 		     cex = 2,
-		     cex.lab = 2,
 		     cex.axis = 2,
-	             las = 1)
-#axis(2, las = 1, cex.lab = 2, cex.axis = 2)
+		     cex.lab = 2,
+		     yaxt = 'n')
 mtext(paste0(arg5, round(percentVar[arg6]*100), "%"), outer = FALSE, side = 2, line = 5.5, cex = 2)
+axis(2, las = 1, cex.label = 2, cex.axis = 2)
 
 par(oma = c(1, 1, 0, 1))
-legend("topright", inset = c(-0.36,0.13), xpd = TRUE,
-		legend = c(expression(italic("Z. aquatica")), "Bass Lake", "Dahler Lake", "Decker Lake", "Garfield Lake",
-			"Necktie River", "Plantagenet", "Shell Lake", "Breeding Line"),
-		pch = c(17, 16, 16, 16, 16, 16, 16, 16, 16),
-		col = c("red3", "red", "yellow3", "yellow", "green", "blue4", "violet", "purple4", "grey"),
-		title = "Upper Mississippi River",
-		ncol = 1,
-		bty = 'n',
-		cex = 2)
-legend("topright", inset = c(-0.37, 0.55), xpd = TRUE,
-		legend = c("Clearwater River", "Ottertail River", "Upper Rice Lake"),
-		pch = 15,
-		col = c("orange", "blue", "purple"),
-		title = "Red River of the North",
-		ncol = 1,
-		bty = 'n',
-		cex = 2)
-legend("topright", inset = c(-0.33, 0.75), xpd = TRUE,
-		legend = c("Mud Hen Lake", "Phantom Lake"),
-		pch = 18,
-		col = c("green3", "violetred3"),
-		title = "St. Croix River",
+legend("topright", inset = c(-0.39, 0.45), xpd = TRUE,
+		legend = c("Garfield Lake 2018","Garfield Lake 2010",  "Shell Lake 2018", "Shell Lake 2010"),
+		pch = c(16, 16, 16, 16),
+		col = c("green3", "burlywood", "purple4", "hotpink"),
 		ncol = 1,
 		bty = 'n',
 		cex = 2)		
@@ -129,10 +91,5 @@ pdf(args[4], height=12, width=16)
 z[, plot_pcs(PC1, PC2, "PC1: ", 1, "PC2: ", 2, pch, col)]
 dev.off()
 
-# PC 2 vs PC3 only
-pdf(args[5], height=12, width=16)
-z[, plot_pcs(PC2, PC3, "PC2: ", 2, "PC3: ", 3, pch, col)]
-dev.off()
-
 # Save data
-save(v, x, y, z, percentVar, file=args[6])
+save(v, x, y, z, percentVar, file=args[5])
