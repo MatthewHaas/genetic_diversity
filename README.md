@@ -139,7 +139,27 @@ STRUCTURE results for _K_ = 6<br>
 
 # Tables
 
-
+### Table 1
+Summary marker statistics for 5,955 Northern Wild Rice (NWR; Zizania palustris L.) bi-allelic single nucleotide polymorphism (SNP) markers generated via genotyping-by-sequencing (GBS). 
+| Chr/Scaffold | Size (Mbp) | # of SNPs | % of total SNPs | # of SNPs in genic regions | % of SNPs in genic regions per chromosome |
+| :----------- | ---------: | --------: | --------------: | -------------------------: | ----------------------------------------: |
+| ZPchr0001    | 95.4       | 483       | 8.11%           | 74                         | 15.32%                                    |
+| ZPchr0002    | 103.4      | 435       | 7.30%           | 56                         | 12.87%                                    |
+| ZPchr0003    | 58.8       | 302       | 5.07%           | 37                         | 12.25%                                    |
+| ZPchr0004    | 98.7       | 491       | 8.25%           | 24                         | 4.89%                                     |
+| ZPchr0005    | 66.6       | 350       | 5.88%           | 41                         | 11.71%                                    |
+| ZPchr0006    | 118.0      | 598       | 10.04%          | 126                        | 21.07%                                    |
+| ZPchr0007    | 42.6       | 181       | 3.04%           | 66                         | 36.46%                                    |
+| ZPchr0008    | 75.7       | 367       | 6.16%           | 38                         | 10.35%                                    |
+| ZPchr0009    | 95.1       | 481       | 8.08%           | 25                         | 5.20%                                     |
+| ZPchr0010    | 111.4      | 568       | 9.54%           | 75                         | 13.20%                                    |
+| ZPchr0011    | 63.2       | 285       | 4.76%           | 41                         | 14.39%                                    |
+| ZPchr0012    | 105.9      | 410       | 6.88%           | 86                         | 20.98%                                    |
+| ZPchr0013    | 111.3      | 583       | 9.79%           | 66                         | 11.32%                                    |
+| ZPchr0014    | 24.0       | 91        | 1.53%           | 28                         | 30.77%                                    |
+| ZPchr0015    | 39.1       | 237       | 3.98%           | 12                         | 5.06%                                     |
+| ZPchr0016    | 13.8       | 88        | 1.48%           | 6                          | 6.82%                                     |
+| ZPchr0458    | 4.3        | 5         | 0.08%           | 3                          | 60.00%                                    |
 
 ### Table 2
 Analysis of Molecular Variance (AMOVA). The AMOVA was performed using the [AMOVA.R](pop_gen_analyses/AMOVA/AMOVA.R) R script launched by [run_AMOVA.sh](pop_gen_analyses/AMOVA/run_AMOVA.sh).
