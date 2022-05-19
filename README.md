@@ -182,6 +182,8 @@ Analysis of Molecular Variance (AMOVA). The AMOVA was performed using the [AMOVA
 
 ### Table 3
 Fixation index (_F<sub>ST</sub>_) values derived using the weighted Weir and Cockerham method (Weir and Cockerham, 1984) based on 5,955 single nucleotide polymorphism (SNP) markers generated via genotyping-by-sequencing (GBS) for a diversity collection of Northern Wild Rice (NWR; _Zizania palustris_ L.) consisting of a.) A Natural Stand collection; b.) A Cultivated collection; and c.) A comparison of Natural Stand and Cultivated collections. Sample sizes can be found in Table S1.   
+
+**Natural Stands vs. Natural Stands**
 |     | Clearwater River | Dahler Lake | Decker Lake | Garfield Lake | Mud Hen Lake | Necktie River | Ottertail River | Phantom Lake | (Lake) Plantagenet | Shell Lake | Upper Rice Lake | _Z. aquatica_ |
 | :------ | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Bass Lake | 0.1040 | 0.0722 | 0.0487 | 0.0802 | 0.1529 | 0.0979 | 0.1201 | 0.0678 | 0.1080 | 0.1254 | 0.0434 | 0.1201 |
@@ -197,6 +199,14 @@ Fixation index (_F<sub>ST</sub>_) values derived using the weighted Weir and Coc
 | Shell Lake | | | | | | | | | | | 0.0628 | 0.1175 |
 | Upper Rice Lake | | | | | | | | | | | | 0.0790 |
 
+**Cultived vs. Cultivated**
+| | FY-C20 | Itasca-C12 | Itasca-C20 | K2EF-C16 | PM3E |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| Barron | 0.0099 | 0.0058 | 0.0155 | 0.0273 | 0.0111 |
+| FY-C20 | | 0.0063 | 0.0065 | 0.0233 | 0.0086 |
+| Itasca-C12 | | | 0.0078 | 0.0279 | 0.0121 |
+| Itasca-C20 | | | | 0.0337 | 0.0190 |
+| K2EF-C16 | | | | | 0.0276 | 
 
 ### Table S4
 The Transition/Transversion ratios were generated using the script [calculate_TsTv_vcftools.sh](vcftools_scripts_incl_nonbiallelic/calculate_TsTv_vcftools.sh). Additional details can be found within the directory containing the script.
