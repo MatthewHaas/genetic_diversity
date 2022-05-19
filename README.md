@@ -233,7 +233,11 @@ List of samples in our diversity collection of Northern Wild Rice (NWR; _Zizania
 | Bass Lake | 50 | Natural Stand | 47.28716 - 93.63132 | UMR |
 | Clearwater River | 50 | Natural Stand | 47.51838 - 95.46291 | RRN |
 | Dahler Lake | 50 | Natural Stand | 46.71888 - 93.97281 | UMR |
-| Decker Lake | 50 | Natural Stand | 47.63515 - 94.40492 | UMR | 
+| Decker Lake | 50 | Natural Stand | 47.63515 - 94.40492 | UMR |
+| Garfield Lake | 50 | Natural Stand/Temporal | 47.21361 - 94.74380 | UMR |
+| Mud Hen Lake | 10 | Natural Stand | 45.77005 - 92.47173 | SCR |
+| Necktie River | 50 Natural Stand | 47.29363 - 94.74724 | UMR |
+| Ottertail River | 50 | Natural Stand | 46.38005 - 95.86430 | RRN |
 
 
 ### Table S4
