@@ -20,6 +20,7 @@ This repository contains all of the scripts that were used to develop the genoty
 ## Tables
 1. [Table 1](#Table-1)
 2. [Table 2](#Table-2)
+3. [Table S4](#Table-S4)
 
 ## Supplemental Figures
 1. [Figure S1](#Figure-S1)
@@ -138,7 +139,27 @@ STRUCTURE results for _K_ = 6<br>
 
 # Tables
 
-### Table 1
+
+
+### Table 2
+Analysis of Molecular Variance (AMOVA). The AMOVA was performed using the [AMOVA.R](pop_gen_analyses/AMOVA/AMOVA.R) R script launched by [run_AMOVA.sh](pop_gen_analyses/AMOVA/run_AMOVA.sh).
+
+| Grouping | Source of variation | df | MS | Sigma | % | Probability |
+| :--- | :--- | ---: | ---: | ---: | ---: | ---: |
+| Natural stands vs. Natural stands | Variations between individuals | 12 | 7440.64 | 133.71 | 8.10 | 0.001 |
+|                                   | Variations within individuals  | 567 | 1516.08 | 1516.08 | 91.90 | 0.001 |
+|                                   | Total variation                | 579 | 1638.87 | 1649.78 | 100.00 | 0.001 |
+| Cultivated vs. Cultivated         | Variations between individuals | 20  | 1841.49  | 49.61   | 3.37 | 0.001 |
+|                                   | Variations within individuals  | 166 | 1421.51 | 1421.51 | 96.63 | 0.001 |
+|                                   | Total variation                | 186 | 1466.67 | 1471.11 | 100.00 | 0.001 |
+| Natural stands vs. Cultivated     | Variations between individuals | 1 | 20,955.05 | 68.42 | 4.09 | 0.001 |
+|                                   | Variations within indiviuduals | 765 | 1604.18 | 1604.17 | 95.91 | 0.001 |
+|                                   | Total variation                | 766 | 1629.44 | 1672.60 | 100.00 | 0.001 |
+| STRUCTURE grouping _K_ = 5        | Variations between individuals | 5 | 8508.68 | 57.96 | 3.53 | 0.001 |
+|                                   | Variations within individuals  | 761 | 1584.24 | 1584.24 | 96.47 | 0.001 |
+|                                   | Total variation                | 766 | 1629.44 | 1642.20 | 100.00 | 0.001 |
+
+### Table S4
 The Transition/Transversion ratios were generated using the script [calculate_TsTv_vcftools.sh](vcftools_scripts_incl_nonbiallelic/calculate_TsTv_vcftools.sh). Additional details can be found within the directory containing the script.
 <!---
 Note: In order to get non-breaking white space in 'original scaffold name' and 'genome wide', I had to hold down the alt/option button on my Mac while typing the space. Otherwise the table looks ugly due to text wrapping for those columns. Other computer types like a PC may have different keystrokes to achieve same goal.
@@ -158,24 +179,6 @@ Note: In order to get non-breaking white space in 'original scaffold name' and '
 | Transitions (Ts) | 366 | 345 | 217 | 383 | 278 | 430 | 115 | 280 | 377 | 423 | 223 | 303 | 446 | 69 | 190 | 71 | 3 | 4519 |
 | Transversions (Tv) | 117 | 90 | 85 | 108 | 72 | 168 | 66 | 87 | 104 | 145 | 62 | 107 | 137 | 22 | 47 | 17 | 2 | 1436 |
 | TsTv ratio | 3.13 | 3.83 | 2.55 | 3.55 | 3.86| 2.56 | 1.74 | 3.22 | 3.63 | 2.92 | 3.60 | 2.83 | 3.26 | 3.14 | 4.04 | 4.18 | 1.50 | 3.15 |
-
-### Table 2
-Analysis of Molecular Variance (AMOVA). The AMOVA was performed using the [AMOVA.R](pop_gen_analyses/AMOVA/AMOVA.R) R script launched by [run_AMOVA.sh](pop_gen_analyses/AMOVA/run_AMOVA.sh).
-
-| Grouping | Source of variation | df | MS | Sigma | % | Probability |
-| :--- | :--- | ---: | ---: | ---: | ---: | ---: |
-| Natural stands vs. Natural stands | Variations between individuals | 12 | 7440.64 | 133.71 | 8.10 | 0.001 |
-|                                   | Variations within individuals  | 567 | 1516.08 | 1516.08 | 91.90 | 0.001 |
-|                                   | Total variation                | 579 | 1638.87 | 1649.78 | 100.00 | 0.001 |
-| Cultivated vs. Cultivated         | Variations between individuals | 20  | 1841.49  | 49.61   | 3.37 | 0.001 |
-|                                   | Variations within individuals  | 166 | 1421.51 | 1421.51 | 96.63 | 0.001 |
-|                                   | Total variation                | 186 | 1466.67 | 1471.11 | 100.00 | 0.001 |
-| Natural stands vs. Cultivated     | Variations between individuals | 1 | 20,955.05 | 68.42 | 4.09 | 0.001 |
-|                                   | Variations within indiviuduals | 765 | 1604.18 | 1604.17 | 95.91 | 0.001 |
-|                                   | Total variation                | 766 | 1629.44 | 1672.60 | 100.00 | 0.001 |
-| STRUCTURE grouping _K_ = 5        | Variations between individuals | 5 | 8508.68 | 57.96 | 3.53 | 0.001 |
-|                                   | Variations within individuals  | 761 | 1584.24 | 1584.24 | 96.47 | 0.001 |
-|                                   | Total variation                | 766 | 1629.44 | 1642.20 | 100.00 | 0.001 |
 
 # Supplementary Figures
 
