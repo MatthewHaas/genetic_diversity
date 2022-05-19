@@ -206,7 +206,24 @@ Fixation index (_F<sub>ST</sub>_) values derived using the weighted Weir and Coc
 | FY-C20 | | 0.0063 | 0.0065 | 0.0233 | 0.0086 |
 | Itasca-C12 | | | 0.0078 | 0.0279 | 0.0121 |
 | Itasca-C20 | | | | 0.0337 | 0.0190 |
-| K2EF-C16 | | | | | 0.0276 | 
+| K2EF-C16 | | | | | 0.0276 |
+
+**Cultivated vs. Natural Stands**
+| | Barron | FY-C20 | Itasca-C12 | Itasca-C20 | K2EF-C16 | PM3E |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| Bass Lake | 0.0362 | 0.0342 | 0.0342 | 0.0436 | 0.0440 | 0.0276 |
+| Clearwater River | 0.0456 | 0.0464 | 0.0472 | 0.0595 | 0.0584 | 0.0431 |
+| Dahler Lake | 0.0412 | 0.0418 | 0.0398 | 0.0504 | 0.0515 | 0.0369 |
+| Decker Lake | 0.0412 | 0.0424 | 0.0422 | 0.0559 | 0.0466 | 0.0338 |
+| Garfield Lake | 0.0542 | 0.0500 | 0.0540 | 0.0663 | 0.0571 | 0.0435 |
+| Mud Hen Lake | 0.0709 | 0.0648 | 0.0694 | 0.0804 | 0.0684 | 0.0693 |
+| Necktie River | 0.0600 | 0.0574 | 0.0589 | 0.0734 | 0.0667 | 0.0510 |
+| Ottertail River | 0.0530 | 0.0505 | 0.0517 | 0.0586 | 0.0562 | 0.0485 |
+| Phantom Lake | 0.0313 | 0.0267 | 0.0316 | 0.0360 | 0.0342 | 0.0262 |
+| (Lake) Plantagent | 0.0495 | 0.0469 | 0.0492 | 0.0587 | 0.0532 | 0.0441 |
+| Shell Lake | 0.0566 | 0.0561 | 0.0574 | 0.0719 | 0.0621 | 0.0504 |
+| Upper Rice Lake | 0.0298 | 0.0305 | 0.0296 | 0.0423 | 0.0352 | 0.0240 |
+| _Z. aquatica_ | 0.0487 | 0.0479 | 0.0479 | 0.0572 | 0.0518 | 0.0445 |
 
 ### Table S4
 The Transition/Transversion ratios were generated using the script [calculate_TsTv_vcftools.sh](vcftools_scripts_incl_nonbiallelic/calculate_TsTv_vcftools.sh). Additional details can be found within the directory containing the script.
