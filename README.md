@@ -21,7 +21,8 @@ This repository contains all of the scripts that were used to develop the genoty
 1. [Table 1](#Table-1)
 2. [Table 2](#Table-2)
 3. [Table 3](#Table-3)
-4. [Table S4](#Table-S4)
+4. [Table S1](#Table-S1)
+5. [Table S4](#Table-S4)
 
 ## Supplemental Figures
 1. [Figure S1](#Figure-S1)
@@ -224,6 +225,16 @@ Fixation index (_F<sub>ST</sub>_) values derived using the weighted Weir and Coc
 | Shell Lake | 0.0566 | 0.0561 | 0.0574 | 0.0719 | 0.0621 | 0.0504 |
 | Upper Rice Lake | 0.0298 | 0.0305 | 0.0296 | 0.0423 | 0.0352 | 0.0240 |
 | _Z. aquatica_ | 0.0487 | 0.0479 | 0.0479 | 0.0572 | 0.0518 | 0.0445 |
+
+### Table S1
+List of samples in our diversity collection of Northern Wild Rice (NWR; _Zizania palustris_ L.) genotyped with 5,955 single nucleotide polymorphism (SNP) markers generated via genotyping-by-sequencing (GBS). HUC 8 watershed designations include Upper Mississippi River (UMR), Red River of the North (RRN), and St. Croix River (SCR) basins.
+| Sample ID | Sample # | Collection Type | GPS coordinates | Watershed |
+| :---      | :---:    | :---:           | :---:           | :---:     |
+| Bass Lake | 50 | Natural Stand | 47.28716 - 93.63132 | UMR |
+| Clearwater River | 50 | Natural Stand | 47.51838 - 95.46291 | RRN |
+| Dahler Lake | 50 | Natural Stand | 46.71888 - 93.97281 | UMR |
+| Decker Lake | 50 | Natural Stand | 47.63515 - 94.40492 | UMR | 
+
 
 ### Table S4
 The Transition/Transversion ratios were generated using the script [calculate_TsTv_vcftools.sh](vcftools_scripts_incl_nonbiallelic/calculate_TsTv_vcftools.sh). Additional details can be found within the directory containing the script.
