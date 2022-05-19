@@ -20,7 +20,8 @@ This repository contains all of the scripts that were used to develop the genoty
 ## Tables
 1. [Table 1](#Table-1)
 2. [Table 2](#Table-2)
-3. [Table S4](#Table-S4)
+3. [Table 3](#Table-3)
+4. [Table S4](#Table-S4)
 
 ## Supplemental Figures
 1. [Figure S1](#Figure-S1)
@@ -178,6 +179,24 @@ Analysis of Molecular Variance (AMOVA). The AMOVA was performed using the [AMOVA
 | STRUCTURE grouping _K_ = 5        | Variations between individuals | 5 | 8508.68 | 57.96 | 3.53 | 0.001 |
 |                                   | Variations within individuals  | 761 | 1584.24 | 1584.24 | 96.47 | 0.001 |
 |                                   | Total variation                | 766 | 1629.44 | 1642.20 | 100.00 | 0.001 |
+
+### Table 3
+Fixation index (_F<sub>ST</sub>_) values derived using the weighted Weir and Cockerham method (Weir and Cockerham, 1984) based on 5,955 single nucleotide polymorphism (SNP) markers generated via genotyping-by-sequencing (GBS) for a diversity collection of Northern Wild Rice (NWR; _Zizania palustris_ L.) consisting of a.) A Natural Stand collection; b.) A Cultivated collection; and c.) A comparison of Natural Stand and Cultivated collections. Sample sizes can be found in Table S1.   
+|     | Clearwater River | Dahler Lake | Decker Lake | Garfield Lake | Mud Hen Lake | Necktie River | Ottertail River | Phantom Lake | (Lake) Plantagenet | Shell Lake | Upper Rice Lake | _Z. aquatica_ |
+| :------ | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Bass Lake | 0.1040 | 0.0722 | 0.0487 | 0.0802 | 0.1529 | 0.0979 | 0.1201 | 0.0678 | 0.1080 | 0.1254 | 0.0434 | 0.1201 |
+| Clearwater River | | 0.1060 | 0.0934 | 0.0679 | 0.1406 | 0.0734 | 0.0670 | 0.0902 | 0.0410 | 0.0553 | 0.0493 | 0.1004 |
+| Dahler Lake | | | 0.0782 | 0.0096 | 0.1519 | 0.1156 | 0.1233 | 0.0563 | 0.1132 | 0.1255 | 0.0483 | 0.1135 |
+| Decker Lake | | | | 0.0696 | 0.1490 | 0.0824 | 0.1076 | 0.0680 | 0.0931 | 0.1034 | 0.0388 | 0.1037 |
+| Garfield Lake | | | | | 0.1515 | 0.0387 | 0.0791 | 0.0885 | 0.0589 | 0.0731 | 0.0459 | 0.1100 |
+| Mud Hen Lake | | | | | | 0.1580 | 0.1353 | 0.0861 | 0.1468 | 0.1578 | 0.1107 | 0.1291 |
+| Necktie River | | | | | | | 0.0923 | 0.0996 | 0.0545 | 0.0838 | 0.0646 | 0.1221 |
+| Ottertail River | | | | | | | | 0.0952 | 0.0668 | 0.0494 | 0.0638 | 0.1072 |
+| Phantom Lake | | | | | | | | | 0.0944 | 0.1077 | 0.0417 | 0.0734 |
+| (Lake) Plantagenet | | | | | | | | | | 0.0538 | 0.0570 | 0.1024 |
+| Shell Lake | | | | | | | | | | | 0.0628 | 0.1175 |
+| Upper Rice Lake | | | | | | | | | | | | 0.0790 |
+
 
 ### Table S4
 The Transition/Transversion ratios were generated using the script [calculate_TsTv_vcftools.sh](vcftools_scripts_incl_nonbiallelic/calculate_TsTv_vcftools.sh). Additional details can be found within the directory containing the script.
