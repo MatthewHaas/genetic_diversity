@@ -289,6 +289,31 @@ Note: In order to get non-breaking white space in 'original scaffold name' and '
 | Transversions (Tv) | 117 | 90 | 85 | 108 | 72 | 168 | 66 | 87 | 104 | 145 | 62 | 107 | 137 | 22 | 47 | 17 | 2 | 1436 |
 | TsTv ratio | 3.13 | 3.83 | 2.55 | 3.55 | 3.86| 2.56 | 1.74 | 3.22 | 3.63 | 2.92 | 3.60 | 2.83 | 3.26 | 3.14 | 4.04 | 4.18 | 1.50 | 3.15 |
 
+### Table S5
+Polymorphic Information Content (PIC) values for 5,955 single nucleotide polymorphism (SNP) markers generated via genotyping-by-sequencing (GBS) using our diversity collection of Northern Wild Rice (NWR; _Zizania palustris_ L.)
+| | Mean | Median | Minimum | Maximum | Standard Deviation |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| Barron | 0.1649 | 0.1557 | 0.0216 | 0.3125 | 0.1043 |
+| FY-C20 | 0.1639 | 0.1557 | 0.0199 | 0.3125 | 0.1052 |
+| Itasca-C12 | 0.1531 | 0.1379 | 0.0166 | 0.3125 | 0.1064 |
+| Itasca-C20 | 0.1840 | 0.1829 | 0.0449 | 0.3125 | 0.0981 |
+| K2EF-C16 | 0.1803 | 0.1829 | 0.0261 | 0.3125 | 0.1053 |
+| PM3E | 0.1774 | 0.1829 | 0.0292 | 0.3125 | 0.1041 |
+| | | | | | |
+| Bass Lake | 0.1484 | 0.1287 | 0.0010 | 0.3125 | 0.1093 |
+| Clearwater River | 0.1523 | 0.1369 | 0.0113 | 0.3125 | 0.1084 |
+| Dahler Lake | 0.1541 | 0.1373 | 0.0142 | 0.3125 | 0.1079 |
+| Decker Lake | 0.1540 | 0.1395 | 0.0091 | 0.3125 | 0.1111 |
+| Garfield Lake | 0.1471 | 0.1263 | 0.0091 | 0.3125 | 0.1090 |
+| Mud Hen Lake | 0.1924 | 0.1999 | 0.0493 | 0.3125 | 0.0982 |
+| Necktie River | 0.1500 | 0.1260 | 0.0113 | 0.3125 | 0.1108 |
+| Ottertail River | 0.1528 | 0.1353 | 0.0010 | 0.3125 | 0.1104 |
+| Phantom Lake | 0.1637 | 0.1702 | 0.0248 | 0.3125 | 0.1049 |
+| (Lake) Plantagenet | 0.1534 | 0.1353 | 0.0010 | 0.3125 | 0.1105 |
+| Shell Lake | 0.1477 | 0.1221 | 0.0010 | 0.3125 | 0.1116 |
+| Upper Rice Lake | 0.1420 | 0.1141 | 0.0010 | 0.3125 | 0.1088 |
+| _Zizania aquatica_ | 0.1496 | 0.1313 | 0.0010 | 0.3125 | 0.1107 |
+
 ### Table S6
 _D_-statistics (ABBA-BABA) results for a diversity collection of Northern Wild Rice (NWR; _Zizania palustris_ L.).
 | P1 | P2 | P3 | ABBA<sup>a</sup> | BABA<sup>a</sup> | BBAA<sup>a</sup> | D | p-value | F4-ratio | Z<sup>b</sup> |
