@@ -238,6 +238,14 @@ List of samples in our diversity collection of Northern Wild Rice (NWR; _Zizania
 | Mud Hen Lake | 10 | Natural Stand | 45.77005 - 92.47173 | SCR |
 | Necktie River | 50 | Natural Stand | 47.29363 - 94.74724 | UMR |
 | Ottertail River | 50 | Natural Stand | 46.38005 - 95.86430 | RRN |
+| Phantom Lake | 20 | Natural Stand | 45.81839 - 92.65074 | SCR |
+| (Lake) Plantagenet | 50 | Natural Stand | 47.36758 - 94.91755 | UMR |
+| Shell Lake | 50 | Natural Stands/Temporal | 46.94510 - 95.48486 | UMR |
+| Upper Rice Lake | 50 | Natural Stand | 47.40030 - 95.28659 | RRN |
+| _Zizania aquatica_ | 50 | Natural Stand | 45.94473 - 94.24821 | UMR |
+| Garfield Lake 2010 | 50 | Temporal | 47.21361 - 94.74380 | UMR |
+| Shell Lake 2010 | 50 | Temporal | 46.94510 - 95.48486 | UMR |
+
 
 
 ### Table S4
