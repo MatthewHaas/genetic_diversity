@@ -22,9 +22,10 @@ This repository contains all of the scripts that were used to develop the genoty
 2. [Table 2](#Table-2)
 3. [Table 3](#Table-3)
 4. [Table S1](#Table-S1)
-5. [Table S4](#Table-S4)
-6. [Table S4](#Table-S5)
-7. [Table S6](#Table-S6)
+5. [Table S2](#Table-S2)
+6. [Table S4](#Table-S4)
+7. [Table S4](#Table-S5)
+8. [Table S6](#Table-S6)
 
 ## Supplemental Figures
 1. [Figure S1](#Figure-S1)
@@ -268,6 +269,13 @@ List of samples in our diversity collection of Northern Wild Rice (NWR; _Zizania
 | PM3E | 17 | Cultivated | n/a | n/a |
 | VE/2\*14WS/\*4K2EF | 2 | Cultivated | n/a | n/a |
 | VN/3\*K2EF | 4 | Cultivated | n/a | n/a |
+
+### Table S2
+Geographic distance (km) matrix of US states of Minnesota and Wisconsin lakes and rivers where Northern Wild Rice (NWR; _Z. palustris_ L.) leaf tissue samples were collected along with watershed designations for the Upper Mississippi River (UMR), Red River of the North (RRN), and St. Croix River (SCR).
+|Natural Population (Watershed) | _Z. aquatica_ | Bass Lake | Clearwater River | Dahler Lake | Decker Lake | Garfield Lake | Mud Hen Lake | Necktie River | Ottertail Lake | Phantom Lake | (Lake) Plantagenet | Shell Lake | Upper Rice Lake |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| _Z. aquatica_ (UMR) | | 156.7 | 198.2 | 88.7 | 188.6 | 146.3 | 139.1 | 154.9 | 133.7 | 124.6 | 166.4 | 146.3 | 180.4 |
+| Bass Lake (UMR) | 156.7 | | 140.4 | 68.4 | 69.9 | 84.5 | 190.8 | 84.3 | 197.8 | 179.9 | 97.5 | 145.5 | 125.5 |
 
 ### Table S4
 The Transition/Transversion ratios were generated using the script [calculate_TsTv_vcftools.sh](vcftools_scripts_incl_nonbiallelic/calculate_TsTv_vcftools.sh). Additional details can be found within the directory containing the script.
