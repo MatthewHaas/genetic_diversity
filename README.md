@@ -246,8 +246,27 @@ List of samples in our diversity collection of Northern Wild Rice (NWR; _Zizania
 | _Zizania aquatica_ | 50 | Natural Stand | 45.94473 - 94.24821 | UMR |
 | Garfield Lake 2010 | 50 | Temporal | 47.21361 - 94.74380 | UMR |
 | Shell Lake 2010 | 50 | Temporal | 46.94510 - 95.48486 | UMR |
-
-
+| 14PD-C10 | 2 | Cultivated | n/a | n/a |
+| 14S\*PM3/PBM-C3 | 3 | Cultivated | n/a | n/a |
+| 14S\*PS-C3 | 5 | Cultivated | n/a | n/a |
+| Barron | 25 | Cultivated | n/a | n/a |
+| Itasca-C12 (Dovetail) | 15 | Cultivated | n/a | n/a |
+| Itasca-C12 | 31 | Cultivated | n/a | n/a |
+| Itasca-C20 | 11 | Cultivated | n/a | n/a |
+| FY-C20 | 29 | Cultivated | n/a | n/a |
+| GPB/K2B-C2 | 3 | Cultivated | n/a | n/a |
+| GPN-1.20 | 2 | Cultivated | n/a | n/a |
+| GPP-1.20 | 6 | Cultivated | n/a | n/a |
+| K2B-C16 | 20 | Cultivated | n/a | n/a |
+| K2EFBP-C1 | 5 | Cultivated | n/a | n/a |
+| KPVN-C4 | 4 | Cultivated | n/a | n/a |
+| KSVN-C4 | 5 | Cultivated | n/a | n/a |
+| PLaR-C20 | 4 | Cultivated | n/a | n/a |
+| PM3/3\*PBM-C3 | 6 | Cultivated | n/a | n/a |
+| PM3/7\*K2EF | 3 | Cultivated | n/a | n/a |
+| PM3E | 17 | Cultivated | n/a | n/a |
+| VE/2\*14WS/\*4K2EF | 2 | Cultivated | n/a | n/a |
+| VN/3\*K2EF | 4 | Cultivated | n/a | n/a |
 
 ### Table S4
 The Transition/Transversion ratios were generated using the script [calculate_TsTv_vcftools.sh](vcftools_scripts_incl_nonbiallelic/calculate_TsTv_vcftools.sh). Additional details can be found within the directory containing the script.
