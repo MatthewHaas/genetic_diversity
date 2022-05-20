@@ -23,7 +23,8 @@ This repository contains all of the scripts that were used to develop the genoty
 3. [Table 3](#Table-3)
 4. [Table S1](#Table-S1)
 5. [Table S4](#Table-S4)
-6. [Table S6](#Table-S6)
+6. [Table S4](#Table-S5)
+7. [Table S6](#Table-S6)
 
 ## Supplemental Figures
 1. [Figure S1](#Figure-S1)
