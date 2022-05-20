@@ -23,6 +23,7 @@ This repository contains all of the scripts that were used to develop the genoty
 3. [Table 3](#Table-3)
 4. [Table S1](#Table-S1)
 5. [Table S4](#Table-S4)
+6. [Table S6](#Table-S6)
 
 ## Supplemental Figures
 1. [Figure S1](#Figure-S1)
@@ -268,6 +269,15 @@ Note: In order to get non-breaking white space in 'original scaffold name' and '
 | Transitions (Ts) | 366 | 345 | 217 | 383 | 278 | 430 | 115 | 280 | 377 | 423 | 223 | 303 | 446 | 69 | 190 | 71 | 3 | 4519 |
 | Transversions (Tv) | 117 | 90 | 85 | 108 | 72 | 168 | 66 | 87 | 104 | 145 | 62 | 107 | 137 | 22 | 47 | 17 | 2 | 1436 |
 | TsTv ratio | 3.13 | 3.83 | 2.55 | 3.55 | 3.86| 2.56 | 1.74 | 3.22 | 3.63 | 2.92 | 3.60 | 2.83 | 3.26 | 3.14 | 4.04 | 4.18 | 1.50 | 3.15 |
+
+### Table S6
+_D_-statistics (ABBA-BABA) results for a diversity collection of Northern Wild Rice (NWR; _Zizania palustris_ L.).
+| P1 | P2 | P3 | ABBA<sup>a</sup> | BABA<sup>a</sup> | BBAA<sup>a</sup> | D | p-value | F4-ratio | Z<sup>b</sup> |
+| :---: | :---: | :---: |:---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Cultivated | Natural Stands I | Natural Stands II | 348.181 | 336.828 | 367.406 | 0.017 | 0.098 | 0.193 | 1.655 |
+
+<sup>a</sup> Number of ABBA and BABA sites. _Z. aquatica_ was used as an outgroup for all comparisons.<br>
+<sup>b</sup> Z: Z-score
 
 # Supplementary Figures
 
