@@ -9,7 +9,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def makePlot(K):
-    colorsAll = ['red', 'lime', 'blue', 'yellow', 'fuchsia', 'cyan']
+    #colorsAll = ['red', 'lime', 'blue', 'yellow', 'fuchsia', 'cyan'] # these were the original colors that were chosen to emulate the colors used in STRUCTURE
+    colorsAll = ['#e935a1', '#00e3ff', '#e1562c', '#537eff', '#00cb85'] # new colors chosen for new STRUCTURE plots (need to get up to 15 since we potentially have that many clusters)
     if K == 2:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([]) # hide x-axis tick marks
