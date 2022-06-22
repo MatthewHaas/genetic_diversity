@@ -13,7 +13,6 @@ This repository contains all of the scripts that were used to develop the genoty
 10. [Figure 5b](#Figure-5b)
 11. [Figure 5c](#Figure-5c)
 12. [Figure 5d](#Figure-5d)
-13. [Figure 5e](#Figure-5e)
 
 ## Tables
 1. [Table 1](#Table-1)
@@ -123,23 +122,19 @@ emulateStructure(df)
 
 ### Figure 5a
 STRUCTURE results for _K_ = 2<br>
-<img src="images/STRUCTURE_K2_plot.png" width="500">
+<img src="images/structure_plot_k2.png" width="500">
 
 ### Figure 5b
 STRUCTURE results for _K_ = 3<br>
-<img src="images/STRUCTURE_K3_plot.png" width="500">
+<img src="images/structure_plot_k3.png" width="500">
 
 ### Figure 5c
 STRUCTURE results for _K_ = 4<br>
-<img src="images/STRUCTURE_K4_plot.png" width="500">
+<img src="images/structure_plot_k4.png" width="500">
 
 ### Figure 5d
 STRUCTURE results for _K_ = 5<br>
-<img src="images/STRUCTURE_K5_plot.png" width="500">
-
-### Figure 5e
-STRUCTURE results for _K_ = 6<br>
-<img src="images/STRUCTURE_K6_plot.png" width="500">
+<img src="images/structure_plot_k5.png" width="500">
 
 # Tables
 
