@@ -60,7 +60,7 @@ for (color in myColors){
 edge_colors <- rep("grey", Nedge(tree))
 
 # Define which edges belong to which lake/river
-# Once these are all done, each lake/river will be colored appropriately and the cultivated will remain grey
+# This will tell R which edges (branches) belong to which lake/river to correctly color them in the next step
 BassLake <- which.edge(tree, "Bass Lake")
 ClearwaterRiver <- which.edge(tree, "Clearwater River")
 DahlerLake <- which.edge(tree, "Dahler Lake")
@@ -74,6 +74,22 @@ Plantagenet <- which.edge(tree, "Lake Plantagenet")
 ShellLake <- which.edge(tree, "Shell Lake")
 UpperRiceLake <- which.edge(tree, "Upper Rice Lake")
 Zaquatica <- which.edge(tree, "Z aquatica")
+
+# Change colors for the natural stands to match PCA plots & collection map
+# Once these are all done, each lake/river will be colored appropriately and the cultivated will remain grey
+edge_colors[BassLake] <- "red"
+edge_colors[ClearwaterRiver] <- "orange"
+edge_colors[DahlerLake] <- "yellow3"
+edge_colors[DeckerLake] <- "yellow"
+edge_colors[GarfieldLake] <- "green3"
+edge_colors[MudHenLake] <- "green"
+edge_colors[NecktieRiver] <- "blue4"
+edge_colors[OttertailRiver] <- "blue"
+edge_colors[PhantomLake] <- "violetred3"
+edge_colors[Plantagenet] <- "violet"
+edge_colors[ShellLake] <- "purple4"
+edge_colors[UpperRiceLake] <- "purple"
+edge_colors[Zaquatica] <- "red3"
 
 pdf(args[4], height = 100, width = 15)
 plot.phylo(tree, cex = 1.5, font = 2, adj = 0, type = "fan", tip.color =  hexColorList[pop(gen_light_x)])
