@@ -329,7 +329,3 @@ _D_-statistics (ABBA-BABA) results for a diversity collection of Northern Wild R
 ### Figure S1
 Evanno method implemented by STRUCTURE harvester to show the ideal number of _K_ populations from STRUCTURE results<br>
 <img src="images/deltaK.png" width="500">
-
-### Figure S2
-Temporal samples tree. This was produced with the same base scripts at the Cultivated and Natural Stands trees.
-<img src ="images/temporal_samples_tree.png" width="500">
