@@ -55,6 +55,26 @@ for (color in myColors){
         hexColorList <- c(hexColorList, hexColor)
 }
 
+# Initialize edge_colors vector with grey for each branch. Remember that `tree` is an object that was created above
+# This makes the default color grey for each line (so that we don't need to specify all of the specific cultivars individually)
+edge_colors <- rep("grey", Nedge(tree))
+
+# Define which edges belong to which lake/river
+# Once these are all done, each lake/river will be colored appropriately and the cultivated will remain grey
+BassLake <- which.edge(tree, "Bass Lake")
+ClearwaterRiver <- which.edge(tree, "Clearwater River")
+DahlerLake <- which.edge(tree, "Dahler Lake")
+DeckerLake <- which.edge(tree, "Decker Lake")
+GarfieldLake <- which.edge(tree, "Garfield Lake")
+MudHenLake <- which.edge(tree, "Mud Hen Lake")
+NecktieRiver <- which.edge(tree, "Necktie River")
+OttertailRiver <- which.edge(tree, "Ottertail River")
+PhantomLake <- which.edge(tree, "Phantom Lake")
+Plantagenet <- which.edge(tree, "Lake Plantagenet")
+ShellLake <- which.edge(tree, "Shell Lake")
+UpperRiceLake <- which.edge(tree, "Upper Rice Lake")
+Zaquatica <- which.edge(tree, "Z aquatica")
+
 pdf(args[4], height = 100, width = 15)
 plot.phylo(tree, cex = 1.5, font = 2, adj = 0, type = "fan", tip.color =  hexColorList[pop(gen_light_x)])
 nodelabels(tree$node.label, adj = c(1.3, -0.5), frame = "n", cex = 0.8, font = 3, xpd = TRUE)
