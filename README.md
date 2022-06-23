@@ -102,7 +102,13 @@ Another new aspect of this tree vs. the original version is that the branches (o
 ```R
 plot.phylo(tree, cex = 1.5, font = 2, adj = 0, type = "fan", edge.color = edge_colors, tip.color =  hexColorList[pop(gen_light_x)])
 ```
-**Note:** This is very similar to the original code. The only difference is that in the original, the arguments `type = "fan"` and `edge.color = edge_colors` were not included so the function used their default values ("phylogram" for `type` and "black" fr `edge.color`.
+**Note:** This is very similar to the original code. The only difference is that in the original, the arguments `type = "fan"` and `edge.color = edge_colors` were not included so the function used their default values ("phylogram" for `type` and "black" for `edge.color`.)<br>
+
+I created the "edge_colors" object using the `which.edge()` function from the `ape` R packege. You can find documentation for that [here](https://rdrr.io/cran/ape/man/which.edge.html). Please see the line below for example code:<br>
+```R
+BassLake <- which.edge(tree, "Bass Lake")
+```
+The script repeats this function for each individual lake or river. The resulting figure (from the `plot.phylo()` function above) will look like this:<br>
 <img src="images/natural_stand_and_breeding_lines_no_GPP_or_GPN_tree_fan.png" width="500">
 
 ## Figure 5 code explanation
