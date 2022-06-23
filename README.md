@@ -104,11 +104,25 @@ plot.phylo(tree, cex = 1.5, font = 2, adj = 0, type = "fan", edge.color = edge_c
 ```
 **Note:** This is very similar to the original code. The only difference is that in the original, the arguments `type = "fan"` and `edge.color = edge_colors` were not included so the function used their default values ("phylogram" for `type` and "black" for `edge.color`.)<br>
 
-I created the "edge_colors" object using the `which.edge()` function from the `ape` R packege. You can find documentation for that [here](https://rdrr.io/cran/ape/man/which.edge.html). Please see the line below for example code:<br>
+To add colors to the edges (branches), you should first initialize the "edge_colors" object. I did that using the following code:
+```R
+edge_colors <- rep("grey", Nedge(tree))
+```
+The `rep()` function will create an object that I've decided to call "edge_colors" with as many occurrences of the word "grey"  as there are edges (branches) in the `tree` object. The default is "black" as stated above, but in our combined PCA plot, we chose to make all of the cultivated material colored grey so that the natural stands would stick out. The approach we are using here (in combination with the next steps) will result in all of the cultivated material being colored grey without having to manually define each and every cultivated variety since there are a bunch of them with complex names (since some of the names offer insight into crosses that went into particular lines and aren't as simple as "Barron", "FY-C20", etc.).
+
+I added lake/river-specific colors to the "edge_colors" object using the `which.edge()` function from the `ape` R packege. You can find documentation for that [here](https://rdrr.io/cran/ape/man/which.edge.html). The function returns a vector containing numbers matching the edges (branches) that meet a specific condition. Please see the line below for example code:<br>
 ```R
 BassLake <- which.edge(tree, "Bass Lake")
 ```
-The [script](pop_gen_analyses/trees/make_tree_natural_stands_and_breeding_lines.R) repeats this function for each individual lake or river. The resulting figure (from the `plot.phylo()` function above) will look like this:<br>
+The [script](pop_gen_analyses/trees/make_tree_natural_stands_and_breeding_lines.R) repeats this function for each individual lake or river.<br>
+
+Colors are then added to the appropriate positions inside the "edge_colors" object using the following code:<br>
+```R
+edge_colors[BassLake] <- "red"
+```
+You will then repeat this step for each of the individual lakes/rivers like you did with the `which.edge()` function to insert the correct color that matches the collection map and PCA plots.
+
+The resulting figure (from the `plot.phylo()` function above) will look like this:<br>
 <img src="images/natural_stand_and_breeding_lines_no_GPP_or_GPN_tree_fan.png" width="500">
 
 ## Figure 5 code explanation
