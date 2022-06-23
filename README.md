@@ -108,7 +108,7 @@ I created the "edge_colors" object using the `which.edge()` function from the `a
 ```R
 BassLake <- which.edge(tree, "Bass Lake")
 ```
-The script repeats this function for each individual lake or river. The resulting figure (from the `plot.phylo()` function above) will look like this:<br>
+The [script](pop_gen_analyses/trees/make_tree_natural_stands_and_breeding_lines.R) repeats this function for each individual lake or river. The resulting figure (from the `plot.phylo()` function above) will look like this:<br>
 <img src="images/natural_stand_and_breeding_lines_no_GPP_or_GPN_tree_fan.png" width="500">
 
 ## Figure 5 code explanation
