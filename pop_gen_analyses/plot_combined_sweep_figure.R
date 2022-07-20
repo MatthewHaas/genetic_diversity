@@ -64,7 +64,7 @@ nucleotideDiv[CLASS == "natural stands", lines(x = POS, y = MEAN_PI,
 axis(side = 1, cex.axis = 2, at = nucleotide_mids, labels = c("ZPchr0001", "ZPchr0002", "ZPchr0003", "ZPchr0004", "ZPchr0005", "ZPchr0006", "ZPchr0007", "ZPchr0008", "ZPchr0009", "ZPchr0010", "ZPchr0011", "ZPchr0012", "ZPchr0013", "ZPchr0014", "ZPchr0015", "ZPchr0016", "ZPchr0458"))
 abline(v = chr_bounds, col = "#a3aaad")
 # Now, Fst
-Fst[,plot(x = POS, y = WEIR_AND_COCKERHAM_FST,
+Fst[,plot(x = POS_new, y = WEIR_AND_COCKERHAM_FST,
 			xlab = "Chromosomes",
 			ylab = "Weir and Cockerham Fst",
 			ylim = c(0,0.7),
