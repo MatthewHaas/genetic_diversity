@@ -7,7 +7,7 @@ load("/home/jkimball/haasx092/TajimaD/220420_nucleotide_diversity_data.Rdata")
 combined -> nucleotideDiv
 
 # Load Fst data
-load("/home/jkimball/haasx092/Fst_vcftools/220420_genome-wide_Fst_data.Rdata")
+load("/home/jkimball/haasx092/Fst_vcftools/220622_Fst_genome-wide_plot_cultivated_vs_natural_stands.Rdata")
 
 # Load XP-CLR data
 load("/home/jkimball/haasx092/XP-CLR/220420_XP-CLR_plotting_data.Rdata")
