@@ -8,6 +8,8 @@ combined -> nucleotideDiv
 
 # Load Fst data
 load("/home/jkimball/haasx092/Fst_vcftools/220622_Fst_genome-wide_plot_cultivated_vs_natural_stands.Rdata")
+# Rename the x object from the Fst Rdata file to be Fst to clear up any ambiguity
+x -> Fst
 
 # Load XP-CLR data
 load("/home/jkimball/haasx092/XP-CLR/220420_XP-CLR_plotting_data.Rdata")
