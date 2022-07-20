@@ -34,7 +34,7 @@ for(i in c(1:17)){
 chr_bounds <- append(chr_bounds, max(nucleotideDiv[CHROM_INDEX == i]$POS))
 }
 # Make combined plot
-pdf("220420_combined_sweep_figure.pdf", height = 15, width = 25)
+pdf("220720_combined_sweep_figure.pdf", height = 15, width = 25)
 par(oma = c(1,2,1,1))
 par(mar = c(2,6,2,2))
 layout(matrix(c(1,2,3), ncol = 1))
