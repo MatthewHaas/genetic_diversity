@@ -22,7 +22,7 @@ nucleotide_mids <- append(nucleotide_mids, mean(nucleotideDiv[CHROM_INDEX == i]$
 
 Fst_mids = c()
 for(i in c(1:16)){
-Fst_mids <- append(Fst_mids, mean(Fst[CHROM_INDEX == i]$POS))
+Fst_mids <- append(Fst_mids, mean(Fst[CHROM_INDEX == i]$POS_new))
 }
 
 XPCLR_mids = c()
