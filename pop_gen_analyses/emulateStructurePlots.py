@@ -5,86 +5,117 @@ descending order)), I figured that with a consistent file format, it was easier 
 
 import sys
 import os
+#import argparse
 import pandas as pd
 import matplotlib.pyplot as plt
 
+#parser = argparse.ArgumentParser()
+
+#parser.add_argument('--pops', '-k', help = 'How many K populations do you expect?', type = str)
+
+#args = parser.parse_args()
+
+#print(parser.format_help())
+
 def makePlot(K):
     #colorsAll = ['red', 'lime', 'blue', 'yellow', 'fuchsia', 'cyan'] # these were the original colors that were chosen to emulate the colors used in STRUCTURE
-    colorsAll = ['#e935a1', '#00e3ff', '#e1562c', '#537eff', '#00cb85'] # new colors chosen for new STRUCTURE plots (need to get up to 15 since we potentially have that many clusters)
+    colorsAll = ['#e935a1', '#00e3ff', '#e1562c', '#537eff', '#00cb85', 'red', 'lime', 'blue',  'yellow', 'fuschia', 'cyan', 'black', 'brown', 'grey'] # new colors chosen for new STRUCTURE plots (need to get up to 15 since we potentially have that many clusters)
     if K == 2:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([]) # hide x-axis tick marks
-        plt.yticks(fontsize = 18) # make tick marks and numbers larger (default = 12)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
+        plt.yticks(fontsize = 18)
+        plt.bar(df['Sample_name'], df['Cluster_1'], color = colorsAll[0], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_2'], bottom = df['Cluster_1'], color = colorsAll[1], width = 1)
         plt.ylabel('Population membership probability', fontsize = 18)
         plt.savefig(sys.argv[2])
     elif K == 3:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([])
-        plt.yticks(fontsize = 18) # make tick marks and numbers larger (default = 12)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_3'], bottom = dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[2], width = 1)
+        plt.yticks(fontsize = 18)
+        plt.bar(df['Sample_name'], df['Cluster_1'], color = colorsAll[0], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_2'], bottom = df['Cluster_1'], color = colorsAll[1], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_3'], bottom = df['Cluster_2'] + df['Cluster_1'], color = colorsAll[2], width = 1)
         plt.ylabel('Population membership probability', fontsize = 18)
         plt.savefig(sys.argv[2])
     elif K == 4:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([])
-        plt.yticks(fontsize = 18) # make tick marks and numbers larger (default = 12)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_3'], bottom = dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[2], width = 1)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_4'], bottom = dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[3], width = 1)
+        plt.yticks(fontsize = 18)
+        plt.bar(df['Sample_name'], df['Cluster_1'], color = colorsAll[0], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_2'], bottom = df['Cluster_1'], color = colorsAll[1], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_3'], bottom = df['Cluster_2'] + df['Cluster_1'], color = colorsAll[2], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_4'], bottom = df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[3], width = 1)
         plt.ylabel('Population membership probability', fontsize = 18)
         plt.savefig(sys.argv[2])
     elif K == 5:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([])
-        plt.yticks(fontsize = 18) # make tick marks and numbers larger (default = 12)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_3'], bottom = dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[2], width = 1)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_4'], bottom = dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[3], width = 1)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_5'], bottom = dfSorted['Cluster_4'] + dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[4], width = 1)
+        plt.yticks(fontsize = 18)
+        plt.bar(df['Sample_name'], df['Cluster_1'], color = colorsAll[0], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_2'], bottom = df['Cluster_1'], color = colorsAll[1], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_3'], bottom = df['Cluster_2'] + df['Cluster_1'], color = colorsAll[2], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_4'], bottom = df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[3], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_5'], bottom = df['Cluster_4'] + df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[4], width = 1)
         plt.ylabel('Population membership probability', fontsize = 18)
         plt.savefig(sys.argv[2])
     elif K == 6:
         plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
         plt.xticks([])
-        plt.yticks(fontsize = 18) # make tick marks and numbers larger (default = 12)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_2'], color = colorsAll[0], width = 1)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_1'], bottom = dfSorted['Cluster_2'], color = colorsAll[1], width = 1)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_3'], bottom = dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[2], width = 1)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_4'], bottom = dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[3], width = 1)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_5'], bottom = dfSorted['Cluster_4'] + dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[4], width = 1)
-        plt.bar(dfSorted['Sample_name'], dfSorted['Cluster_6'], bottom = dfSorted['Cluster_5'] + dfSorted['Cluster_4'] + dfSorted['Cluster_3'] + dfSorted['Cluster_2'] + dfSorted['Cluster_1'], color = colorsAll[5], width = 1)
+        plt.yticks(fontsize = 18)
+        plt.bar(df['Sample_name'], df['Cluster_1'], color = colorsAll[0], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_2'], bottom = df['Cluster_1'], color = colorsAll[1], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_3'], bottom = df['Cluster_2'] + df['Cluster_1'], color = colorsAll[2], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_4'], bottom = df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[3], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_5'], bottom = df['Cluster_4'] + df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[4], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_6'], bottom = df['Cluster_5'] + df['Cluster_4'] + df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[5], width = 1)
+        plt.ylabel('Population membership probability', fontsize = 18)
+        plt.savefig(sys.argv[2])
+    elif K == 14:
+        plt.figure(figsize = (20, 4.8)) # supposedly this is in inches...
+        plt.xticks([])
+        plt.yticks(fontsize = 18)
+        plt.bar(df['Sample_name'], df['Cluster_1'], color = colorsAll[0], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_2'], bottom = df['Cluster_1'], color = colorsAll[1], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_3'], bottom = df['Cluster_2'] + df['Cluster_1'], color = colorsAll[2], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_4'], bottom = df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[3], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_5'], bottom = df['Cluster_4'] + df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[4], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_6'], bottom = df['Cluster_5'] + df['Cluster_4'] + df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[5], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_7'], bottom = df['Cluster_6'] + df['Cluster_5'] + df['Cluster_4'] + df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[5], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_8'], bottom = df['Cluster_7'] + df['Cluster_6'] + df['Cluster_5'] + df['Cluster_4'] + df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[5], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_9'], bottom = df['Cluster_8'] + df['Cluster_7'] + df['Cluster_6'] + df['Cluster_5'] + df['Cluster_4'] + df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[5], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_10'], bottom = df['Cluster_9'] + df['Cluster_8'] + df['Cluster_7'] + df['Cluster_6'] + df['Cluster_5'] + df['Cluster_4'] + df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[5], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_11'], bottom = df['Cluster_10'] + df['Cluster_9'] + df['Cluster_8'] + df['Cluster_7'] + df['Cluster_6'] + df['Cluster_5'] + df['Cluster_4'] + df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[5], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_12'], bottom = df['Cluster_11'] + df['Cluster_10'] + df['Cluster_9'] + df['Cluster_8'] + df['Cluster_7'] + df['Cluster_6'] + df['Cluster_5'] + df['Cluster_4'] + df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[5], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_13'], bottom = df['Cluster_12'] + df['Cluster_11'] + df['Cluster_10'] + df['Cluster_9'] + df['Cluster_8'] + df['Cluster_7'] + df['Cluster_6'] + df['Cluster_5'] + df['Cluster_4'] + df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[5], width = 1)
+        plt.bar(df['Sample_name'], df['Cluster_14'], bottom = df['Cluster_13'] + df['Cluster_12'] + df['Cluster_11'] + df['Cluster_10'] + df['Cluster_9'] + df['Cluster_8'] + df['Cluster_7'] + df['Cluster_6'] + df['Cluster_5'] + df['Cluster_4'] + df['Cluster_3'] + df['Cluster_2'] + df['Cluster_1'], color = colorsAll[5], width = 1)
         plt.ylabel('Population membership probability', fontsize = 18)
         plt.savefig(sys.argv[2])
     else:
         print('Not an acceptable value of K!')
 
 def emulateStructure(df):
-    if len(df.columns) == 9:
+    if len(df.columns) == 7:
         makePlot(K = 2)
         print('Analysis completed assuming K=2 populations.')
-    elif len(df.columns) == 10:
+    elif len(df.columns) == 8:
         makePlot(K = 3)
         print('Analysis completed assuming K=3 populations.')
-    elif len(df.columns) == 11:
+    elif len(df.columns) == 9:
         makePlot(K = 4)
         print('Analysis completed assuming K=4 populations.')
-    elif len(df.columns) == 12:
+    elif len(df.columns) == 10:
         makePlot(K = 5)
         print('Analysis completed assuming K=5 populations.')
-    elif len(df.columns) == 13:
+    elif len(df.columns) == 11:
         makePlot(K = 6)
         print('Analysis completed assuming K=6 populations.')
-    elif len(df.columns) > 13:
-        print('You might have more than K = 6 populations in your input file.')
+    elif len(df.columns) == 19:
+        makePlot(K = 14)
+        print('Analysis completed assuming K=14 populations.')
+    #elif len(df.columns) > 12:
+    #    print('You might have more than K = 6 populations in your input file.')
     else:
         print('Something is wrong with your input file.')
 
 df = pd.read_csv(sys.argv[1])
-dfSorted = df.sort_values(by = ['Most_likely', 'Likelihood'], ascending = (True, False))
 emulateStructure(df)
