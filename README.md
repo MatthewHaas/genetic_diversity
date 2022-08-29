@@ -371,5 +371,5 @@ Table S3 is too large to generate here using Markdown, so you can find it as an 
 # Supplementary Figures
 
 ### Figure S1
-Evanno method implemented by STRUCTURE harvester to show the ideal number of _K_ populations from STRUCTURE results<br>
+Evanno method implemented by [STRUCTURE harvester](https://taylor0.biology.ucla.edu/structureHarvester/) to show the ideal number of _K_ populations from STRUCTURE results. There's no code to show for this figure because we simply uploaded data from STRUCTURE and uploaded it to this website.<br>
 <img src="images/deltaK.png" width="500">
