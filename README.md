@@ -31,7 +31,7 @@ The purpose of this directory is to easily navigate to specific figures from the
 ## Supplemental Figures
 1. [Figure S1](#Figure-S1)
 2. [Figure S2](#Figure-S2)
-3. [Figure S3)(#Figure-S3)
+3. [Figure S3](#Figure-S3)
 
 The goal of each of these pipelines was to generate a Variant Call Format (VCF) file containing SNP data for our population to be used in further analysis.
 
