@@ -296,6 +296,9 @@ Geographic distance (km) matrix of US states of Minnesota and Wisconsin lakes an
 | _Z. aquatica_ (UMR) | | 156.7 | 198.2 | 88.7 | 188.6 | 146.3 | 139.1 | 154.9 | 133.7 | 124.6 | 166.4 | 146.3 | 180.4 |
 | Bass Lake (UMR) | 156.7 | | 140.4 | 68.4 | 69.9 | 84.5 | 190.8 | 84.3 | 197.8 | 179.9 | 97.5 | 145.5 | 125.5 |
 | Clearwater River (RRN) | 198.2 | 140.4 | | 143.7 | 80.5 | 64.0 | 300.2 | 59.4 | 130.3 | 286.3 | 44.4 | 63.8 | 18.7 |
+| Dahler Lake (UMR) | 88.7 | 68.4 | 143.7 | | 107.1 | 80.4 | 156.6 | 86.9 | 149.6 | 142.8 | 101.7 | 117.9 | 125.2 |
+| Decker Lake (UMR) | 188.6 | 69.9 | 80.5 | 107.1 | | 53.4 | 254.7 | 45.9 | 178.3 | 242.5 | 48.7 | 112.0 | 71.3 | 
+| Garfield Lake (UMR) | 146.3 | 84.5 | 64.0 | 80.4 | 53.4 | | 236.9 | 8.9 | 126.1 | 223.2 | 21.6 | 63.6 | 45.9 | 
 
 ### Table S4
 The Transition/Transversion ratios were generated using the script [calculate_TsTv_vcftools.sh](vcftools_scripts_incl_nonbiallelic/calculate_TsTv_vcftools.sh). Additional details can be found within the directory containing the script.
