@@ -96,35 +96,7 @@ Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
 <img src="images/Figure_4_210820_temporal_pca_incl_nonbiallelic.png" width="500">
 
 ### Figure 4a
-Unweighted pair group method with arithmetic averaging (UPGMA) tree for the combined Natural Stands and Cultivated Material panel. The first step in the pipeline to create the UPGMA trees is [run_bcftools_reheader.sh](pop_gen_analyses/trees/run_bcftools_reheader.sh) which makes a new VCF file with shortened sample names (e.g., only ```Sample_0001``` instead of ```Sample_0001/Sample_0001_sorted.bam```). The next step is to use [filter_with_vcftools_by_ind_natural_stands_and_breed_lines.sh](pop_gen_analyses/trees/filter_with_vcftools_by_ind_natural_stands_and_breed_lines.sh) in order to filter the complete VCF file (with all individuals) so that it only contains the samples that you want to include in the tree (specified by the ```.txt``` file (which also needs to contain the same individuals as the ```.csv``` file used by the R script otherwise you will get an error. The R script [make_tree_natural_stands_and_breeding_lines.R](pop_gen_analyses/trees/make_tree_natural_stands_and_breeding_lines.R) which is launched by [run_make_tree_natural_stands_and_breeding_lines.sh](pop_gen_analyses/trees/run_make_tree_natural_stands_and_breeding_lines.sh) contains the main code for making the figure (getting data into the right format, bootstrapping values, tip label color, etc).<br>
 
-The default style for the UPGMA tree is `phyogram` according to the [_ape_ documentation](https://www.rdocumentation.org/packages/ape/versions/5.6-2/topics/plot.phylo). This is what we originally used, but I never liked how it appeared and I think the `fan` version is easier to interpret. It also makes the figure more compact, which I think helps in viewing the entire tree at once. The `radial` style is also circular, but I don't think it looks as clean as the `fan` style.<br><br>
-Another new aspect of this tree vs. the original version is that the branches (or _edges_ using the _ape_ terminology) are colored to match the tip colors. This was acheived using the argument `edge.color = edge_colors` in the `plot.phylo()` function from the _ape_ R package. Together, the two changes described here are accomplished by executing this line of code:
-```R
-plot.phylo(tree, cex = 1.5, font = 2, adj = 0, type = "fan", edge.color = edge_colors, tip.color =  hexColorList[pop(gen_light_x)])
-```
-**Note:** This is very similar to the original code. The only difference is that in the original, the arguments `type = "fan"` and `edge.color = edge_colors` were not included so the function used their default values ("phylogram" for `type` and "black" for `edge.color`.)<br>
-
-To add colors to the edges (branches), you should first initialize the "edge_colors" object. I did that using the following code:
-```R
-edge_colors <- rep("grey", Nedge(tree))
-```
-The `rep()` function will create an object that I've decided to call "edge_colors" with as many occurrences of the word "grey"  as there are edges (branches) in the `tree` object. The default is "black" as stated above, but in our combined PCA plot, we chose to make all of the cultivated material colored grey so that the natural stands would stick out. The approach we are using here (in combination with the next steps) will result in all of the cultivated material being colored grey without having to manually define each and every cultivated variety since there are a bunch of them with complex names (since some of the names offer insight into crosses that went into particular lines and aren't as simple as "Barron", "FY-C20", etc.).
-
-I added lake/river-specific colors to the "edge_colors" object using the `which.edge()` function from the `ape` R packege. You can find documentation for that [here](https://rdrr.io/cran/ape/man/which.edge.html). The function returns a vector containing numbers matching the edges (branches) that meet a specific condition. Please see the line below for example code:<br>
-```R
-BassLake <- which.edge(tree, "Bass Lake")
-```
-The [script](pop_gen_analyses/trees/make_tree_natural_stands_and_breeding_lines.R) repeats this function for each individual lake or river.<br>
-
-Colors are then added to the appropriate positions inside the "edge_colors" object using the following code:<br>
-```R
-edge_colors[BassLake] <- "red"
-```
-You will then repeat this step for each of the individual lakes/rivers like you did with the `which.edge()` function to insert the correct color that matches the collection map and PCA plots.
-
-The resulting figure (from the `plot.phylo()` function above) will look like this:<br>
-<img src="images/natural_stand_and_breeding_lines_no_GPP_or_GPN_tree_fan.png" width="500">
 
 ## Figure 5 code explanation
 I wrote the script [empulateStructurePlots.py](pop_gen_analyses/emulateStructurePlots.py) to make these figures which emulate the ones automatically produced by STRUCTURE. My primary motivation was so that I could add labels to the bottom of each cluster in a reproducible way and not resort to using PowerPoint.
@@ -374,6 +346,35 @@ Table S3 is too large to generate here using Markdown, so you can find it as an 
 ### Figure S1
 
 ### Figure S2
+Unweighted pair group method with arithmetic averaging (UPGMA) tree for the combined Natural Stands and Cultivated Material panel. The first step in the pipeline to create the UPGMA trees is [run_bcftools_reheader.sh](pop_gen_analyses/trees/run_bcftools_reheader.sh) which makes a new VCF file with shortened sample names (e.g., only ```Sample_0001``` instead of ```Sample_0001/Sample_0001_sorted.bam```). The next step is to use [filter_with_vcftools_by_ind_natural_stands_and_breed_lines.sh](pop_gen_analyses/trees/filter_with_vcftools_by_ind_natural_stands_and_breed_lines.sh) in order to filter the complete VCF file (with all individuals) so that it only contains the samples that you want to include in the tree (specified by the ```.txt``` file (which also needs to contain the same individuals as the ```.csv``` file used by the R script otherwise you will get an error. The R script [make_tree_natural_stands_and_breeding_lines.R](pop_gen_analyses/trees/make_tree_natural_stands_and_breeding_lines.R) which is launched by [run_make_tree_natural_stands_and_breeding_lines.sh](pop_gen_analyses/trees/run_make_tree_natural_stands_and_breeding_lines.sh) contains the main code for making the figure (getting data into the right format, bootstrapping values, tip label color, etc).<br>
+
+The default style for the UPGMA tree is `phyogram` according to the [_ape_ documentation](https://www.rdocumentation.org/packages/ape/versions/5.6-2/topics/plot.phylo). This is what we originally used, but I never liked how it appeared and I think the `fan` version is easier to interpret. It also makes the figure more compact, which I think helps in viewing the entire tree at once. The `radial` style is also circular, but I don't think it looks as clean as the `fan` style.<br><br>
+Another new aspect of this tree vs. the original version is that the branches (or _edges_ using the _ape_ terminology) are colored to match the tip colors. This was acheived using the argument `edge.color = edge_colors` in the `plot.phylo()` function from the _ape_ R package. Together, the two changes described here are accomplished by executing this line of code:
+```R
+plot.phylo(tree, cex = 1.5, font = 2, adj = 0, type = "fan", edge.color = edge_colors, tip.color =  hexColorList[pop(gen_light_x)])
+```
+**Note:** This is very similar to the original code. The only difference is that in the original, the arguments `type = "fan"` and `edge.color = edge_colors` were not included so the function used their default values ("phylogram" for `type` and "black" for `edge.color`.)<br>
+
+To add colors to the edges (branches), you should first initialize the "edge_colors" object. I did that using the following code:
+```R
+edge_colors <- rep("grey", Nedge(tree))
+```
+The `rep()` function will create an object that I've decided to call "edge_colors" with as many occurrences of the word "grey"  as there are edges (branches) in the `tree` object. The default is "black" as stated above, but in our combined PCA plot, we chose to make all of the cultivated material colored grey so that the natural stands would stick out. The approach we are using here (in combination with the next steps) will result in all of the cultivated material being colored grey without having to manually define each and every cultivated variety since there are a bunch of them with complex names (since some of the names offer insight into crosses that went into particular lines and aren't as simple as "Barron", "FY-C20", etc.).
+
+I added lake/river-specific colors to the "edge_colors" object using the `which.edge()` function from the `ape` R packege. You can find documentation for that [here](https://rdrr.io/cran/ape/man/which.edge.html). The function returns a vector containing numbers matching the edges (branches) that meet a specific condition. Please see the line below for example code:<br>
+```R
+BassLake <- which.edge(tree, "Bass Lake")
+```
+The [script](pop_gen_analyses/trees/make_tree_natural_stands_and_breeding_lines.R) repeats this function for each individual lake or river.<br>
+
+Colors are then added to the appropriate positions inside the "edge_colors" object using the following code:<br>
+```R
+edge_colors[BassLake] <- "red"
+```
+You will then repeat this step for each of the individual lakes/rivers like you did with the `which.edge()` function to insert the correct color that matches the collection map and PCA plots.
+
+The resulting figure (from the `plot.phylo()` function above) will look like this:<br>
+<img src="images/natural_stand_and_breeding_lines_no_GPP_or_GPN_tree_fan.png" width="500">
 
 ### Figure S3
 The Evanno method (Evanno 2005) was carried out by uploading our results from STRUCTURE (Pritchard et al. 2000) into the program [STRUCTURE harvester](https://taylor0.biology.ucla.edu/structureHarvester/)(Earl and vonHoldt, 2012). DeltaK is minimized at K=5, suggesting that there are 5 subpopulations present in our diversity panel.There's no code to show for this figure because we simply uploaded data from STRUCTURE and uploaded it to this website.<br>
