@@ -22,9 +22,10 @@ The purpose of this directory is to easily navigate to specific figures from the
 3. [Table 3](#Table-3)
 4. [Table S1](#Table-S1)
 5. [Table S2](#Table-S2)
-6. [Table S4](#Table-S4)
-7. [Table S4](#Table-S5)
-8. [Table S6](#Table-S6)
+6. [Table S3](#Table-S3)
+7. [Table S4](#Table-S4)
+8. [Table S5](#Table-S5)
+9. [Table S6](#Table-S6)
 
 ## Supplemental Figures
 1. [Figure S1](#Figure-S1)
@@ -304,6 +305,9 @@ Geographic distance (km) matrix of US states of Minnesota and Wisconsin lakes an
 | Lake Plantagenet (UMR) | 166.4 | 97.5 | 44.4 | 101.7 | 48.7 | 21.6 | 258.2 | 15.3 | 131.4 | 244.5 | | 63.7 | 28.1 |
 | Shell Lake (UMR) | 146.3 | 145.5 | 63.8 | 117.9 | 112.0 | 63.6 | 265.9 | 68.0 | 69.3 | 251.2 | 63.7 | | 52.8 |
 | Upper Rice Lake (RRN) | 180.4 | 125.5 | 18.7 | 125.2 | 71.3 | 45.9 | 281.6 | 42.4 | 121.8 | 267.6 | 28.1 | 52.8 | |
+
+### Table S3
+Table S3 is too large to generate here using Markdown, so you can find it as an Excel file [here](supplemental_data/Table_S3_sample_key_with_SRA_accessions.xlsx).
 
 ### Table S4
 The Transition/Transversion ratios were generated using the script [calculate_TsTv_vcftools.sh](vcftools_scripts_incl_nonbiallelic/calculate_TsTv_vcftools.sh). Additional details can be found within the directory containing the script.
