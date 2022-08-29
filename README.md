@@ -34,6 +34,7 @@ The purpose of this directory is to easily navigate to specific figures from the
 3. [Figure S3](#Figure-S3)
 4. [Figure S4](#Figure-S4)
 5. [Figure S5](#Figure-S5)
+6. [Figure S6](#Figure-S6)
 
 The goal of each of these pipelines was to generate a Variant Call Format (VCF) file containing SNP data for our population to be used in further analysis.
 
@@ -391,3 +392,7 @@ Mantel test results. The plot shows the correlation between geographic distance 
 ### Figure S5
 Results of permutation testing. The histogram shows the frequency of simulated correlation tests resulting from permutation tests. The black diamond with a vertical line beneath it shows the actual correlation value from our Mantel (Figure S4) test using real data. This signifies that our results are unlikely to have been reached by chance.<br>
 <img src="images/211019_mantel_test.png" width="500">
+
+### Figure S6
+Linkage disequilibrium decay for all chromosomes and scaffolds of Northern Wild Rice (NWR; _Zizania palustris_ L.) based on 5,955 single nucleotide polymorphism (SNP) markers generated via genotyping-by-sequencing (GBS).<br>
+<img src="images/linkage_disequilibrium_plots_imputed_with_beagle.png" width="500">
