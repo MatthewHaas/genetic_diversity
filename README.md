@@ -26,6 +26,7 @@ The purpose of this directory is to easily navigate to specific figures from the
 7. [Table S4](#Table-S4)
 8. [Table S5](#Table-S5)
 9. [Table S6](#Table-S6)
+10. [Table S7](#Table-S7)
 
 ## Supplemental Figures
 1. [Figure S1](#Figure-S1)
@@ -363,6 +364,8 @@ _D_-statistics (ABBA-BABA) results for a diversity collection of Northern Wild R
 
 <sup>a</sup> Number of ABBA and BABA sites. _Z. aquatica_ was used as an outgroup for all comparisons.<br>
 <sup>b</sup> Z: Z-score
+
+### Table S7
 
 # Supplementary Figures
 
