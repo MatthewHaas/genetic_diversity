@@ -156,6 +156,11 @@ STRUCTURE results for _K_ = 4<br>
 STRUCTURE results for _K_ = 5<br>
 <img src="images/structure_plot_k5.png" width="500">
 
+Finally, we also wanted to show how the plot looks when _K_=14. We selected 14 as the expected number of populations because we have 12 Natural Stand populations, 1 _Zizania aquatica_ population, and 1 Cultivated Material population.  Interestingly, we did not see each population get its own sub-population. Instead, there are ~6 major sub-populations. Some have higher degrees of admixture than others, especially Mud Hen Lake and Phantom Lake.
+
+STRUCTURE results for _L_ = 14<br>
+<img src="images/structure_plot_k14.png" width="500">
+
 # Tables
 
 ### Table 1
