@@ -31,6 +31,7 @@ The purpose of this directory is to easily navigate to specific figures from the
 ## Supplemental Figures
 1. [Figure S1](#Figure-S1)
 2. [Figure S2](#Figure-S2)
+3. [Figure S3)(#Figure-S3)
 
 The goal of each of these pipelines was to generate a Variant Call Format (VCF) file containing SNP data for our population to be used in further analysis.
 
@@ -371,5 +372,9 @@ Table S3 is too large to generate here using Markdown, so you can find it as an 
 # Supplementary Figures
 
 ### Figure S1
-Evanno method implemented by [STRUCTURE harvester](https://taylor0.biology.ucla.edu/structureHarvester/) to show the ideal number of _K_ populations from STRUCTURE results. There's no code to show for this figure because we simply uploaded data from STRUCTURE and uploaded it to this website.<br>
+
+### Figure S2
+
+### Figure S3
+The Evanno method (Evanno 2005) was carried out by uploading our results from STRUCTURE (Pritchard et al. 2000) into the program [STRUCTURE harvester](https://taylor0.biology.ucla.edu/structureHarvester/)(Earl and vonHoldt, 2012). DeltaK is minimized at K=5, suggesting that there are 5 subpopulations present in our diversity panel.There's no code to show for this figure because we simply uploaded data from STRUCTURE and uploaded it to this website.<br>
 <img src="images/deltaK.png" width="500">
