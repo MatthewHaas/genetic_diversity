@@ -35,6 +35,7 @@ The purpose of this directory is to easily navigate to specific figures from the
 4. [Figure S4](#Figure-S4)
 5. [Figure S5](#Figure-S5)
 6. [Figure S6](#Figure-S6)
+7. [Figure S7](#Figure-S7)
 
 The goal of each of these pipelines was to generate a Variant Call Format (VCF) file containing SNP data for our population to be used in further analysis.
 
@@ -396,3 +397,7 @@ Results of permutation testing. The histogram shows the frequency of simulated c
 ### Figure S6
 Linkage disequilibrium decay for all chromosomes and scaffolds of Northern Wild Rice (NWR; _Zizania palustris_ L.) based on 5,955 single nucleotide polymorphism (SNP) markers generated via genotyping-by-sequencing (GBS).<br>
 <img src="images/linkage_disequilibrium_plots_imputed_with_beagle.png" width="500">
+
+### Figure S7
+Site spectrum frequency histograms for our a.) Natural Stand collection and b.) Cultivated collection of Northern Wild Rice (NWR; _Zizania palustris_ L.) based on 5,955 single nucleotide polymorphism (SNP) markers generated via genotyping-by-sequencing (GBS).<br>
+<img src="images/220418_site_spectrum_frequency_separate_classes.png" width="500">
