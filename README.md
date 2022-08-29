@@ -3,6 +3,7 @@
 This repository contains all of the scripts that were developed for the Northern Wild Rice genetic diversity project. The pre-print can be found [here](https://www.biorxiv.org/content/10.1101/2022.08.25.505308v1).
 
 # Directory
+The purpose of this directory is to easily navigate to specific figures from the manuscript so that you can more easily find detailed information about the scripts that went into creating each figure.
 ## Figures
 1. [Figure 1](#Figure-1)
 2. [Figure 2a](#Figure-2a)
@@ -28,10 +29,6 @@ This repository contains all of the scripts that were developed for the Northern
 ## Supplemental Figures
 1. [Figure S1](#Figure-S1)
 2. [Figure S2](#Figure-S2)
-
-We used multiple SNP-calling pipelines in the development of this project.
-1. [SAMtools/BCFtools](SAMtools-BCFtools)
-2. [FreeBayes](FreeBayes)
 
 The goal of each of these pipelines was to generate a Variant Call Format (VCF) file containing SNP data for our population to be used in further analysis.
 
