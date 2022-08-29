@@ -302,6 +302,10 @@ Geographic distance (km) matrix of US states of Minnesota and Wisconsin lakes an
 | Mud Hen Lake (SCR) | 139.1 | 190.8 | 300.2 | 156.6 | 254.7 | 236.9 | | 243.2 | 270.6 | 14.9 | 258.2 | 265.9 | 281.6 |
 | Necktie River (UMR) | 154.9 | 84.3 | 59.4 | 86.9 | 45.9 | 8.9 | 243.2 | | 132.6 | 229.6 | 15.3 | 68.0 | 42.4 |
 | Ottertail Lake (RRN) | 133.7 | 197.8 | 130.3 | 149.6 | 178.3 | 126.1 | 270.6 | 132.6 | | 255.8 | 131.4 | 69.3 | 121.8 |
+| Phantom Lake (SCR) | 124.6 | 179.9 | 286.3 | 142.8 | 242.5 | 223.2 | 14.9 | 229.6 | 255.8 | | 244.5 | 251.2 | 267.7 |
+| Lake Plantagenet (UMR) | 166.4 | 97.5 | 44.4 | 101.7 | 48.7 | 21.6 | 258.2 | 15.3 | 131.4 | 244.5 | | 63.7 | 28.1 |
+| Shell Lake (UMR) | 146.3 | 145.5 | 63.8 | 117.9 | 112.0 | 63.6 | 265.9 | 68.0 | 69.3 | 251.2 | 63.7 | | 52.8 |
+| Upper Rice Lake (RRN) | 180.4 | 125.5 | 18.7 | 125.2 | 71.3 | 45.9 | 281.6 | 42.4 | 121.8 | 267.6 | 28.1 | 52.8 | |
 
 ### Table S4
 The Transition/Transversion ratios were generated using the script [calculate_TsTv_vcftools.sh](vcftools_scripts_incl_nonbiallelic/calculate_TsTv_vcftools.sh). Additional details can be found within the directory containing the script.
