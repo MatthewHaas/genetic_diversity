@@ -32,6 +32,7 @@ The purpose of this directory is to easily navigate to specific figures from the
 1. [Figure S1](#Figure-S1)
 2. [Figure S2](#Figure-S2)
 3. [Figure S3](#Figure-S3)
+4. [Figure S4](#Figure-S4)
 
 The goal of each of these pipelines was to generate a Variant Call Format (VCF) file containing SNP data for our population to be used in further analysis.
 
@@ -381,3 +382,7 @@ The resulting figure (from the `plot.phylo()` function above) will look like thi
 ### Figure S3
 The Evanno method (Evanno 2005) was carried out by uploading our results from STRUCTURE (Pritchard et al. 2000) into the program [STRUCTURE harvester](https://taylor0.biology.ucla.edu/structureHarvester/)(Earl and vonHoldt, 2012). DeltaK is minimized at K=5, suggesting that there are 5 subpopulations present in our diversity panel.There's no code to show for this figure because we simply uploaded data from STRUCTURE and uploaded it to this website.<br>
 <img src="images/deltaK.png" width="500">
+
+### Figure S4
+Mantel test results. The plot shows the correlation between geographic distance (x-axis) and genetic distance (y-axis). Geographic distance (in kilometers) and genetic distance (as Prevosti's distance, also used in our UPGMA trees) were used as input. Units shown are not the same as the input units.<br>
+<img src="images/220406_dotplot_for_mantel_incl_ItascaC12_with_regression.png" width="500">
