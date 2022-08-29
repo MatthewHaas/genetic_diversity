@@ -250,7 +250,7 @@ Fixation index (_F<sub>ST</sub>_) values derived using the weighted Weir and Coc
 
 ### Table S1
 List of samples in our diversity collection of Northern Wild Rice (NWR; _Zizania palustris_ L.) genotyped with 5,955 single nucleotide polymorphism (SNP) markers generated via genotyping-by-sequencing (GBS). HUC 8 watershed designations include Upper Mississippi River (UMR), Red River of the North (RRN), and St. Croix River (SCR) basins.
-| Sample ID | Sample # | Collection Type | GPS coordinates | Watershed |
+| Sample ID | # of Samples | Collection Type | GPS coordinates | Watershed |
 | :---      | :---:    | :---:           | :---:           | :---:     |
 | Bass Lake | 50 | Natural Stand | 47.28716 - 93.63132 | UMR |
 | Clearwater River | 50 | Natural Stand | 47.51838 - 95.46291 | RRN |
