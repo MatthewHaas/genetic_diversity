@@ -343,7 +343,7 @@ _D_-statistics (ABBA-BABA) results for a diversity collection of Northern Wild R
 <sup>b</sup> Z: Z-score
 
 ### Table S7
-Table S3 is too large to generate here using Markdown, so you can find it as an Excel file [here](supplemental_data/Table_S7_significant_values_TajimaD_Fst_XP-CLR.xlsx).
+Table S7 is too large to generate here using Markdown, so you can find it as an Excel file [here](supplemental_data/Table_S7_significant_values_TajimaD_Fst_XP-CLR.xlsx).
 
 # Supplementary Figures
 
