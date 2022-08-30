@@ -1,18 +1,16 @@
 README for SAMtools-BCFtools
 
 ### Directory setup
-# 15 August 2019
-# PATH TO GBS DATA: /home/jkimball/data_release/umgc/novaseq/190730_A00223_0174_BHCN5GDRXX/Kimball_Project_002
+15 August 2019
+PATH TO GBS DATA: /home/jkimball/data_release/umgc/novaseq/190730_A00223_0174_BHCN5GDRXX/Kimball_Project_002
 
-# How many fastq.gz files are there in Kimball_Project_002?
+How many fastq.gz files are there in Kimball_Project_002?
 ```bash
 find *fastq.gz | wc -l # 1054 including samples from the pilot
 ```
 
-# Write the names of gzipped FASTQ files to a CSV file
-
-# Load R
-Load R by typing `module load R/3.6.0` into the command line and then type `R` to launch R.
+Write the names of gzipped FASTQ files to a CSV file
+First, load R by typing `module load R/3.6.0` into the command line and then type `R` to launch R.
 
 ```R
 # Read in data using the data.table package
@@ -27,7 +25,7 @@ x[, sample_number := sub("^.+[S]", "", sample_number)]
 # Strip off end of the filename (after the sample number) ... begins with "_R1"
 x[, sample_number := sub("_[R1].+$", "", sample_number)]
 
-# Convert sample numbers to numerical and add leading zeros to all samples (to help with sorting).
+#Convert sample numbers to numerical and add leading zeros to all samples (to help with sorting).
 x[, sample_number := sprintf("%04d", as.numeric(sample_number))]
 
 # Reorder rows in ascending order
@@ -43,14 +41,14 @@ write.csv(x, file="190815_main_GBS_sample_names_and_numbers.csv", row.names=FALS
 save(x, file="190815_main_GBS_sample_names_and_numbers.Rdata")
 ```
 
-# Back on the command line: moved relevant files to the main_GBS directory
+Back on the command line: moved relevant files to the main_GBS directory
 ```bash
 mv main_GBS_sample_names.csv main_GBS
 mv 190815_main_GBS_sample_names_and_numbers.Rdata main_GBS
 mv 190815_main_GBS_sample_names_and_numbers.csv main_GBS
 ```
 
-# Set up directory structure
+Set up directory structure
 ```bash
 cat 190815_main_GBS_sample_names_and_numbers.csv | cut -f 1 -d , \
 	| while read i; do
@@ -60,17 +58,17 @@ cat 190815_main_GBS_sample_names_and_numbers.csv | cut -f 1 -d , \
 	done
 ```
 
-# Delete directory that comes from sample_name (header) from the csv file
+Delete directory that comes from sample_name (header) from the csv file
 ```bash
 rm -rf Sample_sample_number
 ```
 
-# Make a file with a list of the directories
+Make a file with a list of the directories
 ```bash
 ls Sample*/ -d | tr -d / > 190815_sample_directory_list.txt
 ```
 
-# Make symlinks to GBS data
+Make symlinks to GBS data
 ```bash
 n=$(printf "%04d\n" "$((1))")
 cat 190815_main_GBS_sample_names_and_numbers.csv | cut -f 2 -d , \
@@ -80,7 +78,7 @@ cat 190815_main_GBS_sample_names_and_numbers.csv | cut -f 2 -d , \
 	done
 ```
 
-# Check that the paths are accurate.
+Check that the paths are accurate.
 ```bash
 ls -l Sample*/Sample*gz > paths_to_gbs_data_check.txt
 ```
