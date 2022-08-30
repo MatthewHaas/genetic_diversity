@@ -95,14 +95,12 @@ Principal component analysis plot (PC1 vs PC2) for the natural stands only<br>
 Principal component analysis plot (PC1 vs PC2) for the cultivated material only<br>
 <img src="images/210818_breeding_lines_pca_incl_nonbiallelic.png" width="500">
 
-### Figure 3
+### Figure 2d
 Principal component analysis plot (PC1 vs PC2) for the temporal samples<br>
 <img src="images/Figure_4_210820_temporal_pca_incl_nonbiallelic.png" width="500">
 
-### Figure 4a
-
-
-## Figure 5 code explanation
+### Figure 3
+## Figure 3 code explanation
 I wrote the script [empulateStructurePlots.py](pop_gen_analyses/emulateStructurePlots.py) to make these figures which emulate the ones automatically produced by STRUCTURE. My primary motivation was so that I could add labels to the bottom of each cluster in a reproducible way and not resort to using PowerPoint.
 A majority of the script consists of functions that I wrote to do the work. A brief overview is provided here.<br>
 **Note:** ```sys.argv[1]``` serves the same function in python as ```args[1]``` does in R. To use it, you should have two lines at the beginning of your script in addition to any other modules you want to use:
@@ -117,19 +115,19 @@ dfSorted = df.sort_values(by = ['Most_likely', 'Likelihood'], ascending = (True,
 emulateStructure(df)
 ```
 
-### Figure 5a
+### Figure 3a
 STRUCTURE results for _K_ = 2<br>
 <img src="images/structure_plot_k2.png" width="500">
 
-### Figure 5b
+### Figure 3b
 STRUCTURE results for _K_ = 3<br>
 <img src="images/structure_plot_k3.png" width="500">
 
-### Figure 5c
+### Figure 3c
 STRUCTURE results for _K_ = 4<br>
 <img src="images/structure_plot_k4.png" width="500">
 
-### Figure 5d
+### Figure 3d
 STRUCTURE results for _K_ = 5<br>
 <img src="images/structure_plot_k5.png" width="500">
 
@@ -137,6 +135,13 @@ Finally, we also wanted to show how the plot looks when _K_=14. We selected 14 a
 
 STRUCTURE results for _K_ = 14<br>
 <img src="images/structure_plot_k14.png" width="500">
+
+### Figure 4
+
+### Figure 5
+The combined sweep plot was generated using [plot_combined_sweep_figure.R](pop_gen_analyses/plot_combined_sweep_figure.R) which imports data from each individual component's analysis so that they can be plotted in the same figure.
+
+
 
 # Tables
 
