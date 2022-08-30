@@ -1,5 +1,92 @@
 README for SAMtools-BCFtools
 
+### Directory setup
+# 15 August 2019
+# PATH TO GBS DATA: /home/jkimball/data_release/umgc/novaseq/190730_A00223_0174_BHCN5GDRXX/Kimball_Project_002
+
+# How many fastq.gz files are there in Kimball_Project_002?
+```bash
+find *fastq.gz | wc -l # 1054 including samples from the pilot
+```
+
+# Write the names of gzipped FASTQ files to a CSV file
+
+# Load R
+Load R by typing `module load R/3.6.0` into the command line and then type `R` to launch R.
+
+```R
+# Read in data using the data.table package
+library(data.table)
+fread("main_GBS_sample_names.csv", header=F) -> x
+
+setnames(x, "filename")
+
+x[, sample_number := filename]
+# Strip off first part of filename until sample number begins (S) but do not include it.
+x[, sample_number := sub("^.+[S]", "", sample_number)]
+# Strip off end of the filename (after the sample number) ... begins with "_R1"
+x[, sample_number := sub("_[R1].+$", "", sample_number)]
+
+# Convert sample numbers to numerical and add leading zeros to all samples (to help with sorting).
+x[, sample_number := sprintf("%04d", as.numeric(sample_number))]
+
+# Reorder rows in ascending order
+x[order(sample_number)] -> x
+
+# Set column order (my personal preference for sample_number to come first)
+setcolorder(x, c("sample_number", "filename")) -> x
+
+# Write output to CSV
+write.csv(x, file="190815_main_GBS_sample_names_and_numbers.csv", row.names=FALSE, col.names=FALSE, sep=",", quote=FALSE)
+
+# Save table as an R object
+save(x, file="190815_main_GBS_sample_names_and_numbers.Rdata")
+```
+
+# Back on the command line: moved relevant files to the main_GBS directory
+```bash
+mv main_GBS_sample_names.csv main_GBS
+mv 190815_main_GBS_sample_names_and_numbers.Rdata main_GBS
+mv 190815_main_GBS_sample_names_and_numbers.csv main_GBS
+```
+
+# Set up directory structure
+```bash
+cat 190815_main_GBS_sample_names_and_numbers.csv | cut -f 1 -d , \
+	| while read i; do
+	d=Sample_$i
+	echo $i
+	mkdir -p $d
+	done
+```
+
+# Delete directory that comes from sample_name (header) from the csv file
+```bash
+rm -rf Sample_sample_number
+```
+
+# Make a file with a list of the directories
+```bash
+ls Sample*/ -d | tr -d / > 190815_sample_directory_list.txt
+```
+
+# Make symlinks to GBS data
+```bash
+n=$(printf "%04d\n" "$((1))")
+cat 190815_main_GBS_sample_names_and_numbers.csv | cut -f 2 -d , \
+	| while read i; do
+	ln -s /home/jkimball/data_release/umgc/novaseq/190730_A00223_0174_BHCN5GDRXX/Kimball_Project_002/$i Sample_$n/Sample_${n}.fq.gz
+	n=$(printf "%04d\n" "$((10#$n+1))")
+	done
+```
+
+# Check that the paths are accurate.
+```bash
+ls -l Sample*/Sample*gz > paths_to_gbs_data_check.txt
+```
+
+## ----- ###
+
 The R script [plot_plink_pca.R](plot_plink_pca.R) takes output from [PLINK](https://zzz.bwh.harvard.edu/plink/index.shtml) version 1.90b6.10 and creates principal component analysis (PCA) plots. The shell script [run_plot_plink_pca.sh](run_plot_plink_pca.sh) launches it. The R script is written in a general way so that the input and output file names are taken from the shell script: ```args = commandArgs(trailingOnly = TRUE)``` at the start of the R script and ```args[1]```, ```args[2]```, ```args[3]```, and ```args[4]``` in place of file names.
 * ```args[1]``` is the eigenvector file (input)
 * ```args[2]``` is the eivenvalue file (input)
