@@ -6,15 +6,11 @@ This repository contains all of the scripts that were developed for the Northern
 The purpose of this directory is to easily navigate to specific figures from the manuscript so that you can more easily find detailed information about the scripts that went into creating each figure.
 ## Figures
 1. [Figure 1](#Figure-1)
-2. [Figure 2a](#Figure-2a)
-3. [Figure 2b](#Figure-2b)
-4. [Figure 2c](#Figure-2c)
+2. [Figure 2](#Figure-2)
 5. [Figure 3](#Figure-3)
-6. [Figure 4a](#Figure-4a)
-9. [Figure 5a](#Figure-5a)
-10. [Figure 5b](#Figure-5b)
-11. [Figure 5c](#Figure-5c)
-12. [Figure 5d](#Figure-5d)
+6. [Figure 4](#Figure-4)
+9. [Figure 5](#Figure-5)
+
 
 ## Tables
 1. [Table 1](#Table-1)
@@ -55,6 +51,7 @@ The script [merge_fastq_read_counts.py](merge_fastq_read_counts.py) was used to 
 This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin. The original map (featuring only the Minnesota watersheds) used watershed boundaries provided by the Minnesota Department of Natural Resources. The updated watershed map featuring watersheds of both Minnesota and Wisconsin was provided by the Wisconsin Department of Natural Resources. **Note:** The shape files for both versions are available in our Google Drive.<br>
 <img src="images/nrw_collection_sites_watersheds.png" width="500">
 
+### Figure 2
 ## Figure 2 code explanation
 The PCA plots were made with R using input from plink. The ```R``` script itself is called from the ```bash``` script that I submitted to the SLURM scheduler. This allows me to recycle the same R script using different input files without needing to constantly edit & re-edit input our output file names. The bash script to make the PCA plot looks like:
 ```bash
