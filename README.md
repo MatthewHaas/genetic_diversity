@@ -401,3 +401,7 @@ Linkage disequilibrium decay for all chromosomes and scaffolds of Northern Wild 
 ### Figure S7
 Site spectrum frequency histograms for our a.) Natural Stand collection and b.) Cultivated collection of Northern Wild Rice (NWR; _Zizania palustris_ L.) based on 5,955 single nucleotide polymorphism (SNP) markers generated via genotyping-by-sequencing (GBS).<br>
 <img src="images/220418_site_spectrum_frequency_separate_classes.png" width="500">
+
+### Other scripts
+There are some other file preseent in this repository that didn't make it into the manuscript, but are here nonetheless. Rather than permanently remove them, the purpose of this section is to briefly explain what they were used for.
+1. [plotting_dv-dp_ratios.R](exploratory_work/plotting_dv-dp_ratios.R) was a script that we used to look at the dv/dp (depth of the variant/total depth of a SNP) to confir that NWR is in fact a diploid. The ploidy was briefly called into question because the size of the genome assembly came in at 1.29 Gb, which is much larger than initially expected. The output of this script confirmed that NWR is indeed a diploid. Later, we also did flow cytometry and the result of that experiment showed that the true size of the NWR genome is closer to 1.8 Gb.
