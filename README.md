@@ -161,8 +161,8 @@ Summary marker statistics for 5,955 Northern Wild Rice (NWR; Zizania palustris L
 | ZPchr0015    | 39.1       | 237       | 3.98%           | 12                         | 5.06%                                     |
 | ZPchr0016    | 13.8       | 88        | 1.48%           | 6                          | 6.82%                                     |
 | ZPchr0458    | 4.3        | 5         | 0.08%           | 3                          | 60.00%                                    |
-<br>
-The number of genes that reside in genic regions are explained in the README file for the `count_snps_in_genes` directory, but I will also briefly explain the process/logic here. The script [bedtools_find_snps_in_genes.sh](count_snps_in_genes/bedtools_find_snps_in_genes.sh) uses the `bedtools intersect` function to find which of my SNPs (in a VCF file) are located in genes (via the GFF3 file). The results are then written to another VCF file (`snps_in_genes.vcf`). A quick one-liner can be used to count the number of SNPS in genes on each chroosome:
+
+The number of genes that reside in genic regions are explained in the README file for the `count_snps_in_genes` directory, but I will also briefly explain the process/logic here. The script [bedtools_find_snps_in_genes.sh](count_snps_in_genes/bedtools_find_snps_in_genes.sh) uses the `bedtools intersect` function to find which of my SNPs (in a VCF file) are located in genes (via the GFF3 file). The results are then written to another VCF file (`snps_in_genes.vcf`). A quick one-liner can be used to count the number of SNPS in genes on each chromosome:<br>
 ```bash
 grep -v "^#" snps_in_genes.vcf | cut -f 1 | sort | uniq -c
 ```
