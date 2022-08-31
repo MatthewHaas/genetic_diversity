@@ -397,9 +397,13 @@ The Evanno method (Evanno 2005) was carried out by uploading our results from ST
 Mantel test results. The plot shows the correlation between geographic distance (x-axis) and genetic distance (y-axis). Geographic distance (in kilometers) and genetic distance (as Prevosti's distance, also used in our UPGMA trees) were used as input. Units shown are not the same as the input units.<br>
 <img src="images/220406_dotplot_for_mantel_incl_ItascaC12_with_regression.png" width="500">
 
+The Mantel test was conducted in the R statistical environment using the [mantel_test.R](pop_gen_analyses/mantel_test.R) script. It contains the code for both the dot plot with regression line as well as the histogram of permutation testing. **Note:** Itasca-C12 was included to be representative of the Cultivated Material with the NCROC as its geographic coordinate to serve as a reference (since it is also the reference genome that was used for short read alignment and SNP calling) despite concerns that it is not a Natural Stand and may not be appropriate to incude (since it is subject to artificial selection and artificial planting and therefore not subject to natural evolutionary forces).
+
 ### Figure S5
 Results of permutation testing. The histogram shows the frequency of simulated correlation tests resulting from permutation tests. The black diamond with a vertical line beneath it shows the actual correlation value from our Mantel (Figure S4) test using real data. This signifies that our results are unlikely to have been reached by chance.<br>
 <img src="images/211019_mantel_test.png" width="500">
+
+This histogram was created using the [mantel_test.R](pop_gen_analyses/mantel_test.R) script.
 
 ### Figure S6
 Linkage disequilibrium decay for all chromosomes and scaffolds of Northern Wild Rice (NWR; _Zizania palustris_ L.) based on 5,955 single nucleotide polymorphism (SNP) markers generated via genotyping-by-sequencing (GBS).<br>
