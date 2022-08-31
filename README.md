@@ -405,6 +405,8 @@ Results of permutation testing. The histogram shows the frequency of simulated c
 Linkage disequilibrium decay for all chromosomes and scaffolds of Northern Wild Rice (NWR; _Zizania palustris_ L.) based on 5,955 single nucleotide polymorphism (SNP) markers generated via genotyping-by-sequencing (GBS).<br>
 <img src="images/linkage_disequilibrium_plots_imputed_with_beagle.png" width="500">
 
+This plot was created using the [calculate_LD_decay.R](pop_gen_analyses/linkage_disequilibrium/calculate_LD_decay.R) script. This analysis used imputed data because the `LD.decay()` function from the [sommer](https://rdrr.io/cran/sommer/) R package requires no missing data. The first round of linkage disequilibrium analysis was done by Reneth in TASSEL and these results compare favorably with her results.
+
 ### Figure S7
 Site spectrum frequency histograms for our a.) Natural Stand collection and b.) Cultivated collection of Northern Wild Rice (NWR; _Zizania palustris_ L.) based on 5,955 single nucleotide polymorphism (SNP) markers generated via genotyping-by-sequencing (GBS).<br>
 <img src="images/220418_site_spectrum_frequency_separate_classes.png" width="500">
