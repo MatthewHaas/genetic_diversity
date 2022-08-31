@@ -401,7 +401,7 @@ The Mantel test was conducted in the R statistical environment using the [mantel
 
 ### Figure S5
 Results of permutation testing. The histogram shows the frequency of simulated correlation tests resulting from permutation tests. The black diamond with a vertical line beneath it shows the actual correlation value from our Mantel (Figure S4) test using real data. This signifies that our results are unlikely to have been reached by chance.<br>
-<img src="images/211019_mantel_test.png" width="500">
+<img src="images/211025_mantel_test_incl_ItascaC12.png" width="500">
 
 This histogram was created using the [mantel_test.R](pop_gen_analyses/mantel_test.R) script.
 
