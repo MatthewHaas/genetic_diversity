@@ -340,6 +340,8 @@ Polymorphic Information Content (PIC) values for 5,955 single nucleotide polymor
 | Upper Rice Lake | 0.1420 | 0.1141 | 0.0010 | 0.3125 | 0.1088 |
 | _Zizania aquatica_ | 0.1496 | 0.1313 | 0.0010 | 0.3125 | 0.1107 |
 
+We initially calculated Polymorphism Information Content (PIC) values in Excel; however, I don't particularly like using Excel for computational work. I made that exception (initially) because I was having a hard time finding appropriate tools to do the analysis. So, I chose to use Excel for expediency. After some time, I discovered the [snpReady]() R package which will actually do the PIC calculations! So, I switched to that method using the [NeiD_and_PIC_with_snpReady.R](pop_gen_analyses/NeiD_and_PIC_with_snpReady.R) script!
+
 ### Table S6
 _D_-statistics (ABBA-BABA) results for a diversity collection of Northern Wild Rice (NWR; _Zizania palustris_ L.).
 | P1 | P2 | P3 | ABBA<sup>a</sup> | BABA<sup>a</sup> | BBAA<sup>a</sup> | D | p-value | F4-ratio | Z<sup>b</sup> |
