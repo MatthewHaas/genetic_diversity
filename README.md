@@ -1,6 +1,6 @@
 <h1 align="center"><strong>Genetic Analysis of Wild and Cultivated Populations of Northern Wild Rice (<I>Zizania palustris</I> L.) Reveal New Insights into Gene Flow and Domestication</strong></h1>
 
-This repository contains all of the scripts that were developed for the Northern Wild Rice genetic diversity project. The pre-print can be found [here](https://www.biorxiv.org/content/10.1101/2022.08.25.505308v1).
+This repository contains all of the scripts that were developed for the Northern Wild Rice genetic diversity project. The pre-print can be found [here](https://www.biorxiv.org/content/10.1101/2022.08.25.505308v1). This work builds upon the initial pilot GBS study by [Shao _et al._ (2020)](https://link.springer.com/content/pdf/10.1007/s12686-019-01116-9.pdf).
 
 # Directory
 The purpose of this directory is to easily navigate to specific figures from the manuscript so that you can more easily find detailed information about the scripts that went into creating each figure.
@@ -40,8 +40,6 @@ Principal Component Analysis (PCA) plots were generated using [PLINK](http://zzz
 The directory [imputation](imputation) contains scripts to impute missing genotype calls, although these were not used in the final analysis.
 
 The directory [pop_gen_analyses](pop_gen_analyses) contains scripts used to conduct many of the population genetic analyses for this project.
-
-The directory [umgc_pilot_study](umgc_pilot_study) contains some scripts that were used in the pilot GBS study by [Shao _et al._ (2020)](https://link.springer.com/content/pdf/10.1007/s12686-019-01116-9.pdf).
 
 **Genome stats:**<br>
 The script [merge_fastq_read_counts.py](merge_fastq_read_counts.py) was used to merge the fastq read counts from each of the reports from two sequening runs ([file 1](Sequencing_report_data/190730_A00223_0174_BHCN5GDRXX_metrics.csv) and [file 2](Sequencing_report_data/190819_A00223_0191_AHF3V3DRXX_metrics.csv) and sum them based on sample identity. The average read count from the FASTQC report (this one run by the University of Minnesota Genomics Center) was 2.1 million reads/sample. I used the [CSV output file](Sequencing_report_data/merged_fastq_sequence_counts.csv) from this script to reaffirm the average count of 2.1 million reads/sample and to find the total read count (1.8 billion reads for 873 samples). We filtered out some samples which were included in the sequencing run, but which were not part of the diversity study. This was done in Excel using the ```VLOOKUP()``` function on the [sample key](191021_main_GBS_sample_key_PBML-C20_renamed.csv).
