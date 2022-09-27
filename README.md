@@ -46,7 +46,7 @@ The script [merge_fastq_read_counts.py](merge_fastq_read_counts.py) was used to 
 
 # Figures
 ### Figure 1
-This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin. The original map (featuring only the Minnesota watersheds) used watershed boundaries provided by the Minnesota Department of Natural Resources. The updated watershed map featuring watersheds of both Minnesota and Wisconsin was provided by the Wisconsin Department of Natural Resources. **Note:** The shape files for both versions are available in our Google Drive.<br>
+This figure shows the location of collection sites on public, non-tribal land in Minnesota and Wisconsin. The original map (featuring only the Minnesota watersheds) used watershed boundaries provided by the Minnesota Department of Natural Resources. The updated watershed map featuring watersheds of both Minnesota and Wisconsin was provided by the Wisconsin Department of Natural Resources. **Note:** The shape files for both versions are available in our Google Drive.<br> I wrote the [MN_watershed_map.py](collection_map/MN_watershed_map.py) script in order to create this figure. Note that there are two shape files required for the script to work (`MN_HUC4_WGS84_UTM15.shp` & `WI_HUC4_WGS84_UTM15.shp`). These are the shape files and are specifically coded into the script. However, there are an additional two files (the shape index files) that are required for the script to work, but are not coded into the script (`MN_HUC4_WGS84_UTM15.shx` & `WI_HUC4_WGS84_UTM15.shx`). The `.shx` files store the index of the feature geometry.
 <img src="images/nrw_collection_sites_watersheds.png" width="500">
 
 ### Figure 2
